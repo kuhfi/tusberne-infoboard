@@ -110,16 +110,9 @@
     {
       "public": true,
       "category": "tabellen-news",
-      "title": "Fußballtabellen – HTML",
+      "title": "Fußballtabellen",
       "kind": "link",
       "url": "./files/fussball-tabellen.html"
-    },
-    {
-      "public": true,
-      "category": "tabellen-news",
-      "title": "Fußballtabellen – PDF",
-      "kind": "pdf",
-      "url": "./files/tabellen-2026-10-21.pdf"
     },
     {
       "public": true,
