@@ -57,6 +57,62 @@
       "kind": "link",
       "url": "https://script.google.com/macros/s/AKfycbxqi0Pqy_K-JkB2-KDikEWasK3AU9-U-Co0wOe7UQlb3z5X4lxayh7HtOFhATkNGeQ/exec",
       "description": "Belegungsübersicht des Fußballraums öffnen."
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Schiedsrichterkosten – HFV-Sätze ab 01.07.2026",
+      "kind": "image",
+      "url": "./files/schiedsrichterkosten-hfv-2026.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Fußballschule – Herbstferien-Camp 26.–30.10.2026",
+      "kind": "image",
+      "url": "./files/fussballschule-herbstferien-2026.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Mobile Sitzbank – Kabine 2",
+      "kind": "image",
+      "url": "./files/mobile-sitzbank.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Warnung – Dach der Multifunktionshalle",
+      "kind": "image",
+      "url": "./files/dach-betreten-verboten.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Jahresauftaktessen – 22.01.2027",
+      "kind": "image",
+      "url": "./files/jahresauftaktessen-2027.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Notfallfortbildung – 09.01.2027",
+      "kind": "image",
+      "url": "./files/notfallfortbildung-2027.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Unterstützung Kinder- und Jugendhospiz Sternenbrücke",
+      "kind": "image",
+      "url": "./files/sternenbruecke.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Wetter & Regenradar – Hamburg-Berne",
+      "kind": "link",
+      "url": "./files/wetter-live.html"
     }
   ]
 }

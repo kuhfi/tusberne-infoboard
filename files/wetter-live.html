@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google" content="notranslate">
+<title>tus BERNE Wetter Live V6 – vollständige WMO-Symbole</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--blue:#07539a;--blue2:#063f78;--ink:#10345e;--muted:#60758b;--line:#d5e2ee;--soft:#f7fbfe}
+*{box-sizing:border-box}
+html{font-size:1px}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-family:Arial,"Liberation Sans",sans-serif;color:var(--ink)}
+body{padding:8rem}
+#app{width:100%;height:100%;display:grid;grid-template-rows:132rem minmax(0,1fr);gap:8rem}
+.hero{display:grid;grid-template-columns:1.1fr 1.1fr 1fr;gap:10rem;align-items:center}
+.title h1{margin:0;color:var(--blue);font-size:25rem;line-height:1;font-weight:950;white-space:nowrap}.place{margin-top:16rem;color:var(--blue2);font-size:14rem}
+.now{display:grid;grid-template-columns:102rem 1fr;gap:14rem;align-items:center}.nowicon{width:92rem;height:72rem;display:flex;align-items:center;justify-content:center}.nowicon .wx-svg{width:100%;height:100%;display:block}.temp{display:flex;align-items:flex-start;line-height:.9}.temp strong{font-size:52rem;color:var(--blue);font-weight:950}.temp span{font-size:20rem;color:var(--blue2);font-weight:900;padding-top:5rem}.cond{margin-top:4rem;font-size:15rem;font-weight:700;color:var(--blue2)}
+.stats{height:100%;display:grid;grid-template-columns:1fr 1fr 1fr}.stat{border-left:1px solid var(--line);padding:0 10rem;display:grid;grid-template-columns:26rem minmax(0,1fr);gap:7rem;align-items:center}.stat-symbol{width:24rem;height:24rem;display:flex;align-items:center;justify-content:center}.stat-symbol svg{width:100%;height:100%;display:block}.stat .k{font-size:9.5rem;color:var(--blue);font-weight:800;line-height:1.15}.stat .v{margin-top:4rem;font-size:15rem;color:var(--blue2);font-weight:950;line-height:1.05}
+.main{min-height:0;display:grid;grid-template-columns:minmax(0,1.75fr) minmax(290rem,.85fr);gap:8rem}.card{min-width:0;min-height:0;border:1px solid var(--line);border-radius:6rem;background:var(--soft);overflow:hidden}
+.radar{display:grid;grid-template-rows:38rem minmax(0,1fr) 42rem;background:#fff}.rhead{display:flex;align-items:center;justify-content:space-between;padding:0 10rem;background:linear-gradient(90deg,var(--blue2),#0a5ec6);color:#fff}.rhead strong{font-size:17rem;font-weight:950}.rhead span{font-size:8rem;white-space:nowrap}
+#map{width:100%;height:100%;min-height:0;background:#dceaf4;position:relative}.leaflet-control-attribution{display:none!important}.source-credit{position:absolute;right:4px;bottom:4px;z-index:1100;max-width:calc(100% - 8px);padding:3px 5px;border-radius:3px;background:rgba(255,255,255,.93);color:#17365d;font:10px/1.25 Arial,sans-serif;text-align:right}.source-credit a{color:#07539a}
+.berne-logo-marker{filter:drop-shadow(0 1rem 2rem rgba(0,0,0,.22));border-radius:50%;}.marker-label{background:#fff;color:var(--blue2);border:2px solid var(--blue);border-radius:4rem;padding:2rem 4rem;font-size:7rem;font-weight:950;box-shadow:none}.marker-label:before{display:none}.radarerr{position:absolute;z-index:1000;left:8rem;top:8rem;background:#fff;border:1px solid var(--line);border-radius:4rem;padding:4rem 6rem;font-size:7rem;font-weight:800;display:none}
+.rfoot{display:grid;grid-template-columns:20rem minmax(0,1fr);gap:8rem;align-items:center;padding:5rem 9rem;background:#fff;border-top:1px solid var(--line)}.play{width:17rem;height:17rem;border:0;border-radius:50%;background:var(--blue);color:#fff;font-size:9rem;font-weight:900}.timeline{display:flex;position:relative;height:9rem;align-items:center}.timeline:before{content:"";position:absolute;left:0;right:0;height:2rem;background:#b9d3ea;border-radius:2rem}.tick{flex:1;height:9rem;position:relative;z-index:2}.tick:after{content:"";position:absolute;width:4rem;height:4rem;left:50%;top:2.5rem;transform:translateX(-50%);border-radius:50%;background:#90b7d8;border:1px solid #fff}.tick.active:after{width:6rem;height:6rem;top:1.5rem;background:var(--blue)}.tlabels{display:flex;justify-content:space-between;color:#4d6f8f;font-size:5.5rem;font-weight:700}.legend{margin-top:3rem;display:grid;grid-template-columns:70rem 1fr;gap:6rem;align-items:center}.legend>span{font-size:6rem;font-weight:700;color:var(--blue2)}.lbar{height:6rem;border-radius:3rem;background:linear-gradient(90deg,#d8e9f8,#63b5f5,#2679ea,#58ca63,#ffd11f,#ff8900,#d51245)}.ltext{display:flex;justify-content:space-between;margin-top:2rem;color:#4d6f8f;font-size:4.5rem;font-weight:700}
+.side{min-height:0;display:grid;grid-template-rows:1fr 1fr 1.15fr;gap:8rem}.forecast{padding:10rem}.fhead{display:flex;justify-content:space-between;gap:6rem}.fhead strong,.trend>strong{font-size:18rem;color:var(--blue2);font-weight:950}.fhead span{font-size:8rem;color:var(--blue)}.fbig{margin-top:8rem;display:grid;grid-template-columns:62rem 1fr 95rem;gap:8rem;align-items:center}.ficon{width:54rem;height:54rem;display:flex;align-items:center;justify-content:center}.ficon .wx-svg{width:100%;height:100%;display:block}.fdesc{font-size:11rem;color:var(--blue2)}.frain{margin-top:5rem;font-size:7.5rem;color:var(--muted);font-weight:700}.ftemp{border-left:1px solid var(--line);padding-left:8rem;text-align:center}.ftemp b{font-size:21rem;color:var(--blue);font-weight:950;white-space:nowrap}.minmax{margin-top:5rem;display:flex;justify-content:space-between;font-size:7rem;color:var(--muted);font-weight:700}
+.trend{padding:10rem}.trendgrid{margin-top:10rem;height:calc(100% - 28rem);display:grid;grid-template-columns:1fr 1fr 1fr}.td{border-left:1px solid var(--line);display:flex;flex-direction:column;align-items:center;text-align:center;padding:2rem 5rem}.td:first-child{border-left:0}.td .date{font-size:8rem;color:var(--blue2);font-weight:700}.td .ico{width:34rem;height:34rem;margin-top:7rem;display:flex;align-items:center;justify-content:center}.td .ico .wx-svg{width:100%;height:100%;display:block}.td .rain{font-size:6.5rem;color:var(--muted);font-weight:700;margin-top:5rem}.td .range{font-size:13rem;color:var(--blue);font-weight:950;margin-top:7rem;white-space:nowrap}
+
+
+/* ===== Hochformat-Optimierung 9:16 für das tus BERNE Infoboard ===== */
+@media (orientation: portrait){
+  body{padding:10rem}
+  #app{grid-template-rows:202rem minmax(0,1fr);gap:8rem}
+
+  .hero{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:42rem 82rem 62rem;
+    gap:8rem;
+    align-items:stretch
+  }
+  .title{display:flex;align-items:flex-end;justify-content:space-between;gap:12rem;min-width:0}
+  .title h1{font-size:27rem;line-height:1;white-space:nowrap}
+  .place{margin-top:0;font-size:14rem;line-height:1.1;white-space:nowrap;padding-bottom:2rem}
+
+  .now{
+    display:grid;
+    grid-template-columns:90rem minmax(0,1fr);
+    gap:14rem;
+    align-items:center;
+    padding:0 6rem
+  }
+  .nowicon{width:82rem;height:66rem}
+  .temp strong{font-size:50rem}
+  .temp span{font-size:19rem;padding-top:4rem}
+  .cond{margin-top:3rem;font-size:15rem}
+
+  .stats{
+    height:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    border-top:1px solid var(--line)
+  }
+  .stat{border-left:1px solid var(--line);padding:7rem 8rem 2rem;grid-template-columns:25rem minmax(0,1fr);gap:6rem}
+  .stat:first-child{border-left:0}
+  .stat-symbol{width:23rem;height:23rem}
+  .stat .k{font-size:9rem}
+  .stat .v{margin-top:3rem;font-size:14rem}
+
+  .main{
+    min-height:0;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:minmax(0,1.65fr) minmax(0,1fr);
+    gap:8rem
+  }
+
+  .radar{grid-template-rows:42rem minmax(0,1fr) 58rem}
+  .rhead{padding:0 11rem}
+  .rhead strong{font-size:16rem}
+  .rhead span{font-size:8rem}
+  .rfoot{grid-template-columns:22rem minmax(0,1fr);gap:8rem;padding:5rem 9rem}
+  .play{width:19rem;height:19rem;font-size:9rem}
+  .timeline{height:10rem}
+  .tlabels{font-size:6rem}
+  .legend{margin-top:4rem;grid-template-columns:72rem 1fr;gap:6rem}
+  .legend>span{font-size:6.5rem}
+  .lbar{height:6rem}
+  .ltext{font-size:4.8rem}
+
+  .side{
+    min-height:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:minmax(0,1fr) minmax(0,1.08fr);
+    gap:8rem
+  }
+  .forecast{padding:9rem}
+  .fhead strong,.trend>strong{font-size:16rem}
+  .fhead span{font-size:7.5rem}
+  .fbig{margin-top:6rem;grid-template-columns:48rem minmax(0,1fr) 76rem;gap:6rem}
+  .ficon{width:44rem;height:44rem}
+  .fdesc{font-size:9.5rem;line-height:1.12}
+  .frain{margin-top:4rem;font-size:7rem}
+  .ftemp{padding-left:6rem}
+  .ftemp b{font-size:16rem}
+  .minmax{margin-top:4rem;font-size:6.3rem}
+
+  .trend{grid-column:1 / -1;padding:9rem 11rem}
+  .trendgrid{margin-top:7rem;height:calc(100% - 23rem)}
+  .td{padding:0 6rem}
+  .td .date{font-size:8rem}
+  .td .ico{width:31rem;height:31rem;margin-top:4rem}
+  .td .rain{font-size:6.5rem;margin-top:3rem}
+  .td .range{font-size:12.5rem;margin-top:4rem}
+}
+
+</style>
+</head>
+<body translate="no">
+<div id="app">
+  <section class="hero">
+    <div class="title"><h1>WETTER &amp; REGENRADAR</h1><div class="place">Hamburg-Berne</div></div>
+    <div class="now"><div class="nowicon" id="nowIcon"></div><div><div class="temp"><strong id="temp">--</strong><span>°C</span></div><div class="cond" id="condition">Wetter wird geladen …</div></div></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-symbol" id="windSymbol"></div><div><div class="k">Wind</div><div class="v" id="wind">-- km/h</div></div></div>
+      <div class="stat"><div class="stat-symbol" id="feelsSymbol"></div><div><div class="k">Gefühlte Temperatur</div><div class="v" id="feels">-- °C</div></div></div>
+      <div class="stat"><div class="stat-symbol" id="rainSymbol"></div><div><div class="k">Regenrisiko</div><div class="v" id="rain">-- %</div></div></div>
+    </div>
+  </section>
+  <section class="main">
+    <section class="card radar">
+      <div class="rhead"><strong>REGENVORHERSAGE HAMBURG</strong><span id="radarTime">Vorhersage wird geladen …</span></div>
+      <div id="map"><div class="radarerr" id="radarError"></div><div class="source-credit">Kartendaten © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> · Radar: <a href="https://www.dwd.de/" target="_blank" rel="noopener noreferrer">DWD</a></div></div>
+      <div class="rfoot"><button class="play" id="playBtn" type="button">❚❚</button><div><div class="timeline" id="timeline"></div><div class="tlabels"><span id="firstTime">–</span><span>Vorhersage · nächste 2 Stunden</span><span id="lastTime">–</span></div><div class="legend"><span>Niederschlag</span><div><div class="lbar"></div><div class="ltext"><span>leicht</span><span>mäßig</span><span>stark</span><span>sehr stark</span><span>extrem</span></div></div></div></div></div>
+    </section>
+    <aside class="side">
+      <section class="card forecast"><div class="fhead"><strong>HEUTE</strong><span id="todayDate">–</span></div><div class="fbig"><div class="ficon" id="todayIcon"></div><div><div class="fdesc" id="todayDesc">–</div><div class="frain" id="todayRain">Regenrisiko: –</div></div><div class="ftemp"><b id="todayTemp">– / –°C</b><div class="minmax"><span>Min.</span><span>Max.</span></div></div></div></section>
+      <section class="card forecast"><div class="fhead"><strong>MORGEN</strong><span id="tomorrowDate">–</span></div><div class="fbig"><div class="ficon" id="tomorrowIcon"></div><div><div class="fdesc" id="tomorrowDesc">–</div><div class="frain" id="tomorrowRain">Regenrisiko: –</div></div><div class="ftemp"><b id="tomorrowTemp">– / –°C</b><div class="minmax"><span>Min.</span><span>Max.</span></div></div></div></section>
+      <section class="card trend"><strong>3-TAGE-TREND</strong><div class="trendgrid">
+        <div class="td"><div class="date" id="trendDate0">–</div><div class="ico" id="trendIcon0"></div><div class="rain" id="trendRain0">–</div><div class="range" id="trendTemp0">– / –°C</div></div>
+        <div class="td"><div class="date" id="trendDate1">–</div><div class="ico" id="trendIcon1"></div><div class="rain" id="trendRain1">–</div><div class="range" id="trendTemp1">– / –°C</div></div>
+        <div class="td"><div class="date" id="trendDate2">–</div><div class="ico" id="trendIcon2"></div><div class="rain" id="trendRain2">–</div><div class="range" id="trendTemp2">– / –°C</div></div>
+      </div></section>
+    </aside>
+  </section>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(()=>{
+"use strict";
+const LAT=53.6288,LON=10.1256,$=id=>document.getElementById(id);
+function scale(){const portrait=innerHeight>innerWidth;const bw=portrait?540:940,bh=portrait?960:525;const s=Math.max(.55,Math.min(4.5,Math.min(innerWidth/bw,innerHeight/bh)));document.documentElement.style.fontSize=s.toFixed(4)+'px';setTimeout(()=>map?.invalidateSize(),50)}addEventListener('resize',scale,{passive:true});
+const tf=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',hour:'2-digit',minute:'2-digit'}),df=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',weekday:'short',day:'2-digit',month:'2-digit'}),dfl=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Berlin',weekday:'short',day:'2-digit',month:'2-digit',year:'numeric'});
+const codeText=c=>{
+  c=Number(c);
+  const text={
+    0:'Klar',
+    1:'Überwiegend klar',
+    2:'Teilweise bewölkt',
+    3:'Bedeckt',
+    45:'Nebel',
+    48:'Reifnebel',
+    51:'Leichter Nieselregen',
+    53:'Mäßiger Nieselregen',
+    55:'Starker Nieselregen',
+    56:'Leichter gefrierender Nieselregen',
+    57:'Starker gefrierender Nieselregen',
+    61:'Leichter Regen',
+    63:'Mäßiger Regen',
+    65:'Starker Regen',
+    66:'Leichter gefrierender Regen',
+    67:'Starker gefrierender Regen',
+    71:'Leichter Schneefall',
+    73:'Mäßiger Schneefall',
+    75:'Starker Schneefall',
+    77:'Schneegriesel',
+    80:'Leichte Regenschauer',
+    81:'Mäßige Regenschauer',
+    82:'Heftige Regenschauer',
+    85:'Leichte Schneeschauer',
+    86:'Starke Schneeschauer',
+    95:'Gewitter',
+    96:'Gewitter mit leichtem Hagel',
+    99:'Gewitter mit starkem Hagel'
+  };
+  return text[c] ?? 'Wechselhaft';
+};
+
+const svgWrap=body=>`<svg class="wx-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
+
+const sunCore=(cx=50,cy=48,r=19)=>`
+  <g stroke="#FFB400" stroke-width="5.5" stroke-linecap="round">
+    <path d="M${cx} ${cy-38}v11M${cx} ${cy+27}v11M${cx-38} ${cy}h11M${cx+27} ${cy}h11
+             M${cx-27} ${cy-27}l8 8M${cx+19} ${cy+19}l8 8
+             M${cx+27} ${cy-27}l-8 8M${cx-19} ${cy+19}l-8 8"/>
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="#FFC21A" stroke="none"/>
+  </g>`;
+
+const cloudCore=(fill='#AFC8DF', y=42)=>`
+  <path d="M24 ${y+31}h52c12 0 20-7 20-17 0-9-7-16-17-17-3-13-13-22-27-22-15 0-27 11-29 26C11 ${y+2} 4 ${y+9} 4 ${y+17}c0 8 7 14 20 14z"
+        fill="${fill}"/>`;
+
+const rainDrops=(count=3,heavy=false)=> {
+  const xs = count===2 ? [36,64] : count===4 ? [24,42,60,78] : [30,50,70];
+  return `<g stroke="#1676D2" stroke-width="${heavy?7:5}" stroke-linecap="round">${
+    xs.map((x,i)=>`<path d="M${x} ${70+(i%2)*2}l-${heavy?7:5} ${heavy?18:14}"/>`).join('')
+  }</g>`;
+};
+
+const snowFlakes=(count=3,heavy=false)=> {
+  const pts = count===2 ? [[36,77],[64,77]]
+    : count===5 ? [[22,75],[39,83],[56,75],[73,83],[84,72]]
+    : [[28,76],[50,84],[72,76]];
+  return `<g stroke="#4E9DD4" stroke-width="${heavy?3.4:2.7}" stroke-linecap="round">${
+    pts.map(([x,y])=>`<path d="M${x-5} ${y}h10M${x} ${y-5}v10M${x-4} ${y-4}l8 8M${x+4} ${y-4}l-8 8"/>`).join('')
+  }</g>`;
+};
+
+const hailDots=(count=3,heavy=false)=> {
+  const pts = count===5 ? [[22,76],[38,84],[54,75],[70,84],[83,74]] : [[30,78],[50,85],[70,78]];
+  return `<g fill="${heavy?'#376F9E':'#78A9CF'}" stroke="#fff" stroke-width="1">${
+    pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="${heavy?5:4}"/>`).join('')
+  }</g>`;
+};
+
+const iceMark=()=>`
+  <g stroke="#2D8BC7" stroke-width="3" stroke-linecap="round">
+    <path d="M76 65v22M65 76h22M68 68l16 16M84 68L68 84"/>
+  </g>`;
+
+const sunSvg=()=>svgWrap(sunCore());
+
+const mostlyClearSvg=()=>svgWrap(
+  sunCore(42,43,18) +
+  `<path d="M43 80h38c9 0 15-6 15-13 0-7-5-12-13-13-3-10-10-16-20-16-11 0-19 8-21 18-8 1-13 6-13 12 0 7 5 12 14 12z" fill="#B8D0E4"/>`
+);
+
+const partlySvg=()=>svgWrap(
+  sunCore(32,34,17) +
+  `<path d="M30 83h49c11 0 18-7 18-16 0-8-6-14-15-15-3-12-12-19-24-19-13 0-24 9-26 22-11 1-17 7-17 15 0 7 6 13 15 13z" fill="#AFC8DF"/>`
+);
+
+const cloudSvg=()=>svgWrap(cloudCore('#AFC8DF',42));
+const overcastSvg=()=>svgWrap(cloudCore('#899FB4',42));
+
+const fogSvg=()=>svgWrap(
+  cloudCore('#B7C8D6',27) +
+  `<g stroke="#7895AC" stroke-width="5.5" stroke-linecap="round">
+    <path d="M12 66h76M18 78h64M27 90h46"/>
+  </g>`
+);
+
+const rimeFogSvg=()=>svgWrap(
+  cloudCore('#B7C8D6',22) +
+  `<g stroke="#7895AC" stroke-width="5" stroke-linecap="round">
+    <path d="M12 62h76M19 74h62"/>
+  </g>` +
+  snowFlakes(3,false)
+);
+
+const drizzleSvg=(level=1,freezing=false)=>svgWrap(
+  cloudCore('#AFC8DF',28) +
+  rainDrops(level===1?2:level===2?3:4, level===3) +
+  (freezing?iceMark():'')
+);
+
+const rainSvg=(level=1,freezing=false)=>svgWrap(
+  cloudCore(level===3?'#8FA8BE':'#AFC8DF',27) +
+  rainDrops(level===1?2:level===2?3:4, level===3) +
+  (freezing?iceMark():'')
+);
+
+const snowSvg=(level=1)=>svgWrap(
+  cloudCore(level===3?'#93A9BC':'#AFC8DF',25) +
+  snowFlakes(level===1?2:level===2?3:5, level===3)
+);
+
+const snowGrainsSvg=()=>svgWrap(
+  cloudCore('#AFC8DF',26) +
+  `<g fill="#5AAAE6"><circle cx="28" cy="76" r="3"/><circle cx="44" cy="84" r="3"/>
+   <circle cx="61" cy="76" r="3"/><circle cx="76" cy="84" r="3"/></g>`
+);
+
+const showerSvg=(level=1)=>svgWrap(
+  sunCore(28,29,14) +
+  `<path d="M29 61h50c11 0 18-7 18-15 0-8-6-14-15-15-3-11-12-18-24-18-13 0-23 9-25 20-10 1-16 7-16 14 0 8 6 14 12 14z" fill="${level===3?'#879FB5':'#AFC8DF'}"/>` +
+  rainDrops(level===1?2:level===2?3:4, level===3)
+);
+
+const snowShowerSvg=(level=1)=>svgWrap(
+  sunCore(28,29,14) +
+  `<path d="M29 61h50c11 0 18-7 18-15 0-8-6-14-15-15-3-11-12-18-24-18-13 0-23 9-25 20-10 1-16 7-16 14 0 8 6 14 12 14z" fill="#AFC8DF"/>` +
+  snowFlakes(level===1?3:5, level===2)
+);
+
+const stormSvg=(hail=0)=>svgWrap(
+  cloudCore('#7F94A9',22) +
+  `<path d="M53 53L38 76h12l-5 18 22-30H54z" fill="#FFC21A"/>` +
+  `<g stroke="#1676D2" stroke-width="5.5" stroke-linecap="round">
+    <path d="M25 68l-6 15M79 68l-6 15"/>
+  </g>` +
+  (hail===1?hailDots(3,false):hail===2?hailDots(5,true):'')
+);
+
+const weatherSvg=c=>{
+  c=Number(c);
+  switch(c){
+    case 0:return sunSvg();
+    case 1:return mostlyClearSvg();
+    case 2:return partlySvg();
+    case 3:return overcastSvg();
+    case 45:return fogSvg();
+    case 48:return rimeFogSvg();
+    case 51:return drizzleSvg(1,false);
+    case 53:return drizzleSvg(2,false);
+    case 55:return drizzleSvg(3,false);
+    case 56:return drizzleSvg(1,true);
+    case 57:return drizzleSvg(3,true);
+    case 61:return rainSvg(1,false);
+    case 63:return rainSvg(2,false);
+    case 65:return rainSvg(3,false);
+    case 66:return rainSvg(1,true);
+    case 67:return rainSvg(3,true);
+    case 71:return snowSvg(1);
+    case 73:return snowSvg(2);
+    case 75:return snowSvg(3);
+    case 77:return snowGrainsSvg();
+    case 80:return showerSvg(1);
+    case 81:return showerSvg(2);
+    case 82:return showerSvg(3);
+    case 85:return snowShowerSvg(1);
+    case 86:return snowShowerSvg(2);
+    case 95:return stormSvg(0);
+    case 96:return stormSvg(1);
+    case 99:return stormSvg(2);
+    default:return partlySvg();
+  }
+};
+
+const windSymbolSvg=()=>`<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#07539a" stroke-width="5" stroke-linecap="round"><path d="M8 22h30c8 0 10-12 2-14-5-1-8 2-9 5"/><path d="M7 32h42c10 0 11 14 2 16-6 1-9-2-10-6"/><path d="M8 43h22"/></g></svg>`;
+const thermometerSvg=()=>`<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#07539a" stroke-width="5"><path d="M28 12a7 7 0 0 1 14 0v25a13 13 0 1 1-14 0z"/><path d="M35 21v24" stroke-linecap="round"/></g><circle cx="35" cy="49" r="7" fill="#07539a"/></svg>`;
+const dropSvg=()=>`<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M32 5C24 18 13 30 13 42a19 19 0 1 0 38 0C51 30 40 18 32 5z" fill="#1676D2"/><path d="M23 43c1 6 5 9 10 10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/></svg>`;
+const windDir=deg=>{if(deg==null||Number.isNaN(Number(deg)))return'';const a=['N','NO','O','SO','S','SW','W','NW'];return a[Math.round((Number(deg)%360)/45)%8]};
+$('windSymbol').innerHTML=windSymbolSvg();$('feelsSymbol').innerHTML=thermometerSvg();$('rainSymbol').innerHTML=dropSvg();
+function setDay(prefix,day){if(!day)return;$(prefix+'Date').textContent=dfl.format(day.date);$(prefix+'Icon').innerHTML=weatherSvg(day.code);$(prefix+'Desc').textContent=codeText(day.code);$(prefix+'Rain').textContent='Regenrisiko: '+day.rain+' %';$(prefix+'Temp').textContent=day.min+'° / '+day.max+'°C'}
+async function loadWeather(){try{const url='https://api.open-meteo.com/v1/forecast?latitude='+LAT+'&longitude='+LON+'&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FBerlin&forecast_days=5';const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const w=await r.json(),c=w.current||{},d=w.daily||{};const days=(d.time||[]).map((x,i)=>({date:new Date(x+'T12:00:00'),code:d.weather_code?.[i]??3,min:Math.round(d.temperature_2m_min?.[i]??0),max:Math.round(d.temperature_2m_max?.[i]??0),rain:Math.round(d.precipitation_probability_max?.[i]??0)}));$('nowIcon').innerHTML=weatherSvg(c.weather_code);$('temp').textContent=Math.round(c.temperature_2m??0);$('condition').textContent=codeText(c.weather_code);const dir=windDir(c.wind_direction_10m);$('wind').textContent=Math.round(c.wind_speed_10m??0)+' km/h'+(dir?' ('+dir+')':'');$('feels').textContent=Math.round(c.apparent_temperature??0)+' °C';$('rain').textContent=(days[0]?.rain??0)+' %';setDay('today',days[0]);setDay('tomorrow',days[1]);for(let i=0;i<3;i++){const day=days[i+2];if(!day)continue;$('trendDate'+i).textContent=df.format(day.date);$('trendIcon'+i).innerHTML=weatherSvg(day.code);$('trendRain'+i).textContent='Regen '+day.rain+' %';$('trendTemp'+i).textContent=day.min+'° / '+day.max+'°C'}}catch(e){console.warn(e);$('condition').textContent='Wetterdaten nicht verfügbar'}}
+const map=L.map('map',{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false,preferCanvas:true}).setView([LAT,LON],12);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:13,minZoom:3}).addTo(map);
+const berneLogo=L.icon({iconUrl:'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMTE0Ny4wMDAwMDBwdCIgaGVpZ2h0PSIxMTQ1LjAwMDAwMHB0IiB2aWV3Qm94PSIwIDAgMTE0Ny4wMDAwMDAgMTE0NS4wMDAwMDAiCiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KCjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDExNDUuMDAwMDAwKSBzY2FsZSgwLjEwMDAwMCwtMC4xMDAwMDApIgpmaWxsPSIjMDA1NUE1IiBzdHJva2U9Im5vbmUiPgo8cGF0aCBkPSJNNTM1NSAxMTM2OSBjLTEwODggLTc0IC0yMTI3IC00NTkgLTMwMDUgLTExMTQgLTM1NyAtMjY2IC03MDUgLTU5OQotMTAwNiAtOTYxIC0xODYgLTIyNSAtNDMzIC01OTAgLTU3OCAtODU2IC00MDIgLTc0MSAtNjMwIC0xNTIyIC02ODYgLTIzNDYKLTEzIC0xOTUgLTEzIC01OTYgMCAtNzc3IDk5IC0xMzc4IDY2OCAtMjYzNiAxNjMzIC0zNjA2IDc3MSAtNzc3IDE3MjIgLTEzMDUKMjc3OCAtMTU0NCA0NTAgLTEwMSA4NTkgLTE0MSAxMzY5IC0xMzIgMzg4IDcgNjM5IDMyIDk5NSAxMDIgMTI1MCAyNDQgMjQxNQo5MzQgMzIzNSAxOTE1IDU3MCA2ODMgOTU1IDE0MzkgMTE2OSAyMjk1IDE4MSA3MjUgMjExIDE1NDIgODUgMjI5OSAtMTY2IDk5OAotNTkwIDE5MTkgLTEyNTAgMjcxMSAtMTM2IDE2MyAtNTMyIDU2MCAtNjg0IDY4NyAtOTcxIDgwNCAtMjA2MSAxMjQzIC0zMzAwCjEzMjggLTE2OCAxMSAtNTgwIDExIC03NTUgLTF6IG05NTAgLTc0OCBjMTQ3OCAtMTc5IDI3NTQgLTk2NCAzNTcwIC0yMTk2IDQzNQotNjU2IDY5NCAtMTM3NiA3OTEgLTIxOTUgMjIgLTE4NiAzMCAtNjY4IDE1IC04NjggLTgzIC0xMDc0IC00NjQgLTIwMTcgLTExNTAKLTI4NDIgLTEyOCAtMTU1IC00NjYgLTQ5MCAtNjI2IC02MjIgLTczOCAtNjA3IC0xNjEwIC05ODYgLTI1MzUgLTExMDIgLTQ2OAotNTggLTk5NiAtNDggLTE0NTUgMzAgLTEzNTggMjI4IC0yNTcxIDEwMjkgLTMzMjcgMjE5NSAtNDUwIDY5NCAtNzE0IDE0ODMKLTc3OSAyMzMxIC0xNSAyMDEgLTYgNzAzIDE1IDg4NiA3MyA2MTMgMjIxIDExMTcgNDg2IDE2NTcgMzI4IDY2OCA4MDMgMTI1MAoxNDAwIDE3MTUgNzY4IDU5OCAxNjU2IDk0MiAyNjYwIDEwMjkgMTg0IDE2IDc0MSA1IDkzNSAtMTh6Ii8+CjxwYXRoIGQ9Ik0yNjM1IDg0MjkgYy00NjggLTIyNiAtNTQxIC0yNjEgLTU5NyAtMjg3IGwtNTggLTI2IDAgLTIwOCAwIC0yMDgKLTIzMCAwIC0yMzAgMCAwIC0zMTAgMCAtMzEwIDIzMCAwIDIzMCAwIC0xIC03MTIgYzAgLTQ5OSAzIC03MjkgMTEgLTc2NSA0MgotMTkxIDI5OSAtMzQzIDY0OSAtMzg1IDY3IC04IDIzMSAtMTMgNDQxIC0xMyAzNTQgMCA0NDkgOSA1OTggNTUgMTk5IDYyIDMzMwoxODEgMzgzIDM0MSAxOCA1NyAxOSA5OSAxOSA2MTUgbDAgNTU0IC0zNzAgMCAtMzcwIDAgMCAtMzYwIGMwIC0zODUgLTMgLTQxNAotNTMgLTQ4MyAtMzQgLTQ1IC05OSAtNzggLTE2NyAtODQgLTEwMiAtMTAgLTE4MSAzNCAtMjIxIDEyMiAtMTcgMzcgLTE5IDc4Ci0xOSA1NzggbDAgNTM3IDcxOCAwIDcxOSAwIDYgMTUyIGM0IDgzIDcgMjIyIDcgMzEwIGwwIDE1OCAtNzI1IDAgLTcyNSAwIDAKNDIwIGMwIDIzMSAtMyA0MjAgLTcgNDIwIC01IDAgLTExMSAtNTAgLTIzOCAtMTExeiIvPgo8cGF0aCBkPSJNODExMCA3Nzk0IGMtMTkzIC0yOCAtMzYyIC04MSAtNDg1IC0xNTIgLTc5IC00NyAtMTkzIC0xNjIgLTIyNwotMjMyIC05NiAtMTk5IC0xMjMgLTQ0MCAtNjkgLTYxMSAzOCAtMTIyIDEyNyAtMjM1IDI1MCAtMzE4IDEyMiAtODMgMjY3IC0xMjkKNjU2IC0yMDYgMzIxIC02NCAzNTIgLTc0IDQxMiAtMTM3IDkzIC05NyA5OCAtMjU3IDExIC0zNTEgLTE0IC0xNSAtNTIgLTM5Ci04NCAtNTQgLTUzIC0yNSAtNjkgLTI4IC0xNjQgLTI3IC0xNjIgMSAtMjMzIDM2IC0yODAgMTM2IC0yNSA1MiAtMzUgOTEgLTU1CjIyMSBsLTYgMzcgLTQzMiAwIC00MzMgMCA4IC05OSBjMTUgLTE4MiA3MyAtMzYzIDE1NCAtNDcyIDc3IC0xMDUgMjU3IC0yMTMKNDI5IC0yNTcgMTk2IC01MCA1MTggLTc5IDc1NSAtNjcgMzU0IDE3IDU3NSA4NiA4MTIgMjUyIDEwMSA3MCAxNjEgMTM5IDIwNwoyMzcgNTcgMTE4IDc2IDIwOCA3NSAzNTEgLTEgMzM2IC0xNDkgNTA4IC01NjAgNjQ4IC0xMjAgNDIgLTI3NSA4MyAtNjI0IDE2NwotMTU1IDM4IC0yMjEgNjQgLTI3MiAxMDkgLTQ3IDQxIC02MiA4NyAtNTUgMTY3IDYgODEgMzUgMTIyIDExNCAxNjAgMTAxIDUwCjI1MSA0MiAzMzIgLTE2IDY1IC00NyAxMjEgLTE2NiAxMjEgLTI1NyBsMCAtMzMgNDI2IDAgNDI3IDAgLTcgNzIgYy0xNyAxODkKLTc0IDMyNyAtMTc2IDQyOCAtMTY0IDE2NSAtNDA0IDI3OSAtNjQ1IDMwOSAtMTIzIDE1IC00OTggMTIgLTYxNSAtNXoiLz4KPHBhdGggZD0iTTQ0NzAgNjc4NyBjMCAtODcxIDEgLTkxNyAxOSAtOTg5IDM1IC0xMzggMTEzIC0yNTYgMjM1IC0zNTkgMTE5Ci0xMDEgMjE1IC0xNDAgNDUzIC0xODQgMjkzIC01NCA2ODQgLTc0IDkwMyAtNDYgMjA1IDI3IDQwMCA4MyA1MTkgMTQ4IDIwMAoxMTEgMzI0IDI4OCAzNjAgNTEzIDYgMzkgMTIgNDIzIDE1IDk0OCBsNSA4ODIgLTQ2NSAwIC00NjQgMCAwIC04MjAgYzAgLTc5MwotMSAtODIyIC0yMCAtODc3IC0xMSAtMzEgLTMyIC03MCAtNDcgLTg2IC02NiAtNjggLTE4NyAtMTAyIC0zMTEgLTg3IC0xMTcgMTUKLTE5OSA2NiAtMjQzIDE1MiAtMTggMzYgLTE5IDY2IC0xOSA3MjAgMCAzNzYgLTMgNzU0IC03IDg0MSBsLTYgMTU3IC00NjQgMAotNDYzIDAgMCAtOTEzeiIvPgo8cGF0aCBkPSJNMTk5MCAzNzU0IGwwIC05MTUgNDUzIDMgYzQ5MyA0IDQ3OCAyIDYwNCA2NyAxMTMgNTcgMjE2IDE5NiAyNDQKMzI4IDE3IDgzIDYgMjYyIC0yMCAzMzcgLTM3IDEwNSAtMTA3IDE5NCAtMTkzIDI0NSBsLTM3IDIyIDU5IDU5IGM5NyA5NCAxNDAKMjIxIDEyNSAzNzAgLTI1IDIzNyAtMTUzIDM2MSAtNDAzIDM5MCAtNDggNSAtMjU1IDEwIC00NTkgMTAgbC0zNzMgMCAwIC05MTZ6Cm03NzkgNTMzIGM2OSAtMzQgODYgLTY1IDg2IC0xNTAgLTEgLTkwIC0xOSAtMTI3IC04MiAtMTY0IC00NiAtMjcgLTQ5IC0yNwotMjI3IC0yNyBsLTE4MSAtMSAtMyAxODMgLTIgMTgyIDE4MiAwIGMxNjggLTEgMTg3IC0zIDIyNyAtMjN6IG0zNiAtNzAwIGM3NwotMzQgMTE2IC05MCAxMTggLTE2NiAyIC03MiAtMTEgLTExOSAtNDUgLTE1NyAtNTggLTY2IC03MCAtNjggLTMwNSAtNzIgbC0yMTMKLTQgMCAyMTIgMCAyMTIgMjAzIC00IGMxNjYgLTMgMjA5IC03IDI0MiAtMjF6Ii8+CjxwYXRoIGQ9Ik0zNTgwIDM3NjUgbDAgLTkwNSA1NzUgMCA1NzUgMCAwIDE3NSAwIDE3NSAtMzc1IDAgLTM3NSAwIDAgMjA1IDAKMjA1IDMzMCAwIDMzMCAwIDAgMTY1IDAgMTY1IC0zMzAgMCAtMzMwIDAgMCAxODAgMCAxODAgMzY1IDAgMzY1IDAgMCAxODAgMAoxODAgLTU2NSAwIC01NjUgMCAwIC05MDV6Ii8+CjxwYXRoIGQ9Ik01MDAwIDM3NjUgbDAgLTkwNSAxOTAgMCAxOTAgMCAwIDM0NiAwIDM0NSAxNzQgLTMgYzIwNCAtNCAyMTYgLTgKMjUzIC05OSAzMSAtNzkgNDMgLTE4NiA0MyAtNDAwIGwwIC0xODkgMjExIDAgMjExIDAgLTYgMjMgYy00IDEyIC0xMSAxMzAgLTE2CjI2MiAtNiAxNTUgLTE1IDI2MyAtMjUgMzA0IC0yOCAxMTcgLTg5IDIxMSAtMTYwIDI0OCBsLTMwIDE2IDI1IDE2IGMxMzcgODkKMjA0IDIzMiAyMDQgNDMxIC0xIDI1NiAtMTQ1IDQ0NyAtMzczIDQ5NiAtNTAgMTAgLTE2MyAxNCAtNDc4IDE0IGwtNDEzIDAgMAotOTA1eiBtNzg2IDU0NCBjNzMgLTM2IDk5IC05NCA5OCAtMjE0IDAgLTcxIC01IC05OSAtMjEgLTEzMCAtNDYgLTg5IC05NgotMTA1IC0zMTggLTEwNSBsLTE2NSAwIDAgMjMzIGMwIDEyOSAzIDIzNyA4IDI0MSA0IDUgODQgNiAxNzggNCAxNTggLTQgMTc1Ci02IDIyMCAtMjl6Ii8+CjxwYXRoIGQ9Ik02NTcwIDM3NjUgbDAgLTkwNSAxODUgMCAxODUgMCAwIDU2NSBjMCAzMTEgMyA1NjUgOCA1NjUgNCAwIDUxIC05NgoxMDUgLTIxMyA1NCAtMTE2IDE3MSAtMzY5IDI2MSAtNTYyIGwxNjIgLTM1MCAyNTIgLTMgMjUyIC0yIDAgOTA1IDAgOTA1IC0xNzUKMCAtMTc1IDAgLTIgLTU3MiAtMyAtNTczIC00MSA4NSBjLTIzIDQ3IC0xMzEgMjc5IC0yNDIgNTE1IC0xMTAgMjM3IC0yMTIgNDU2Ci0yMjggNDg4IGwtMjggNTcgLTI1OCAwIC0yNTggMCAwIC05MDV6Ii8+CjxwYXRoIGQ9Ik04MzEwIDM3NjUgbDAgLTkwNSA1ODUgMCA1ODUgMCAwIDE4NSAwIDE4NSAtMzY1IDAgLTM2NSAwIDAgMTk1IDAKMTk1IDMyMCAwIDMyMCAwIDAgMTY1IDAgMTY1IC0zMjAgMCAtMzIwIDAgMCAxODAgMCAxODAgMzU1IDAgMzU1IDAgMCAxODAgMAoxODAgLTU3NSAwIC01NzUgMCAwIC05MDV6Ii8+CjwvZz4KPC9zdmc+Cg==',iconSize:[42,42],iconAnchor:[21,21],className:'berne-logo-marker'});
+L.marker([LAT,LON],{icon:berneLogo,zIndexOffset:1000}).addTo(map);
+const DWD_WMS='https://maps.dwd.de/geoserver/dwd/wms';
+const DWD_RADAR_LAYER='dwd:Radar_rv_product_1x1km_ger';
+const RADAR_STEP_MIN=5;
+const RADAR_FUTURE_MIN=120;
+
+let frames=[],radarLayer=null,frameIndex=0,timer=null,playing=true,hold=false;
+
+function postStatus(){
+  const now=Math.floor(Date.now()/1000);
+  parent.postMessage({
+    type:'tus-berne-weather-status',
+    time:now,
+    generated_at:new Date(now*1000).toISOString()
+  },location.origin);
+}
+
+function buildForecastFrames(){
+  const stepMs=RADAR_STEP_MIN*60*1000;
+  const base=Math.floor(Date.now()/stepMs)*stepMs;
+
+  frames=[];
+
+  for(let offset=0;offset<=RADAR_FUTURE_MIN;offset+=RADAR_STEP_MIN){
+    const ms=base+offset*60*1000;
+
+    frames.push({
+      time:Math.floor(ms/1000),
+      iso:new Date(ms).toISOString(),
+      offset:offset
+    });
+  }
+
+  frameIndex=0;
+}
+
+function rlabel(f){
+  return f?.time
+    ? tf.format(new Date(f.time*1000))+' Uhr'
+    : '–';
+}
+
+function renderTicks(){
+  const el=$('timeline');
+  el.innerHTML='';
+
+  frames.forEach((f,i)=>{
+    const t=document.createElement('div');
+    t.className='tick'+(i===frameIndex?' active':'');
+    t.addEventListener('click',()=>showFrame(i));
+    el.appendChild(t);
+  });
+
+  $('firstTime').textContent=
+    frames.length
+      ? 'JETZT · '+rlabel(frames[0]).replace(' Uhr','')
+      : '–';
+
+  $('lastTime').textContent=
+    frames.length
+      ? '+120 · '+rlabel(frames.at(-1)).replace(' Uhr','')
+      : '–';
+}
+
+function showFrame(i){
+  if(!frames.length)return;
+
+  frameIndex=(i+frames.length)%frames.length;
+  const f=frames[frameIndex];
+
+  if(radarLayer){
+    map.removeLayer(radarLayer);
+  }
+
+  radarLayer=L.tileLayer.wms(DWD_WMS,{
+    layers:DWD_RADAR_LAYER,
+    styles:'',
+    format:'image/png',
+    transparent:true,
+    version:'1.3.0',
+    crs:L.CRS.EPSG3857,
+    TIME:f.iso,
+    opacity:.82,
+    tileSize:256,
+    minZoom:3,
+    maxZoom:13,
+    zIndex:20
+  }).addTo(map);
+
+  const dt=new Date(f.time*1000);
+
+  $('radarTime').textContent=
+    (f.offset===0?'JETZT':'+'+f.offset+' Min.')+
+    ' · '+tf.format(dt)+' Uhr';
+
+  [...document.querySelectorAll('.tick')].forEach(
+    (x,n)=>x.classList.toggle('active',n===frameIndex)
+  );
+
+  postStatus();
+}
+
+function start(){
+  if(!frames.length)return;
+
+  playing=true;
+  hold=false;
+  $('playBtn').textContent='❚❚';
+
+  clearInterval(timer);
+
+  timer=setInterval(()=>{
+    if(!frames.length)return;
+
+    if(frameIndex>=frames.length-1){
+      clearInterval(timer);
+      timer=null;
+      playing=false;
+      $('playBtn').textContent='▶';
+      return;
+    }
+
+    showFrame(frameIndex+1);
+
+  },450);
+}
+function stop(){
+  playing=false;
+  $('playBtn').textContent='▶';
+  clearInterval(timer);
+  timer=null;
+}
+
+$('playBtn').addEventListener('click',()=>playing?stop():start());
+
+async function loadRadar(){
+  try{
+    $('radarError').style.display='none';
+
+    buildForecastFrames();
+    renderTicks();
+    showFrame(0);
+    start();
+
+  }catch(e){
+    console.warn(e);
+
+    $('radarTime').textContent=
+      'Vorhersage derzeit nicht verfügbar';
+
+    $('radarError').textContent=
+      'DWD-Radar konnte nicht geladen werden.';
+
+    $('radarError').style.display='block';
+
+    parent.postMessage({
+      type:'tus-berne-weather-status',
+      error:true
+    },location.origin);
+  }
+}
+
+
+scale();loadWeather();loadRadar();setInterval(loadWeather,10*60*1000);setInterval(loadRadar,5*60*1000);
+})();
+</script>
+</body>
+</html>
