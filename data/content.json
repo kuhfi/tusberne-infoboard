@@ -42,6 +42,22 @@
       "kind": "image",
       "url": "./files/dfb-akademie.png",
       "description": "Infografik zu Trainingsdialogen und Übungsideen der DFB-Akademie"
+    },
+    {
+      "public": true,
+      "category": "belegung",
+      "title": "Kabinen – Zuordnung zum Training",
+      "kind": "image",
+      "url": "./files/kabinen-training.png",
+      "description": "Standard-Kabinenzuordnung für drei Trainingseinheiten: 16:30–18:00 Uhr Kabinen 1/2, 18:15–19:45 Uhr Kabinen 3/4, 20:00–21:30 Uhr Kabinen 1/2. Keine tagesaktuelle Belegungsübersicht."
+    },
+    {
+      "public": true,
+      "category": "belegung",
+      "title": "Besprechungsraum – Raumbelegung",
+      "kind": "link",
+      "url": "./files/besprechungsraum.html",
+      "description": "Informationen zum Besprechungsraum. Der aktuelle Live-Status und Buchungen werden auf dieser öffentlichen Seite derzeit nicht angezeigt."
     }
   ]
 }
