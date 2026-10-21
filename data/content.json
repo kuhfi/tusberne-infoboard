@@ -9,8 +9,7 @@
       "title": "Trainingsplan Berner Allee",
       "kind": "link",
       "url": "./files/trainingsplan.html?platz=berne",
-      "description": "Sportplatz „Berner Allee“ · Saison 2026/27 · Montag bis Freitag · Datenstand 30.09.2026",
-      "updated_at": "2026-09-30T17:53:54.459Z"
+      "description": "Sportplatz „Berner Allee“ · Saison 2026/27 · Montag bis Freitag"
     },
     {
       "public": true,
@@ -18,8 +17,7 @@
       "title": "Trainingsplan 3 für FARBE (Farmsen)",
       "kind": "link",
       "url": "./files/trainingsplan.html?platz=farmsen",
-      "description": "Sportplatz „3 für FARBE“ · Saison 2026/27 · Montag bis Freitag · Datenstand 30.09.2026",
-      "updated_at": "2026-09-30T17:54:03.294Z"
+      "description": "Sportplatz „3 für FARBE“ · Saison 2026/27 · Montag bis Freitag"
     }
   ]
 }
