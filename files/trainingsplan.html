@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0055a5">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Trainingszeiten und Platzaufteilung der Fußballabteilung tus BERNE – Berner Allee und 3 für FARBE.">
+  <title>Training | tus BERNE Infoboard</title>
+  <style>
+    :root { --blue:#0055a5; --dark:#082b66; --line:#d8e6f7; --bg:#f7faff; --muted:#526478; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font:16px/1.45 Arial,Helvetica,sans-serif; background:var(--bg); color:#172b47; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    button { font:inherit; cursor:pointer; }
+    :focus-visible { outline:3px solid #e5a02e; outline-offset:3px; }
+    .wrap { width:min(950px,calc(100% - 24px)); margin:auto; }
+    .hero { padding:12px 0 0; }
+    .hero-inner { border-radius:24px; background:linear-gradient(140deg,#144db1,#08255f); color:#fff; padding:19px 24px 23px; box-shadow:0 12px 28px rgba(0,48,102,.12); }
+    .back { display:inline-flex; border:1px solid #ffffff60; background:#ffffff18; color:#fff; padding:5px 11px; border-radius:999px; font-size:13px; font-weight:700; }
+    .back:hover { color:#fff; }
+    .tagline { margin:14px 0 2px; font-weight:800; font-size:11px; letter-spacing:.12em; opacity:.88; }
+    h1 { margin:0; font-size:clamp(28px,5vw,38px); letter-spacing:-.6px; }
+    .hero p:last-child { margin:3px 0 0; color:#e6f1ff; font-size:14px; }
+    main { padding:14px 0 34px; }
+    .places { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-bottom:15px; }
+    .place { display:block; text-align:center; padding:13px 9px; border-radius:14px; border:1px solid var(--line); background:#fff; font-weight:800; box-shadow:0 4px 13px rgba(0,48,102,.05); }
+    .place[aria-current="page"] { color:white; background:var(--blue); border-color:var(--blue); }
+    .heading { background:white; border:1px solid var(--line); border-radius:16px; padding:15px 17px; margin-bottom:14px; }
+    .heading h2 { margin:0; font-size:23px; line-height:1.2; color:var(--dark); }
+    .heading p { margin:6px 0 0; color:var(--muted); font-size:13px; }
+    .day-nav { display:flex; gap:7px; overflow-x:auto; padding:2px 0 13px; scrollbar-width:thin; }
+    .day-tab { flex:1 0 auto; min-width:45px; border:1px solid #bcd4ee; color:#164d85; background:#fff; border-radius:999px; padding:9px 11px; font-weight:800; font-size:13px; }
+    .day-tab[aria-pressed="true"] { color:#fff; background:var(--blue); border-color:var(--blue); }
+    .day { margin:0 0 13px; border-radius:16px; overflow:hidden; border:1px solid var(--line); background:#fff; box-shadow:0 6px 19px rgba(0,48,102,.05); }
+    .day h3 { margin:0; padding:11px 15px; background:#e7f0ff; color:var(--dark); font-size:18px; }
+    .day.current h3 { color:white; background:var(--blue); }
+    .day h3 small { font-size:11px; margin-left:8px; letter-spacing:.05em; }
+    .slot { display:grid; grid-template-columns:165px minmax(0,1fr) minmax(0,1fr); border-top:1px solid var(--line); }
+    .slot:first-of-type { border-top:0; }
+    .slot-time { display:flex; flex-direction:column; justify-content:center; padding:12px; background:#f0f6ff; gap:3px; border-right:1px solid var(--line); }
+    .block-label { font-size:11px; text-transform:uppercase; letter-spacing:.04em; font-weight:800; color:#516987; }
+    .hours { font-size:14px; font-weight:800; color:var(--dark); overflow-wrap:anywhere; }
+    .half { display:flex; flex-direction:column; align-items:stretch; border-right:1px solid var(--line); min-width:0; }
+    .half:last-child { border-right:0; }
+    .side-label { text-align:center; font-size:11px; font-weight:800; letter-spacing:.055em; color:#537093; background:#fafcff; padding:4px 6px; border-bottom:1px solid var(--line); }
+    .teams { display:flex; flex:1; flex-wrap:wrap; justify-content:center; align-items:stretch; }
+    .team { flex:1 1 75px; display:grid; place-items:center; text-align:center; padding:10px 5px; font-size:14px; font-weight:800; line-height:1.25; overflow-wrap:break-word; }
+    .team+.team { border-left:1px solid var(--line); }
+    .team.free { background:#fff0e2; color:#8b4500; }
+    .team.unspecified { color:#7b8ca0; font-weight:400; }
+    .footnote { padding:13px 16px; border:1px solid var(--line); border-radius:14px; color:var(--muted); background:white; font-size:12px; }
+    .footnote p { margin:0 0 5px; }
+    .footnote p:last-child { margin-bottom:0; }
+    .loading { padding:16px; border-radius:14px; border:1px solid var(--line); background:white; }
+    .footer { padding:20px; text-align:center; font-size:12px; color:#5a728e; }
+    @media(max-width:650px) {
+      .hero-inner { padding:16px 18px 19px; border-radius:20px; }
+      h1 { font-size:30px; }
+      .place { font-size:14px; padding:11px 5px; }
+      .heading { padding:12px 13px; }
+      .heading h2 { font-size:21px; }
+      .slot { grid-template-columns:1fr 1fr; }
+      .slot-time { grid-column:1/-1; border-right:0; border-bottom:1px solid var(--line); flex-direction:row; align-items:center; justify-content:space-between; padding:7px 11px; gap:8px; }
+      .block-label { flex:none; }
+      .hours { font-size:13px; text-align:right; }
+      .team { padding:11px 4px; font-size:13px; min-height:43px; flex-basis:70px; }
+      .side-label { font-size:10px; }
+    }
+    @media(prefers-reduced-motion:reduce){ html {scroll-behavior:auto} }
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap"><div class="hero-inner">
+    <a class="back" href="../index.html#themen">← Zurück zum Infoboard</a>
+    <p class="tagline">EINMAL BERNE IMMER BERNE</p>
+    <h1>Training</h1>
+    <p>Trainingspläne der Fußballabteilung tus BERNE</p>
+  </div></div></header>
+  <main class="wrap">
+    <nav class="places" aria-label="Sportplatz auswählen">
+      <a class="place" data-place="berne" href="./trainingsplan.html?platz=berne">Berner Allee</a>
+      <a class="place" data-place="farmsen" href="./trainingsplan.html?platz=farmsen">3 für FARBE</a>
+    </nav>
+    <div class="heading">
+      <h2 id="location">Trainingsplan wird geladen …</h2>
+      <p><span id="season"></span><span id="data-status"></span></p>
+    </div>
+    <nav id="day-nav" class="day-nav" aria-label="Wochentag auswählen"></nav>
+    <div id="schedule" aria-live="polite"><p class="loading">Lade Trainingszeiten …</p></div>
+    <aside class="footnote">
+      <p>„frei“ ist im Originalplan ausdrücklich als frei eingetragen. „–“ bedeutet dagegen: Im ursprünglichen Plan steht an dieser Stelle keine Angabe.</p>
+      <p>Trainingszeiten können sich ändern. Maßgeblich sind die aktuellen Vereinsinformationen.</p>
+    </aside>
+  </main>
+  <footer class="footer">tus BERNE · EINMAL BERNE IMMER BERNE</footer>
+  <script>
+    "use strict";
+    (function () {
+      const days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"];
+      const labels = ["Mo", "Di", "Mi", "Do", "Fr"];
+      const params = new URLSearchParams(location.search);
+      const place = params.get("platz") === "farmsen" ? "farmsen" : "berne";
+      document.querySelectorAll("[data-place]").forEach(function (link) {
+        if (link.dataset.place === place) link.setAttribute("aria-current", "page");
+      });
+      let records = [];
+      const dayNav = document.getElementById("day-nav");
+      const schedule = document.getElementById("schedule");
+      const placeTitle = document.getElementById("location");
+      const season = document.getElementById("season");
+      const dataStatus = document.getElementById("data-status");
+      const today = new Intl.DateTimeFormat("de-DE", {
+        weekday:"long",timeZone:"Europe/Berlin"
+      }).format(new Date());
+      let selected = days.includes(today) ? today : "Alle";
+
+      function elem(tag, cls, text) {
+        const node = document.createElement(tag);
+        if (cls) node.className = cls;
+        if (typeof text === "string") node.textContent = text;
+        return node;
+      }
+      function renderNav() {
+        dayNav.replaceChildren();
+        days.concat(["Alle"]).forEach(function (name, index) {
+          const btn = elem("button", "day-tab", index < 5 ? labels[index] : name);
+          btn.type = "button";
+          btn.setAttribute("aria-pressed", String(selected === name));
+          btn.setAttribute("aria-label", name + " anzeigen");
+          btn.addEventListener("click", function () { selected = name; renderNav(); renderDays(); });
+          dayNav.append(btn);
+        });
+      }
+      function makeSide(label, teams) {
+        const side = elem("div", "half");
+        side.append(elem("div", "side-label", label));
+        const body = elem("div", "teams");
+        teams.forEach(function (team) {
+          const cls = team === "frei" ? "team free" : (!team ? "team unspecified" : "team");
+          const cell = elem("div", cls, team || "–");
+          if (!team) cell.setAttribute("aria-label", "Keine Angabe im Originalplan");
+          body.append(cell);
+        });
+        side.append(body);
+        return side;
+      }
+      function renderDays() {
+        schedule.replaceChildren();
+        const visible = records.filter(function (item) { return selected === "Alle" || item.name === selected; });
+        visible.forEach(function (item) {
+          const card = elem("section", "day" + (item.name === today ? " current" : ""));
+          const heading = elem("h3", "", item.name);
+          if (item.name === today) heading.append(elem("small", "", "HEUTE"));
+          card.append(heading);
+          item.blocks.forEach(function (block) {
+            const slot = elem("div", "slot");
+            const time = elem("div", "slot-time");
+            time.append(elem("span", "block-label", block.block), elem("strong", "hours", block.time));
+            slot.append(time, makeSide("VORNE", block.front), makeSide("HINTEN", block.back));
+            card.append(slot);
+          });
+          schedule.append(card);
+        });
+      }
+      fetch("../data/training-" + place + ".json", {cache:"no-store"})
+        .then(function (res) { if (!res.ok) throw new Error("Daten nicht erreichbar"); return res.json(); })
+        .then(function (data) {
+          if (data.schema_version !== 1 || data.location_id !== place ||
+              !Array.isArray(data.days) || data.days.length !== 5 ||
+              data.days.some(function (d) { return !days.includes(d.name) || !Array.isArray(d.blocks); })) {
+            throw new Error("Unbekannte Trainingsplandaten");
+          }
+          records = data.days;
+          placeTitle.textContent = data.location;
+          season.textContent = data.season;
+          const date = new Date(data.source_modified_at);
+          if (!Number.isNaN(date.getTime())) {
+            dataStatus.textContent = " · Datenstand: " + new Intl.DateTimeFormat("de-DE", {
+              dateStyle:"medium", timeZone:"Europe/Berlin"
+            }).format(date);
+          }
+          renderNav();
+          renderDays();
+        })
+        .catch(function () {
+          dayNav.replaceChildren();
+          placeTitle.textContent = "Trainingsplan momentan nicht verfügbar";
+          schedule.replaceChildren(elem("p", "loading", "Die Trainingsplandaten konnten nicht geladen werden. Bitte später erneut versuchen."));
+        });
+    }());
+  </script>
+</body>
+</html>

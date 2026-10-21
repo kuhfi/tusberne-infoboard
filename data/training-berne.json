@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "location_id": "berne",
+  "location": "Sportplatz „Berner Allee“",
+  "season": "Saison 2026/27",
+  "source_modified_at": "2026-09-30T17:53:54.459Z",
+  "days": [
+    {
+      "name": "Montag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            "2014 (2.)",
+            "2013 (14-täglich)"
+          ],
+          "back": [
+            "2015"
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:15–19:45",
+          "front": [
+            "2012 (1.)"
+          ],
+          "back": [
+            "2011 (2.)",
+            "2011 (1.)"
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "20:00–21:30",
+          "front": [
+            "2. Herren"
+          ],
+          "back": [
+            "Ü32"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dienstag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            "2016"
+          ],
+          "back": [
+            "2017",
+            "2019"
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:15–19:45",
+          "front": [
+            "2014 (1.)"
+          ],
+          "back": [
+            "2012 (2.)",
+            "2013"
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "20:00–21:30",
+          "front": [
+            "1. Herren"
+          ],
+          "back": [
+            "3. Herren"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mittwoch",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            "2020",
+            "2018"
+          ],
+          "back": [
+            "2015"
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:15–19:45",
+          "front": [
+            "2011 (1.)"
+          ],
+          "back": [
+            "2009 + 2010"
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "20:00–21:30",
+          "front": [
+            "Ü50"
+          ],
+          "back": [
+            "Ü40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Donnerstag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            "2016"
+          ],
+          "back": [
+            "2017"
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:15–19:45",
+          "front": [
+            "2013"
+          ],
+          "back": [
+            "2014 (2.)",
+            "2014 (1.)"
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "20:00–21:30",
+          "front": [
+            "1. Herren"
+          ],
+          "back": [
+            "2. Herren"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Freitag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            "2020",
+            "2018"
+          ],
+          "back": [
+            "2019",
+            "2021"
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:15–19:45",
+          "front": [
+            "2012 (2.)"
+          ],
+          "back": [
+            "2011 (1.)"
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "20:00–21:30",
+          "front": [
+            "3. Herren"
+          ],
+          "back": [
+            "frei"
+          ]
+        }
+      ]
+    }
+  ]
+}

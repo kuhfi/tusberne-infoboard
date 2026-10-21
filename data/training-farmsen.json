@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "location_id": "farmsen",
+  "location": "Sportplatz „3 für FARBE“",
+  "season": "Saison 2026/27",
+  "source_modified_at": "2026-09-30T17:54:03.294Z",
+  "days": [
+    {
+      "name": "Montag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "17:00–18:30",
+          "front": [
+            "2014 (1.)"
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:30–20:00",
+          "front": [
+            "2009 + 2010"
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "19:30/20:00 –21:00",
+          "front": [
+            "frei"
+          ],
+          "back": [
+            "frei"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dienstag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:00–19:30",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "19:30–21:00",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mittwoch",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:00–19:30",
+          "front": [
+            "2012 (1.)"
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "19:30–21:00",
+          "front": [
+            "Ü32"
+          ],
+          "back": [
+            "frei"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Donnerstag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            "frei"
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:00–19:30",
+          "front": [
+            "2011 (2.)"
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "19:30–21:00",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Freitag",
+      "blocks": [
+        {
+          "block": "Block 1",
+          "time": "16:30–18:00",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 2",
+          "time": "18:00–19:30",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        },
+        {
+          "block": "Block 3",
+          "time": "19:30–21:00",
+          "front": [
+            ""
+          ],
+          "back": [
+            ""
+          ]
+        }
+      ]
+    }
+  ]
+}
