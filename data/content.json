@@ -106,13 +106,6 @@
       "title": "Unterstützung Kinder- und Jugendhospiz Sternenbrücke",
       "kind": "image",
       "url": "./files/sternenbruecke.png"
-    },
-    {
-      "public": true,
-      "category": "tabellen-news",
-      "title": "Wetter & Regenradar – Hamburg-Berne",
-      "kind": "link",
-      "url": "./files/wetter-live.html"
     }
   ]
 }
