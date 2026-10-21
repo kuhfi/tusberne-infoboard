@@ -106,6 +106,29 @@
       "title": "Unterstützung Kinder- und Jugendhospiz Sternenbrücke",
       "kind": "image",
       "url": "./files/sternenbruecke.png"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Fußballtabellen – Stand 21.10.2026, 08:15 Uhr",
+      "kind": "pdf",
+      "url": "./files/tabellen-2026-10-21.pdf",
+      "description": "Tabellen, letzte und nächste Spiele der 17 aufgeführten tus-BERNE-Mannschaften. Stand 21.10.2026, 08:15 Uhr; nicht automatisch aktualisiert."
+    },
+    {
+      "public": true,
+      "category": "mannschaften-ansprechpartner",
+      "title": "Abteilungsleitung – Ansprechpartner & Zuständigkeiten",
+      "kind": "image",
+      "url": "./files/abteilungsleitung.png"
+    },
+    {
+      "public": true,
+      "category": "mannschaften-ansprechpartner",
+      "title": "Mannschaften – Ansprechpartner und Trainingszeiten",
+      "kind": "link",
+      "url": "https://tusberne-fussball.de/teams/",
+      "description": "Öffentliche Mannschaftsliste der Fußballabteilung. Die direkte Datenübernahme vom Raspberry Pi wird gesondert eingerichtet."
     }
   ]
 }
