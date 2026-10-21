@@ -110,25 +110,23 @@
     {
       "public": true,
       "category": "tabellen-news",
-      "title": "Fußballtabellen – Stand 21.10.2026, 08:15 Uhr",
+      "title": "Fußballtabellen",
       "kind": "pdf",
-      "url": "./files/tabellen-2026-10-21.pdf",
-      "description": "Tabellen, letzte und nächste Spiele der 17 aufgeführten tus-BERNE-Mannschaften. Stand 21.10.2026, 08:15 Uhr; nicht automatisch aktualisiert."
+      "url": "./files/tabellen-2026-10-21.pdf"
     },
     {
       "public": true,
       "category": "mannschaften-ansprechpartner",
-      "title": "Abteilungsleitung – Ansprechpartner & Zuständigkeiten",
+      "title": "Abteilungsleitung",
       "kind": "image",
       "url": "./files/abteilungsleitung.png"
     },
     {
       "public": true,
       "category": "mannschaften-ansprechpartner",
-      "title": "Mannschaften – Ansprechpartner und Trainingszeiten",
+      "title": "Mannschaften",
       "kind": "link",
-      "url": "https://tusberne-fussball.de/teams/",
-      "description": "Öffentliche Mannschaftsliste der Fußballabteilung. Die direkte Datenübernahme vom Raspberry Pi wird gesondert eingerichtet."
+      "url": "https://tusberne-fussball.de/teams/"
     }
   ]
 }
