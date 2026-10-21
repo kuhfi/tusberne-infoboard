@@ -48,8 +48,7 @@
       "category": "belegung",
       "title": "Kabinen – Zuordnung zum Training",
       "kind": "image",
-      "url": "./files/kabinen-training.png",
-      "description": "Standard-Kabinenzuordnung für drei Trainingseinheiten: 16:30–18:00 Uhr Kabinen 1/2, 18:15–19:45 Uhr Kabinen 3/4, 20:00–21:30 Uhr Kabinen 1/2. Keine tagesaktuelle Belegungsübersicht."
+      "url": "./files/kabinen-training.png"
     },
     {
       "public": true,
