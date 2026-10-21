@@ -53,10 +53,10 @@
     {
       "public": true,
       "category": "belegung",
-      "title": "Besprechungsraum – Raumbelegung",
+      "title": "Fußballraum – Belegung",
       "kind": "link",
-      "url": "./files/besprechungsraum.html",
-      "description": "Informationen zum Besprechungsraum. Der aktuelle Live-Status und Buchungen werden auf dieser öffentlichen Seite derzeit nicht angezeigt."
+      "url": "https://script.google.com/macros/s/AKfycbxqi0Pqy_K-JkB2-KDikEWasK3AU9-U-Co0wOe7UQlb3z5X4lxayh7HtOFhATkNGeQ/exec",
+      "description": "Belegungsübersicht des Fußballraums öffnen."
     }
   ]
 }
