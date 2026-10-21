@@ -6,14 +6,22 @@
 
 ## Projektstand (21.10.2026)
 
-Die mobile öffentliche Homepage nutzt die vier Bereiche des digitalen Infoboards. Derzeit sind **14 öffentliche Einträge** in `data/content.json` hinterlegt:
+Die mobile öffentliche Homepage nutzt die vier Bereiche des digitalen Infoboards. Derzeit sind **17 öffentliche Einträge** in `data/content.json` hinterlegt:
 
 - **Kachel 1 / Training:** 5 Inhalte (zwei Trainingspläne und drei Grafiken).
 - **Kachel 2 / Belegung:** 2 Inhalte (Kabinen-Grafik und externer Link zur Fußballraumbelegung über Google Apps Script).
-- **Kachel 3 / Tabellen / News:** 7 Inhalte (sieben Informations- und Termingrafiken).
-- **Kachel 4 / Mannschaften und Ansprechpartner:** noch keine öffentlichen Einträge.
+- **Kachel 3 / Tabellen / News:** 8 Inhalte (sieben Informations- und Termingrafiken sowie eine interaktive HTML-Fußballtabellenansicht).
+- **Kachel 4 / Mannschaften und Ansprechpartner:** 2 Inhalte (Abteilungsleitungs-Grafik und Link zur öffentlichen Mannschaftsübersicht).
 
 Die Originalgrafiken liegen statisch im Verzeichnis `files/`. Die Wetterseite ist bewusst nicht Teil der öffentlichen Homepage und verbleibt als Originaldatei im Google Drive für das Infoboard vor Ort. Die öffentlichen Einträge sind **noch nicht automatisch mit Google Drive oder Raspberry Pi synchronisiert**.
+
+**Tabellenstand:** `files/fussball-tabellen.html` verwendet zunächst `data/fussball-tabellen-snapshot.json` (Fußballtabellen vom 21.10.2026, 08:15 Uhr; 17 Mannschaften). Die HTML-Seite prüft zusätzlich `data/fussball_live_data.json` und bevorzugt diese, sofern sie künftig vom Pi regelmäßig hochgeladen wird. Ein automatischer Pi-Export ist **noch nicht eingerichtet**. Das PDF `files/tabellen-2026-10-21.pdf` liegt als Sicherung im Repository, ist jedoch kein sichtbarer Homepage-Eintrag. Die Fußballraumbelegung ist ein externer Google-Apps-Script-Link, die Mannschaftsübersicht verweist auf die öffentliche Vereinswebsite.
+
+## Geplante automatische Aktualisierung
+
+Der Pi erzeugt Fußball-Livedaten unter `/home/kuhfi/infoboard-app/public/fussball-live/fussball_live_data.json`. Ein eigener, bisher **nicht installierter** Veröffentlichungsdienst soll ausschließlich geprüfte öffentliche Daten nach `data/fussball_live_data.json` übertragen. Weitere Freigabequellen: manuell zugelassene Trainingspläne und Bilder aus den vier Kachelordnern, aber keine privaten Konfigurationen, Raumkalender oder unfreigegebenen Personendaten.
+
+Der Dienst soll nach erfolgreicher lokaler Datenerzeugung bzw. in einem angemessenen Timer-Takt arbeiten, nur bei Änderungen committen und keine GitHub-Anmeldedaten ins Repository schreiben. Für das GitHub-Pages-Deployment ist nach Installation das tatsächliche Push-Verhalten zu verifizieren. Aktuell besteht weder eine direkte Verbindung zum Pi noch eine bestätigte automatische GitHub-Synchronisation.
 
 **Hinweis zur Aktualität:** Das Herbstferien-Camp wird mit dem Datum 26.–30.10.2026 als statische Grafik angezeigt. Veranstaltungshinweise müssen nach Ablauf kontrolliert und bei Bedarf entfernt werden. Persönliche Buchungsdaten bleiben aus dem statischen Export ausgeschlossen.
 
