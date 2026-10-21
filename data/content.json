@@ -18,6 +18,30 @@
       "kind": "link",
       "url": "./files/trainingsplan.html?platz=farmsen",
       "description": "Sportplatz „3 für FARBE“ · Saison 2026/27 · Montag bis Freitag"
+    },
+    {
+      "public": true,
+      "category": "training",
+      "title": "Lageplan Tore",
+      "kind": "image",
+      "url": "./files/lageplan-tore.png",
+      "description": "Übersicht der Tore und ihrer Standorte am Sportplatz"
+    },
+    {
+      "public": true,
+      "category": "training",
+      "title": "Advance Football – Digitale Trainingsideen",
+      "kind": "image",
+      "url": "./files/advance-football.png",
+      "description": "Informationen zu digitalen Trainingsideen und Coaching-Inhalten für tus BERNE"
+    },
+    {
+      "public": true,
+      "category": "training",
+      "title": "DFB-Akademie – Trainingsdialoge",
+      "kind": "image",
+      "url": "./files/dfb-akademie.png",
+      "description": "Infografik zu Trainingsdialogen und Übungsideen der DFB-Akademie"
     }
   ]
 }
