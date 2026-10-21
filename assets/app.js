@@ -5,11 +5,11 @@
   // Vier sichtbare Infoboard-Kacheln; ältere Export-Kategorien bleiben kompatibel.
   const tiles = [
     { id: "training", name: "Training", hint: "Trainingspläne und Trainingszeiten",
-      icon: "📅", sourceIds: ["trainingsplaene", "training"] },
+      icon: "🏃", sourceIds: ["trainingsplaene", "training"] },
     { id: "belegung", name: "Belegung", hint: "Kabinen, Plätze und Lagepläne",
-      icon: "🚪", sourceIds: ["kabinen", "lageplan", "belegung"] },
+      icon: "📅", sourceIds: ["kabinen", "lageplan", "belegung"] },
     { id: "tabellen-news", name: "Tabellen / News", hint: "Spiele, Tabellen und Neuigkeiten",
-      icon: "⚽", sourceIds: ["fussball", "news", "tabellen-news"] },
+      icon: "📊", sourceIds: ["fussball", "news", "tabellen-news"] },
     { id: "mannschaften-ansprechpartner", name: "Mannschaften / Ansprechpartner",
       hint: "Teams und freigegebene Kontakte",
       icon: "👥", sourceIds: ["mannschaften", "ansprechpartner", "mannschaften-ansprechpartner"] }
@@ -25,8 +25,6 @@
     reset: document.getElementById("filter-zurueck"),
     heading: document.getElementById("contents-title"),
     notice: document.getElementById("meldungen"),
-    status: document.getElementById("status-label"),
-    stand: document.getElementById("datenstand"),
     count: document.getElementById("gesamtzahl")
   };
   const state = { items: [], tile: "alle", search: "" };
@@ -65,16 +63,16 @@
   }
   function renderTiles() {
     ui.tileGrid.replaceChildren();
-    tiles.forEach(function (tile, index) {
+    tiles.forEach(function (tile) {
       const count = state.items.filter(function (item) { return item.tile === tile; }).length;
       const button = el("button", "category category--" + tile.id);
       button.type = "button";
       button.setAttribute("aria-pressed", String(state.tile === tile.id));
-      button.setAttribute("aria-label", "Kachel " + (index + 1) + ": " + tile.name + ". Bereich anzeigen");
+      button.setAttribute("aria-label", tile.name + " anzeigen");
       const top = el("span", "category-top");
       const icon = el("span", "category-icon", tile.icon);
       icon.setAttribute("aria-hidden", "true");
-      top.append(el("span", "category-index", "KACHEL " + String(index + 1).padStart(2, "0")), icon);
+      top.append(icon);
       const bottom = el("span", "category-bottom");
       bottom.append(el("span", "category-count", count ? count + (count === 1 ? " Inhalt" : " Inhalte") : "Bereich öffnen"),
         el("span", "category-arrow", "↗"));
@@ -168,22 +166,12 @@
             description: typeof item.description === "string" ? item.description.slice(0, 500) : "",
             updated_at: item.updated_at };
         });
-        const checked = formattedDate(data.generated_at);
-        ui.stand.textContent = checked ? "Export erstellt: " + checked : "Noch kein bestätigter Datenstand";
-        if (data.mode === "published" && state.items.length) {
-          ui.status.textContent = "Öffentlich freigegebene Inhalte";
-          document.querySelector(".dot").classList.add("is-live");
-        } else {
-          ui.status.textContent = "Vorschau · Veröffentlichung noch nicht freigegeben";
-        }
         render();
       })
       .catch(function () {
         if (location.protocol === "file:") {
-          ui.status.textContent = "Lokale Designvorschau · Daten werden erst über einen Webserver geladen";
           setNotice("Die Gestaltung ist sichtbar. Die JSON-Daten sind beim direkten Öffnen als Datei nicht abrufbar.");
         } else {
-          ui.status.textContent = "Daten derzeit nicht verfügbar";
           setNotice("Der Datenabruf ist fehlgeschlagen. Bitte später erneut versuchen.");
         }
       });
