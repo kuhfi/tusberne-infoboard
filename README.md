@@ -4,15 +4,26 @@
 
 **EINMAL BERNE IMMER BERNE**
 
-## Projektstand
+## Projektstand (21.10.2026)
 
-Die Website enthält derzeit ausschließlich das getestete HTML/CSS/JavaScript-Grundgerüst. **Die Datenquelle `data/content.json` ist leer und befindet sich im Vorschaumodus.** Es werden noch keine Trainings-, Kabinen-, Mannschafts- oder Kontaktdaten veröffentlicht.
+Die mobile öffentliche Homepage nutzt die vier Bereiche des digitalen Infoboards. Derzeit sind **15 öffentliche Einträge** in `data/content.json` hinterlegt:
 
-Aufbau:
-- `index.html` – Startseite mit Suche und Themen
-- `assets/styles.css` – Gestaltung
-- `assets/app.js` – Darstellung, Suche und Filter
-- `data/content.json` – ausschließlich freigegebene öffentliche Inhalte
+- **Kachel 1 / Training:** 5 Inhalte (zwei Trainingspläne und drei Grafiken).
+- **Kachel 2 / Belegung:** 2 Inhalte (Kabinen-Grafik und externer Link zur Fußballraumbelegung über Google Apps Script).
+- **Kachel 3 / Tabellen / News:** 8 Inhalte (sieben Informations-/Termingrafiken und Wetter-/Radar-HTML).
+- **Kachel 4 / Mannschaften und Ansprechpartner:** noch keine öffentlichen Einträge.
+
+Die Originalgrafiken liegen statisch im Verzeichnis `files/`. Wetterdaten werden auf der Wetterseite im Browser über Open-Meteo und die Regenradar-Karten über DWD geladen; die tatsächliche Verfügbarkeit dieser externen Dienste wurde nicht bestätigt. Die öffentlichen Einträge sind **noch nicht automatisch mit Google Drive oder Raspberry Pi synchronisiert**.
+
+**Hinweis zur Aktualität:** Das Herbstferien-Camp wird mit dem Datum 26.–30.10.2026 als statische Grafik angezeigt. Veranstaltungshinweise müssen nach Ablauf kontrolliert und bei Bedarf entfernt werden. Persönliche Buchungsdaten bleiben aus dem statischen Export ausgeschlossen.
+
+Dateistruktur:
+- `index.html` – Startseite mit Suche und vier Kacheln
+- `assets/styles.css` – Darstellung
+- `assets/app.js` – Darstellung, Suche, Filter und sichere URL-Auswahl
+- `data/content.json` – ausschließlich freigegebene öffentliche Einträge
+- `data/training-berne.json`, `data/training-farmsen.json` – veröffentlichte Trainingsplan-Daten
+- `files/` – veröffentlichte HTML-Seiten und Grafiken
 
 ## GitHub Pages
 
