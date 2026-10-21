@@ -1,0 +1,103 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fußball · Hochkant</title>
+<style>
+:root{--blue:#07539a;--blue2:#063f78;--ink:#102f55;--muted:#60758b;--line:#c8dbea;--soft:#edf5fb;--hi:#0a6bc0}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}body{padding:16px}#app{height:100%;display:grid;grid-template-rows:120px 190px 190px minmax(0,1fr);gap:14px}.hero{background:linear-gradient(115deg,var(--blue2),var(--blue));color:white;border-radius:10px;padding:16px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;gap:7px 18px;align-items:center}.hero h1{font-size:36px;line-height:1;margin:0;font-weight:950;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.league{grid-column:1/2;font-size:19px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.96}.count{grid-row:1/3;grid-column:2;font-size:22px;font-weight:950}.game{border:2px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-rows:44px minmax(0,1fr)}.label{display:flex;align-items:center;padding:0 18px;background:var(--blue);color:white;font-size:21px;font-weight:950}.gamebody{padding:12px 18px 14px;display:grid;grid-template-rows:auto minmax(0,1fr);gap:10px}.date{font-size:19px;color:var(--muted);font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.match{display:grid;grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr);align-items:center;gap:12px}.team{font-size:29px;font-weight:900;line-height:1.08;overflow-wrap:anywhere}.team.right{text-align:right}.score,.vs{display:inline-flex;align-items:center;justify-content:center;text-align:center;border-radius:8px;font-weight:950;padding:8px 14px;font-variant-numeric:tabular-nums;line-height:1}.score{min-width:118px;font-size:36px;color:white;background:var(--blue)}.vs{min-width:78px;font-size:26px;color:#526b84;background:#eaf2f8}.tablecard{border:2px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-rows:46px minmax(0,1fr)}.tabletitle{background:var(--blue);color:white;display:flex;align-items:center;padding:0 18px;font-size:21px;font-weight:950}.wrap{min-height:0;overflow:hidden}.table{width:100%;height:100%;border-collapse:collapse;table-layout:fixed;font-variant-numeric:tabular-nums}.table th,.table td{border-right:1px solid #d8e6f1;padding:0 6px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.table th{font-size:.95em;font-weight:950;color:var(--blue2)}.table th:nth-child(2),.table td:nth-child(2){text-align:left}.table th:nth-child(1),.table td:nth-child(1){width:7%}.table th:nth-child(2),.table td:nth-child(2){width:44%}.table th:nth-child(n+3),.table td:nth-child(n+3){width:7%}.table th:nth-child(7),.table td:nth-child(7){width:14%}.table thead{height:6%}.table tbody tr:nth-child(even){background:#f4f8fb}.table tbody tr.berne{background:var(--hi);color:white;font-weight:950}.table tbody td{font-weight:760}.error{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:26px;font-weight:900;color:#8a4e00;padding:30px}
+
+/* BERNE_SPIELSTATUS_V1 */
+.gamebody.status-active{grid-template-rows:auto minmax(0,1fr) auto}
+.game-status{
+  display:flex;align-items:center;justify-content:center;
+  min-height:30px;padding:4px 10px;border-radius:7px;
+  font-size:18px;font-weight:950;letter-spacing:.25px;
+  text-align:center;color:#8a4e00;background:#fff3cd;border:1px solid #f0d98a
+}
+
+
+/* Responsive öffentliche Version auf Basis der originalen Pi-Anzeige */
+html,body{height:auto;min-height:100%;overflow:visible;background:#f6faff}
+body{padding:16px;font:16px/1.45 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#14293f}
+a{color:#0055a5}
+.web-top,.web-nav,.web-count,#app,.footer{max-width:1000px;margin-left:auto;margin-right:auto}
+.web-top{margin-bottom:18px}
+.back{display:inline-block;margin-bottom:14px;font-size:14px;font-weight:800;text-decoration:none}
+.web-top h1{color:#063f78;font-size:clamp(28px,6vw,42px);margin:0;line-height:1.14}
+#dataStatus{font-size:14px;font-weight:800;color:#8b5100;margin-top:9px}
+.web-nav label{display:block;color:#063f78;font-size:13px;font-weight:800;margin:0 0 6px}
+.web-controls{display:grid;grid-template-columns:minmax(0,1fr) 48px 48px;gap:8px}
+.web-controls select,.web-controls button{background:#fff;border:1px solid #c8dbea;border-radius:10px;min-height:44px;color:#10345e;font:inherit}
+.web-controls select{padding:9px 12px;font-weight:750}
+.web-controls button{font-size:21px;cursor:pointer}
+.web-controls button:disabled{opacity:.4;cursor:not-allowed}
+.web-count{text-align:right;font-size:13px;color:#60758b;margin:8px auto 12px;font-weight:800}
+:focus-visible{outline:3px solid #d18a19;outline-offset:3px}
+#app{height:auto;min-height:200px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;gap:12px}
+.hero{grid-column:1/-1;display:block;min-height:96px;position:relative;border-radius:12px;padding:19px 21px}
+.hero h1{font-size:clamp(22px,5vw,30px);line-height:1.2;white-space:normal;overflow:visible;margin-bottom:5px}
+.league{grid-column:auto;white-space:normal;font-size:14px;line-height:1.35;overflow:visible}
+.count{position:absolute;right:16px;top:14px;font-size:13px}
+.game{display:block;border:1px solid #c8dbea;border-radius:12px;min-width:0;background:#fff}
+.label{min-height:44px;font-size:15px;padding:11px 15px}
+.gamebody,.gamebody.status-active{display:block;padding:15px}
+.date{font-size:13px;line-height:1.3;white-space:normal;margin-bottom:12px}
+.match{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;align-items:center}
+.team{font-size:15px;line-height:1.25;overflow-wrap:anywhere}
+.score{min-width:0;font-size:20px;padding:8px 12px}
+.vs{min-width:0;font-size:16px;padding:8px 12px}
+.game-status{margin-top:12px}
+.tablecard{grid-column:1/-1;display:block;border-radius:12px;min-height:0}
+.tabletitle{min-height:45px;display:flex;align-items:center;font-size:17px;padding:10px 15px}
+.tablecard::before{content:"Tabelle bei Bedarf seitlich verschieben →";display:none;color:#60758b;font-size:12px;padding:8px 13px}
+.wrap{min-height:0;width:100%;overflow-x:auto}
+.table{width:100%;min-width:640px;height:auto;font-size:14px!important}
+.table th,.table td{padding:8px 5px;line-height:1.2;height:auto}
+.table th:nth-child(2),.table td:nth-child(2){white-space:normal;overflow-wrap:anywhere}
+.table tbody tr.berne{background:#0055a5}
+.error{height:auto;min-height:160px;padding:25px}
+.footer{color:#60758b;text-align:center;font-size:13px;padding:25px 0 15px}
+.footer strong{color:#063f78}
+@media(max-width:670px){
+ #app{display:flex;flex-direction:column;gap:12px}
+ .hero{min-height:0}
+ .team{font-size:14px}
+ .tablecard::before{display:block}
+ .table{font-size:13px!important}
+}
+</style><meta name="robots" content="noindex,nofollow"></head><body><header class="web-top"><a class="back" href="../index.html">← Zurück zum Infoboard</a><h1>Fußballtabellen</h1><div id="dataStatus" role="status">Tabellendaten werden geladen …</div></header>
+<nav class="web-nav" aria-label="Mannschaften auswählen"><label for="teamPick">Mannschaft</label><div class="web-controls"><select id="teamPick" disabled><option>Wird geladen …</option></select><button type="button" id="previous" aria-label="Vorherige Mannschaft">←</button><button type="button" id="following" aria-label="Nächste Mannschaft">→</button></div></nav>
+<div id="count" class="web-count" aria-live="polite"></div><div id="app"><div class="error">Lade Fußballdaten …</div></div><script>
+const app=document.getElementById('app');let data=null,index=0,timer=null,last='';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const short=s=>String(s??'').replace(/-Jun\./g,'').replace(/\s*\((?:J|A)\d\)\s*/g,'').replace(/\s+/g,' ').trim();
+const dt=g=>g?`${esc(g.date||'')}${g.time?` · ${esc(g.time)} Uhr`:''}${g.competition?` · ${esc(g.competition)}`:''}`:'Keine Daten';
+function game(g,last,label){if(!g)return `<section class="game"><div class="label">${label}</div><div class="gamebody"><div class="date">Keine Daten</div><div class="match"><div class="team">–</div><div class="vs">–</div><div class="team right">–</div></div></div></section>`;const status=String(g.status||'').trim();const scored=last&&g.home_score!=null&&g.away_score!=null;const middle=scored?`<div class="score">${esc(g.home_score)}:${esc(g.away_score)}</div>`:(status?'<div class="vs">–</div>':'<div class="vs">VS</div>');return `<section class="game"><div class="label">${label}</div><div class="gamebody${status?' status-active':''}"><div class="date">${dt(g)}</div><div class="match"><div class="team">${esc(short(g.home))}</div>${middle}<div class="team right">${esc(short(g.away))}</div></div>${status?`<div class="game-status">${esc(status)}</div>`:''}</div></section>`}
+function render(){if(!data?.teams?.length){app.innerHTML='<div class="error">Keine Fußballdaten vorhanden.</div>';return}const t=data.teams[index%data.teams.length],rows=t.table||[];const fs=rows.length<=10?22:rows.length<=12?20:rows.length<=14?18:17;app.innerHTML=`<div class="hero"><h1>${esc(t.display_name)}</h1><div class="league">${esc(t.league_line)}</div><div class="count">${index+1}/${data.teams.length}</div></div>${game(t.last_game,true,'LETZTES SPIEL')}${game(t.next_game,false,'NÄCHSTES SPIEL')}<section class="tablecard"><div class="tabletitle">TABELLE · KOMPLETT</div><div class="wrap"><table class="table" style="font-size:${fs}px"><thead><tr><th>Pl</th><th>Mannschaft</th><th>Sp</th><th>G</th><th>U</th><th>V</th><th>Tore</th><th>Pkt</th></tr></thead><tbody>${rows.map(r=>`<tr class="${String(r.team).toLowerCase().includes('berne')?'berne':''}"><td>${esc(r.place)}.</td><td>${esc(short(r.team))}</td><td>${esc(r.games)}</td><td>${esc(r.won)}</td><td>${esc(r.draw)}</td><td>${esc(r.lost)}</td><td>${esc(r.goals)}</td><td>${esc(r.points)}</td></tr>`).join('')}</tbody></table></div></section>`}
+
+const picker=document.getElementById('teamPick'),statusElement=document.getElementById('dataStatus');
+function redraw(){if(!data||!data.teams?.length)return;render();picker.value=String(index);document.getElementById('count').textContent=(index+1)+' von '+data.teams.length+' Mannschaften'}
+function choose(n){if(!data?.teams?.length)return;index=(n+data.teams.length)%data.teams.length;redraw()}
+document.getElementById('previous').addEventListener('click',()=>choose(index-1));
+document.getElementById('following').addEventListener('click',()=>choose(index+1));
+picker.addEventListener('change',()=>choose(Number(picker.value)));
+function dateString(value){if(typeof value!=='string'&&typeof value!=='number')return '';
+ const d=typeof value==='number'?new Date(value*1000):new Date(value);
+ return Number.isNaN(d.getTime())?'':new Intl.DateTimeFormat('de-DE',{dateStyle:'medium',timeStyle:'short',timeZone:'Europe/Berlin'}).format(d);}
+async function readData(path){const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
+ const d=await r.json();if(!d||!Array.isArray(d.teams)||!d.teams.length)throw Error('Mannschaften fehlen');return d;}
+async function refresh(){
+ let next,origin;
+ try{next=await readData('../data/fussball_live_data.json');origin='export'}
+ catch(_){try{next=await readData('../data/fussball-tabellen-snapshot.json');origin='snapshot'}
+ catch(_){statusElement.textContent='Tabellendaten nicht verfügbar';if(!data)app.innerHTML='<div class="error">Tabellen derzeit nicht verfügbar.</div>';return}}
+ const selection=data?.teams?.[index]?.display_name;data=next;
+ index=Math.max(0,data.teams.findIndex(t=>t.display_name===selection));
+ picker.replaceChildren();data.teams.forEach((t,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=t.display_name||'Mannschaft '+(i+1);picker.append(o)});
+ picker.disabled=false;
+ document.getElementById('previous').disabled=data.teams.length<2;
+ document.getElementById('following').disabled=data.teams.length<2;
+ const when=dateString(data.generated_at||data.checked_at||data.checkedAt);
+ statusElement.textContent=origin==='snapshot'
+ ?'Gespeicherter Tabellenstand'+(when?' · '+when:'')+' · nicht live'
+ :'Vom Raspberry Pi übertragener Stand'+(when?' · '+when:'')+' · Aktualität abhängig vom Export';
+ redraw();
+}
+refresh();setInterval(refresh,10*60*1000);
+</script><footer class="footer">tus BERNE · Fußballabteilung · <strong>EINMAL BERNE IMMER BERNE</strong></footer></body></html>
