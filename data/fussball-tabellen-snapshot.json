@@ -1,0 +1,2060 @@
+{
+  "schema_version": 1,
+  "mode": "snapshot",
+  "source": "Tabellen.pdf (tus BERNE Infoboard, Padlet-Exporte)",
+  "generated_at": "2026-10-21T08:15:00+02:00",
+  "teams": [
+    {
+      "id": "pdf-page-1",
+      "display_name": "tus BERNE 1.Hr.",
+      "league_line": "Herren Bezirksliga · BZL 02 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:10:10+02:00",
+      "last_game": {
+        "date": "18.10.2026",
+        "time": "12:30",
+        "home": "tus BERNE 1.Hr.",
+        "away": "Eilbek 1.Hr.",
+        "home_score": 0,
+        "away_score": 1
+      },
+      "next_game": {
+        "date": "25.10.2026",
+        "time": "15:00",
+        "home": "Croatia 1.Hr.",
+        "away": "tus BERNE 1.Hr."
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "DSC Hanseat 1.Hr.",
+          "games": 9,
+          "won": 8,
+          "draw": 0,
+          "lost": 1,
+          "goals": "39:10",
+          "points": 24
+        },
+        {
+          "place": 2,
+          "team": "VfL 93 1.Hr.",
+          "games": 10,
+          "won": 5,
+          "draw": 3,
+          "lost": 2,
+          "goals": "25:13",
+          "points": 18
+        },
+        {
+          "place": 3,
+          "team": "Sasel 2.Hr.",
+          "games": 9,
+          "won": 5,
+          "draw": 2,
+          "lost": 2,
+          "goals": "30:20",
+          "points": 17
+        },
+        {
+          "place": 4,
+          "team": "SV Groß Borstel 1.Hr.",
+          "games": 10,
+          "won": 5,
+          "draw": 2,
+          "lost": 3,
+          "goals": "25:23",
+          "points": 17
+        },
+        {
+          "place": 5,
+          "team": "UH-Adler 1.Hr.",
+          "games": 10,
+          "won": 6,
+          "draw": 0,
+          "lost": 4,
+          "goals": "29:20",
+          "points": 15
+        },
+        {
+          "place": 6,
+          "team": "Croatia 1.Hr.",
+          "games": 10,
+          "won": 4,
+          "draw": 2,
+          "lost": 4,
+          "goals": "24:24",
+          "points": 14
+        },
+        {
+          "place": 7,
+          "team": "Duvenstedt 1.Hr.",
+          "games": 9,
+          "won": 4,
+          "draw": 1,
+          "lost": 4,
+          "goals": "21:26",
+          "points": 13
+        },
+        {
+          "place": 8,
+          "team": "HSV 3.Hr.",
+          "games": 9,
+          "won": 3,
+          "draw": 3,
+          "lost": 3,
+          "goals": "21:19",
+          "points": 12
+        },
+        {
+          "place": 9,
+          "team": "HEBC 2.Hr.",
+          "games": 10,
+          "won": 3,
+          "draw": 3,
+          "lost": 4,
+          "goals": "26:27",
+          "points": 12
+        },
+        {
+          "place": 10,
+          "team": "Alstertal-Langenhorn 1.Hr.",
+          "games": 10,
+          "won": 3,
+          "draw": 3,
+          "lost": 4,
+          "goals": "16:19",
+          "points": 12
+        },
+        {
+          "place": 11,
+          "team": "Harksheide 2.Hr.",
+          "games": 10,
+          "won": 3,
+          "draw": 3,
+          "lost": 4,
+          "goals": "19:23",
+          "points": 12
+        },
+        {
+          "place": 12,
+          "team": "Wellingsbüttel 1.Hr.",
+          "games": 9,
+          "won": 3,
+          "draw": 3,
+          "lost": 3,
+          "goals": "22:19",
+          "points": 9
+        },
+        {
+          "place": 13,
+          "team": "Polonia 1.Hr.",
+          "games": 9,
+          "won": 2,
+          "draw": 3,
+          "lost": 4,
+          "goals": "22:26",
+          "points": 9
+        },
+        {
+          "place": 14,
+          "team": "tus BERNE 1.Hr.",
+          "games": 9,
+          "won": 3,
+          "draw": 0,
+          "lost": 6,
+          "goals": "13:27",
+          "points": 9
+        },
+        {
+          "place": 15,
+          "team": "Walddörfer 1.Hr.",
+          "games": 9,
+          "won": 2,
+          "draw": 1,
+          "lost": 6,
+          "goals": "17:29",
+          "points": 7
+        },
+        {
+          "place": 16,
+          "team": "Eilbek 1.Hr.",
+          "games": 10,
+          "won": 2,
+          "draw": 1,
+          "lost": 7,
+          "goals": "13:37",
+          "points": 7
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-2",
+      "display_name": "tus BERNE 2.Hr.",
+      "league_line": "Herren Kreisklasse · KK 05 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:10:25+02:00",
+      "last_game": {
+        "date": "17.10.2026",
+        "time": "17:30",
+        "home": "tus BERNE 2.Hr.",
+        "away": "Polonia 3.Hr.",
+        "home_score": 7,
+        "away_score": 0
+      },
+      "next_game": {
+        "date": "25.10.2026",
+        "time": "10:00",
+        "home": "SV Barmbek 1.Hr.",
+        "away": "tus BERNE 2.Hr."
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Bramfeld 3.Hr.",
+          "games": 10,
+          "won": 8,
+          "draw": 0,
+          "lost": 2,
+          "goals": "28:23",
+          "points": 24
+        },
+        {
+          "place": 2,
+          "team": "tus BERNE 2.Hr.",
+          "games": 9,
+          "won": 7,
+          "draw": 2,
+          "lost": 0,
+          "goals": "70:12",
+          "points": 23
+        },
+        {
+          "place": 3,
+          "team": "MSV Hamburg 4.Hr.",
+          "games": 10,
+          "won": 6,
+          "draw": 2,
+          "lost": 2,
+          "goals": "37:21",
+          "points": 20
+        },
+        {
+          "place": 4,
+          "team": "FC Preußen Hamburg 1.Hr.",
+          "games": 9,
+          "won": 6,
+          "draw": 0,
+          "lost": 3,
+          "goals": "42:20",
+          "points": 18
+        },
+        {
+          "place": 5,
+          "team": "DSC Hanseat 2.Hr.",
+          "games": 8,
+          "won": 6,
+          "draw": 0,
+          "lost": 2,
+          "goals": "26:25",
+          "points": 18
+        },
+        {
+          "place": 6,
+          "team": "Urania 3.Hr.",
+          "games": 9,
+          "won": 5,
+          "draw": 1,
+          "lost": 3,
+          "goals": "29:21",
+          "points": 16
+        },
+        {
+          "place": 7,
+          "team": "SV Barmbek 1.Hr.",
+          "games": 6,
+          "won": 5,
+          "draw": 0,
+          "lost": 1,
+          "goals": "23:8",
+          "points": 15
+        },
+        {
+          "place": 8,
+          "team": "Hellbrook 2.Hr.",
+          "games": 8,
+          "won": 4,
+          "draw": 1,
+          "lost": 3,
+          "goals": "29:18",
+          "points": 13
+        },
+        {
+          "place": 9,
+          "team": "Croatia 2.Hr.",
+          "games": 10,
+          "won": 2,
+          "draw": 3,
+          "lost": 5,
+          "goals": "24:33",
+          "points": 9
+        },
+        {
+          "place": 10,
+          "team": "Farmsen 3.Hr.",
+          "games": 8,
+          "won": 3,
+          "draw": 0,
+          "lost": 5,
+          "goals": "20:29",
+          "points": 9
+        },
+        {
+          "place": 11,
+          "team": "Polonia 3.Hr.",
+          "games": 9,
+          "won": 2,
+          "draw": 1,
+          "lost": 6,
+          "goals": "18:28",
+          "points": 7
+        },
+        {
+          "place": 12,
+          "team": "Hamburg Hurricanes 2.Hr.",
+          "games": 8,
+          "won": 2,
+          "draw": 0,
+          "lost": 6,
+          "goals": "14:34",
+          "points": 6
+        },
+        {
+          "place": 13,
+          "team": "Störtebeker SV 1.Hr.",
+          "games": 10,
+          "won": 1,
+          "draw": 1,
+          "lost": 8,
+          "goals": "10:39",
+          "points": 4
+        },
+        {
+          "place": 14,
+          "team": "DJK Hamburg 1.Hr.",
+          "games": 10,
+          "won": 1,
+          "draw": 1,
+          "lost": 8,
+          "goals": "17:58",
+          "points": 4
+        },
+        {
+          "place": 15,
+          "team": "Horner TV 2.Hr.",
+          "games": 8,
+          "won": 1,
+          "draw": 2,
+          "lost": 5,
+          "goals": "19:37",
+          "points": -1
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-3",
+      "display_name": "tus BERNE 3.Hr.",
+      "league_line": "Herren Kreisklasse · KK 06 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:10:41+02:00",
+      "last_game": {
+        "date": "18.10.2026",
+        "time": "15:00",
+        "home": "tus BERNE 3.Hr.",
+        "away": "Sasel 4.Hr.",
+        "home_score": 6,
+        "away_score": 0
+      },
+      "next_game": {
+        "date": "24.10.2026",
+        "time": "13:00",
+        "home": "DUWO 08 2.Hr.",
+        "away": "tus BERNE 3.Hr."
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Alstertal-Langenhorn 3.Hr.",
+          "games": 10,
+          "won": 10,
+          "draw": 0,
+          "lost": 0,
+          "goals": "80:10",
+          "points": 30
+        },
+        {
+          "place": 2,
+          "team": "Polonia 4.Hr.",
+          "games": 10,
+          "won": 7,
+          "draw": 2,
+          "lost": 1,
+          "goals": "81:19",
+          "points": 23
+        },
+        {
+          "place": 3,
+          "team": "Poppenbüttel 2.Hr.",
+          "games": 10,
+          "won": 6,
+          "draw": 2,
+          "lost": 2,
+          "goals": "40:18",
+          "points": 20
+        },
+        {
+          "place": 4,
+          "team": "HSV 5.Hr.",
+          "games": 10,
+          "won": 6,
+          "draw": 1,
+          "lost": 3,
+          "goals": "48:20",
+          "points": 19
+        },
+        {
+          "place": 5,
+          "team": "DUWO 08 2.Hr.",
+          "games": 10,
+          "won": 5,
+          "draw": 4,
+          "lost": 1,
+          "goals": "32:13",
+          "points": 19
+        },
+        {
+          "place": 6,
+          "team": "tus BERNE 3.Hr.",
+          "games": 10,
+          "won": 5,
+          "draw": 3,
+          "lost": 2,
+          "goals": "35:17",
+          "points": 18
+        },
+        {
+          "place": 7,
+          "team": "Bramfeld 4.Hr.",
+          "games": 10,
+          "won": 6,
+          "draw": 0,
+          "lost": 4,
+          "goals": "26:39",
+          "points": 18
+        },
+        {
+          "place": 8,
+          "team": "Farmsen 2.Hr.",
+          "games": 10,
+          "won": 5,
+          "draw": 2,
+          "lost": 3,
+          "goals": "35:23",
+          "points": 17
+        },
+        {
+          "place": 9,
+          "team": "Nordlichter im NSV 2.Hr.",
+          "games": 10,
+          "won": 5,
+          "draw": 2,
+          "lost": 3,
+          "goals": "23:18",
+          "points": 17
+        },
+        {
+          "place": 10,
+          "team": "Friedrichsgabe 1.Hr.",
+          "games": 10,
+          "won": 4,
+          "draw": 3,
+          "lost": 3,
+          "goals": "32:20",
+          "points": 15
+        },
+        {
+          "place": 11,
+          "team": "Sasel 4.Hr.",
+          "games": 10,
+          "won": 3,
+          "draw": 2,
+          "lost": 5,
+          "goals": "30:36",
+          "points": 11
+        },
+        {
+          "place": 12,
+          "team": "Hummelsbüttel 1.Hr.",
+          "games": 10,
+          "won": 3,
+          "draw": 1,
+          "lost": 6,
+          "goals": "22:39",
+          "points": 10
+        },
+        {
+          "place": 13,
+          "team": "Tonndorf-Lohe 2.Hr.",
+          "games": 10,
+          "won": 1,
+          "draw": 1,
+          "lost": 8,
+          "goals": "20:69",
+          "points": 4
+        },
+        {
+          "place": 14,
+          "team": "Condor 4.Hr.",
+          "games": 10,
+          "won": 1,
+          "draw": 0,
+          "lost": 9,
+          "goals": "11:47",
+          "points": 3
+        },
+        {
+          "place": 15,
+          "team": "FC Hamburg 1.Hr.",
+          "games": 10,
+          "won": 1,
+          "draw": 0,
+          "lost": 9,
+          "goals": "20:70",
+          "points": 3
+        },
+        {
+          "place": 16,
+          "team": "Walddörfer 3.Hr.",
+          "games": 10,
+          "won": 0,
+          "draw": 1,
+          "lost": 9,
+          "goals": "8:85",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-4",
+      "display_name": "tus BERNE 1.Ü32",
+      "league_line": "Herren Ü32 Landesliga · Ü32-LL 01 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:10:53+02:00",
+      "last_game": {
+        "date": "17.10.2026",
+        "time": "11:00",
+        "home": "tus BERNE 1.Ü32",
+        "away": "BU 2.Ü32",
+        "home_score": 2,
+        "away_score": 7
+      },
+      "next_game": {
+        "date": "15.11.2026",
+        "time": "09:45",
+        "home": "Wellingsbüttel 1.Ü32",
+        "away": "tus BERNE 1.Ü32"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Eilbek 1.Ü32",
+          "games": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2,
+          "goals": "7:4",
+          "points": 12
+        },
+        {
+          "place": 2,
+          "team": "Bergstedt 1.Ü32",
+          "games": 6,
+          "won": 3,
+          "draw": 2,
+          "lost": 1,
+          "goals": "13:6",
+          "points": 11
+        },
+        {
+          "place": 3,
+          "team": "Poppenbüttel 1.Ü32",
+          "games": 4,
+          "won": 3,
+          "draw": 1,
+          "lost": 0,
+          "goals": "14:3",
+          "points": 10
+        },
+        {
+          "place": 4,
+          "team": "Rahlstedt 1.Ü32",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "11:6",
+          "points": 10
+        },
+        {
+          "place": 5,
+          "team": "Victoria 2.Ü32",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "11:8",
+          "points": 10
+        },
+        {
+          "place": 6,
+          "team": "Wellingsbüttel 1.Ü32",
+          "games": 6,
+          "won": 2,
+          "draw": 1,
+          "lost": 3,
+          "goals": "9:11",
+          "points": 7
+        },
+        {
+          "place": 7,
+          "team": "UH-Adler 1.Ü32",
+          "games": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goals": "7:11",
+          "points": 7
+        },
+        {
+          "place": 8,
+          "team": "BU 2.Ü32",
+          "games": 6,
+          "won": 2,
+          "draw": 0,
+          "lost": 4,
+          "goals": "8:13",
+          "points": 6
+        },
+        {
+          "place": 9,
+          "team": "Alstertal-Langenhorn 1.Ü32",
+          "games": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "goals": "11:12",
+          "points": 4
+        },
+        {
+          "place": 10,
+          "team": "tus BERNE 1.Ü32",
+          "games": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "goals": "6:18",
+          "points": 3
+        },
+        {
+          "place": 11,
+          "team": "Ahrensburg 1.Ü32",
+          "games": 5,
+          "won": 0,
+          "draw": 2,
+          "lost": 3,
+          "goals": "5:10",
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-5",
+      "display_name": "tus BERNE 1.Ü40",
+      "league_line": "Herren Ü40 Landesliga · Ü40-LL 01 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:11:19+02:00",
+      "last_game": {
+        "date": "18.10.2026",
+        "time": "12:00",
+        "home": "SC Wentorf 1.Ü40",
+        "away": "tus BERNE 1.Ü40",
+        "home_score": 2,
+        "away_score": 4
+      },
+      "next_game": {
+        "date": "15.11.2026",
+        "time": "11:15",
+        "home": "Wellingsbüttel 1.Ü40",
+        "away": "tus BERNE 1.Ü40"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "tus BERNE 1.Ü40",
+          "games": 6,
+          "won": 6,
+          "draw": 0,
+          "lost": 0,
+          "goals": "35:7",
+          "points": 18
+        },
+        {
+          "place": 2,
+          "team": "Wandsetal 1.Ü40",
+          "games": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2,
+          "goals": "21:13",
+          "points": 10
+        },
+        {
+          "place": 3,
+          "team": "Schwarzenbek 1.Ü40",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "17:9",
+          "points": 9
+        },
+        {
+          "place": 4,
+          "team": "Wellingsbüttel 1.Ü40",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "10:7",
+          "points": 9
+        },
+        {
+          "place": 5,
+          "team": "Hoisbüttel 1.Ü40",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "9:6",
+          "points": 9
+        },
+        {
+          "place": 6,
+          "team": "Billstedt-Horn 1.Ü40",
+          "games": 6,
+          "won": 3,
+          "draw": 0,
+          "lost": 3,
+          "goals": "13:18",
+          "points": 9
+        },
+        {
+          "place": 7,
+          "team": "SC Wentorf 1.Ü40",
+          "games": 6,
+          "won": 2,
+          "draw": 1,
+          "lost": 3,
+          "goals": "11:12",
+          "points": 7
+        },
+        {
+          "place": 8,
+          "team": "Rahlstedt 1.Ü40",
+          "games": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goals": "7:17",
+          "points": 7
+        },
+        {
+          "place": 9,
+          "team": "Tonndorf-Lohe/Condor 1.Ü40 SG",
+          "games": 6,
+          "won": 2,
+          "draw": 0,
+          "lost": 4,
+          "goals": "10:15",
+          "points": 6
+        },
+        {
+          "place": 10,
+          "team": "Curslack-Neuengamme 1.Ü40",
+          "games": 6,
+          "won": 2,
+          "draw": 0,
+          "lost": 4,
+          "goals": "8:19",
+          "points": 6
+        },
+        {
+          "place": 11,
+          "team": "Voran Ohe 1.Ü40",
+          "games": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "goals": "8:10",
+          "points": 4
+        },
+        {
+          "place": 12,
+          "team": "Walddörfer 2.Ü40",
+          "games": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "goals": "5:21",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-6",
+      "display_name": "tus BERNE 1.Ü50",
+      "league_line": "Herren Ü50 Kreisklasse · Ü50-KK 01 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:11:21+02:00",
+      "last_game": {
+        "date": "11.10.2026",
+        "time": "11:00",
+        "home": "tus BERNE 1.Ü50",
+        "away": "Concordia 1.Ü50",
+        "home_score": 1,
+        "away_score": 4
+      },
+      "next_game": {
+        "date": "22.11.2026",
+        "time": "10:30",
+        "home": "tus BERNE 1.Ü50",
+        "away": "SC V. M./ Alteng./ Cursl.-N. 1.Ü50 SG"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Concordia 1.Ü50",
+          "games": 4,
+          "won": 4,
+          "draw": 0,
+          "lost": 0,
+          "goals": "16:2",
+          "points": 12
+        },
+        {
+          "place": 2,
+          "team": "SC V. M./ Alteng./ Cursl.-N. 1.Ü50 SG",
+          "games": 6,
+          "won": 4,
+          "draw": 1,
+          "lost": 1,
+          "goals": "17:7",
+          "points": 12
+        },
+        {
+          "place": 3,
+          "team": "Alteng./SC V. M./Cursl.-N. 1.Ü50 SG",
+          "games": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goals": "13:6",
+          "points": 12
+        },
+        {
+          "place": 4,
+          "team": "Walddörfer 1.Ü50",
+          "games": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goals": "14:8",
+          "points": 12
+        },
+        {
+          "place": 5,
+          "team": "tus BERNE 1.Ü50",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "14:12",
+          "points": 9
+        },
+        {
+          "place": 6,
+          "team": "Dassendorf/Aumühle 1.Ü50 SG",
+          "games": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goals": "16:12",
+          "points": 7
+        },
+        {
+          "place": 7,
+          "team": "Düneberg 1.Ü50",
+          "games": 6,
+          "won": 2,
+          "draw": 1,
+          "lost": 3,
+          "goals": "9:12",
+          "points": 7
+        },
+        {
+          "place": 8,
+          "team": "Meiendorf/Wandsetal/Farmsen 1.Ü50 SG",
+          "games": 4,
+          "won": 0,
+          "draw": 1,
+          "lost": 3,
+          "goals": "2:15",
+          "points": 1
+        },
+        {
+          "place": 9,
+          "team": "Schwarzenbek 1.Ü50",
+          "games": 5,
+          "won": 0,
+          "draw": 0,
+          "lost": 5,
+          "goals": "3:13",
+          "points": 0
+        },
+        {
+          "place": 10,
+          "team": "Stapelfeld 1.Ü50",
+          "games": 5,
+          "won": 0,
+          "draw": 0,
+          "lost": 5,
+          "goals": "6:23",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-7",
+      "display_name": "tus BERNE 1.A",
+      "league_line": "A-Junioren Landesliga · U18-LL 02 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:11:24+02:00",
+      "last_game": {
+        "date": "17.10.2026",
+        "time": "11:00",
+        "home": "tus BERNE 1.A-Jun. (J1)",
+        "away": "ASV Bergedorf 85 1.A-Jun. (J1)",
+        "home_score": 4,
+        "away_score": 0
+      },
+      "next_game": {
+        "date": "24.10.2026",
+        "time": "10:30",
+        "home": "tus BERNE 1.A-Jun. (J1)",
+        "away": "UH-Adler 1.B-Jun. (A1)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Niendorf 2.A-Jun. (J1)",
+          "games": 6,
+          "won": 6,
+          "draw": 0,
+          "lost": 0,
+          "goals": "26:3",
+          "points": 18
+        },
+        {
+          "place": 2,
+          "team": "Süderelbe 1.A-Jun. (J1)",
+          "games": 6,
+          "won": 6,
+          "draw": 0,
+          "lost": 0,
+          "goals": "29:9",
+          "points": 18
+        },
+        {
+          "place": 3,
+          "team": "Sternschanze 2.A-Jun. (J1)",
+          "games": 6,
+          "won": 5,
+          "draw": 0,
+          "lost": 1,
+          "goals": "25:12",
+          "points": 15
+        },
+        {
+          "place": 4,
+          "team": "Nienstedten 2.A-Jun. (J1)",
+          "games": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2,
+          "goals": "40:18",
+          "points": 12
+        },
+        {
+          "place": 5,
+          "team": "tus BERNE 1.A-Jun. (J1)",
+          "games": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2,
+          "goals": "10:15",
+          "points": 12
+        },
+        {
+          "place": 6,
+          "team": "Sasel 1.A-Jun. (J1)",
+          "games": 6,
+          "won": 3,
+          "draw": 2,
+          "lost": 1,
+          "goals": "12:7",
+          "points": 11
+        },
+        {
+          "place": 7,
+          "team": "Rissen 1.A-Jun. (J1)",
+          "games": 6,
+          "won": 2,
+          "draw": 1,
+          "lost": 3,
+          "goals": "20:22",
+          "points": 7
+        },
+        {
+          "place": 8,
+          "team": "Altona 93 2.A-Jun. (J2)",
+          "games": 6,
+          "won": 2,
+          "draw": 0,
+          "lost": 4,
+          "goals": "11:15",
+          "points": 6
+        },
+        {
+          "place": 9,
+          "team": "Nordlichter im NSV 1.A-Jun. (J1)",
+          "games": 6,
+          "won": 2,
+          "draw": 0,
+          "lost": 4,
+          "goals": "8:12",
+          "points": 6
+        },
+        {
+          "place": 10,
+          "team": "Willinghusen 2.A-Jun. (J1)",
+          "games": 6,
+          "won": 1,
+          "draw": 2,
+          "lost": 3,
+          "goals": "9:18",
+          "points": 5
+        },
+        {
+          "place": 11,
+          "team": "BU 2.A-Jun. (J2)",
+          "games": 6,
+          "won": 1,
+          "draw": 1,
+          "lost": 4,
+          "goals": "13:17",
+          "points": 4
+        },
+        {
+          "place": 12,
+          "team": "Teutonia 05 3.A-Jun. (J2)",
+          "games": 6,
+          "won": 1,
+          "draw": 1,
+          "lost": 4,
+          "goals": "13:18",
+          "points": 4
+        },
+        {
+          "place": 13,
+          "team": "Glashütte 2.A-Jun. (J1)",
+          "games": 6,
+          "won": 1,
+          "draw": 1,
+          "lost": 4,
+          "goals": "12:21",
+          "points": 4
+        },
+        {
+          "place": 14,
+          "team": "Walddörfer 3.A-Jun. (J2)",
+          "games": 6,
+          "won": 0,
+          "draw": 0,
+          "lost": 6,
+          "goals": "3:44",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-8",
+      "display_name": "tus BERNE 1.B",
+      "league_line": "B-Junioren Landesliga · U16-LL 04 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:11:27+02:00",
+      "last_game": {
+        "date": "11.10.2026",
+        "time": "16:30",
+        "home": "VfL Pinneberg 1.B-Jun. (J1)",
+        "away": "tus BERNE 1.B-Jun. (J1)",
+        "home_score": 7,
+        "away_score": 0
+      },
+      "next_game": {
+        "date": "01.11.2026",
+        "time": "10:30",
+        "home": "tus BERNE 1.B-Jun. (J1)",
+        "away": "Blankenese 1.B-Jun. (J1)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Rahlstedt 2.B-Jun. (J1)",
+          "games": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goals": "19:9",
+          "points": 12
+        },
+        {
+          "place": 2,
+          "team": "BU 2.B-Jun. (J1)",
+          "games": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goals": "14:8",
+          "points": 12
+        },
+        {
+          "place": 3,
+          "team": "tus BERNE 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 3,
+          "draw": 2,
+          "lost": 0,
+          "goals": "29:9",
+          "points": 11
+        },
+        {
+          "place": 4,
+          "team": "Vorw. Wacker 2.B-Jun. (J1)",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "16:12",
+          "points": 10
+        },
+        {
+          "place": 5,
+          "team": "Süderelbe 3.B-Jun. (J1)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "12:8",
+          "points": 9
+        },
+        {
+          "place": 6,
+          "team": "Lemsahl 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goals": "13:14",
+          "points": 7
+        },
+        {
+          "place": 7,
+          "team": "Niendorf 2.B-Jun. (J1)",
+          "games": 5,
+          "won": 2,
+          "draw": 0,
+          "lost": 3,
+          "goals": "10:14",
+          "points": 6
+        },
+        {
+          "place": 8,
+          "team": "HSV 3.B-Jun. (J1)",
+          "games": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "goals": "12:27",
+          "points": 3
+        },
+        {
+          "place": 9,
+          "team": "Curslack-Neuengamme 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "goals": "6:16",
+          "points": 1
+        },
+        {
+          "place": 10,
+          "team": "Einigkeit 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "goals": "8:22",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-9",
+      "display_name": "tus BERNE 2.B",
+      "league_line": "B-Junioren Kreisliga · U16-KL 03 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:11:39+02:00",
+      "last_game": {
+        "date": "04.10.2026",
+        "time": "14:00",
+        "home": "Lemsahl 2.B-Jun. (J2)",
+        "away": "tus BERNE 2.B-Jun. (J2)",
+        "home_score": 6,
+        "away_score": 3
+      },
+      "next_game": {
+        "date": "14.11.2026",
+        "time": "15:00",
+        "home": "tus BERNE 2.B-Jun. (J2)",
+        "away": "UH-Adler 2.B-Jun. (J1)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "UH-Adler 2.B-Jun. (J1)",
+          "games": 5,
+          "won": 5,
+          "draw": 0,
+          "lost": 0,
+          "goals": "36:6",
+          "points": 15
+        },
+        {
+          "place": 2,
+          "team": "BU 4.B-Jun. (J2)",
+          "games": 5,
+          "won": 5,
+          "draw": 0,
+          "lost": 0,
+          "goals": "38:14",
+          "points": 15
+        },
+        {
+          "place": 3,
+          "team": "Meiendorf 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "35:8",
+          "points": 10
+        },
+        {
+          "place": 4,
+          "team": "GW Eimsbüttel 2.B-Jun. (J2)",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "36:10",
+          "points": 10
+        },
+        {
+          "place": 5,
+          "team": "Walddörfer 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "20:8",
+          "points": 10
+        },
+        {
+          "place": 6,
+          "team": "Lemsahl 2.B-Jun. (J2)",
+          "games": 5,
+          "won": 2,
+          "draw": 2,
+          "lost": 1,
+          "goals": "18:12",
+          "points": 8
+        },
+        {
+          "place": 7,
+          "team": "Condor 3.B-Jun. (J1)",
+          "games": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "goals": "14:11",
+          "points": 5
+        },
+        {
+          "place": 8,
+          "team": "Bramfeld 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 0,
+          "draw": 3,
+          "lost": 2,
+          "goals": "8:24",
+          "points": 3
+        },
+        {
+          "place": 9,
+          "team": "Blankenese 3.B-Jun. (J3)",
+          "games": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "goals": "8:33",
+          "points": 3
+        },
+        {
+          "place": 10,
+          "team": "tus BERNE 2.B-Jun. (J2)",
+          "games": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "goals": "9:35",
+          "points": 3
+        },
+        {
+          "place": 11,
+          "team": "Glashütte 2.B-Jun. (J2)",
+          "games": 5,
+          "won": 0,
+          "draw": 2,
+          "lost": 3,
+          "goals": "6:20",
+          "points": 2
+        },
+        {
+          "place": 12,
+          "team": "Urania 1.B-Jun. (J1)",
+          "games": 5,
+          "won": 0,
+          "draw": 0,
+          "lost": 5,
+          "goals": "4:51",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-10",
+      "display_name": "tus BERNE 1.C",
+      "league_line": "C-Junioren Bezirksliga · U15-BZL 02 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:11:52+02:00",
+      "last_game": {
+        "date": "10.10.2026",
+        "time": "12:30",
+        "home": "UH-Adler 1.C-Jun. (A1)",
+        "away": "tus BERNE 1.C-Jun. (A1)",
+        "home_score": 7,
+        "away_score": 2
+      },
+      "next_game": {
+        "date": "14.11.2026",
+        "time": "09:30",
+        "home": "tus BERNE 1.C-Jun. (A1)",
+        "away": "GW Eimsbüttel 1.C-Jun. (A1)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Alstertal-Langenhorn 2.C-Jun. (A1)",
+          "games": 5,
+          "won": 5,
+          "draw": 0,
+          "lost": 0,
+          "goals": "21:5",
+          "points": 15
+        },
+        {
+          "place": 2,
+          "team": "Farmsen 1.C-Jun. (A1)",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "10:5",
+          "points": 10
+        },
+        {
+          "place": 3,
+          "team": "VfL 93 2.C-Jun. (A2)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "22:13",
+          "points": 9
+        },
+        {
+          "place": 4,
+          "team": "Bramfeld 1.C-Jun. (A1)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "15:10",
+          "points": 9
+        },
+        {
+          "place": 5,
+          "team": "Rahlstedt 3.C-Jun. (A2)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "10:7",
+          "points": 9
+        },
+        {
+          "place": 6,
+          "team": "GW Eimsbüttel 1.C-Jun. (A1)",
+          "games": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goals": "15:10",
+          "points": 7
+        },
+        {
+          "place": 7,
+          "team": "UH-Adler 1.C-Jun. (A1)",
+          "games": 5,
+          "won": 2,
+          "draw": 0,
+          "lost": 3,
+          "goals": "11:13",
+          "points": 6
+        },
+        {
+          "place": 8,
+          "team": "tus BERNE 1.C-Jun. (A1)",
+          "games": 5,
+          "won": 2,
+          "draw": 0,
+          "lost": 3,
+          "goals": "13:20",
+          "points": 6
+        },
+        {
+          "place": 9,
+          "team": "HSV 4.C-Jun. (A3)",
+          "games": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "goals": "13:24",
+          "points": 3
+        },
+        {
+          "place": 10,
+          "team": "Sasel 4.C-Jun. (A2)",
+          "games": 5,
+          "won": 0,
+          "draw": 0,
+          "lost": 5,
+          "goals": "7:30",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-11",
+      "display_name": "tus BERNE 2.C",
+      "league_line": "C-Junioren Kreisliga · U15-KL 03 · Saison 2026/27",
+      "checked_at": "2026-10-21T08:11:56+02:00",
+      "last_game": {
+        "date": "11.10.2026",
+        "time": "17:00",
+        "home": "tus BERNE 2.C-Jun. (A2)",
+        "away": "Union Tornesch 4.C-Jun. (A2)",
+        "home_score": 7,
+        "away_score": 5
+      },
+      "next_game": {
+        "date": "08.11.2026",
+        "time": "09:00",
+        "home": "Poppenbüttel 3.C-Jun. (A2)",
+        "away": "tus BERNE 2.C-Jun. (A2)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Glashütte 3.C-Jun. (A2)",
+          "games": 4,
+          "won": 2,
+          "draw": 1,
+          "lost": 1,
+          "goals": "18:14",
+          "points": 7
+        },
+        {
+          "place": 2,
+          "team": "Meiendorf 2.C-Jun. (A1)",
+          "games": 2,
+          "won": 2,
+          "draw": 0,
+          "lost": 0,
+          "goals": "9:1",
+          "points": 6
+        },
+        {
+          "place": 3,
+          "team": "Poppenbüttel 3.C-Jun. (A2)",
+          "games": 4,
+          "won": 1,
+          "draw": 1,
+          "lost": 2,
+          "goals": "15:18",
+          "points": 4
+        },
+        {
+          "place": 4,
+          "team": "TuS Hamburg 2.C-Jun. (A1)",
+          "games": 4,
+          "won": 1,
+          "draw": 1,
+          "lost": 2,
+          "goals": "6:12",
+          "points": 4
+        },
+        {
+          "place": 5,
+          "team": "DUWO 08 1.C-Jun. (A1)",
+          "games": 3,
+          "won": 0,
+          "draw": 3,
+          "lost": 0,
+          "goals": "9:9",
+          "points": 3
+        },
+        {
+          "place": 6,
+          "team": "tus BERNE 2.C-Jun. (A2)",
+          "games": 3,
+          "won": 1,
+          "draw": 0,
+          "lost": 2,
+          "goals": "11:14",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-12",
+      "display_name": "tus BERNE 3.C",
+      "league_line": "C-Junioren Kreisliga · U14-KL 06 Herbst · Saison 2026/27",
+      "checked_at": "2026-10-21T08:12:29+02:00",
+      "last_game": {
+        "date": "10.10.2026",
+        "time": "11:00",
+        "home": "West-Eimsbüttel 2.C-Jun. (J1)",
+        "away": "tus BERNE 3.C-Jun. (J1)",
+        "home_score": 1,
+        "away_score": 3
+      },
+      "next_game": {
+        "date": "08.11.2026",
+        "time": "09:30",
+        "home": "Condor 2.C-Jun. (J2)",
+        "away": "tus BERNE 3.C-Jun. (J1)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Walddörfer 2.C-Jun. (J1)",
+          "games": 4,
+          "won": 4,
+          "draw": 0,
+          "lost": 0,
+          "goals": "15:1",
+          "points": 12
+        },
+        {
+          "place": 2,
+          "team": "Bramfeld 2.C-Jun. (J1)",
+          "games": 4,
+          "won": 4,
+          "draw": 0,
+          "lost": 0,
+          "goals": "20:9",
+          "points": 12
+        },
+        {
+          "place": 3,
+          "team": "SV Groß Borstel 4.C-Jun. (J2)",
+          "games": 4,
+          "won": 2,
+          "draw": 0,
+          "lost": 2,
+          "goals": "13:12",
+          "points": 6
+        },
+        {
+          "place": 4,
+          "team": "Sperber 1.C-Jun. (J1)",
+          "games": 4,
+          "won": 2,
+          "draw": 0,
+          "lost": 2,
+          "goals": "15:15",
+          "points": 6
+        },
+        {
+          "place": 5,
+          "team": "tus BERNE 3.C-Jun. (J1)",
+          "games": 4,
+          "won": 2,
+          "draw": 0,
+          "lost": 2,
+          "goals": "16:17",
+          "points": 6
+        },
+        {
+          "place": 6,
+          "team": "Duvenstedt 1.C-Jun. (J1)",
+          "games": 4,
+          "won": 1,
+          "draw": 0,
+          "lost": 3,
+          "goals": "6:10",
+          "points": 3
+        },
+        {
+          "place": 7,
+          "team": "Meiendorf 3.C-Jun. (J2)",
+          "games": 4,
+          "won": 1,
+          "draw": 0,
+          "lost": 3,
+          "goals": "5:19",
+          "points": 3
+        },
+        {
+          "place": 8,
+          "team": "Lemsahl 1.C-Jun. (J1)",
+          "games": 4,
+          "won": 0,
+          "draw": 0,
+          "lost": 4,
+          "goals": "9:16",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-13",
+      "display_name": "tus BERNE 4.C 7er",
+      "league_line": "C-Junioren Kreisklasse 7er · U15-KK 71 7er Herbst · Saison 2026/27",
+      "checked_at": "2026-10-21T08:13:37+02:00",
+      "last_game": {
+        "date": "11.10.2026",
+        "time": "15:00",
+        "home": "tus BERNE 4.C-Jun. (A3) 7er",
+        "away": "Rahlstedt 5.C-Jun. (A3)",
+        "home_score": 4,
+        "away_score": 3
+      },
+      "next_game": {
+        "date": "07.11.2026",
+        "time": "09:00",
+        "home": "Sternschanze 3.C-Jun. (A1)",
+        "away": "tus BERNE 4.C-Jun. (A3) 7er"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
+          "games": 4,
+          "won": 3,
+          "draw": 1,
+          "lost": 0,
+          "goals": "20:3",
+          "points": 10
+        },
+        {
+          "place": 2,
+          "team": "Polonia 1.C-Jun. (A1) 7er",
+          "games": 3,
+          "won": 2,
+          "draw": 1,
+          "lost": 0,
+          "goals": "21:3",
+          "points": 7
+        },
+        {
+          "place": 3,
+          "team": "Sternschanze 3.C-Jun. (A1)",
+          "games": 4,
+          "won": 2,
+          "draw": 0,
+          "lost": 2,
+          "goals": "12:16",
+          "points": 6
+        },
+        {
+          "place": 4,
+          "team": "Hummelsbüttel 1.C-Jun. (A1) 7er",
+          "games": 3,
+          "won": 1,
+          "draw": 0,
+          "lost": 2,
+          "goals": "7:14",
+          "points": 3
+        },
+        {
+          "place": 5,
+          "team": "tus BERNE 4.C-Jun. (A3) 7er",
+          "games": 4,
+          "won": 0,
+          "draw": 0,
+          "lost": 4,
+          "goals": "7:31",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-14",
+      "display_name": "tus BERNE 1.D",
+      "league_line": "D-Junioren Verbandsliga · U13-OL 02 Herbst · Saison 2026/27",
+      "checked_at": "2026-10-21T08:14:00+02:00",
+      "last_game": {
+        "date": "10.10.2026",
+        "time": "13:00",
+        "home": "tus BERNE 1.D-Jun. (A1)",
+        "away": "SV Wilhelmsburg 2.D-Jun. (A1)"
+      },
+      "next_game": {
+        "date": "08.11.2026",
+        "time": "13:00",
+        "home": "tus BERNE 1.D-Jun. (A1)",
+        "away": "Harksheide 2.D-Jun. (A2)-S"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Vorw. Wacker 1.D-Jun. (A1)",
+          "games": 4,
+          "won": 4,
+          "draw": 0,
+          "lost": 0,
+          "goals": "29:9",
+          "points": 12
+        },
+        {
+          "place": 2,
+          "team": "Poppenbüttel 1.D-Jun. (A1)",
+          "games": 4,
+          "won": 2,
+          "draw": 1,
+          "lost": 1,
+          "goals": "22:15",
+          "points": 7
+        },
+        {
+          "place": 3,
+          "team": "tus BERNE 1.D-Jun. (A1)",
+          "games": 4,
+          "won": 2,
+          "draw": 0,
+          "lost": 2,
+          "goals": "24:13",
+          "points": 6
+        },
+        {
+          "place": 4,
+          "team": "Condor 1.D-Jun. (A1)",
+          "games": 4,
+          "won": 1,
+          "draw": 1,
+          "lost": 2,
+          "goals": "12:24",
+          "points": 4
+        },
+        {
+          "place": 5,
+          "team": "Concordia 1.D-Jun. (A1)",
+          "games": 4,
+          "won": 0,
+          "draw": 0,
+          "lost": 4,
+          "goals": "4:30",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-15",
+      "display_name": "tus BERNE 2.D",
+      "league_line": "D-Junioren Landesliga · U12-LL 09 Herbst · Saison 2026/27",
+      "checked_at": "2026-10-21T08:14:52+02:00",
+      "last_game": {
+        "date": "10.10.2026",
+        "time": "11:00",
+        "home": "tus BERNE 2.D-Jun. (J1)",
+        "away": "Rahlstedt 3.D-Jun. (J1)",
+        "home_score": 4,
+        "away_score": 4
+      },
+      "next_game": {
+        "date": "07.11.2026",
+        "time": "13:30",
+        "home": "Bramfeld 2.D-Jun. (J2)",
+        "away": "tus BERNE 2.D-Jun. (J1)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Ahrensburg 1.D-Jun. (J1)",
+          "games": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goals": "32:14",
+          "points": 12
+        },
+        {
+          "place": 2,
+          "team": "Vorw. Wacker 4.D-Jun. (J2)",
+          "games": 5,
+          "won": 2,
+          "draw": 2,
+          "lost": 1,
+          "goals": "23:25",
+          "points": 8
+        },
+        {
+          "place": 3,
+          "team": "Rahlstedt 4.D-Jun. (J2)",
+          "games": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goals": "24:22",
+          "points": 7
+        },
+        {
+          "place": 4,
+          "team": "Sasel 3.D-Jun. (J1)",
+          "games": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "goals": "19:27",
+          "points": 5
+        },
+        {
+          "place": 5,
+          "team": "HSV 7.D-Jun. (J4)",
+          "games": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "goals": "21:26",
+          "points": 4
+        },
+        {
+          "place": 5,
+          "team": "tus BERNE 2.D-Jun. (J1)",
+          "games": 5,
+          "won": 0,
+          "draw": 4,
+          "lost": 1,
+          "goals": "21:26",
+          "points": 4
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-16",
+      "display_name": "tus BERNE 3.D",
+      "league_line": "D-Junioren Kreisliga · U13-KL 03 Herbst · Saison 2026/27",
+      "checked_at": "2026-10-21T08:14:53+02:00",
+      "last_game": {
+        "date": "11.10.2026",
+        "time": "09:00",
+        "home": "tus BERNE 3.D-Jun. (A2)-S",
+        "away": "DUWO 08 1.D-Jun. (A1)",
+        "home_score": 5,
+        "away_score": 6
+      },
+      "next_game": {
+        "date": "01.11.2026",
+        "time": "10:00",
+        "home": "Stapelfeld 1.D-Jun. (A1)-S",
+        "away": "tus BERNE 3.D-Jun. (A2)-S"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Alstertal-Langenhorn 7.D-Jun. (A4)",
+          "games": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goals": "26:20",
+          "points": 12
+        },
+        {
+          "place": 2,
+          "team": "DUWO 08 1.D-Jun. (A1)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "28:20",
+          "points": 9
+        },
+        {
+          "place": 3,
+          "team": "Nordlichter im NSV 1.D-Jun. (A1)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "28:24",
+          "points": 9
+        },
+        {
+          "place": 4,
+          "team": "tus BERNE 3.D-Jun. (A2)-S",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "24:24",
+          "points": 9
+        },
+        {
+          "place": 5,
+          "team": "Bergstedt 2.D-Jun. (A1)",
+          "games": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "goals": "21:28",
+          "points": 4
+        },
+        {
+          "place": 6,
+          "team": "Halstenbek-Rellingen 2.D-Jun. (A2)",
+          "games": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "goals": "19:30",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": "pdf-page-17",
+      "display_name": "tus BERNE 4.D",
+      "league_line": "D-Junioren Kreisliga · U12-KL 09 Herbst · Saison 2026/27",
+      "checked_at": "2026-10-21T08:15:08+02:00",
+      "last_game": {
+        "date": "03.10.2026",
+        "time": "09:00",
+        "home": "tus BERNE 4.D-Jun. (J2)",
+        "away": "Sasel 7.D-Jun. (J4)",
+        "home_score": 4,
+        "away_score": 0
+      },
+      "next_game": {
+        "date": "08.11.2026",
+        "time": "09:00",
+        "home": "tus BERNE 4.D-Jun. (J2)",
+        "away": "tus BERNE 1.E-Jun. (A1)"
+      },
+      "table": [
+        {
+          "place": 1,
+          "team": "Duvenstedt 1.D-Jun. (J1)",
+          "games": 5,
+          "won": 4,
+          "draw": 1,
+          "lost": 0,
+          "goals": "32:19",
+          "points": 13
+        },
+        {
+          "place": 2,
+          "team": "Ahrensburg 2.D-Jun. (J2)",
+          "games": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goals": "30:20",
+          "points": 12
+        },
+        {
+          "place": 3,
+          "team": "tus BERNE 4.D-Jun. (J2)",
+          "games": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goals": "25:16",
+          "points": 10
+        },
+        {
+          "place": 4,
+          "team": "Meiendorf 2.D-Jun. (J1)",
+          "games": 5,
+          "won": 2,
+          "draw": 0,
+          "lost": 3,
+          "goals": "27:22",
+          "points": 6
+        },
+        {
+          "place": 5,
+          "team": "Sasel 7.D-Jun. (J4)",
+          "games": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "goals": "13:29",
+          "points": 1
+        },
+        {
+          "place": 6,
+          "team": "Farmsen 2.D-Jun. (J1)",
+          "games": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "goals": "12:33",
+          "points": 1
+        }
+      ]
+    }
+  ]
+}
