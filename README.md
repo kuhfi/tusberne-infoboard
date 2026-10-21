@@ -21,3 +21,14 @@ Unter **Settings → Pages → Build and deployment** die Quelle **Deploy from a
 Dieses Repository ist bewusst **öffentlich**. Keine Anmeldedaten, Pi-Konfigurationen, internen Kontakte, Buchungsdaten oder privaten Diagnoseberichte hochladen. Neue Daten werden erst nach Prüfung und Freigabe übernommen.
 
 Die vorhandene FAQ bleibt als eigenständige Netlify-Website bestehen.
+
+## Vier Kacheln (seit dem 21.10.2026)
+
+Die Startseite entspricht den vier Bereichen des Infoboards:
+
+1. **Training** (Export-Kategorien: \`trainingsplaene\`, \`training\`)
+2. **Belegung** (\`kabinen\`, \`lageplan\`, \`belegung\`)
+3. **Tabellen / News** (\`fussball\`, \`news\`, \`tabellen-news\`)
+4. **Mannschaften / Ansprechpartner** (\`mannschaften\`, \`ansprechpartner\`, \`mannschaften-ansprechpartner\`)
+
+Die bisherigen Kategorien der Datenstruktur bleiben lesbar. Einträge werden weiterhin nur gezeigt, wenn sie ausdrücklich als \`public: true\` freigegeben sind und eine sichere URL haben. Die Beispiel-Datendatei bleibt leer.

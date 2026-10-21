@@ -1,27 +1,35 @@
 "use strict";
 
-// Ausschließlich explizit freigegebene Datensätze rendern. Nie HTML aus Fremddaten einsetzen.
+// Nur geprüfte, ausdrücklich öffentliche Datensätze rendern. Keine HTML-Injektion aus Daten.
 (function () {
-  const categories = [
-    { id: "trainingsplaene", name: "Trainingspläne", hint: "Berne & Farmsen", icon: "📅" },
-    { id: "kabinen", name: "Kabinenbelegung", hint: "Training & Spieltage", icon: "🚪" },
-    { id: "fussball", name: "Spiele & Tabellen", hint: "Ergebnisse & Staffeln", icon: "⚽" },
-    { id: "mannschaften", name: "Mannschaften", hint: "Teams & Informationen", icon: "👥" },
-    { id: "news", name: "News & Termine", hint: "Aktuelles vom Verein", icon: "📣" },
-    { id: "lageplan", name: "Platz & Lageplan", hint: "Tore & Orientierung", icon: "📍" }
+  // Vier sichtbare Infoboard-Kacheln; ältere Export-Kategorien bleiben kompatibel.
+  const tiles = [
+    { id: "training", name: "Training", hint: "Trainingspläne und Trainingszeiten",
+      icon: "📅", sourceIds: ["trainingsplaene", "training"] },
+    { id: "belegung", name: "Belegung", hint: "Kabinen, Plätze und Lagepläne",
+      icon: "🚪", sourceIds: ["kabinen", "lageplan", "belegung"] },
+    { id: "tabellen-news", name: "Tabellen / News", hint: "Spiele, Tabellen und Neuigkeiten",
+      icon: "⚽", sourceIds: ["fussball", "news", "tabellen-news"] },
+    { id: "mannschaften-ansprechpartner", name: "Mannschaften / Ansprechpartner",
+      hint: "Teams und freigegebene Kontakte",
+      icon: "👥", sourceIds: ["mannschaften", "ansprechpartner", "mannschaften-ansprechpartner"] }
   ];
-  const allowed = new Map(categories.map(function (c) { return [c.id, c]; }));
+  const sourceToTile = new Map();
+  tiles.forEach(function (tile) {
+    tile.sourceIds.forEach(function (id) { sourceToTile.set(id, tile); });
+  });
   const ui = {
-    categoryList: document.getElementById("kategorien"),
+    tileGrid: document.getElementById("kategorien"),
     documents: document.getElementById("dokumente"),
     search: document.getElementById("suche"),
-    chips: document.getElementById("filter-chips"),
+    reset: document.getElementById("filter-zurueck"),
+    heading: document.getElementById("contents-title"),
     notice: document.getElementById("meldungen"),
     status: document.getElementById("status-label"),
     stand: document.getElementById("datenstand"),
     count: document.getElementById("gesamtzahl")
   };
-  const state = { items: [], category: "alle", search: "", mode: "preview" };
+  const state = { items: [], tile: "alle", search: "" };
 
   function safeLink(value) {
     if (typeof value !== "string" || !value || value.length > 1800) return null;
@@ -45,72 +53,80 @@
       dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Berlin"
     }).format(date);
   }
-  function el(tag, className, text) {
+  function el(tag, className, content) {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (typeof text === "string") node.textContent = text;
+    if (typeof content === "string") node.textContent = content;
     return node;
   }
-  function setNotice(text) {
-    ui.notice.textContent = text;
+  function setNotice(message) {
+    ui.notice.textContent = message;
     ui.notice.hidden = false;
   }
-  function renderCategories() {
-    ui.categoryList.replaceChildren();
-    categories.forEach(function (cat) {
-      const count = state.items.filter(function (item) { return item.category === cat.id; }).length;
-      const button = el("button", "category");
+  function renderTiles() {
+    ui.tileGrid.replaceChildren();
+    tiles.forEach(function (tile, index) {
+      const count = state.items.filter(function (item) { return item.tile === tile; }).length;
+      const button = el("button", "category category--" + tile.id);
       button.type = "button";
-      button.setAttribute("aria-pressed", String(state.category === cat.id));
-      button.append(el("span", "category-title", cat.name));
-      button.append(el("span", "category-subtitle", cat.hint + " · " + count + " Inhalte"));
+      button.setAttribute("aria-pressed", String(state.tile === tile.id));
+      button.setAttribute("aria-label", "Kachel " + (index + 1) + ": " + tile.name + ". Bereich anzeigen");
+      const top = el("span", "category-top");
+      const icon = el("span", "category-icon", tile.icon);
+      icon.setAttribute("aria-hidden", "true");
+      top.append(el("span", "category-index", "KACHEL " + String(index + 1).padStart(2, "0")), icon);
+      const bottom = el("span", "category-bottom");
+      bottom.append(el("span", "category-count", count ? count + (count === 1 ? " Inhalt" : " Inhalte") : "Bereich öffnen"),
+        el("span", "category-arrow", "↗"));
+      button.append(top, el("span", "category-title", tile.name),
+        el("span", "category-subtitle", tile.hint), bottom);
       button.addEventListener("click", function () {
-        setCategory(state.category === cat.id ? "alle" : cat.id);
+        selectTile(state.tile === tile.id ? "alle" : tile.id);
       });
-      ui.categoryList.append(button);
+      ui.tileGrid.append(button);
     });
   }
-  function setCategory(id) {
-    state.category = id;
+  function selectTile(id) {
+    state.tile = id;
     render();
-    document.getElementById("inhalte").scrollIntoView({ behavior: "smooth" });
-  }
-  function renderChips() {
-    ui.chips.replaceChildren();
-    [{ id: "alle", name: "Alle" }].concat(categories).forEach(function (cat) {
-      const button = el("button", "chip", cat.name);
-      button.type = "button";
-      button.setAttribute("aria-pressed", String(state.category === cat.id));
-      button.addEventListener("click", function () { setCategory(cat.id); });
-      ui.chips.append(button);
+    document.getElementById("inhalte").scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
     });
   }
   function renderDocuments() {
     ui.documents.replaceChildren();
+    const selectedTile = tiles.find(function (tile) { return tile.id === state.tile; });
     const term = state.search.toLocaleLowerCase("de-DE");
     const selected = state.items.filter(function (item) {
-      if (state.category !== "alle" && state.category !== item.category) return false;
-      return (item.title + " " + (item.description || "") + " " + allowed.get(item.category).name)
+      if (selectedTile && item.tile !== selectedTile) return false;
+      return (item.title + " " + (item.description || "") + " " + item.tile.name)
         .toLocaleLowerCase("de-DE").includes(term);
     });
+    ui.heading.textContent = selectedTile ? selectedTile.name : "Alle Inhalte";
+    ui.reset.hidden = !selectedTile;
+    ui.count.textContent = selected.length + (selected.length === 1 ? " Inhalt" : " Inhalte");
+
     if (selected.length === 0) {
-      setNotice(state.items.length
-        ? "Für diese Auswahl sind keine freigegebenen Inhalte vorhanden."
-        : "Es wurden noch keine Inhalte für die Öffentlichkeit freigegeben. Die automatische Datenübernahme wird eingerichtet.");
+      if (state.items.length && term) {
+        setNotice("Für diese Suche wurden keine passenden Inhalte gefunden.");
+      } else if (selectedTile) {
+        setNotice("Für die Kachel „" + selectedTile.name + "“ sind noch keine öffentlichen Inhalte freigegeben.");
+      } else {
+        setNotice("Es wurden noch keine Inhalte für die Öffentlichkeit freigegeben. Die automatische Datenübernahme wird eingerichtet.");
+      }
       return;
     }
     ui.notice.hidden = true;
     selected.forEach(function (item) {
       const card = el("details", "document");
-      const category = allowed.get(item.category);
       const summary = el("summary", "");
-      const title = el("span", "doc-title", item.title);
-      summary.append(title);
-      summary.append(el("span", "doc-category", category.name));
+      summary.append(el("span", "doc-title", item.title),
+        el("span", "doc-category", item.tile.name));
       card.append(summary);
       const body = el("div", "document-body");
       if (item.description) body.append(el("p", "", item.description));
-      const link = el("a", "doc-open", item.kind === "pdf" ? "PDF öffnen" : (item.kind === "image" ? "Bild öffnen" : "Ansehen"));
+      const link = el("a", "doc-open",
+        item.kind === "pdf" ? "PDF öffnen" : (item.kind === "image" ? "Bild öffnen" : "Ansehen"));
       link.href = item.url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
@@ -121,37 +137,35 @@
       ui.documents.append(card);
     });
   }
-
   function render() {
-    renderCategories();
-    renderChips();
+    renderTiles();
     renderDocuments();
-    ui.count.textContent = state.items.length + " freigegebene Inhalte";
   }
   function initialize() {
-    document.querySelectorAll("[data-go-category]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        const id = button.getAttribute("data-go-category");
-        if (allowed.has(id)) setCategory(id);
-      });
+    ui.reset.addEventListener("click", function () { selectTile("alle"); });
+    ui.search.addEventListener("input", function () {
+      state.search = ui.search.value.trim();
+      renderDocuments();
     });
-    ui.search.addEventListener("input", function () { state.search = ui.search.value.trim(); renderDocuments(); });
     render();
-
     fetch("./data/content.json", { cache: "no-store" })
-      .then(function (response) { if (!response.ok) throw new Error("Datenabruf fehlgeschlagen"); return response.json(); })
+      .then(function (response) {
+        if (!response.ok) throw new Error("Datenabruf fehlgeschlagen");
+        return response.json();
+      })
       .then(function (data) {
-        if (!data || data.schema_version !== 1 || !Array.isArray(data.items) || (data.mode !== "preview" && data.mode !== "published")) {
+        if (!data || data.schema_version !== 1 || !Array.isArray(data.items) ||
+          (data.mode !== "preview" && data.mode !== "published")) {
           throw new Error("Unbekanntes Datenformat");
         }
-        state.mode = data.mode;
         state.items = data.items.filter(function (item) {
-          return item && item.public === true && allowed.has(item.category)
+          return item && item.public === true && sourceToTile.has(item.category)
             && typeof item.title === "string" && item.title.length > 0 && item.title.length <= 140
-            && ["pdf","image","link"].includes(item.kind) && safeLink(item.url);
+            && ["pdf", "image", "link"].includes(item.kind) && safeLink(item.url);
         }).map(function (item) {
-          return { category: item.category, title: item.title, kind: item.kind,
-            url: safeLink(item.url), description: typeof item.description === "string" ? item.description.slice(0, 500) : "",
+          return { tile: sourceToTile.get(item.category), title: item.title, kind: item.kind,
+            url: safeLink(item.url),
+            description: typeof item.description === "string" ? item.description.slice(0, 500) : "",
             updated_at: item.updated_at };
         });
         const checked = formattedDate(data.generated_at);
