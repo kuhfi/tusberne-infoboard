@@ -94,7 +94,10 @@
   function renderDocuments() {
     ui.documents.replaceChildren();
     const selectedTile = tiles.find(function (tile) { return tile.id === state.tile; });
-    const selected = state.items.filter(function (item) { return item.tile === selectedTile; });
+    // Optionale Nummern legen die Reihenfolge innerhalb einer Kachel fest.
+    // Ohne Nummer bleibt die Reihenfolge des öffentlichen Inhaltsverzeichnisses bestehen.
+    const selected = state.items.filter(function (item) { return item.tile === selectedTile; })
+      .sort(function (a, b) { return a.order - b.order; });
     ui.heading.textContent = selectedTile ? selectedTile.name : "Alle Inhalte";
     ui.reset.hidden = !selectedTile;
     ui.count.textContent = selected.length + (selected.length === 1 ? " Inhalt" : " Inhalte");
@@ -151,7 +154,9 @@
           return { tile: sourceToTile.get(item.category), title: item.title, kind: item.kind,
             url: safeLink(item.url),
             description: typeof item.description === "string" ? item.description.slice(0, 500) : "",
-            updated_at: item.updated_at };
+            updated_at: item.updated_at,
+            order: Number.isInteger(item.order) && item.order > 0 && item.order < 10000
+              ? item.order : Number.MAX_SAFE_INTEGER };
         });
         render();
       })
