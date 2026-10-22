@@ -61,7 +61,7 @@ a{color:#0055a5}
  .tablecard::before{display:block}
  .table{font-size:13px!important}
 }
-</style><meta name="robots" content="noindex,nofollow"></head><body><header class="web-top"><a class="back" href="../index.html">← Zurück zum Infoboard</a><h1>Fußballtabellen</h1><div id="dataStatus" role="status">Tabellendaten werden geladen …</div></header>
+</style><meta name="robots" content="noindex,nofollow"></head><body><header class="web-top"><a class="back" href="../index.html">← Zurück zum Infoboard</a><h1>Fußballtabellen</h1><div id="dataStatus" role="status" hidden></div></header>
 <nav class="web-nav" aria-label="Mannschaften auswählen"><label for="teamPick">Mannschaft</label><div class="web-controls"><select id="teamPick" disabled><option>Wird geladen …</option></select><button type="button" id="previous" aria-label="Vorherige Mannschaft">←</button><button type="button" id="following" aria-label="Nächste Mannschaft">→</button></div></nav>
 <div id="count" class="web-count" aria-live="polite"></div><div id="app"><div class="error">Lade Fußballdaten …</div></div><script>
 const app=document.getElementById('app');let data=null,index=0,timer=null,last='';
@@ -86,7 +86,7 @@ async function refresh(){
  let next,origin;
  try{next=await readData('../data/fussball_live_data.json');origin='export'}
  catch(_){try{next=await readData('../data/fussball-tabellen-snapshot.json');origin='snapshot'}
- catch(_){statusElement.textContent='Tabellendaten nicht verfügbar';if(!data)app.innerHTML='<div class="error">Tabellen derzeit nicht verfügbar.</div>';return}}
+ catch(_){statusElement.hidden=false;statusElement.textContent='Tabellendaten nicht verfügbar';if(!data)app.innerHTML='<div class="error">Tabellen derzeit nicht verfügbar.</div>';return}}
  const selection=data?.teams?.[index]?.display_name;data=next;
  index=Math.max(0,data.teams.findIndex(t=>t.display_name===selection));
  picker.replaceChildren();data.teams.forEach((t,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=t.display_name||'Mannschaft '+(i+1);picker.append(o)});
@@ -94,9 +94,12 @@ async function refresh(){
  document.getElementById('previous').disabled=data.teams.length<2;
  document.getElementById('following').disabled=data.teams.length<2;
  const when=dateString(data.generated_at||data.checked_at||data.checkedAt);
+ // Bei aktuellen Live-Daten keinen technischen Export-Hinweis anzeigen.
+ // Nur beim Rueckfall auf gespeicherte Daten sichtbar warnen.
+ statusElement.hidden=origin!=='snapshot';
  statusElement.textContent=origin==='snapshot'
  ?'Gespeicherter Tabellenstand'+(when?' · '+when:'')+' · nicht live'
- :'Vom Raspberry Pi übertragener Stand'+(when?' · '+when:'')+' · Aktualität abhängig vom Export';
+ :'';
  redraw();
 }
 refresh();setInterval(refresh,10*60*1000);
