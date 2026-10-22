@@ -112,9 +112,11 @@ async function update(){
   week=Math.max(0,incoming.period.weeks.findIndex(w=>w.start===prevStart));
   const stamp=timestamp(incoming.generated_at);
   const age=new Date()-new Date(incoming.generated_at);
-  const old=!Number.isFinite(age)||age>30*60*1000;
+  // Der Pi überträgt nur inhaltliche Änderungen. Ein unveränderter Zeitstempel
+  // bedeutet deshalb nicht, dass der 10-Minuten-Abgleich ausgefallen ist.
+  const old=!Number.isFinite(age)||age>7*24*60*60*1000;
   statusEl.classList.toggle("warning",old);
-  statusEl.textContent=(old?"Letzter verfügbarer Pi-Datenstand":"Vom Raspberry Pi übertragen")+(stamp?" · "+stamp:"")+(old?" · Aktualität prüfen":"");
+  statusEl.textContent="Kabinenplan · Datenstand"+(stamp?" "+stamp:"")+(old?" · Bitte Aktualität prüfen":"");
   draw();
  }catch(e){
   statusEl.classList.add("warning");
