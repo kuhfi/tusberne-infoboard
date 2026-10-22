@@ -1,0 +1,12 @@
+[Unit]
+Description=tus BERNE - GitHub-Homepage alle 10 Minuten aktualisieren
+
+[Timer]
+# Fussball und Kabinen laufen zur vollen Zehnerminute; zwei Minuten Puffer.
+OnCalendar=*-*-* *:02/10:00
+AccuracySec=30s
+Persistent=true
+Unit=berne-github-public-sync.service
+
+[Install]
+WantedBy=timers.target
