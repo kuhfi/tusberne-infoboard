@@ -21,13 +21,12 @@
   const ui = {
     tileGrid: document.getElementById("kategorien"),
     documents: document.getElementById("dokumente"),
-    search: document.getElementById("suche"),
     reset: document.getElementById("filter-zurueck"),
     heading: document.getElementById("contents-title"),
     notice: document.getElementById("meldungen"),
     count: document.getElementById("gesamtzahl")
   };
-  const state = { items: [], tile: "alle", search: "" };
+  const state = { items: [], tile: "alle" };
 
   function safeLink(value) {
     if (typeof value !== "string" || !value || value.length > 1800) return null;
@@ -87,31 +86,21 @@
   function selectTile(id) {
     state.tile = id;
     render();
-    document.getElementById("inhalte").scrollIntoView({
+    const target = document.getElementById(id === "alle" ? "themen" : "inhalte");
+    target.scrollIntoView({
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
     });
   }
   function renderDocuments() {
     ui.documents.replaceChildren();
     const selectedTile = tiles.find(function (tile) { return tile.id === state.tile; });
-    const term = state.search.toLocaleLowerCase("de-DE");
-    const selected = state.items.filter(function (item) {
-      if (selectedTile && item.tile !== selectedTile) return false;
-      return (item.title + " " + (item.description || "") + " " + item.tile.name)
-        .toLocaleLowerCase("de-DE").includes(term);
-    });
+    const selected = state.items.filter(function (item) { return item.tile === selectedTile; });
     ui.heading.textContent = selectedTile ? selectedTile.name : "Alle Inhalte";
     ui.reset.hidden = !selectedTile;
     ui.count.textContent = selected.length + (selected.length === 1 ? " Inhalt" : " Inhalte");
 
     if (selected.length === 0) {
-      if (state.items.length && term) {
-        setNotice("Für diese Suche wurden keine passenden Inhalte gefunden.");
-      } else if (selectedTile) {
-        setNotice("Für die Kachel „" + selectedTile.name + "“ sind noch keine öffentlichen Inhalte freigegeben.");
-      } else {
-        setNotice("Es wurden noch keine Inhalte für die Öffentlichkeit freigegeben. Die automatische Datenübernahme wird eingerichtet.");
-      }
+      setNotice("Für die Kachel „" + selectedTile.name + "“ sind noch keine öffentlichen Inhalte freigegeben.");
       return;
     }
     ui.notice.hidden = true;
@@ -137,14 +126,12 @@
   }
   function render() {
     renderTiles();
-    renderDocuments();
+    const showingContents = state.tile !== "alle";
+    document.getElementById("inhalte").hidden = !showingContents;
+    if (showingContents) renderDocuments();
   }
   function initialize() {
     ui.reset.addEventListener("click", function () { selectTile("alle"); });
-    ui.search.addEventListener("input", function () {
-      state.search = ui.search.value.trim();
-      renderDocuments();
-    });
     render();
     fetch("./data/content.json", { cache: "no-store" })
       .then(function (response) {
