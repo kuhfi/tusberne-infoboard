@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T16:41:18+02:00",
+  "generated_at": "2026-10-22T16:50:40+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -11,7 +11,8 @@
         "home": "tus BERNE 1.Hr.",
         "away": "Eilbek 1.Hr.",
         "home_score": "0",
-        "away_score": "1"
+        "away_score": "1",
+        "status": null
       },
       "next_game": {
         "date": "25.10.2026",
@@ -20,7 +21,8 @@
         "home": "Croatia 1.Hr.",
         "away": "tus BERNE 1.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
