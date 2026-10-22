@@ -61,6 +61,15 @@
     {
       "public": true,
       "category": "belegung",
+      "title": "Kabinenbelegungsplan – Heimspiele",
+      "kind": "link",
+      "url": "./files/kabinen-belegungsplan.html",
+      "description": "Automatisch vom Raspberry Pi berechnete Spiel- und Kabinenzuordnung der nächsten zwei Wochen.",
+      "managed_by": "pi-cabins-export"
+    },
+    {
+      "public": true,
+      "category": "belegung",
       "title": "Fußballraum – Belegung",
       "kind": "link",
       "url": "https://script.google.com/macros/s/AKfycbxqi0Pqy_K-JkB2-KDikEWasK3AU9-U-Co0wOe7UQlb3z5X4lxayh7HtOFhATkNGeQ/exec",
