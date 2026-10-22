@@ -15,6 +15,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 SOURCE = Path("/home/kuhfi/infoboard-app/public/kabinen-live/kabinenplan_data.json")
 TARGET = REPO / "data/kabinen_live_data.json"
+INDEX = REPO / "data/content.json"
+CABIN_URL = "./files/kabinen-belegungsplan.html"
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 TIME = re.compile(r"^\d{1,2}:\d{2}$")
 FIELDS = ("date", "time", "kind", "league", "home", "away",
@@ -110,11 +112,43 @@ def main():
     print("Interne Quellen/Berechnungsdetails: NICHT enthalten")
     print("Vorgesehene GitHub-Datei:", TARGET.relative_to(REPO))
     print("Aenderung:", "JA" if changed else "NEIN")
-    if args.apply and changed:
-        TARGET.parent.mkdir(parents=True, exist_ok=True)
-        TARGET.write_bytes(data)
-        print("Lokale Exportdatei geschrieben; KEIN Commit/Push")
-    elif not args.apply:
+    index = json.loads(INDEX.read_text(encoding="utf-8"))
+    if index.get("schema_version") != 1 or not isinstance(index.get("items"), list):
+        raise ValueError("GitHub-Inhaltsverzeichnis ungueltig")
+    items = index["items"]
+    existing = [item for item in items if item.get("url") == CABIN_URL]
+    if existing and (len(existing) != 1 or existing[0].get("category") != "belegung"
+                     or existing[0].get("kind") != "link"):
+        raise ValueError("Kabinenplan-Link mit falscher Zuordnung vorhanden")
+    entry_missing = not existing
+    print("Kachel-2-Eintrag:", "NEU" if entry_missing else "vorhanden")
+    if args.apply:
+        if changed:
+            TARGET.parent.mkdir(parents=True, exist_ok=True)
+            TARGET.write_bytes(data)
+            print("Lokale Exportdatei geschrieben")
+        if entry_missing:
+            insert_pos = next(
+                (i + 1 for i, item in enumerate(items)
+                 if item.get("category") == "belegung"),
+                len(items)
+            )
+            items.insert(insert_pos, {
+                "public": True,
+                "category": "belegung",
+                "title": "Kabinenbelegungsplan – Heimspiele",
+                "kind": "link",
+                "url": CABIN_URL,
+                "description": "Automatisch vom Raspberry Pi berechnete Spiel- und Kabinenzuordnung der nächsten zwei Wochen.",
+                "managed_by": "pi-cabins-export",
+            })
+            INDEX.write_text(
+                json.dumps(index, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8"
+            )
+            print("Kachel-2-Link lokal ergaenzt")
+        print("KEIN Commit/Push; nur lokale Git-Arbeitskopie")
+    else:
         print("Keinerlei Dateien veraendert")
 
 
