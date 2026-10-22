@@ -1,0 +1,18 @@
+[Unit]
+Description=tus BERNE - Oeffentliche GitHub-Homepage aktualisieren
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=kuhfi
+Group=kuhfi
+WorkingDirectory=/home/kuhfi/tusberne-github-sync
+Environment=HOME=/home/kuhfi
+ExecStart=/usr/bin/bash /home/kuhfi/tusberne-github-sync/scripts/pi_public_publish.sh --publish
+TimeoutStartSec=8min
+UMask=0077
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
