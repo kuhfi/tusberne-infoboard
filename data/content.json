@@ -25,7 +25,9 @@
       "title": "Lageplan Tore",
       "kind": "image",
       "url": "./files/lageplan-tore.png",
-      "description": "Übersicht der Tore und ihrer Standorte am Sportplatz"
+      "description": "Übersicht der Tore und ihrer Standorte am Sportplatz",
+      "source_path": "kachel1/03 Lageplan Tore.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
@@ -33,7 +35,9 @@
       "title": "Advance Football – Digitale Trainingsideen",
       "kind": "image",
       "url": "./files/advance-football.png",
-      "description": "Informationen zu digitalen Trainingsideen und Coaching-Inhalten für tus BERNE"
+      "description": "Informationen zu digitalen Trainingsideen und Coaching-Inhalten für tus BERNE",
+      "source_path": "kachel1/04 Advance Football.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
@@ -41,14 +45,18 @@
       "title": "DFB-Akademie – Trainingsdialoge",
       "kind": "image",
       "url": "./files/dfb-akademie.png",
-      "description": "Infografik zu Trainingsdialogen und Übungsideen der DFB-Akademie"
+      "description": "Infografik zu Trainingsdialogen und Übungsideen der DFB-Akademie",
+      "source_path": "kachel1/05 DFB Akademie.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
       "category": "belegung",
       "title": "Kabinen – Zuordnung zum Training",
       "kind": "image",
-      "url": "./files/kabinen-training.png"
+      "url": "./files/kabinen-training.png",
+      "source_path": "kachel2/01 Kabinen Training.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
@@ -63,49 +71,63 @@
       "category": "tabellen-news",
       "title": "Schiedsrichterkosten – HFV-Sätze ab 01.07.2026",
       "kind": "image",
-      "url": "./files/schiedsrichterkosten-hfv-2026.png"
+      "url": "./files/schiedsrichterkosten-hfv-2026.png",
+      "source_path": "kachel3/02 Schiedsrichter Kosten.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
       "category": "tabellen-news",
       "title": "Fußballschule – Herbstferien-Camp 26.–30.10.2026",
       "kind": "image",
-      "url": "./files/fussballschule-herbstferien-2026.png"
+      "url": "./files/fussballschule-herbstferien-2026.png",
+      "source_path": "kachel3/03 Fussballschule.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
       "category": "tabellen-news",
       "title": "Mobile Sitzbank – Kabine 2",
       "kind": "image",
-      "url": "./files/mobile-sitzbank.png"
+      "url": "./files/mobile-sitzbank.png",
+      "source_path": "kachel3/04 Sitzbank.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
       "category": "tabellen-news",
       "title": "Warnung – Dach der Multifunktionshalle",
       "kind": "image",
-      "url": "./files/dach-betreten-verboten.png"
+      "url": "./files/dach-betreten-verboten.png",
+      "source_path": "kachel3/05 Warnung.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
       "category": "tabellen-news",
       "title": "Jahresauftaktessen – 22.01.2027",
       "kind": "image",
-      "url": "./files/jahresauftaktessen-2027.png"
+      "url": "./files/jahresauftaktessen-2027.png",
+      "source_path": "kachel3/06 Jahresauftaktessen 2027.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
       "category": "tabellen-news",
       "title": "Notfallfortbildung – 09.01.2027",
       "kind": "image",
-      "url": "./files/notfallfortbildung-2027.png"
+      "url": "./files/notfallfortbildung-2027.png",
+      "source_path": "kachel3/07 Notfallfortbildung.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
       "category": "tabellen-news",
       "title": "Unterstützung Kinder- und Jugendhospiz Sternenbrücke",
       "kind": "image",
-      "url": "./files/sternenbruecke.png"
+      "url": "./files/sternenbruecke.png",
+      "source_path": "kachel3/08 Sternbrücke.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
@@ -119,7 +141,9 @@
       "category": "mannschaften-ansprechpartner",
       "title": "Abteilungsleitung",
       "kind": "image",
-      "url": "./files/abteilungsleitung.png"
+      "url": "./files/abteilungsleitung.png",
+      "source_path": "kachel4/01 Abteilungsleitung.png",
+      "managed_by": "pi-public-sync"
     },
     {
       "public": true,
