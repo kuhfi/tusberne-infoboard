@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0055a5">
+<meta name="robots" content="noindex,nofollow">
+<title>Kabinenbelegungsplan | tus BERNE</title>
+<style>
+:root{--blue:#0055a5;--dark:#063f78;--ink:#102b47;--muted:#5d748c;--line:#c9ddec;--bg:#f5f9fe;--soft:#eaf3fb}
+*{box-sizing:border-box}
+body{margin:0;padding:17px;font:16px/1.45 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--blue)}
+.container{max-width:1050px;margin:0 auto}
+.back{display:inline-block;margin:0 0 12px;text-decoration:none;font-weight:800;font-size:14px}
+h1{color:var(--dark);font-size:clamp(27px,6vw,42px);line-height:1.2;margin:0 0 8px}
+.subhead{color:var(--muted);margin:0 0 15px;font-size:14px}
+.status{padding:11px 13px;border:1px solid #c6dfec;border-radius:10px;background:#fff;font-size:13px;color:#375977;font-weight:700}
+.status.warning{background:#fff7e9;border-color:#ebd1a0;color:#825300}
+.navigation{display:grid;grid-template-columns:46px minmax(0,1fr) 46px;gap:8px;align-items:center;margin:17px 0 12px}
+.navigation button{border:1px solid #b9d6ed;background:#fff;color:var(--blue);border-radius:10px;font:800 22px/1 system-ui;min-height:46px;cursor:pointer}
+.navigation button:disabled{opacity:.4;cursor:not-allowed}
+.week{font-weight:850;text-align:center;color:var(--dark);font-size:clamp(14px,3vw,18px)}
+.hint{color:var(--muted);font-size:13px;margin:0 0 12px}
+.day{margin:14px 0 18px;border:1px solid var(--line);border-radius:12px;background:white;overflow:hidden;box-shadow:0 3px 11px #12345609}
+.daybar{display:flex;gap:12px;justify-content:space-between;align-items:center;padding:12px 15px;background:var(--blue);color:white;font-weight:850}
+.daybar small{font-size:12px;font-weight:750}
+.game{padding:14px 15px;display:grid;grid-template-columns:95px minmax(0,1fr) minmax(180px, .75fr);align-items:center;gap:12px;border-top:1px solid var(--line)}
+.game:first-of-type{border-top:0}
+.game:nth-child(odd){background:#fafcff}
+.time{font-variant-numeric:tabular-nums;color:var(--dark);font-size:19px;font-weight:900}
+.teams{min-width:0;overflow-wrap:anywhere}
+.home{color:var(--blue);font-weight:850}
+.away{font-weight:730}
+.meta{color:var(--muted);font-size:12px;margin-top:5px}
+.cabins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;text-align:center}
+.cabin{border:1px solid var(--line);border-radius:9px;padding:8px 4px;background:var(--soft);min-width:0}
+.cabin-label{color:#4c6c89;display:block;font-size:11px;font-weight:850;letter-spacing:.02em;text-transform:uppercase}
+.cabin-number{display:block;font-size:21px;color:var(--dark);font-weight:900;overflow-wrap:anywhere}
+.empty{background:white;color:var(--muted);text-align:center;border:1px solid var(--line);padding:26px;border-radius:12px;font-weight:750}
+.footer{text-align:center;font-size:12px;color:var(--muted);padding:25px 0}
+.footer strong{color:var(--dark)}
+:focus-visible{outline:3px solid #d18a19;outline-offset:3px}
+@media(max-width:700px){
+ body{padding:13px}
+ .game{grid-template-columns:77px minmax(0,1fr);gap:8px}
+ .time{font-size:17px;align-self:start}
+ .cabins{grid-column:1/-1;margin-top:3px}
+ .cabin{padding:8px 5px}
+ .cabins .cabin-label{font-size:10px}
+ .cabin-number{font-size:19px}
+ .daybar{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<a class="back" href="../index.html">← Zurück zum Infoboard</a>
+<h1>Kabinenbelegungsplan</h1>
+<p class="subhead">Heimspiele am Sportplatz tus BERNE · Berechnet vom Raspberry Pi</p>
+<div id="status" class="status" role="status">Kabinenbelegungsplan wird geladen …</div>
+</header>
+<nav class="navigation" aria-label="Wochen auswählen">
+<button id="prev" type="button" aria-label="Vorherige Woche" disabled>←</button>
+<div class="week" id="weekTitle">Lade Zeitraum …</div>
+<button id="next" type="button" aria-label="Nächste Woche" disabled>→</button>
+</nav>
+<p class="hint">Heim = Heimkabine · Gast = Gastkabine · SR = Schiedsrichterkabine</p>
+<main id="games" aria-live="polite"><div class="empty">Lade Spiele …</div></main>
+<footer class="footer">tus BERNE · Fußballabteilung · <strong>EINMAL BERNE IMMER BERNE</strong></footer>
+</div>
+<script>
+"use strict";
+const statusEl=document.getElementById("status");
+const titleEl=document.getElementById("weekTitle");
+const listEl=document.getElementById("games");
+const prev=document.getElementById("prev");
+const next=document.getElementById("next");
+let data=null,week=0;
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function deDate(value){const [y,m,d]=String(value??"").split("-");return y&&m&&d?d+"."+m+"."+y:String(value??"")}
+function dayName(value){const d=new Date(String(value)+"T12:00:00");return Number.isNaN(d.getTime())?"":new Intl.DateTimeFormat("de-DE",{weekday:"long"}).format(d)}
+function timestamp(value){const d=new Date(value);return Number.isNaN(d.getTime())?"":new Intl.DateTimeFormat("de-DE",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Berlin"}).format(d)}
+function oneCabin(name,value){return '<div class="cabin"><span class="cabin-label">'+esc(name)+'</span><span class="cabin-number">'+esc(value||"–")+'</span></div>'}
+function draw(){
+ if(!data?.period?.weeks?.length){listEl.innerHTML='<div class="empty">Kein gültiger Zeitraum vorhanden.</div>';return}
+ const weeks=data.period.weeks;
+ week=Math.max(0,Math.min(week,weeks.length-1));
+ prev.disabled=week===0;next.disabled=week===weeks.length-1;
+ const selected=weeks[week];
+ titleEl.textContent=deDate(selected.start)+" – "+deDate(selected.end)+"  ("+(week+1)+"/"+weeks.length+")";
+ const games=(data.games||[]).filter(g=>g.date>=selected.start&&g.date<=selected.end).sort((a,b)=>String(a.date).localeCompare(String(b.date))||String(a.time).localeCompare(String(b.time)));
+ if(!games.length){listEl.innerHTML='<div class="empty">Keine Heimspiele in Berne in dieser Woche.</div>';return}
+ const days=[...new Set(games.map(g=>g.date))].sort();
+ listEl.innerHTML=days.map(day=>{
+  const rows=games.filter(g=>g.date===day);
+  return '<section class="day"><header class="daybar"><span>'+esc(dayName(day))+' · '+esc(deDate(day))+'</span><small>'+rows.length+' '+(rows.length===1?'Spiel':'Spiele')+'</small></header>'+
+   rows.map(g=>'<article class="game"><div class="time">'+esc(g.time)+'</div><div class="teams"><div class="home">'+esc(g.home)+'</div><div class="away">'+esc(g.away)+'</div><div class="meta">'+esc([g.kind,g.league].filter(Boolean).join(" · "))+(g.festival?' · Turnier':'')+'</div></div><div class="cabins">'+oneCabin("Heim",g.home_cabin)+oneCabin("Gast",g.guest_cabin)+oneCabin("SR",g.sr_cabin)+'</div></article>').join("")+'</section>';
+ }).join("");
+}
+prev.addEventListener("click",()=>{week--;draw()});
+next.addEventListener("click",()=>{week++;draw()});
+async function update(){
+ try{
+  const response=await fetch("../data/kabinen_live_data.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("HTTP "+response.status);
+  const incoming=await response.json();
+  if(incoming?.schema_version!==1||!Array.isArray(incoming?.games)||!Array.isArray(incoming?.period?.weeks)||!incoming.period.weeks.length)throw new Error("Ungültige Planungsdaten");
+  const prevStart=data?.period?.weeks?.[week]?.start;
+  data=incoming;
+  week=Math.max(0,incoming.period.weeks.findIndex(w=>w.start===prevStart));
+  const stamp=timestamp(incoming.generated_at);
+  const age=new Date()-new Date(incoming.generated_at);
+  const old=!Number.isFinite(age)||age>30*60*1000;
+  statusEl.classList.toggle("warning",old);
+  statusEl.textContent=(old?"Letzter verfügbarer Pi-Datenstand":"Vom Raspberry Pi übertragen")+(stamp?" · "+stamp:"")+(old?" · Aktualität prüfen":"");
+  draw();
+ }catch(e){
+  statusEl.classList.add("warning");
+  statusEl.textContent="Kabinenplan derzeit nicht verfügbar"+(data?" · bisheriger Stand wird weiter angezeigt":"");
+  if(!data)listEl.innerHTML='<div class="empty">Es liegt noch kein öffentlicher Kabinenplan vor. Bitte später erneut versuchen.</div>';
+ }
+}
+update();
+setInterval(update,10*60*1000);
+</script>
+</body>
+</html>
