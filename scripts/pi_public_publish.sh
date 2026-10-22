@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # tus BERNE - Veröffentlicht ausschließlich freigegebene Kachel-Bilder und die
-# für GitHub bereinigten Fußballtabellen. Niemals Dateien der Pi-Anzeige ändern.
+# für GitHub bereinigten Fußball-/Kabinendaten. Pi-Anzeige nicht verändern.
 # Ohne --publish: nur Probelauf, weder Commit noch Push.
 set -Eeuo pipefail
 umask 077
@@ -38,6 +38,7 @@ echo "=== tus BERNE GitHub-Synchronisierung: $MODE ==="
 date '+Zeit: %Y-%m-%d %H:%M:%S %Z'
 if [[ "$MODE" == "--dry-run" ]]; then
   python3 scripts/pi_public_sync.py
+  python3 scripts/pi_cabins_export.py
   echo "Probelauf abgeschlossen. Keine lokalen Inhaltsänderungen und kein Upload."
   exit 0
 fi
@@ -60,13 +61,17 @@ git merge --ff-only origin/main
 
 echo "=== Freigegebene Inhalte vorbereiten ==="
 python3 scripts/pi_public_sync.py --apply
+# Erst nach erfolgreicher, datensparsamer Kabinenplan-Erzeugung wird
+# der neue Link in Kachel 2 freigeschaltet.
+python3 scripts/pi_cabins_export.py --apply
 python3 -m json.tool data/content.json >/dev/null
 python3 -m json.tool data/fussball_live_data.json >/dev/null
+python3 -m json.tool data/kabinen_live_data.json >/dev/null
 
-# Die Arbeitskopie war vorher sauber. Das Python-Skript schreibt ausschließlich
-# data/content.json, data/fussball_live_data.json sowie freigegebene Bilddateien
-# im Verzeichnis files/. Keine Pi-Quelle wird veraendert.
-git add -A -- data/content.json data/fussball_live_data.json files/
+# Die Arbeitskopie war vorher sauber. Die beiden Python-Skripte schreiben
+# nur die folgenden oeffentlich freigegebenen Ziele in der Git-Arbeitskopie.
+# Keine Pi-Quelle wird veraendert.
+git add -A -- data/content.json data/fussball_live_data.json data/kabinen_live_data.json files/
 git diff --cached --check
 
 if git diff --cached --quiet; then
