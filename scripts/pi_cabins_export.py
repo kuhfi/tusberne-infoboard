@@ -139,7 +139,7 @@ def main():
                 "title": "Kabinenbelegungsplan – Heimspiele",
                 "kind": "link",
                 "url": CABIN_URL,
-                "description": "Automatisch vom Raspberry Pi berechnete Spiel- und Kabinenzuordnung der nächsten zwei Wochen.",
+                "order": 1,
                 "managed_by": "pi-cabins-export",
             })
             INDEX.write_text(
