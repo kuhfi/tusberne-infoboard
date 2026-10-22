@@ -162,6 +162,15 @@
       "title": "Mannschaften",
       "kind": "link",
       "url": "https://tusberne-fussball.de/teams/"
+    },
+    {
+      "public": true,
+      "category": "training",
+      "title": "Lageplan für Fußballtore Bauarbeiten",
+      "kind": "image",
+      "url": "./files/drive/kachel1/lageplan-fur-fuballtore-bauarbeiten-424793ad.jpg",
+      "source_path": "kachel1/03 Lageplan für Fußballtore Bauarbeiten.jpg",
+      "managed_by": "pi-public-sync"
     }
   ]
 }
