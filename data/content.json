@@ -52,20 +52,11 @@
     {
       "public": true,
       "category": "belegung",
-      "title": "Kabinen – Zuordnung zum Training",
-      "kind": "image",
-      "url": "./files/kabinen-training.png",
-      "source_path": "kachel2/01 Kabinen Training.png",
-      "managed_by": "pi-public-sync"
-    },
-    {
-      "public": true,
-      "category": "belegung",
       "title": "Kabinenbelegungsplan – Heimspiele",
       "kind": "link",
       "url": "./files/kabinen-belegungsplan.html",
-      "description": "Automatisch vom Raspberry Pi berechnete Spiel- und Kabinenzuordnung der nächsten zwei Wochen.",
-      "managed_by": "pi-cabins-export"
+      "managed_by": "pi-cabins-export",
+      "order": 1
     },
     {
       "public": true,
@@ -73,7 +64,18 @@
       "title": "Fußballraum – Belegung",
       "kind": "link",
       "url": "https://script.google.com/macros/s/AKfycbxqi0Pqy_K-JkB2-KDikEWasK3AU9-U-Co0wOe7UQlb3z5X4lxayh7HtOFhATkNGeQ/exec",
+      "order": 2,
       "description": "Belegungsübersicht des Fußballraums öffnen."
+    },
+    {
+      "public": true,
+      "category": "belegung",
+      "title": "Kabinen – Zuordnung zum Training",
+      "kind": "image",
+      "url": "./files/kabinen-training.png",
+      "source_path": "kachel2/01 Kabinen Training.png",
+      "managed_by": "pi-public-sync",
+      "order": 3
     },
     {
       "public": true,
