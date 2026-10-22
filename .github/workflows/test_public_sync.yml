@@ -1,0 +1,17 @@
+name: Test public image sync
+on:
+  pull_request:
+    paths:
+      - 'scripts/pi_public_sync.py'
+      - 'tests/test_pi_public_sync.py'
+      - '.github/workflows/test_public_sync.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run offline removal-safety tests
+        run: python3 -m unittest discover -s tests -v
