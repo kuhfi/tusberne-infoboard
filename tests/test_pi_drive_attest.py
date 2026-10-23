@@ -93,6 +93,24 @@ class VerifyDriveSyncTests(unittest.TestCase):
             proof = attest.create_proof("drive:folder", self.local)
         self.assertEqual(proof["pdf_names"][tile], [pdf])
 
+    def test_pdf_only_kachel_is_valid(self):
+        tile = "4"
+        pdf = "03 Flyer.pdf"
+        (self.local / "kachel4" / self.images[tile]).unlink()
+        (self.local / "kachel4" / pdf).write_bytes(b"%PDF-1.7\n")
+        self.manifest["tiles"][tile] = [{"name": pdf, "type": "pdf"}]
+        (self.local / "manifest.json").write_text(
+            json.dumps(self.manifest), encoding="utf-8"
+        )
+        def drive(remote_root, tile_id):
+            if tile_id == tile:
+                return [], [pdf]
+            return [self.images[tile_id]], []
+        with patch.object(attest, "read_drive_files", side_effect=drive):
+            proof = attest.create_proof("drive:folder", self.local)
+        self.assertEqual(proof["image_names"][tile], [])
+        self.assertEqual(proof["pdf_names"][tile], [pdf])
+
     def test_missing_drive_pdf_blocks_proof(self):
         pdf = "03 Turnierinformationen.pdf"
         (self.local / "kachel3" / pdf).write_bytes(b"%PDF-1.7\n")
