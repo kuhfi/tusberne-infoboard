@@ -180,7 +180,7 @@ def main():
         if args.apply:
             atomic_write(args.local_root, proof)
         print(
-            "f"Drive-Dateiabgleich: {count} Bilder und {pdf_count} PDFs "
+            f"Drive-Dateiabgleich: {count} Bilder und {pdf_count} PDFs "
             f"in 4 Kacheln bestaetigt; "
             + ("Bestaetigung geschrieben" if args.apply else "nur Probelauf")
         )
