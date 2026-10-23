@@ -89,6 +89,62 @@ class DriveRemovalGuardTests(unittest.TestCase):
         self.assertEqual(len(kept), 3)
         self.assertNotIn("kachel1/old.png", [x.get("source_path") for x in kept])
 
+    def test_old_image_only_proof_does_not_enable_pdf_deletion(self):
+        self.write_proof()
+        self.assertTrue(sync.verified_drive_manifest(self.manifest, self.tiles))
+        self.assertFalse(sync.verified_drive_pdf_manifest(self.manifest, self.tiles))
+
+    def test_full_proof_enables_pdf_deletion(self):
+        self.write_proof(pdf_names={str(i): [] for i in range(1, 5)})
+        self.assertTrue(sync.verified_drive_pdf_manifest(self.manifest, self.tiles))
+
+    def test_pdf_proof_with_wrong_names_blocks_deletion(self):
+        self.write_proof(pdf_names={str(i): ["unexpected.pdf"] for i in range(1, 5)})
+        self.assertFalse(sync.verified_drive_pdf_manifest(self.manifest, self.tiles))
+
+    def test_pdf_proof_with_missing_tile_blocks_deletion(self):
+        self.write_proof(pdf_names={"1": []})
+        self.assertFalse(sync.verified_drive_pdf_manifest(self.manifest, self.tiles))
+
+    def test_valid_pdf_file_named_in_manifest(self):
+        self.tiles["3"].append({"name": "01 Turnier.PDF", "type": "pdf"})
+        self.manifest = json.dumps({"tiles": self.tiles}).encode("utf-8")
+        pdf_names = {str(i): [] for i in range(1, 5)}
+        pdf_names["3"] = ["01 Turnier.PDF"]
+        self.write_proof(pdf_names=pdf_names)
+        self.assertTrue(sync.verified_drive_pdf_manifest(self.manifest, self.tiles))
+
+    def test_only_verified_managed_pdf_is_removed(self):
+        removed = {"kind": "pdf", "managed_by": "pi-public-sync",
+                   "source_path": "kachel3/01 Veranstaltung.pdf",
+                   "url": "./files/drive/kachel3/veranstaltung-a1b2c3d4.pdf"}
+        existing = {"kind": "pdf", "managed_by": "pi-public-sync",
+                    "source_path": "kachel3/02 Bestand.pdf",
+                    "url": "./files/drive/kachel3/bestand-c1d2e3f4.pdf"}
+        manual = {"kind": "pdf", "source_path": "kachel3/03 Dokument.pdf",
+                  "url": "./files/manual.pdf"}
+        items = [removed, existing, manual]
+        unchanged, count, blobs = sync.remove_stale_pdfs(
+            items, {"kachel3/02 Bestand.pdf"}, False
+        )
+        self.assertEqual(unchanged, items)
+        self.assertEqual(count, 0)
+        self.assertEqual(blobs, [])
+        kept, count, blobs = sync.remove_stale_pdfs(
+            items, {"kachel3/02 Bestand.pdf"}, True
+        )
+        self.assertEqual(kept, [existing, manual])
+        self.assertEqual(count, 1)
+        self.assertEqual(
+            blobs, [sync.REPO / "files/drive/kachel3/veranstaltung-a1b2c3d4.pdf"]
+        )
+
+    def test_mass_pdf_removal_is_blocked(self):
+        items = [{"kind": "pdf", "managed_by": "pi-public-sync",
+                  "source_path": f"kachel3/old{i}.pdf"} for i in range(4)]
+        with self.assertRaisesRegex(ValueError, "Zu viele geloeschte PDFs"):
+            sync.remove_stale_pdfs(items, set(), True)
+
     def test_mass_removal_is_blocked(self):
         items = [{"kind": "image", "managed_by": "pi-public-sync",
                   "source_path": f"kachel1/old{i}.png"} for i in range(4)]
