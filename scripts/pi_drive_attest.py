@@ -36,8 +36,8 @@ def image_names(entries):
             raise ValueError("Ungueltiger Dateiname")
         if Path(name).suffix.lower() in ALLOWED_IMAGES:
             names.append(name)
-    if not names or len(names) != len(set(names)):
-        raise ValueError("Leere oder doppelte Bilddateiliste")
+    if len(names) != len(set(names)):
+        raise ValueError("Doppelte Bilddateiliste")
     return sorted(names)
 
 
