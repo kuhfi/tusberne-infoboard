@@ -143,7 +143,7 @@ Ein `inactive` bei erfolgreich abgeschlossenen **One-Shot-Services** ist für si
 
 Auf dem Pi ist `berne-backup-daily.timer` aktiv (täglicher Lauf gegen **07:00 Uhr**). Die Sicherung vom **23.10.2026** wurde laut `backup-status.txt` lokal auf Extrahierbarkeit/Metadaten geprüft sowie nach Google Drive hochgeladen und durch Rücklesen verifiziert.
 
-**Nicht nachgewiesen:** Wiederherstellung auf Ersatzhardware bzw. vollständiger Neustart des Systems aus dieser Sicherung (`hardware_restore_tested: false`). Die vorhandene `.tar.gz`-Datensicherung ist **nicht automatisch ein vollständiges bootfähiges SD-Kartenabbild**. Ein kontrollierter Restore-/Neustarttest steht noch aus.
+**Nicht nachgewiesen:** Wiederherstellung auf Ersatzhardware bzw. vollständiger Start des Systems **aus dieser Sicherung** (`hardware_restore_tested: false`). Die vorhandene `.tar.gz`-Datensicherung ist **nicht automatisch ein vollständiges bootfähiges SD-Kartenabbild**. Ein regulärer Raspberry-Pi-Neustart wurde am **23.10.2026** durchgeführt; anschließend meldete die Systemampel **10/10 GRUEN** (12/12 erwartete Timer aktiv, Dienste erfolgreich, Drive-Synchronisierung frisch). Die TV-Bildausgabe während der geplanten Betriebszeit wurde damit noch nicht gesondert nachgewiesen.
 
 **Vertraulichkeit:** Backups enthalten auch Anwendungs-Zugangsdaten. Sie bleiben außerhalb dieses **öffentlichen** GitHub-Repositories; keine Archive, Backup-Statusdateien mit sensiblen Metadaten, Tokens, SSH-Schlüssel oder lokale Konfigurationsdateien hier veröffentlichen.
 
@@ -157,10 +157,26 @@ python3 -m unittest discover -s tests -v
 
 Die exportierten Inhalte werden außerdem durch die produktiven Skripte vor einem Commit validiert. Automatische Tests ersetzen jedoch keinen Praxistest auf dem Raspberry Pi.
 
+## PDF-Praxistest und Google-Drive-Aufräumen (23.10.2026)
+
+### PDF-Veröffentlichung
+
+- **Erfolgreich geprüft:** Die Datei `06 Hallentraining 2026-2027.pdf` wurde im produktiven Google-Drive-Ordner `tus-BERNE-Infoboard-Hochkant/Kachel1` erkannt, automatisch nach GitHub übertragen und auf der öffentlichen Homepage als „Hallentraining 2026-2027“ verlinkt.
+- Auf der Homepage wurde die Kachel „Training“ dadurch vorübergehend von **5 auf 6 öffentliche Einträge** erweitert.
+- **Öffnen auf Desktop und Smartphone wurde praktisch bestätigt.**
+- Die PDF wurde anschließend wieder aus der produktiven Google-Drive-Kachel entfernt. **Die automatische Entfernung aus GitHub/der Homepage war bei der letzten Überprüfung noch nicht bestätigt**: `data/content.json` enthielt weiterhin den PDF-Eintrag. Diesen Löschschritt **nicht** als erledigt markieren, bevor Index **und** PDF-Datei auf GitHub verschwunden sind.
+
+### Google-Drive-Struktur und sichere Aufräumarbeiten
+
+- **Produktiv:** `tus-BERNE-Infoboard-Hochkant` mit `Kachel1` bis `Kachel4`, den Anzeigezeiten-Tabellen und ergänzenden Betriebsordnern.
+- **Eigenständige Querformat-Struktur:** `tus-BERNE-Infoboard-Quer` mit eigenen Kacheln. **Nicht** als doppelte Hochkant-Kopie behandeln und ohne Prüfung nicht verschieben oder löschen.
+- In `Entwicklung & Diagnose` wurde der Ordner **„Archiv – alte Entwürfe und Prüfnotizen 2026“** eingerichtet. Dorthin wurden **8** ältere Dateien verschoben (zwei frühere Padlet-Vorschau-Skripte, drei Prüfnotizen, drei historische ZIP-Pakete). Das ist eine **reversible Ablageverschiebung**, keine Löschung.
+- **Nicht angefasst:** produktive Kachelordner, Querformat-Ordner, Anzeigezeiten, Padlet-Exporte, Backup-Ordner, aktuelle Entwicklungs- und Diagnosewerkzeuge. Der Google-Drive-Speicherplatz wird durch bloßes Verschieben nicht geringer.
+
 ## Noch offen (Stand 23.10.2026)
 
-- **PDF-Praxistest:** PDF in freigegebener Drive-Kachel hinzufügen, Mobilansicht/Öffnen, Aktualisierung und anschließend sicheres Entfernen prüfen. Die PDF-Funktion ist programmiert und automatisiert getestet; ein vollständiger Upload-/Löschtest im Echtbetrieb fehlt.
-- **Google Drive aufräumen:** Doppelte/alte Kachelordner und überholte Dateien zunächst inventarisieren, produktive Quelle verifizieren, **nicht ungeprüft löschen**.
-- **Technische Abnahme:** Kontrollierter Neustart samt TV- und Timerprüfung; längerer Netz-/Drive-Ausfall und Wiederherstellbarkeit eines Backups auf Ersatzhardware noch nicht nachgewiesen.
+- **PDF-Löschtest fertigstellen:** Abwesenheit des Test-PDF-Eintrags in `data/content.json` **und** Entfernung des veröffentlichten PDF-Blobs nach gültigem Drive-Nachweis kontrollieren. Die Upload-/Anzeige-/Öffnungsseite ist bereits geprüft.
+- **Technische Abnahme:** Tatsächliches TV-Bild nach einem planmäßigen Einschalten sowie kontrollierter längerer Netz-/Drive-Ausfall noch nicht nachgewiesen; regulärer Pi-Neustart mit 10/10 grünen Statusprüfungen bereits bestanden.
+- **Wiederherstellung:** Hardware-Restore bzw. bootfähiges, getestetes Ersatzmedium weiterhin nicht nachgewiesen.
 
 Die zuletzt bestätigten Betriebsdaten dienen als Ausgangspunkt für spätere Kontrollen, nicht als Garantie für den zukünftigen Zustand.
