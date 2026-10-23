@@ -114,7 +114,16 @@ fi
 git diff --cached --check
 
 if git diff --cached --quiet; then
-  echo "Keine oeffentlichen Inhaltsaenderungen. Kein Commit erforderlich."
+  echo "Keine neuen oeffentlichen Inhaltsaenderungen. Kein Commit erforderlich."
+  # Wenn der letzte Push am Netz/bei GitHub scheiterte, liegt der bereits
+  # erstellte Commit weiterhin lokal auf main. Er muss trotzdem nachgeholt
+  # werden, auch wenn die Quelldateien inzwischen unveraendert sind.
+  pending="$(git rev-list --count origin/main..HEAD)"
+  if [[ "$pending" -gt 0 ]]; then
+    echo "Noch $pending lokale Commits nicht hochgeladen: GitHub-Push nachholen."
+    git push origin HEAD:main
+    echo "Ausstehende Commits erfolgreich hochgeladen."
+  fi
   exit 0
 fi
 
