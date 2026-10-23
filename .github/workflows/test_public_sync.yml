@@ -3,9 +3,11 @@ on:
   pull_request:
     paths:
       - 'scripts/pi_public_sync.py'
+      - 'scripts/pi_public_publish.sh'
       - 'scripts/pi_training_export.py'
       - 'scripts/pi_drive_attest.py'
       - 'tests/test_pi_public_sync.py'
+      - 'tests/test_pi_public_publish.py'
       - 'tests/test_pi_training_export.py'
       - 'tests/test_pi_drive_attest.py'
       - '.github/workflows/test_public_sync.yml'
@@ -17,5 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run offline removal-safety tests
+      - name: Check publisher shell syntax
+        run: bash -n scripts/pi_public_publish.sh
+      - name: Run offline publication-safety tests
         run: python3 -m unittest discover -s tests -v
