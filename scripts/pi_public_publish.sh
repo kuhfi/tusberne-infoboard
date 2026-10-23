@@ -39,6 +39,11 @@ date '+Zeit: %Y-%m-%d %H:%M:%S %Z'
 if [[ "$MODE" == "--dry-run" ]]; then
   python3 scripts/pi_public_sync.py
   python3 scripts/pi_cabins_export.py
+  # Trainingsplaene getrennt pruefen: ein fehlerhaftes HTML darf die
+  # Bild-, Fussball- und Kabinenaktualisierung nicht blockieren.
+  if ! python3 scripts/pi_training_export.py; then
+    echo "WARNUNG: Trainingsplaene voruebergehend nicht lesbar." >&2
+  fi
   echo "Probelauf abgeschlossen. Keine lokalen Inhaltsänderungen und kein Upload."
   exit 0
 fi
@@ -64,14 +69,28 @@ python3 scripts/pi_public_sync.py --apply
 # Erst nach erfolgreicher, datensparsamer Kabinenplan-Erzeugung wird
 # der neue Link in Kachel 2 freigeschaltet.
 python3 scripts/pi_cabins_export.py --apply
+
+# Die Trainingsplaene stammen aus den unveraenderten Pi-HTML-Dateien in Kachel 1.
+# Beide Plaene werden zuerst gemeinsam geprueft. Bei Fehlern die alten,
+# bereits veroeffentlichten Plaene behalten und andere Kacheln weiter pflegen.
+if python3 scripts/pi_training_export.py --apply &&
+   python3 -m json.tool data/training-berne.json >/dev/null &&
+   python3 -m json.tool data/training-farmsen.json >/dev/null; then
+  echo "Trainingsplaene fuer die Homepage erfolgreich geprueft."
+else
+  # Zu Beginn war die Git-Arbeitskopie sauber; daher darf nur diese
+  # optionale Dateigruppe auf die bekannte Version zurueckgesetzt werden.
+  git restore --worktree -- data/training-berne.json data/training-farmsen.json
+  echo "WARNUNG: Trainingsplan-Export fehlgeschlagen; vorige Homepage-Plaene bleiben." >&2
+fi
 python3 -m json.tool data/content.json >/dev/null
 python3 -m json.tool data/fussball_live_data.json >/dev/null
 python3 -m json.tool data/kabinen_live_data.json >/dev/null
 
-# Die Arbeitskopie war vorher sauber. Die beiden Python-Skripte schreiben
-# nur die folgenden oeffentlich freigegebenen Ziele in der Git-Arbeitskopie.
-# Keine Pi-Quelle wird veraendert.
-git add -A -- data/content.json data/fussball_live_data.json data/kabinen_live_data.json files/
+# Die Arbeitskopie war vorher sauber. Es werden nur ausdruecklich
+# freigegebene Homepage-Dateien uebertragen. Keine Pi-Quelle wird veraendert.
+git add -A -- data/content.json data/fussball_live_data.json data/kabinen_live_data.json \
+  data/training-berne.json data/training-farmsen.json files/
 git diff --cached --check
 
 if git diff --cached --quiet; then
