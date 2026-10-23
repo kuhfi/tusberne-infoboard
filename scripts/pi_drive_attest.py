@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Certify a complete Google-Drive-to-Pi image synchronization.
+"""Certify a complete Google-Drive-to-Pi public image/PDF synchronization.
 
 Run only after portrait-drive-sync.sh has successfully completed all four
 rclone sync calls and atomically written portrait-content/manifest.json.
@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ALLOWED_IMAGES = {".png", ".jpg", ".jpeg", ".webp"}
+ALLOWED_PDFS = {".pdf"}
 PROOF_NAME = "drive-publication-verified.json"
 TILES = ("1", "2", "3", "4")
 
@@ -40,7 +41,25 @@ def image_names(entries):
     return sorted(names)
 
 
-def read_drive_images(remote_root, tile_id):
+def pdf_names(entries):
+    """Return unique PDF filenames; a tile with no PDFs is valid."""
+    if not isinstance(entries, list):
+        raise ValueError("Unvollstaendige PDF-Dateiliste")
+    names = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            raise ValueError("Ungueltiger PDF-Dateieintrag")
+        name = entry.get("name")
+        if not isinstance(name, str) or not name or Path(name).name != name:
+            raise ValueError("Ungueltiger PDF-Dateiname")
+        if Path(name).suffix.lower() in ALLOWED_PDFS:
+            names.append(name)
+    if len(names) != len(set(names)):
+        raise ValueError("Doppelte PDF-Dateiliste")
+    return sorted(names)
+
+
+def read_drive_files(remote_root, tile_id):
     """rclone must list all pages. Any error disables certification."""
     folder = f"{remote_root.rstrip('/')}/Kachel{tile_id}"
     try:
@@ -62,10 +81,9 @@ def read_drive_images(remote_root, tile_id):
         raise ValueError(f"Drive-Dateiliste Kachel {tile_id} unvollstaendig")
     if any(not isinstance(row, dict) for row in records):
         raise ValueError(f"Drive-Dateiliste Kachel {tile_id} fehlerhaft")
-    return image_names([
-        {"name": row.get("Name")}
-        for row in records if row.get("IsDir") is not True
-    ])
+    files = [{"name": row.get("Name")}
+             for row in records if row.get("IsDir") is not True]
+    return image_names(files), pdf_names(files)
 
 
 def create_proof(remote_root, local_root):
@@ -82,6 +100,7 @@ def create_proof(remote_root, local_root):
         raise ValueError("Pi-Manifest ist unvollstaendig")
 
     verified = {}
+    verified_pdfs = {}
     for tile_id in TILES:
         entries = tiles[tile_id]
         if not isinstance(entries, list) or not entries:
@@ -91,16 +110,25 @@ def create_proof(remote_root, local_root):
             entry for entry in entries
             if isinstance(entry, dict) and entry.get("type") == "image"
         ])
-        drive = read_drive_images(remote_root, tile_id)
+        local_pdfs = pdf_names([
+            entry for entry in entries
+            if isinstance(entry, dict) and entry.get("type") == "pdf"
+        ])
+        drive, drive_pdfs = read_drive_files(remote_root, tile_id)
         if local != drive:
             raise ValueError(
                 f"Kachel {tile_id}: Drive-Bilder stimmen nicht mit dem Pi-Manifest ueberein"
             )
-        for name in local:
+        if local_pdfs != drive_pdfs:
+            raise ValueError(
+                f"Kachel {tile_id}: Drive-PDFs stimmen nicht mit dem Pi-Manifest ueberein"
+            )
+        for name in local + local_pdfs:
             item = local_root / f"kachel{tile_id}" / name
             if item.is_symlink() or not item.is_file() or item.stat().st_size <= 0:
                 raise ValueError(f"Kachel {tile_id}: lokale Bilddatei fehlt")
         verified[tile_id] = drive
+        verified_pdfs[tile_id] = drive_pdfs
 
     # Block a proof if another portrait-sync replaced the manifest meanwhile.
     if manifest_path.read_bytes() != manifest_bytes:
@@ -113,6 +141,7 @@ def create_proof(remote_root, local_root):
         "completed_at": datetime.now(timezone.utc).isoformat(),
         "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
         "image_names": verified,
+        "pdf_names": verified_pdfs,
     }
 
 
@@ -147,10 +176,12 @@ def main():
     try:
         proof = create_proof(args.remote_root, args.local_root)
         count = sum(len(names) for names in proof["image_names"].values())
+        pdf_count = sum(len(names) for names in proof["pdf_names"].values())
         if args.apply:
             atomic_write(args.local_root, proof)
         print(
-            f"Drive-Bildabgleich: {count} Bilder in 4 Kacheln bestaetigt; "
+            "f"Drive-Dateiabgleich: {count} Bilder und {pdf_count} PDFs "
+            f"in 4 Kacheln bestaetigt; "
             + ("Bestaetigung geschrieben" if args.apply else "nur Probelauf")
         )
     except (ValueError, OSError) as exc:
