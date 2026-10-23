@@ -79,15 +79,6 @@
     {
       "public": true,
       "category": "tabellen-news",
-      "title": "Fußballschule – Herbstferien-Camp 26.–30.10.2026",
-      "kind": "image",
-      "url": "./files/fussballschule-herbstferien-2026.png",
-      "source_path": "kachel3/03 Fussballschule.png",
-      "managed_by": "pi-public-sync"
-    },
-    {
-      "public": true,
-      "category": "tabellen-news",
       "title": "Mobile Sitzbank – Kabine 2",
       "kind": "image",
       "url": "./files/mobile-sitzbank.png",
