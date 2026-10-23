@@ -32,6 +32,17 @@ class PublisherTrainingIntegrationTests(unittest.TestCase):
         self.assertIn("data/training-berne.json", combined)
         self.assertIn("data/training-farmsen.json", combined)
 
+    def test_teams_preview_is_read_only(self):
+        segment = SCRIPT.split('if [[ "$MODE" == "--dry-run" ]]; then', 1)[1]
+        segment = segment.split('exit 0', 1)[0]
+        self.assertIn("python3 scripts/pi_teams_export.py", segment)
+        self.assertNotIn("pi_teams_export.py --apply", segment)
+
+    def test_teams_apply_and_optional_git_staging(self):
+        self.assertIn("python3 scripts/pi_teams_export.py --apply", SCRIPT)
+        self.assertIn('if [[ -f data/teams.json ]]; then', SCRIPT)
+        self.assertIn("git add -- data/teams.json", SCRIPT)
+
     def test_no_direct_pi_display_writes(self):
         self.assertNotIn("portrait-drive-sync.sh --", SCRIPT)
         self.assertNotIn("systemctl restart", SCRIPT)

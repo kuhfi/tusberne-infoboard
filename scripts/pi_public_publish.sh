@@ -44,6 +44,9 @@ if [[ "$MODE" == "--dry-run" ]]; then
   if ! python3 scripts/pi_training_export.py; then
     echo "WARNUNG: Trainingsplaene voruebergehend nicht lesbar." >&2
   fi
+  if ! python3 scripts/pi_teams_export.py; then
+    echo "WARNUNG: Mannschaftsdaten voruebergehend nicht lesbar." >&2
+  fi
   echo "Probelauf abgeschlossen. Keine lokalen Inhaltsänderungen und kein Upload."
   exit 0
 fi
@@ -83,6 +86,17 @@ else
   git restore --worktree -- data/training-berne.json data/training-farmsen.json
   echo "WARNUNG: Trainingsplan-Export fehlgeschlagen; vorige Homepage-Plaene bleiben." >&2
 fi
+
+# Kachel 4: Die bereits vorhandene Pi-Zwischenspeicherung enthaelt alle
+# oeffentlich freigegebenen Mannschaften, Trainer-Kontakte und Trainingszeiten.
+# Nur nach vollstaendiger Plausibilitaetspruefung neue JSON-Daten publizieren
+# und den Homepage-Link auf die eigene mobile Mannschaftsseite umstellen.
+if python3 scripts/pi_teams_export.py --apply; then
+  python3 -m json.tool data/teams.json >/dev/null
+  echo "Mannschaftsuebersicht aus dem Pi-Cache vorbereitet."
+else
+  echo "WARNUNG: Mannschaftsdaten nicht lesbar; bestehende Ansicht bleibt." >&2
+fi
 python3 -m json.tool data/content.json >/dev/null
 python3 -m json.tool data/fussball_live_data.json >/dev/null
 python3 -m json.tool data/kabinen_live_data.json >/dev/null
@@ -91,6 +105,12 @@ python3 -m json.tool data/kabinen_live_data.json >/dev/null
 # freigegebene Homepage-Dateien uebertragen. Keine Pi-Quelle wird veraendert.
 git add -A -- data/content.json data/fussball_live_data.json data/kabinen_live_data.json \
   data/training-berne.json data/training-farmsen.json files/
+# Bei einem voruebergehenden Ausfall der Pi-Teams-Datei ist teams.json
+# moeglicherweise noch nicht angelegt. In diesem Fall trotzdem alle anderen
+# Kacheln ohne Git-Pathspec-Fehler aktualisieren.
+if [[ -f data/teams.json ]]; then
+  git add -- data/teams.json
+fi
 git diff --cached --check
 
 if git diff --cached --quiet; then

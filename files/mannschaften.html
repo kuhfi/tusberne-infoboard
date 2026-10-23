@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0055a5">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Alle Fußballmannschaften des tus BERNE: Jahrgänge, Ansprechpersonen, Telefonnummern, E-Mail und Trainingszeiten.">
+<title>Mannschaften & Ansprechpartner | tus BERNE</title>
+<style>
+:root{--blue:#0055a5;--dark:#063b73;--ink:#142238;--muted:#52677f;--line:#d1e2f2;--bg:#f5f9fe;--soft:#eaf4ff}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 85% 0,rgba(0,85,165,.12),transparent 25rem),var(--bg);font:16px/1.48 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink)}
+a{color:var(--blue);overflow-wrap:anywhere}
+a:hover{text-decoration:none}
+:focus-visible{outline:3px solid #d38b19;outline-offset:3px}
+.wrap{width:min(1100px,calc(100% - 30px));margin:auto}
+.skip{position:absolute;left:-9999px;top:0;background:white;padding:10px}.skip:focus{left:10px;z-index:100}
+.back{display:inline-flex;align-items:center;margin:20px 0 15px;font-size:14px;font-weight:800;text-decoration:none}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 104px;gap:14px;align-items:center;border-radius:22px;padding:23px 25px;background:linear-gradient(130deg,#1558b4,#063273);color:#fff;box-shadow:0 15px 30px #123a7726}
+.eyebrow{font-size:12px;font-weight:850;letter-spacing:.12em;color:#d8eaff;margin:0 0 5px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.12;margin:0 0 9px}
+.hero p.sub{font-size:15px;color:#edf5ff;margin:0;max-width:570px}
+.hero img{width:100px;height:100px;object-fit:contain;background:#fff;border-radius:50%;padding:5px;box-shadow:0 9px 19px #0003}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 0}
+.count{display:inline-block;background:#e6f2ff;color:var(--dark);border-radius:100px;padding:8px 13px;font-weight:900;font-size:14px}
+.source{font-size:13px;font-weight:700}
+.status{color:var(--muted);font-size:14px;margin:12px 0 22px}
+.status.error{color:#9d2929;font-weight:800}
+.section{margin:25px 0 37px}
+.section h2{border-bottom:4px solid var(--blue);font-size:clamp(22px,3vw,28px);color:var(--dark);margin:0 0 14px;padding-bottom:10px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{min-width:0;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 17px #0c2c5b10;overflow:hidden}
+.card-header{display:flex;align-items:baseline;justify-content:space-between;gap:9px;padding:15px 16px 12px;background:#eff6ff;border-bottom:1px solid var(--line)}
+.card h3{font-size:18px;line-height:1.24;color:var(--dark);margin:0;overflow-wrap:anywhere}
+.year{flex-shrink:0;font-size:13px;font-weight:850;color:var(--blue);background:white;border-radius:999px;padding:4px 9px;border:1px solid #c6ddef}
+.info{margin:0;padding:13px 16px 16px}
+.info dt{font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:11px 0 3px}
+.info dt:first-child{margin-top:0}
+.info dd{margin:0;white-space:pre-line;overflow-wrap:anywhere;font-size:14px}
+.info .person{font-weight:800;font-size:15px;color:#1a385d}
+.info a{display:inline-block;font-weight:750;padding:2px 0}
+.line{display:block}
+.empty{color:var(--muted)}
+footer{margin:30px 0 24px;border-top:1px solid var(--line);padding-top:17px;font-size:13px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+footer strong{color:var(--dark)}
+@media(max-width:690px){.cards{grid-template-columns:1fr}.hero{grid-template-columns:minmax(0,1fr) 75px;padding:17px}.hero img{width:75px;height:75px}.card-header{padding:14px}.info{padding:13px 14px 15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="wrap">
+<a class="back" href="../index.html">← Zurück zum Infoboard</a>
+<header class="hero">
+  <div>
+    <p class="eyebrow">TUS BERNE · FUSSBALLABTEILUNG</p>
+    <h1>Mannschaften & Ansprechpartner</h1>
+    <p class="sub">Alle Mannschaften auf einen Blick – mit Jahrgängen, Kontakten und Trainingszeiten.</p>
+  </div>
+  <img src="../assets/tus-berne-logo.svg" alt="Vereinslogo tus BERNE" width="100" height="100">
+</header>
+<main id="inhalt">
+  <div class="topline">
+    <span id="count" class="count" aria-live="polite">Mannschaften werden geladen …</span>
+    <a class="source" href="https://tusberne-fussball.de/teams/" target="_blank" rel="noopener noreferrer">Zur offiziellen Mannschaftsseite ↗</a>
+  </div>
+  <p id="status" class="status" role="status">Lade die aktuellen Mannschaftsdaten …</p>
+  <section class="section" id="adult" hidden>
+    <h2>Herren & Senioren</h2>
+    <div class="cards" id="adult-list"></div>
+  </section>
+  <section class="section" id="youth" hidden>
+    <h2>Jugend & Kinder</h2>
+    <div class="cards" id="youth-list"></div>
+  </section>
+</main>
+<footer><span>tus BERNE · Fußballabteilung</span><strong>EINMAL BERNE IMMER BERNE</strong></footer>
+</div>
+<script>
+"use strict";
+(function(){
+  const fields = ["team","year","contact","phone","email","training"];
+  const count = document.getElementById("count");
+  const status = document.getElementById("status");
+  function el(tag, className, content) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (typeof content === "string") node.textContent = content;
+    return node;
+  }
+  function lines(value) {
+    return (typeof value === "string" ? value : "")
+      .split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+  }
+  function addDetails(dl, label, value, type) {
+    if (!value || !value.trim() || value.trim() === "–") return;
+    dl.append(el("dt", "", label));
+    const dd = el("dd");
+    if (type === "contact") {
+      dd.className = "person";
+      dd.textContent = value;
+    } else if (type === "phone" || type === "email") {
+      for (const line of lines(value)) {
+        const item = el("span","line");
+        const cleaned = line.replace(/[\u200b-\u200f\u202a-\u202e\u2060]/g,"").trim();
+        const phone = cleaned.replace(/[()\s/.-]/g,"");
+        const validPhone = /^[+]?\d{7,17}$/.test(phone);
+        const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleaned);
+        if (type === "phone" && validPhone || type === "email" && validEmail) {
+          const link = el("a","",line);
+          link.href = type === "phone" ? "tel:" + phone : "mailto:" + cleaned;
+          item.append(link);
+        } else {
+          item.textContent = line;
+        }
+        dd.append(item);
+      }
+    } else {
+      dd.textContent = value;
+    }
+    dl.append(dd);
+  }
+  function card(team) {
+    const article = el("article","card");
+    const header = el("div","card-header");
+    header.append(el("h3","",team.team));
+    if (team.year && team.year !== "–") header.append(el("span","year",team.year));
+    article.append(header);
+    const info = el("dl","info");
+    addDetails(info,"Ansprechpartner",team.contact,"contact");
+    addDetails(info,"Telefon",team.phone,"phone");
+    addDetails(info,"E-Mail",team.email,"email");
+    addDetails(info,"Trainingszeiten",team.training,"training");
+    article.append(info);
+    return article;
+  }
+  function render(data) {
+    if (!data || data.schema_version !== 1 ||
+        data.source !== "https://tusberne-fussball.de/teams/" ||
+        !Array.isArray(data.teams) || data.teams.length < 18 || data.teams.length > 40 ||
+        !data.teams.every(t => t && fields.every(key => typeof t[key] === "string"))) {
+      throw new Error("Mannschaftsdaten sind unvollständig");
+    }
+    const adult = document.getElementById("adult-list");
+    const youth = document.getElementById("youth-list");
+    const teams = data.teams;
+    for (const team of teams) {
+      const senior = /(?:Herren|Senioren|Alte Herren|\u00dc\s?\d+)/i.test(team.team);
+      (senior ? adult : youth).append(card(team));
+    }
+    document.getElementById("adult").hidden = adult.children.length === 0;
+    document.getElementById("youth").hidden = youth.children.length === 0;
+    count.textContent = teams.length + " Mannschaften";
+    status.textContent = "Aktualisiert aus den Mannschaftsdaten der öffentlichen Vereinsseite.";
+  }
+  fetch("../data/teams.json", {cache:"no-store"})
+    .then(response => { if(!response.ok) throw new Error("Datenabruf fehlgeschlagen"); return response.json(); })
+    .then(render)
+    .catch(() => {
+      count.textContent = "Mannschaftsübersicht";
+      status.className = "status error";
+      status.textContent = "Die Mannschaftsdaten konnten gerade nicht geladen werden. Bitte nutze die verlinkte offizielle Mannschaftsseite.";
+    });
+}());
+</script>
+</body>
+</html>
