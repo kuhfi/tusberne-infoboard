@@ -4,7 +4,7 @@
 (function () {
   // Vier sichtbare Infoboard-Kacheln; ältere Export-Kategorien bleiben kompatibel.
   const tiles = [
-    { id: "training", name: "Training", hint: "Trainingspläne und Trainingszeiten",
+    { id: "training", name: "Training", hint: "Trainingspläne, Trainingsinhalte und Lageplan Tore",
       icon: "🏃", sourceIds: ["trainingsplaene", "training"] },
     { id: "belegung", name: "Belegung", hint: "Kabinenbelegungen Heimspiele und Belegung Fußballraum",
       icon: "📅", sourceIds: ["kabinen", "lageplan", "belegung"] },
