@@ -138,6 +138,25 @@ class TeamsExporterTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "manuell geaendert"):
             teams.updated_index(index)
 
+    def test_homepage_team_description_is_removed_and_not_regenerated(self):
+        index = make_index()
+        index["items"][0]["description"] = (
+            "23+ Mannschaften, Jahrgänge, Ansprechpartner, Kontaktdaten und Trainingszeiten"
+        )
+        cleaned = teams.updated_index(index)
+        self.assertNotIn("description", cleaned["items"][0])
+        self.assertEqual(cleaned["items"][0]["url"], teams.TARGET_URL)
+        cleaned = teams.updated_index(cleaned)
+        self.assertNotIn("description", cleaned["items"][0])
+
+    def test_mobile_page_has_no_external_link_or_source_notice(self):
+        page = (Path(__file__).resolve().parents[1] /
+                "files/mannschaften.html").read_text(encoding="utf-8")
+        self.assertNotIn("Zur offiziellen Mannschaftsseite", page)
+        self.assertNotIn("Aktualisiert aus den Mannschaftsdaten", page)
+        self.assertIn("status.hidden = true;", page)
+        self.assertIn("status.hidden = false;", page)
+
     def test_control_character_rejected(self):
         raw = make_cache()
         raw["rows"][2][0] = "Team\x00secret"
