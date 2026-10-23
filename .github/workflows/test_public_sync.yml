@@ -1,4 +1,4 @@
-name: Test public image sync
+name: Test public content sync
 on:
   pull_request:
     paths:
@@ -7,6 +7,7 @@ on:
       - 'scripts/pi_training_export.py'
       - 'scripts/pi_drive_attest.py'
       - 'tests/test_pi_public_sync.py'
+      - 'tests/test_pi_pdf_publication.py'
       - 'tests/test_pi_public_publish.py'
       - 'tests/test_pi_training_export.py'
       - 'tests/test_pi_drive_attest.py'
