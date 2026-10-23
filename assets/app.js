@@ -6,9 +6,9 @@
   const tiles = [
     { id: "training", name: "Training", hint: "Trainingspläne und Trainingszeiten",
       icon: "🏃", sourceIds: ["trainingsplaene", "training"] },
-    { id: "belegung", name: "Belegung", hint: "Kabinen, Plätze und Lagepläne",
+    { id: "belegung", name: "Belegung", hint: "Kabinenbelegungen Heimspiele und Belegung Fußballraum",
       icon: "📅", sourceIds: ["kabinen", "lageplan", "belegung"] },
-    { id: "tabellen-news", name: "Tabellen / News", hint: "Spiele, Tabellen und Neuigkeiten",
+    { id: "tabellen-news", name: "Tabellen / News", hint: "Tabellen und Neuigkeiten",
       icon: "📊", sourceIds: ["fussball", "news", "tabellen-news"] },
     { id: "mannschaften-ansprechpartner", name: "Mannschaften / Ansprechpartner",
       hint: "Teams und freigegebene Kontakte",
