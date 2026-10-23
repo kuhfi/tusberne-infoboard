@@ -5,11 +5,13 @@ on:
       - 'scripts/pi_public_sync.py'
       - 'scripts/pi_public_publish.sh'
       - 'scripts/pi_training_export.py'
+      - 'scripts/pi_teams_export.py'
       - 'scripts/pi_drive_attest.py'
       - 'tests/test_pi_public_sync.py'
       - 'tests/test_pi_pdf_publication.py'
       - 'tests/test_pi_public_publish.py'
       - 'tests/test_pi_training_export.py'
+      - 'tests/test_pi_teams_export.py'
       - 'tests/test_pi_drive_attest.py'
       - '.github/workflows/test_public_sync.yml'
   workflow_dispatch:
