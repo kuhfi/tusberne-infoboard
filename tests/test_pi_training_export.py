@@ -67,7 +67,7 @@ class TrainingTests(unittest.TestCase):
 
     def test_reject_missing_week(self):
         with self.assertRaisesRegex(ValueError, "Wochenbereich"):
-            exp.parse_schedule("<h1>Training</h1>", "berne")
+            exp.parse_schedule(html_for("Sportplatz „Berner Allee“").replace('<div class="week">', '<div class="not-week">'), "berne")
 
     def test_preview_does_not_change_json(self):
         with tempfile.TemporaryDirectory() as temp:
