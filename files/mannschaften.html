@@ -24,9 +24,9 @@ h1{font-size:clamp(28px,5vw,42px);line-height:1.12;margin:0 0 9px}
 .hero img{width:100px;height:100px;object-fit:contain;background:#fff;border-radius:50%;padding:5px;box-shadow:0 9px 19px #0003}
 .topline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 0}
 .count{display:inline-block;background:#e6f2ff;color:var(--dark);border-radius:100px;padding:8px 13px;font-weight:900;font-size:14px}
-.source{font-size:13px;font-weight:700}
 .status{color:var(--muted);font-size:14px;margin:12px 0 22px}
 .status.error{color:#9d2929;font-weight:800}
+.status[hidden]{display:none}
 .section{margin:25px 0 37px}
 .section h2{border-bottom:4px solid var(--blue);font-size:clamp(22px,3vw,28px);color:var(--dark);margin:0 0 14px;padding-bottom:10px}
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
@@ -63,7 +63,6 @@ footer strong{color:var(--dark)}
 <main id="inhalt">
   <div class="topline">
     <span id="count" class="count" aria-live="polite">Mannschaften werden geladen …</span>
-    <a class="source" href="https://tusberne-fussball.de/teams/" target="_blank" rel="noopener noreferrer">Zur offiziellen Mannschaftsseite ↗</a>
   </div>
   <p id="status" class="status" role="status">Lade die aktuellen Mannschaftsdaten …</p>
   <section class="section" id="adult" hidden>
@@ -152,7 +151,7 @@ footer strong{color:var(--dark)}
     document.getElementById("adult").hidden = adult.children.length === 0;
     document.getElementById("youth").hidden = youth.children.length === 0;
     count.textContent = teams.length + " Mannschaften";
-    status.textContent = "Aktualisiert aus den Mannschaftsdaten der öffentlichen Vereinsseite.";
+    status.hidden = true;
   }
   fetch("../data/teams.json", {cache:"no-store"})
     .then(response => { if(!response.ok) throw new Error("Datenabruf fehlgeschlagen"); return response.json(); })
@@ -160,7 +159,8 @@ footer strong{color:var(--dark)}
     .catch(() => {
       count.textContent = "Mannschaftsübersicht";
       status.className = "status error";
-      status.textContent = "Die Mannschaftsdaten konnten gerade nicht geladen werden. Bitte nutze die verlinkte offizielle Mannschaftsseite.";
+      status.hidden = false;
+      status.textContent = "Die Mannschaftsdaten konnten gerade nicht geladen werden. Bitte später erneut versuchen.";
     });
 }());
 </script>
