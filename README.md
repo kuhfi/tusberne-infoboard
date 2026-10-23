@@ -164,7 +164,7 @@ Die exportierten Inhalte werden außerdem durch die produktiven Skripte vor eine
 - **Erfolgreich geprüft:** Die Datei `06 Hallentraining 2026-2027.pdf` wurde im produktiven Google-Drive-Ordner `tus-BERNE-Infoboard-Hochkant/Kachel1` erkannt, automatisch nach GitHub übertragen und auf der öffentlichen Homepage als „Hallentraining 2026-2027“ verlinkt.
 - Auf der Homepage wurde die Kachel „Training“ dadurch vorübergehend von **5 auf 6 öffentliche Einträge** erweitert.
 - **Öffnen auf Desktop und Smartphone wurde praktisch bestätigt.**
-- Die PDF wurde anschließend wieder aus der produktiven Google-Drive-Kachel entfernt. **Die automatische Entfernung aus GitHub/der Homepage war bei der letzten Überprüfung noch nicht bestätigt**: `data/content.json` enthielt weiterhin den PDF-Eintrag. Diesen Löschschritt **nicht** als erledigt markieren, bevor Index **und** PDF-Datei auf GitHub verschwunden sind.
+- Die PDF wurde anschließend wieder aus der produktiven Google-Drive-Kachel entfernt. **Auch der Löschtest ist erfolgreich:** Der Raspberry Pi veröffentlichte den aktualisierten GitHub-Stand automatisch; danach enthielt `data/content.json` wieder **17 statt 18 Einträge** (Kachel Training **5 statt 6**). Der PDF-Eintrag **und die PDF-Datei** waren auf GitHub `main` nicht mehr vorhanden (geprüft am 23.10.2026).
 
 ### Google-Drive-Struktur und sichere Aufräumarbeiten
 
@@ -175,7 +175,7 @@ Die exportierten Inhalte werden außerdem durch die produktiven Skripte vor eine
 
 ## Noch offen (Stand 23.10.2026)
 
-- **PDF-Löschtest fertigstellen:** Abwesenheit des Test-PDF-Eintrags in `data/content.json` **und** Entfernung des veröffentlichten PDF-Blobs nach gültigem Drive-Nachweis kontrollieren. Die Upload-/Anzeige-/Öffnungsseite ist bereits geprüft.
+- **PDF-Praxistest abgeschlossen:** Automatisches Hinzufügen aus Drive, GitHub-Veröffentlichung, Öffnen auf Desktop und Smartphone sowie automatische Entfernung aus `data/content.json` und dem GitHub-Dateibestand wurden erfolgreich geprüft. Keine weitere PDF-Testaktion erforderlich.
 - **Technische Abnahme:** Tatsächliches TV-Bild nach einem planmäßigen Einschalten sowie kontrollierter längerer Netz-/Drive-Ausfall noch nicht nachgewiesen; regulärer Pi-Neustart mit 10/10 grünen Statusprüfungen bereits bestanden.
 - **Wiederherstellung:** Hardware-Restore bzw. bootfähiges, getestetes Ersatzmedium weiterhin nicht nachgewiesen.
 
