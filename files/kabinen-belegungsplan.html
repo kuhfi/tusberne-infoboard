@@ -108,14 +108,13 @@ async function update(){
   const incoming=await response.json();
   if(incoming?.schema_version!==1||!Array.isArray(incoming?.games)||!Array.isArray(incoming?.period?.weeks)||!incoming.period.weeks.length)throw new Error("Ungültige Planungsdaten");
   const prevStart=data?.period?.weeks?.[week]?.start;
-  const nextWithGames=incoming.period.weeks.findIndex(w=>
-    incoming.games.some(g=>g.date>=w.start&&g.date<=w.end));
   data=incoming;
-  // Beim ersten Oeffnen eine Woche mit Spielen zeigen; bei spaeteren
-  // Aktualisierungen die vom Besucher ausgewaehlte Woche beibehalten.
+  // Beim ersten Oeffnen IMMER Woche 1 zeigen, selbst wenn keine
+  // Heimspiele stattfinden. Bei spaeteren Datenaktualisierungen die
+  // vom Besucher selbst ausgewaehlte Woche weiterhin beibehalten.
   week=prevStart
     ? Math.max(0,incoming.period.weeks.findIndex(w=>w.start===prevStart))
-    : Math.max(0,nextWithGames);
+    : 0;
   const stamp=timestamp(incoming.generated_at);
   const age=new Date()-new Date(incoming.generated_at);
   // Der Pi überträgt nur inhaltliche Änderungen. Ein unveränderter Zeitstempel

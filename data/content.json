@@ -74,7 +74,8 @@
       "kind": "image",
       "url": "./files/schiedsrichterkosten-hfv-2026.png",
       "source_path": "kachel3/02 Schiedsrichter Kosten.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 2
     },
     {
       "public": true,
@@ -83,7 +84,8 @@
       "kind": "image",
       "url": "./files/mobile-sitzbank.png",
       "source_path": "kachel3/04 Sitzbank.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 6
     },
     {
       "public": true,
@@ -92,7 +94,8 @@
       "kind": "image",
       "url": "./files/dach-betreten-verboten.png",
       "source_path": "kachel3/05 Warnung.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 5
     },
     {
       "public": true,
@@ -101,7 +104,8 @@
       "kind": "image",
       "url": "./files/jahresauftaktessen-2027.png",
       "source_path": "kachel3/06 Jahresauftaktessen 2027.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 4
     },
     {
       "public": true,
@@ -110,7 +114,8 @@
       "kind": "image",
       "url": "./files/notfallfortbildung-2027.png",
       "source_path": "kachel3/07 Notfallfortbildung.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 3
     },
     {
       "public": true,
@@ -119,14 +124,16 @@
       "kind": "image",
       "url": "./files/sternenbruecke.png",
       "source_path": "kachel3/08 Sternbrücke.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 7
     },
     {
       "public": true,
       "category": "tabellen-news",
       "title": "Fußballtabellen",
       "kind": "link",
-      "url": "./files/fussball-tabellen.html"
+      "url": "./files/fussball-tabellen.html",
+      "order": 1
     },
     {
       "public": true,
