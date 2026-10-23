@@ -4,6 +4,8 @@ on:
     paths:
       - 'files/mannschaften.html'
       - 'data/content.json'
+      - 'files/kabinen-belegungsplan.html'
+      - 'tests/test_news_order_cabins_week.py'
       - 'scripts/pi_public_sync.py'
       - 'scripts/pi_public_publish.sh'
       - 'scripts/pi_training_export.py'
