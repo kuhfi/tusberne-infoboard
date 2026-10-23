@@ -22,16 +22,6 @@
     {
       "public": true,
       "category": "training",
-      "title": "Lageplan Tore",
-      "kind": "image",
-      "url": "./files/lageplan-tore.png",
-      "description": "Übersicht der Tore und ihrer Standorte am Sportplatz",
-      "source_path": "kachel1/03 Lageplan Tore.png",
-      "managed_by": "pi-public-sync"
-    },
-    {
-      "public": true,
-      "category": "training",
       "title": "Advance Football – Digitale Trainingsideen",
       "kind": "image",
       "url": "./files/advance-football.png",
