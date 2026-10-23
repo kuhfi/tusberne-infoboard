@@ -159,15 +159,6 @@
       "url": "./files/drive/kachel1/lageplan-fur-fuballtore-bauarbeiten-424793ad.jpg",
       "source_path": "kachel1/03 Lageplan für Fußballtore Bauarbeiten.jpg",
       "managed_by": "pi-public-sync"
-    },
-    {
-      "public": true,
-      "category": "training",
-      "title": "Hallentraining 2026-2027",
-      "kind": "pdf",
-      "url": "./files/drive/kachel1/hallentraining-2026-2027-db4c10b6.pdf",
-      "source_path": "kachel1/06 Hallentraining 2026-2027.pdf",
-      "managed_by": "pi-public-sync"
     }
   ]
 }
