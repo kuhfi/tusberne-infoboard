@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T21:01:59+02:00",
+  "generated_at": "2026-10-23T21:41:02+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -37,6 +37,16 @@
         },
         {
           "place": 2,
+          "team": "UH-Adler 1.Hr.",
+          "games": 11,
+          "won": 7,
+          "draw": 0,
+          "lost": 4,
+          "goals": "34:20",
+          "points": 18
+        },
+        {
+          "place": 3,
           "team": "VfL 93 1.Hr.",
           "games": 10,
           "won": 5,
@@ -46,7 +56,7 @@
           "points": 18
         },
         {
-          "place": 3,
+          "place": 4,
           "team": "Sasel 2.Hr.",
           "games": 9,
           "won": 5,
@@ -56,7 +66,7 @@
           "points": 17
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "SV Groß Borstel 1.Hr.",
           "games": 10,
           "won": 5,
@@ -64,16 +74,6 @@
           "lost": 3,
           "goals": "25:23",
           "points": 17
-        },
-        {
-          "place": 5,
-          "team": "UH-Adler 1.Hr.",
-          "games": 10,
-          "won": 6,
-          "draw": 0,
-          "lost": 4,
-          "goals": "29:20",
-          "points": 15
         },
         {
           "place": 6,
@@ -128,11 +128,11 @@
         {
           "place": 11,
           "team": "Harksheide 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 3,
           "draw": 3,
-          "lost": 4,
-          "goals": "19:23",
+          "lost": 5,
+          "goals": "19:28",
           "points": 12
         },
         {
