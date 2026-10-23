@@ -14,7 +14,7 @@
 
 ## Aktueller Projektstand
 
-Die Website läuft produktiv und wird vom Raspberry Pi automatisch mit freigegebenen Informationen versorgt. Die Gestaltung ist blau-weiß (Vereinsblau `#0055A5`), nutzt das originale Vereinslogo und den Vereinsslogan. Die Startseite besitzt **vier Bereiche**, aber **keine Suchfunktion**. Besucher erreichen sie auch über den separat erstellten QR-Code-Aushang am Infoboard.
+Die Website läuft produktiv und wird vom Raspberry Pi automatisch mit freigegebenen Informationen versorgt. Die Gestaltung ist blau-weiß (Vereinsblau `#0055A5`), nutzt das originale Vereinslogo und den Vereinsslogan. Die Startseite besitzt **vier Bereiche**, aber **keine Suchfunktion**. Für den Zugang vor Ort wurde ein separater QR-Code-Aushang gestaltet; ob und wo er bereits montiert ist, wird hier nicht vorausgesetzt.
 
 Die Anzahl und Auswahl der Inhalte verändern sich durch die Synchronisierung. Maßgeblich ist stets [`data/content.json`](data/content.json), **nicht** eine fest eingetragene Anzahl in dieser README.
 
