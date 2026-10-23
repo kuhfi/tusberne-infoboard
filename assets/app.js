@@ -11,7 +11,7 @@
     { id: "tabellen-news", name: "Tabellen / News", hint: "Tabellen und Neuigkeiten",
       icon: "📊", sourceIds: ["fussball", "news", "tabellen-news"] },
     { id: "mannschaften-ansprechpartner", name: "Mannschaften / Ansprechpartner",
-      hint: "Teams und freigegebene Kontakte",
+      hint: "Mannschaften und Abteilungsleitung",
       icon: "👥", sourceIds: ["mannschaften", "ansprechpartner", "mannschaften-ansprechpartner"] }
   ];
   const sourceToTile = new Map();
