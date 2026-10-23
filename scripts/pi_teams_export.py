@@ -76,7 +76,9 @@ def updated_index(index):
     if entry.get("url") not in (SOURCE_URL, TARGET_URL):
         raise ValueError("Homepage-Mannschaftslink wurde manuell geaendert")
     entry["url"] = TARGET_URL
-    entry["description"] = "23+ Mannschaften, Jahrgänge, Ansprechpartner, Kontaktdaten und Trainingszeiten"
+    # Kein Beschreibungstext unter "Mannschaften" auf der Startseite.
+    # Entfernt auch eine zuvor vom Exporter angelegte Beschreibung.
+    entry.pop("description", None)
     return index
 
 
