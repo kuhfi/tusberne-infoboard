@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T19:51:44+02:00",
+  "generated_at": "2026-10-23T20:10:57+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -967,7 +967,8 @@
         "home": "tus BERNE 1.A-Jun. (J1)",
         "away": "ASV Bergedorf 85 1.A-Jun. (J1)",
         "home_score": "4",
-        "away_score": "0"
+        "away_score": "0",
+        "status": null
       },
       "next_game": {
         "date": "24.10.2026",
@@ -977,7 +978,7 @@
         "away": "UH-Adler 1.B-Jun. (A1)",
         "home_score": null,
         "away_score": null,
-        "status": "ABGESETZT"
+        "status": "Absetzung"
       },
       "table": [
         {
