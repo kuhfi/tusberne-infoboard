@@ -146,7 +146,6 @@ def verified_drive_manifest(manifest_bytes, tiles):
             if (not isinstance(expected, list)
                     or not all(isinstance(x, str) and x for x in expected)
                     or len(set(expected)) != len(expected)
-                    or not current
                     or len(set(current)) != len(current)
                     or set(expected) != set(current)):
                 return False
@@ -203,7 +202,8 @@ def remove_stale_pdfs(items, active_sources, verified):
     ]
     if len(stale) > MAX_REMOVALS:
         raise ValueError("Zu viele geloeschte PDFs auf einmal; manuelle Pruefung erforderlich")
-    other_urls = {item.get("url") for item in items if item not in stale}
+    stale_ids = {id(item) for item in stale}
+    other_urls = {item.get("url") for item in items if id(item) not in stale_ids}
     blobs = []
     for item in stale:
         url = item.get("url")
@@ -211,8 +211,7 @@ def remove_stale_pdfs(items, active_sources, verified):
                 and re.fullmatch(r"\./files/drive/kachel[1-4]/[a-z0-9-]+-[0-9a-f]{8}\.pdf", url)
                 and url not in other_urls):
             blobs.append(REPO / url.removeprefix("./"))
-    ids = {id(item) for item in stale}
-    return [item for item in items if id(item) not in ids], len(stale), blobs
+    return [item for item in items if id(item) not in stale_ids], len(stale), blobs
 
 
 def remove_stale_images(items, active_sources, verified):
