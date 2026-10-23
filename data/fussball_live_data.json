@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T09:10:17+02:00",
+  "generated_at": "2026-10-23T09:40:16+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1914,7 +1914,8 @@
         "home": "tus BERNE 3.D-Jun. (A2)-S",
         "away": "DUWO 08 1.D-Jun. (A1)",
         "home_score": "5",
-        "away_score": "6"
+        "away_score": "6",
+        "status": null
       },
       "next_game": {
         "date": "01.11.2026",
@@ -1923,7 +1924,8 @@
         "home": "Stapelfeld 1.D-Jun. (A1)-S",
         "away": "tus BERNE 3.D-Jun. (A2)-S",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {

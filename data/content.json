@@ -142,7 +142,8 @@
       "category": "mannschaften-ansprechpartner",
       "title": "Mannschaften",
       "kind": "link",
-      "url": "https://tusberne-fussball.de/teams/"
+      "url": "./files/mannschaften.html",
+      "description": "23+ Mannschaften, Jahrgänge, Ansprechpartner, Kontaktdaten und Trainingszeiten"
     },
     {
       "public": true,

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "source": "https://tusberne-fussball.de/teams/",
+  "teams": [
+    {
+      "team": "1. Herren",
+      "year": "–",
+      "contact": "Jürgen Evers",
+      "phone": "0172/9935247",
+      "email": "m5moritz@gmx.de",
+      "training": "Di.+Do. 20:00–21:30 in Berne"
+    },
+    {
+      "team": "2. Herren",
+      "year": "",
+      "contact": "Mike Franke",
+      "phone": "0176/80728536",
+      "email": "u21@tusbernefussball.de",
+      "training": "Mo.+Do. 20:00–21:30 in Berne"
+    },
+    {
+      "team": "3. Herren",
+      "year": "–",
+      "contact": "Dirk Biastoch",
+      "phone": "0157/87865079‬",
+      "email": "melle.dj@gmx.de",
+      "training": "Di.+Fr. 20:00–21:30 in Berne"
+    },
+    {
+      "team": "Senioren (Ü 40)",
+      "year": "–",
+      "contact": "Michael Kraft",
+      "phone": "0176/66590205",
+      "email": "hsvmichel69@hotmail.de",
+      "training": "Mi. 20:00–21:30 in Berne"
+    },
+    {
+      "team": "Senioren (Ü 50)",
+      "year": "–",
+      "contact": "Manuel Meyer",
+      "phone": "0163/5315887",
+      "email": "manuhsv58@googlemail.com",
+      "training": "Mi. 20:00–21:30 in Berne"
+    },
+    {
+      "team": "Alte Herren (Ü 32)",
+      "year": "–",
+      "contact": "Christian Polzin",
+      "phone": "0176/20259631",
+      "email": "christian_polzin@gmx.de",
+      "training": "Mo. 20:00-21:30 in Berne\nMi. 19:30–21:00 in Farmsen"
+    },
+    {
+      "team": "1. A (U18/U17)",
+      "year": "2009/\n2010",
+      "contact": "André von Behrens\nFelix Achilles",
+      "phone": "0176/61413644\n0176/42058548",
+      "email": "vonbehrens@gmx.net\nfe.achilles@gmail.com",
+      "training": "Mo. 18:30–20:00 in Farmsen\nMi. 18:15–19:45 in Berne"
+    },
+    {
+      "team": "1. B (U16)",
+      "year": "2011",
+      "contact": "Mattis Pfennig",
+      "phone": "0152/51908721‬",
+      "email": "mattis-pfennig@outlook.com",
+      "training": "Mo.+Mi.+Fr. 18:15–19:45 in Berne"
+    },
+    {
+      "team": "2. B (U16)",
+      "year": "2011",
+      "contact": "Madlen De Nayer",
+      "phone": "0162/8760515",
+      "email": "madlen.jahncke@web.de",
+      "training": "Mo. 18:15–19:45 in Berne\nDo. 18:00–19:30 in Farmsen"
+    },
+    {
+      "team": "1. C (U15)",
+      "year": "2012",
+      "contact": "Tom Woltemath",
+      "phone": "0176/30471890",
+      "email": "tus-berne-2012@web.de",
+      "training": "Mo. 18:15–19:45 in Berne\nMi. 18:00–19:30 in Farmsen"
+    },
+    {
+      "team": "2. C (U15)/4. C (7er) – Warteliste!",
+      "year": "2012",
+      "contact": "Matthias Gross\nSimon Küseler",
+      "phone": "0173/2072280",
+      "email": "tusberne2012@gmail.com",
+      "training": "Di.+Fr. 18:15–19:45 in Berne"
+    },
+    {
+      "team": "3. C (U14)",
+      "year": "2013",
+      "contact": "Steffen Kuhfuß",
+      "phone": "0176/60031116",
+      "email": "tusberne2013@gmail.com",
+      "training": "Mo. 17–18 Uhr in Berne (alle 2 Wochen)\nDi.+Do. 18:15–19:45 in Berne"
+    },
+    {
+      "team": "1. D (U13)",
+      "year": "2014",
+      "contact": "Andy Pesch",
+      "phone": "0176/32698640",
+      "email": "andy.pesch@hotmail.de",
+      "training": "Mo. 17:00–18:30 in Farmsen\nDi.+Do. 18:15–19:45 in Berne"
+    },
+    {
+      "team": "3. D (U13)",
+      "year": "2014",
+      "contact": "Marc Lindner",
+      "phone": "0163/4371569",
+      "email": "marcjuergenlindner@outlook.de",
+      "training": "Mo. 16:30–18:00 in Berne\nDo. 18:15–19:45 in Berne"
+    },
+    {
+      "team": "2. D / 4. D (U12)",
+      "year": "2015",
+      "contact": "Kai Bertrams",
+      "phone": "0170/3340571",
+      "email": "kai.bertrams@googlemail.com",
+      "training": "Mo.+Mi. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "1. E / 2. E / 3. E (U11)",
+      "year": "2016",
+      "contact": "Sascha Voigt",
+      "phone": "0173/6050867",
+      "email": "voigt.sascha@googlemail.com",
+      "training": "Di.+Do. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "4. E (U10)",
+      "year": "2017",
+      "contact": "Andy Pesch",
+      "phone": "0176/32698640",
+      "email": "andy.pesch@hotmail.de",
+      "training": "Di.+Do. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "5. E (U10)",
+      "year": "2017",
+      "contact": "Özgürkan Sayir",
+      "phone": "0176/34898666",
+      "email": "OSAYIR@web.de",
+      "training": "Di.+Do. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "1. F (U9)",
+      "year": "2018",
+      "contact": "Kevin Bethien",
+      "phone": "0172/4672061",
+      "email": "Kevinbethien@gmx.de",
+      "training": "Mi.+Fr. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "2. F/3. F (U8) – Keine Neuaufnahmen &\nkeine Warteliste!",
+      "year": "2019",
+      "contact": "Frithjof Schubert",
+      "phone": "",
+      "email": "tus-berne-2019@web.de",
+      "training": "Di.+Fr. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "1. G (U7) – Keine Neuaufnahmen &\nkeine Warteliste!",
+      "year": "2020",
+      "contact": "Marcus Held",
+      "phone": "–",
+      "email": "marcusheld@gmx.net",
+      "training": "Di.+Fr. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "2. G (U6) – Keine Neuaufnahmen &\nkeine Warteliste!",
+      "year": "2021",
+      "contact": "Stephan Seifert",
+      "phone": "–",
+      "email": "Stephan.a.seifert@gmail.com",
+      "training": "Fr. 16:30–18:00 in Berne"
+    },
+    {
+      "team": "Bernies (Kindergarten) – Warteliste!",
+      "year": "2022",
+      "contact": "Ingo Tietje",
+      "phone": "–",
+      "email": "ingo.tietje@gmx.de",
+      "training": "Fr. 16:15–18:00 Schule Lienaustraße"
+    }
+  ]
+}
