@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T15:20:19+02:00",
+  "generated_at": "2026-10-24T16:00:17+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -363,15 +363,6 @@
       "display_name": "tus BERNE 3.Hr.",
       "league_line": "Herren Kreisklasse · KK 06 · Saison 2026/27",
       "last_game": {
-        "date": "18.10.2026",
-        "time": "15:00",
-        "competition": "Kreisklasse",
-        "home": "tus BERNE 3.Hr.",
-        "away": "Sasel 4.Hr.",
-        "home_score": "6",
-        "away_score": "0"
-      },
-      "next_game": {
         "date": "24.10.2026",
         "time": "13:00",
         "competition": "Kreisklasse",
@@ -379,6 +370,15 @@
         "away": "tus BERNE 3.Hr.",
         "home_score": "3",
         "away_score": "4"
+      },
+      "next_game": {
+        "date": "01.11.2026",
+        "time": "15:00",
+        "competition": "Kreisklasse",
+        "home": "tus BERNE 3.Hr.",
+        "away": "Tonndorf-Lohe 2.Hr.",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
@@ -1129,7 +1129,8 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "Blankenese 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "ABGESETZT"
       },
       "table": [
         {
