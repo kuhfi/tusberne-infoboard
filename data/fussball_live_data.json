@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T12:21:20+02:00",
+  "generated_at": "2026-10-24T12:30:37+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -831,7 +831,8 @@
         "home": "tus BERNE 1.Ü50",
         "away": "Concordia 1.Ü50",
         "home_score": "1",
-        "away_score": "4"
+        "away_score": "4",
+        "status": null
       },
       "next_game": {
         "date": "22.11.2026",
@@ -840,7 +841,8 @@
         "home": "tus BERNE 1.Ü50",
         "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1129,7 +1131,8 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "Blankenese 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "ABGESETZT"
       },
       "table": [
         {
