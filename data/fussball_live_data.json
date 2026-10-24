@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:00:32+02:00",
+  "generated_at": "2026-10-24T13:10:25+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -687,8 +687,7 @@
         "home": "SC Wentorf 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": "2",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -697,8 +696,7 @@
         "home": "Wellingsbüttel 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -833,8 +831,7 @@
         "home": "tus BERNE 1.Ü50",
         "away": "Concordia 1.Ü50",
         "home_score": "1",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "22.11.2026",
@@ -843,8 +840,7 @@
         "home": "tus BERNE 1.Ü50",
         "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
