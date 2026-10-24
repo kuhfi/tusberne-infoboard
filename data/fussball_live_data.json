@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:10:25+02:00",
+  "generated_at": "2026-10-24T14:20:17+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -56,22 +56,22 @@
         {
           "place": 4,
           "team": "Sasel 2.Hr.",
-          "games": 9,
+          "games": 10,
           "won": 5,
-          "draw": 2,
+          "draw": 3,
           "lost": 2,
           "goals": "30:20",
-          "points": 17
+          "points": 18
         },
         {
           "place": 5,
           "team": "SV Groß Borstel 1.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 5,
-          "draw": 2,
+          "draw": 3,
           "lost": 3,
           "goals": "25:23",
-          "points": 17
+          "points": 18
         },
         {
           "place": 6,
@@ -210,12 +210,12 @@
         {
           "place": 1,
           "team": "Bramfeld 3.Hr.",
-          "games": 10,
-          "won": 8,
+          "games": 11,
+          "won": 9,
           "draw": 0,
           "lost": 2,
-          "goals": "28:23",
-          "points": 24
+          "goals": "31:25",
+          "points": 27
         },
         {
           "place": 2,
@@ -289,22 +289,22 @@
         },
         {
           "place": 9,
-          "team": "Croatia 2.Hr.",
-          "games": 10,
-          "won": 2,
-          "draw": 3,
-          "lost": 5,
-          "goals": "24:33",
-          "points": 9
-        },
-        {
-          "place": 10,
           "team": "Farmsen 3.Hr.",
           "games": 8,
           "won": 3,
           "draw": 0,
           "lost": 5,
           "goals": "20:29",
+          "points": 9
+        },
+        {
+          "place": 10,
+          "team": "Croatia 2.Hr.",
+          "games": 11,
+          "won": 2,
+          "draw": 3,
+          "lost": 6,
+          "goals": "26:36",
           "points": 9
         },
         {
@@ -949,15 +949,6 @@
       "display_name": "tus BERNE 1.A",
       "league_line": "A-Junioren Landesliga · U18-LL 02 · Saison 2026/27",
       "last_game": {
-        "date": "17.10.2026",
-        "time": "11:00",
-        "competition": "Landesfreundschaftsspiele",
-        "home": "tus BERNE 1.A-Jun. (J1)",
-        "away": "ASV Bergedorf 85 1.A-Jun. (J1)",
-        "home_score": "4",
-        "away_score": "0"
-      },
-      "next_game": {
         "date": "24.10.2026",
         "time": "10:30",
         "competition": "Landesfreundschaftsspiele",
@@ -966,6 +957,15 @@
         "home_score": null,
         "away_score": null,
         "status": "ABGESETZT"
+      },
+      "next_game": {
+        "date": "07.11.2026",
+        "time": "10:00",
+        "competition": "Landesliga",
+        "home": "Willinghusen 2.A-Jun. (J1)",
+        "away": "tus BERNE 1.A-Jun. (J1)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
@@ -1129,7 +1129,8 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "Blankenese 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "ABGESETZT"
       },
       "table": [
         {
