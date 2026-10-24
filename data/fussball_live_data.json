@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T14:30:18+02:00",
+  "generated_at": "2026-10-24T15:00:17+02:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -377,8 +377,8 @@
         "competition": "Kreisklasse",
         "home": "DUWO 08 2.Hr.",
         "away": "tus BERNE 3.Hr.",
-        "home_score": null,
-        "away_score": null
+        "home_score": "3",
+        "away_score": "4"
       },
       "table": [
         {
@@ -404,15 +404,25 @@
         {
           "place": 3,
           "team": "Poppenbüttel 2.Hr.",
-          "games": 10,
-          "won": 6,
+          "games": 11,
+          "won": 7,
           "draw": 2,
           "lost": 2,
-          "goals": "40:18",
-          "points": 20
+          "goals": "43:18",
+          "points": 23
         },
         {
           "place": 4,
+          "team": "tus BERNE 3.Hr.",
+          "games": 11,
+          "won": 6,
+          "draw": 3,
+          "lost": 2,
+          "goals": "39:20",
+          "points": 21
+        },
+        {
+          "place": 5,
           "team": "Nordlichter im NSV 2.Hr.",
           "games": 11,
           "won": 6,
@@ -422,7 +432,7 @@
           "points": 20
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "HSV 5.Hr.",
           "games": 10,
           "won": 6,
@@ -432,24 +442,14 @@
           "points": 19
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "DUWO 08 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 5,
           "draw": 4,
-          "lost": 1,
-          "goals": "32:13",
-          "points": 19
-        },
-        {
-          "place": 7,
-          "team": "tus BERNE 3.Hr.",
-          "games": 10,
-          "won": 5,
-          "draw": 3,
           "lost": 2,
           "goals": "35:17",
-          "points": 18
+          "points": 19
         },
         {
           "place": 8,
@@ -534,11 +534,11 @@
         {
           "place": 16,
           "team": "Walddörfer 3.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 0,
           "draw": 1,
-          "lost": 9,
-          "goals": "8:85",
+          "lost": 10,
+          "goals": "8:88",
           "points": 1
         }
       ]
@@ -1129,7 +1129,8 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "Blankenese 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "ABGESETZT"
       },
       "table": [
         {
