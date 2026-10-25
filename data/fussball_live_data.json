@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T18:20:18+01:00",
+  "generated_at": "2026-10-25T20:30:53+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -453,16 +453,26 @@
         },
         {
           "place": 8,
-          "team": "Bramfeld 4.Hr.",
-          "games": 10,
-          "won": 6,
-          "draw": 0,
-          "lost": 4,
-          "goals": "26:39",
+          "team": "Friedrichsgabe 1.Hr.",
+          "games": 11,
+          "won": 5,
+          "draw": 3,
+          "lost": 3,
+          "goals": "38:20",
           "points": 18
         },
         {
           "place": 9,
+          "team": "Bramfeld 4.Hr.",
+          "games": 11,
+          "won": 6,
+          "draw": 0,
+          "lost": 5,
+          "goals": "26:45",
+          "points": 18
+        },
+        {
+          "place": 10,
           "team": "Farmsen 2.Hr.",
           "games": 11,
           "won": 5,
@@ -470,16 +480,6 @@
           "lost": 4,
           "goals": "37:27",
           "points": 17
-        },
-        {
-          "place": 10,
-          "team": "Friedrichsgabe 1.Hr.",
-          "games": 10,
-          "won": 4,
-          "draw": 3,
-          "lost": 3,
-          "goals": "32:20",
-          "points": 15
         },
         {
           "place": 11,
