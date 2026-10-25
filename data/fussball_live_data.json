@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T12:20:17+01:00",
+  "generated_at": "2026-10-25T12:50:28+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -86,12 +86,12 @@
         {
           "place": 7,
           "team": "Duvenstedt 1.Hr.",
-          "games": 9,
+          "games": 10,
           "won": 4,
-          "draw": 1,
+          "draw": 2,
           "lost": 4,
-          "goals": "21:26",
-          "points": 13
+          "goals": "22:27",
+          "points": 14
         },
         {
           "place": 8,
@@ -176,12 +176,12 @@
         {
           "place": 16,
           "team": "Eilbek 1.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 2,
-          "draw": 1,
+          "draw": 2,
           "lost": 7,
-          "goals": "13:37",
-          "points": 7
+          "goals": "14:38",
+          "points": 8
         }
       ]
     },
@@ -220,12 +220,12 @@
         {
           "place": 2,
           "team": "tus BERNE 2.Hr.",
-          "games": 9,
-          "won": 7,
+          "games": 10,
+          "won": 8,
           "draw": 2,
           "lost": 0,
-          "goals": "70:12",
-          "points": 23
+          "goals": "81:16",
+          "points": 26
         },
         {
           "place": 3,
@@ -250,11 +250,11 @@
         {
           "place": 5,
           "team": "SV Barmbek 1.Hr.",
-          "games": 7,
+          "games": 8,
           "won": 6,
           "draw": 0,
-          "lost": 1,
-          "goals": "26:8",
+          "lost": 2,
+          "goals": "30:19",
           "points": 18
         },
         {
