@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:10:17+01:00",
+  "generated_at": "2026-10-25T14:40:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -394,12 +394,12 @@
         {
           "place": 2,
           "team": "Polonia 4.Hr.",
-          "games": 10,
-          "won": 7,
+          "games": 11,
+          "won": 8,
           "draw": 2,
           "lost": 1,
-          "goals": "81:19",
-          "points": 23
+          "goals": "85:21",
+          "points": 26
         },
         {
           "place": 3,
@@ -464,11 +464,11 @@
         {
           "place": 9,
           "team": "Farmsen 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 5,
           "draw": 2,
-          "lost": 3,
-          "goals": "35:23",
+          "lost": 4,
+          "goals": "37:27",
           "points": 17
         },
         {
