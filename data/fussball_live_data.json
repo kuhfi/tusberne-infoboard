@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T18:10:20+01:00",
+  "generated_at": "2026-10-25T18:20:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -10,8 +10,8 @@
         "competition": "Bezirksliga",
         "home": "Croatia 1.Hr.",
         "away": "tus BERNE 1.Hr.",
-        "home_score": null,
-        "away_score": null
+        "home_score": "2",
+        "away_score": "4"
       },
       "next_game": {
         "date": "01.11.2026",
@@ -76,11 +76,11 @@
         {
           "place": 6,
           "team": "Croatia 1.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 4,
           "draw": 2,
-          "lost": 4,
-          "goals": "24:24",
+          "lost": 5,
+          "goals": "26:28",
           "points": 14
         },
         {
@@ -145,6 +145,16 @@
         },
         {
           "place": 13,
+          "team": "tus BERNE 1.Hr.",
+          "games": 10,
+          "won": 4,
+          "draw": 0,
+          "lost": 6,
+          "goals": "17:29",
+          "points": 12
+        },
+        {
+          "place": 14,
           "team": "Walddörfer 1.Hr.",
           "games": 10,
           "won": 3,
@@ -154,23 +164,13 @@
           "points": 10
         },
         {
-          "place": 14,
+          "place": 15,
           "team": "Wellingsbüttel 1.Hr.",
           "games": 10,
           "won": 3,
           "draw": 3,
           "lost": 4,
           "goals": "24:23",
-          "points": 9
-        },
-        {
-          "place": 15,
-          "team": "tus BERNE 1.Hr.",
-          "games": 9,
-          "won": 3,
-          "draw": 0,
-          "lost": 6,
-          "goals": "13:27",
           "points": 9
         },
         {
