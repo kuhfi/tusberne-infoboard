@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-25T18:00:22+01:00",
+  "generated_at": "2026-10-25T18:10:20+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
       "league_line": "Herren Bezirksliga · BZL 02 · Saison 2026/27",
       "last_game": {
-        "date": "18.10.2026",
-        "time": "12:30",
+        "date": "25.10.2026",
+        "time": "15:00",
         "competition": "Bezirksliga",
-        "home": "tus BERNE 1.Hr.",
-        "away": "Eilbek 1.Hr.",
-        "home_score": "0",
-        "away_score": "1"
+        "home": "Croatia 1.Hr.",
+        "away": "tus BERNE 1.Hr.",
+        "home_score": null,
+        "away_score": null
       },
       "next_game": {
         "date": "01.11.2026",
