@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T17:00:16+01:00",
+  "generated_at": "2026-10-25T17:30:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -229,6 +229,16 @@
         },
         {
           "place": 3,
+          "team": "MSV Hamburg 4.Hr.",
+          "games": 11,
+          "won": 7,
+          "draw": 2,
+          "lost": 2,
+          "goals": "43:24",
+          "points": 23
+        },
+        {
+          "place": 4,
           "team": "FC Preußen Hamburg 1.Hr.",
           "games": 10,
           "won": 7,
@@ -238,7 +248,7 @@
           "points": 21
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "DSC Hanseat 2.Hr.",
           "games": 9,
           "won": 7,
@@ -246,16 +256,6 @@
           "lost": 2,
           "goals": "29:27",
           "points": 21
-        },
-        {
-          "place": 5,
-          "team": "MSV Hamburg 4.Hr.",
-          "games": 10,
-          "won": 6,
-          "draw": 2,
-          "lost": 2,
-          "goals": "37:21",
-          "points": 20
         },
         {
           "place": 6,
@@ -330,11 +330,11 @@
         {
           "place": 13,
           "team": "Störtebeker SV 1.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 1,
           "draw": 1,
-          "lost": 8,
-          "goals": "10:39",
+          "lost": 9,
+          "goals": "13:45",
           "points": 4
         },
         {
