@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T16:00:16+01:00",
+  "generated_at": "2026-10-25T16:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -384,11 +384,11 @@
         {
           "place": 1,
           "team": "Alstertal-Langenhorn 3.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 10,
           "draw": 0,
-          "lost": 0,
-          "goals": "80:10",
+          "lost": 1,
+          "goals": "80:12",
           "points": 30
         },
         {
@@ -413,6 +413,16 @@
         },
         {
           "place": 4,
+          "team": "HSV 5.Hr.",
+          "games": 11,
+          "won": 7,
+          "draw": 1,
+          "lost": 3,
+          "goals": "50:20",
+          "points": 22
+        },
+        {
+          "place": 5,
           "team": "tus BERNE 3.Hr.",
           "games": 11,
           "won": 6,
@@ -422,7 +432,7 @@
           "points": 21
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "Nordlichter im NSV 2.Hr.",
           "games": 11,
           "won": 6,
@@ -430,16 +440,6 @@
           "lost": 3,
           "goals": "27:18",
           "points": 20
-        },
-        {
-          "place": 6,
-          "team": "HSV 5.Hr.",
-          "games": 10,
-          "won": 6,
-          "draw": 1,
-          "lost": 3,
-          "goals": "48:20",
-          "points": 19
         },
         {
           "place": 7,
