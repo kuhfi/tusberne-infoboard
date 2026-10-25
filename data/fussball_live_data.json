@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T14:00:16+01:00",
+  "generated_at": "2026-10-25T14:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -483,6 +483,16 @@
         },
         {
           "place": 11,
+          "team": "Hummelsbüttel 1.Hr.",
+          "games": 11,
+          "won": 4,
+          "draw": 1,
+          "lost": 6,
+          "goals": "29:39",
+          "points": 13
+        },
+        {
+          "place": 12,
           "team": "Sasel 4.Hr.",
           "games": 11,
           "won": 3,
@@ -492,23 +502,13 @@
           "points": 11
         },
         {
-          "place": 12,
-          "team": "Hummelsbüttel 1.Hr.",
-          "games": 10,
-          "won": 3,
-          "draw": 1,
-          "lost": 6,
-          "goals": "22:39",
-          "points": 10
-        },
-        {
           "place": 13,
           "team": "Tonndorf-Lohe 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 1,
           "draw": 1,
-          "lost": 8,
-          "goals": "20:69",
+          "lost": 9,
+          "goals": "20:76",
           "points": 4
         },
         {
