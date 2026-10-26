@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T21:30:17+01:00",
+  "generated_at": "2026-10-26T07:50:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -96,22 +96,22 @@
         {
           "place": 8,
           "team": "HSV 3.Hr.",
-          "games": 9,
+          "games": 10,
           "won": 3,
-          "draw": 3,
+          "draw": 4,
           "lost": 3,
-          "goals": "21:19",
-          "points": 12
+          "goals": "22:20",
+          "points": 13
         },
         {
           "place": 9,
           "team": "HEBC 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 3,
-          "draw": 3,
+          "draw": 4,
           "lost": 4,
-          "goals": "26:27",
-          "points": 12
+          "goals": "27:28",
+          "points": 13
         },
         {
           "place": 10,
