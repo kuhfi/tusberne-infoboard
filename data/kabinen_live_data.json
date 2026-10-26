@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T13:50:27+02:00",
+  "generated_at": "2026-10-26T06:31:33+01:00",
   "period": {
     "weeks": [
       {
-        "start": "2026-10-19",
-        "end": "2026-10-25"
-      },
-      {
         "start": "2026-10-26",
         "end": "2026-11-01"
+      },
+      {
+        "start": "2026-11-02",
+        "end": "2026-11-08"
       }
     ]
   },
@@ -58,6 +58,42 @@
       "home": "tus BERNE 3.Hr.",
       "away": "Tonndorf-Lohe 2.Hr.",
       "home_cabin": "2",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-08",
+      "time": "09:00",
+      "kind": "Freundschaftsspiel",
+      "league": "Kreisfreundschaftsspiele",
+      "home": "tus BERNE 4.D (J2)",
+      "away": "tus BERNE 1.E (A1)",
+      "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-08",
+      "time": "11:00",
+      "kind": "Freundschaftsspiel",
+      "league": "Landesfreundschaftsspiele",
+      "home": "tus BERNE 1.B (J1)",
+      "away": "U17 TuS Fleestedt",
+      "home_cabin": "2",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
+      "festival": false
+    },
+    {
+      "date": "2026-11-08",
+      "time": "13:00",
+      "kind": "Pokal",
+      "league": "Pokal",
+      "home": "tus BERNE 1.D (A1)",
+      "away": "Harksheide 2.D (A2)-S",
+      "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
