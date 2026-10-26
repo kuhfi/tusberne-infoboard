@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T14:00:18+01:00",
+  "generated_at": "2026-10-26T14:30:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1129,7 +1129,8 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "Blankenese 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "ABGESETZT"
       },
       "table": [
         {
