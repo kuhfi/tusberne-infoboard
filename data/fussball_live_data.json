@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T10:00:16+01:00",
+  "generated_at": "2026-10-26T11:40:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -26,12 +26,12 @@
         {
           "place": 1,
           "team": "DSC Hanseat 1.Hr.",
-          "games": 9,
-          "won": 8,
+          "games": 10,
+          "won": 9,
           "draw": 0,
           "lost": 1,
-          "goals": "39:10",
-          "points": 24
+          "goals": "42:10",
+          "points": 27
         },
         {
           "place": 2,
@@ -126,11 +126,11 @@
         {
           "place": 11,
           "team": "Alstertal-Langenhorn 1.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 3,
           "draw": 3,
-          "lost": 4,
-          "goals": "16:19",
+          "lost": 5,
+          "goals": "16:22",
           "points": 12
         },
         {
