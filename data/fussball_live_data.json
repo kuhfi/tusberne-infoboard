@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T11:40:17+01:00",
+  "generated_at": "2026-10-26T12:50:22+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -125,16 +125,6 @@
         },
         {
           "place": 11,
-          "team": "Alstertal-Langenhorn 1.Hr.",
-          "games": 11,
-          "won": 3,
-          "draw": 3,
-          "lost": 5,
-          "goals": "16:22",
-          "points": 12
-        },
-        {
-          "place": 12,
           "team": "Harksheide 2.Hr.",
           "games": 11,
           "won": 3,
@@ -144,7 +134,7 @@
           "points": 12
         },
         {
-          "place": 13,
+          "place": 12,
           "team": "tus BERNE 1.Hr.",
           "games": 10,
           "won": 4,
@@ -154,7 +144,7 @@
           "points": 12
         },
         {
-          "place": 14,
+          "place": 13,
           "team": "Walddörfer 1.Hr.",
           "games": 10,
           "won": 3,
@@ -164,13 +154,23 @@
           "points": 10
         },
         {
-          "place": 15,
+          "place": 14,
           "team": "Wellingsbüttel 1.Hr.",
           "games": 10,
           "won": 3,
           "draw": 3,
           "lost": 4,
           "goals": "24:23",
+          "points": 9
+        },
+        {
+          "place": 15,
+          "team": "Alstertal-Langenhorn 1.Hr.",
+          "games": 11,
+          "won": 3,
+          "draw": 3,
+          "lost": 5,
+          "goals": "16:22",
           "points": 9
         },
         {
