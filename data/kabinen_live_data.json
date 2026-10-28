@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T06:31:33+01:00",
+  "generated_at": "2026-10-28T09:10:45+01:00",
   "period": {
     "weeks": [
       {
@@ -58,6 +58,18 @@
       "home": "tus BERNE 3.Hr.",
       "away": "Tonndorf-Lohe 2.Hr.",
       "home_cabin": "2",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-07",
+      "time": "11:00",
+      "kind": "Freundschaftsspiel",
+      "league": "Bezirksfreundschaftsspiele",
+      "home": "tus BERNE 7.D (J4)",
+      "away": "DUWO 08 3.D (J1)",
+      "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
