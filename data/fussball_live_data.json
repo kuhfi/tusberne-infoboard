@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T18:21:29+01:00",
+  "generated_at": "2026-10-28T18:40:23+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1120,8 +1120,7 @@
         "home": "VfL Pinneberg 1.B-Jun. (J1)",
         "away": "tus BERNE 1.B-Jun. (J1)",
         "home_score": "7",
-        "away_score": "0",
-        "status": null
+        "away_score": "0"
       },
       "next_game": {
         "date": "01.11.2026",
@@ -1131,7 +1130,7 @@
         "away": "Blankenese 1.B-Jun. (J1)",
         "home_score": null,
         "away_score": null,
-        "status": "Absetzung"
+        "status": "ABGESETZT"
       },
       "table": [
         {
@@ -1246,8 +1245,7 @@
         "home": "Lemsahl 2.B-Jun. (J2)",
         "away": "tus BERNE 2.B-Jun. (J2)",
         "home_score": "6",
-        "away_score": "3",
-        "status": null
+        "away_score": "3"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1256,8 +1254,7 @@
         "home": "tus BERNE 2.B-Jun. (J2)",
         "away": "UH-Adler 2.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1392,8 +1389,7 @@
         "home": "UH-Adler 1.C-Jun. (A1)",
         "away": "tus BERNE 1.C-Jun. (A1)",
         "home_score": "7",
-        "away_score": "2",
-        "status": null
+        "away_score": "2"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1402,8 +1398,7 @@
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "GW Eimsbüttel 1.C-Jun. (A1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
