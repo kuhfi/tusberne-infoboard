@@ -162,3 +162,11 @@ main { padding:14px 0 34px; }
 }
 @media(prefers-reduced-motion:reduce){ html { scroll-behavior:auto; } }
 @media print { .top-actions,.backtop { display:none; } }
+
+/* Direkte Inhaltslinks in der Trainingskachel. */
+.document-direct { display:flex; align-items:center; gap:12px; padding:16px; color:#182230; min-height:60px; }
+.document-direct:hover { text-decoration:none; border-color:var(--blue); background:var(--blue-soft); }
+.doc-direct-arrow { display:grid; place-items:center; width:26px; height:26px; flex:none; border-radius:50%; background:var(--blue); color:#fff; }
+.doc-direct-content { display:block; min-width:0; overflow-wrap:anywhere; }
+.doc-direct-content .doc-title { display:block; font-weight:900; }
+.doc-description { display:block; margin-top:5px; color:#344054; font-size:14px; font-weight:400; }
