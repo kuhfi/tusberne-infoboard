@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T13:00:18+01:00",
+  "generated_at": "2026-10-29T13:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -232,10 +232,10 @@
           "team": "MSV Hamburg 4.Hr.",
           "games": 11,
           "won": 7,
-          "draw": 2,
-          "lost": 2,
-          "goals": "43:24",
-          "points": 23
+          "draw": 1,
+          "lost": 3,
+          "goals": "40:24",
+          "points": 22
         },
         {
           "place": 4,
@@ -301,11 +301,11 @@
           "place": 10,
           "team": "Croatia 2.Hr.",
           "games": 11,
-          "won": 2,
-          "draw": 3,
+          "won": 3,
+          "draw": 2,
           "lost": 6,
-          "goals": "26:36",
-          "points": 9
+          "goals": "26:33",
+          "points": 11
         },
         {
           "place": 11,
