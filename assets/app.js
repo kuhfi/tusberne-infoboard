@@ -108,6 +108,23 @@
     }
     ui.notice.hidden = true;
     selected.forEach(function (item) {
+      // Training: ein direkter Link pro Inhalt, ohne zusätzlichen Aufklapp-Schritt.
+      if (item.tile.id === "training") {
+        const card = el("a", "document document-direct");
+        card.href = item.url;
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
+        const arrow = el("span", "doc-direct-arrow", "→");
+        arrow.setAttribute("aria-hidden", "true");
+        const content = el("span", "doc-direct-content");
+        content.append(el("span", "doc-title", item.title));
+        if (item.description) content.append(el("span", "doc-description", item.description));
+        const stand = formattedDate(item.updated_at);
+        if (stand) content.append(el("span", "doc-time", "Dateistand: " + stand));
+        card.append(arrow, content);
+        ui.documents.append(card);
+        return;
+      }
       const card = el("details", "document");
       const summary = el("summary", "");
       summary.append(el("span", "doc-title", item.title),
