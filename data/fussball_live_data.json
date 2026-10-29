@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T13:50:17+01:00",
+  "generated_at": "2026-10-29T17:30:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1850,7 +1850,8 @@
         "home": "tus BERNE 2.D-Jun. (J1)",
         "away": "Rahlstedt 3.D-Jun. (J1)",
         "home_score": "4",
-        "away_score": "4"
+        "away_score": "4",
+        "status": null
       },
       "next_game": {
         "date": "07.11.2026",
@@ -1859,7 +1860,8 @@
         "home": "Bramfeld 2.D-Jun. (J2)",
         "away": "tus BERNE 2.D-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
