@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T15:50:17+01:00",
+  "generated_at": "2026-10-30T16:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1129,8 +1129,7 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "Blankenese 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": "ABGESETZT"
+        "away_score": null
       },
       "table": [
         {
@@ -1790,16 +1789,26 @@
       "table": [
         {
           "place": 1,
-          "team": "Vorw. Wacker 1.D-Jun. (A1)",
+          "team": "tus BERNE 1.D-Jun. (A1)",
           "games": 4,
-          "won": 4,
+          "won": 3,
           "draw": 0,
-          "lost": 0,
-          "goals": "29:9",
-          "points": 12
+          "lost": 1,
+          "goals": "23:6",
+          "points": 9
         },
         {
           "place": 2,
+          "team": "Vorw. Wacker 1.D-Jun. (A1)",
+          "games": 4,
+          "won": 3,
+          "draw": 0,
+          "lost": 1,
+          "goals": "22:8",
+          "points": 9
+        },
+        {
+          "place": 3,
           "team": "Poppenbüttel 1.D-Jun. (A1)",
           "games": 4,
           "won": 2,
@@ -1807,16 +1816,6 @@
           "lost": 1,
           "goals": "22:15",
           "points": 7
-        },
-        {
-          "place": 3,
-          "team": "tus BERNE 1.D-Jun. (A1)",
-          "games": 4,
-          "won": 2,
-          "draw": 0,
-          "lost": 2,
-          "goals": "24:13",
-          "points": 6
         },
         {
           "place": 4,
