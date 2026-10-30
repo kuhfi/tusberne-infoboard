@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T21:40:18+01:00",
+  "generated_at": "2026-10-30T22:00:26+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -75,6 +75,16 @@
         },
         {
           "place": 6,
+          "team": "Harksheide 2.Hr.",
+          "games": 12,
+          "won": 4,
+          "draw": 3,
+          "lost": 5,
+          "goals": "22:29",
+          "points": 15
+        },
+        {
+          "place": 7,
           "team": "Croatia 1.Hr.",
           "games": 11,
           "won": 4,
@@ -84,7 +94,7 @@
           "points": 14
         },
         {
-          "place": 7,
+          "place": 8,
           "team": "Duvenstedt 1.Hr.",
           "games": 10,
           "won": 4,
@@ -94,7 +104,7 @@
           "points": 14
         },
         {
-          "place": 8,
+          "place": 9,
           "team": "HSV 3.Hr.",
           "games": 10,
           "won": 3,
@@ -104,7 +114,7 @@
           "points": 13
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "HEBC 2.Hr.",
           "games": 12,
           "won": 3,
@@ -114,23 +124,13 @@
           "points": 13
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Polonia 1.Hr.",
           "games": 10,
           "won": 3,
           "draw": 3,
           "lost": 4,
           "goals": "23:26",
-          "points": 12
-        },
-        {
-          "place": 11,
-          "team": "Harksheide 2.Hr.",
-          "games": 11,
-          "won": 3,
-          "draw": 3,
-          "lost": 5,
-          "goals": "19:28",
           "points": 12
         },
         {
@@ -156,11 +156,11 @@
         {
           "place": 14,
           "team": "Wellingsbüttel 1.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 3,
           "draw": 3,
-          "lost": 4,
-          "goals": "24:23",
+          "lost": 5,
+          "goals": "25:26",
           "points": 9
         },
         {
