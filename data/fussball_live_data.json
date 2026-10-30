@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T21:00:21+01:00",
+  "generated_at": "2026-10-30T21:40:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -384,22 +384,22 @@
         {
           "place": 1,
           "team": "Alstertal-Langenhorn 3.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 10,
           "draw": 0,
-          "lost": 1,
-          "goals": "80:12",
+          "lost": 2,
+          "goals": "83:16",
           "points": 30
         },
         {
           "place": 2,
           "team": "Polonia 4.Hr.",
-          "games": 11,
-          "won": 8,
+          "games": 12,
+          "won": 9,
           "draw": 2,
           "lost": 1,
-          "goals": "85:21",
-          "points": 26
+          "goals": "89:24",
+          "points": 29
         },
         {
           "place": 3,
