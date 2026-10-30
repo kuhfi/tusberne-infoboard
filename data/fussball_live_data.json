@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T20:30:22+01:00",
+  "generated_at": "2026-10-30T21:00:21+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -35,22 +35,22 @@
         },
         {
           "place": 2,
+          "team": "VfL 93 1.Hr.",
+          "games": 12,
+          "won": 6,
+          "draw": 3,
+          "lost": 3,
+          "goals": "29:14",
+          "points": 21
+        },
+        {
+          "place": 3,
           "team": "UH-Adler 1.Hr.",
           "games": 11,
           "won": 7,
           "draw": 0,
           "lost": 4,
           "goals": "34:20",
-          "points": 18
-        },
-        {
-          "place": 3,
-          "team": "VfL 93 1.Hr.",
-          "games": 11,
-          "won": 5,
-          "draw": 3,
-          "lost": 3,
-          "goals": "25:14",
           "points": 18
         },
         {
@@ -106,11 +106,11 @@
         {
           "place": 9,
           "team": "HEBC 2.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 3,
           "draw": 4,
-          "lost": 4,
-          "goals": "27:28",
+          "lost": 5,
+          "goals": "27:32",
           "points": 13
         },
         {
