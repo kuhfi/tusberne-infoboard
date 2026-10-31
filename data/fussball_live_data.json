@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T22:00:26+01:00",
+  "generated_at": "2026-10-31T06:30:26+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -35,6 +35,16 @@
         },
         {
           "place": 2,
+          "team": "UH-Adler 1.Hr.",
+          "games": 12,
+          "won": 8,
+          "draw": 0,
+          "lost": 4,
+          "goals": "35:20",
+          "points": 21
+        },
+        {
+          "place": 3,
           "team": "VfL 93 1.Hr.",
           "games": 12,
           "won": 6,
@@ -42,16 +52,6 @@
           "lost": 3,
           "goals": "29:14",
           "points": 21
-        },
-        {
-          "place": 3,
-          "team": "UH-Adler 1.Hr.",
-          "games": 11,
-          "won": 7,
-          "draw": 0,
-          "lost": 4,
-          "goals": "34:20",
-          "points": 18
         },
         {
           "place": 4,
@@ -106,11 +106,11 @@
         {
           "place": 9,
           "team": "HSV 3.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 3,
           "draw": 4,
-          "lost": 3,
-          "goals": "22:20",
+          "lost": 4,
+          "goals": "22:21",
           "points": 13
         },
         {
@@ -443,6 +443,16 @@
         },
         {
           "place": 7,
+          "team": "Friedrichsgabe 1.Hr.",
+          "games": 12,
+          "won": 5,
+          "draw": 4,
+          "lost": 3,
+          "goals": "40:22",
+          "points": 19
+        },
+        {
+          "place": 8,
           "team": "DUWO 08 2.Hr.",
           "games": 11,
           "won": 5,
@@ -450,16 +460,6 @@
           "lost": 2,
           "goals": "35:17",
           "points": 19
-        },
-        {
-          "place": 8,
-          "team": "Friedrichsgabe 1.Hr.",
-          "games": 11,
-          "won": 5,
-          "draw": 3,
-          "lost": 3,
-          "goals": "38:20",
-          "points": 18
         },
         {
           "place": 9,
@@ -503,22 +503,22 @@
         },
         {
           "place": 13,
+          "team": "FC Hamburg 1.Hr.",
+          "games": 12,
+          "won": 1,
+          "draw": 2,
+          "lost": 9,
+          "goals": "25:75",
+          "points": 5
+        },
+        {
+          "place": 14,
           "team": "Condor 4.Hr.",
           "games": 11,
           "won": 1,
           "draw": 1,
           "lost": 9,
           "goals": "14:50",
-          "points": 4
-        },
-        {
-          "place": 14,
-          "team": "FC Hamburg 1.Hr.",
-          "games": 11,
-          "won": 1,
-          "draw": 1,
-          "lost": 9,
-          "goals": "23:73",
           "points": 4
         },
         {
