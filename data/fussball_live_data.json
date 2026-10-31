@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T14:40:16+01:00",
+  "generated_at": "2026-10-31T17:30:39+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1513,7 +1513,8 @@
         "home": "tus BERNE 2.C-Jun. (A2)",
         "away": "Union Tornesch 4.C-Jun. (A2)",
         "home_score": "7",
-        "away_score": "5"
+        "away_score": "5",
+        "status": null
       },
       "next_game": {
         "date": "08.11.2026",
@@ -1522,7 +1523,8 @@
         "home": "Poppenbüttel 3.C-Jun. (A2)",
         "away": "tus BERNE 2.C-Jun. (A2)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
