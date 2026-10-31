@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T18:00:35+01:00",
+  "generated_at": "2026-10-31T18:10:37+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -195,7 +195,8 @@
         "home": "SV Barmbek 1.Hr.",
         "away": "tus BERNE 2.Hr.",
         "home_score": "4",
-        "away_score": "11"
+        "away_score": "11",
+        "status": null
       },
       "next_game": {
         "date": "31.10.2026",
@@ -204,7 +205,8 @@
         "home": "tus BERNE 2.Hr.",
         "away": "Horner TV 2.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
