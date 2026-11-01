@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T17:10:16+01:00",
+  "generated_at": "2026-11-01T17:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -75,6 +75,16 @@
         },
         {
           "place": 6,
+          "team": "Duvenstedt 1.Hr.",
+          "games": 11,
+          "won": 5,
+          "draw": 2,
+          "lost": 4,
+          "goals": "26:30",
+          "points": 17
+        },
+        {
+          "place": 7,
           "team": "Polonia 1.Hr.",
           "games": 11,
           "won": 4,
@@ -84,7 +94,7 @@
           "points": 15
         },
         {
-          "place": 7,
+          "place": 8,
           "team": "Harksheide 2.Hr.",
           "games": 12,
           "won": 4,
@@ -94,23 +104,13 @@
           "points": 15
         },
         {
-          "place": 8,
-          "team": "Croatia 1.Hr.",
-          "games": 11,
-          "won": 4,
-          "draw": 2,
-          "lost": 5,
-          "goals": "26:28",
-          "points": 14
-        },
-        {
           "place": 9,
-          "team": "Duvenstedt 1.Hr.",
-          "games": 10,
+          "team": "Croatia 1.Hr.",
+          "games": 12,
           "won": 4,
           "draw": 2,
-          "lost": 4,
-          "goals": "22:27",
+          "lost": 6,
+          "goals": "29:32",
           "points": 14
         },
         {
