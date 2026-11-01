@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T18:00:16+01:00",
+  "generated_at": "2026-11-01T18:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -319,23 +319,23 @@
         },
         {
           "place": 12,
-          "team": "Hamburg Hurricanes 2.Hr.",
-          "games": 9,
+          "team": "DJK Hamburg 1.Hr.",
+          "games": 11,
           "won": 2,
-          "draw": 0,
-          "lost": 7,
-          "goals": "16:37",
-          "points": 6
+          "draw": 1,
+          "lost": 8,
+          "goals": "19:58",
+          "points": 7
         },
         {
           "place": 13,
-          "team": "DJK Hamburg 1.Hr.",
+          "team": "Hamburg Hurricanes 2.Hr.",
           "games": 10,
-          "won": 1,
-          "draw": 1,
+          "won": 2,
+          "draw": 0,
           "lost": 8,
-          "goals": "17:58",
-          "points": 4
+          "goals": "16:39",
+          "points": 6
         },
         {
           "place": 14,
