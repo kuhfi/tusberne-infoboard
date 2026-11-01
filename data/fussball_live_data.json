@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T11:10:19+01:00",
+  "generated_at": "2026-11-01T13:00:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1908,15 +1908,6 @@
       "display_name": "tus BERNE 3.D",
       "league_line": "D-Junioren Kreisliga · U13-KL 03 Herbst · Saison 2026/27",
       "last_game": {
-        "date": "11.10.2026",
-        "time": "09:00",
-        "competition": "Kreisfreundschaftsspiele",
-        "home": "tus BERNE 3.D-Jun. (A2)-S",
-        "away": "DUWO 08 1.D-Jun. (A1)",
-        "home_score": "5",
-        "away_score": "6"
-      },
-      "next_game": {
         "date": "01.11.2026",
         "time": "10:00",
         "competition": "Kreisfreundschaftsspiele",
@@ -1925,6 +1916,7 @@
         "home_score": null,
         "away_score": null
       },
+      "next_game": null,
       "table": [
         {
           "place": 1,
