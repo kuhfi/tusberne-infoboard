@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="de"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0055a5"><meta name="robots" content="noindex,nofollow">
+<title>tus BERNE | FAQ für Trainer &amp; Betreuer</title>
+<meta name="description" content="FAQ für Trainer und Betreuer im tus BERNE Fußball. Ergänzung zum digitalen Infoboard mit Zuständigkeiten und PSG-Kontakten.">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="../assets/tus-berne-logo.svg">
+<style>
+    main { padding:18px 0 34px; }
+    .intro {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px 18px;
+      margin:0 0 16px;
+    }
+    .intro h2 { margin:0 0 6px; font-size:clamp(22px, 4vw, 30px); color:var(--blue-dark); }
+    .intro p { margin:0; color:#344054; }
+    .pill-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .pill {
+      background:var(--blue-soft);
+      color:#163451;
+      border-left:4px solid var(--blue);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .quick {
+      display:grid;
+      grid-template-columns:repeat(5, minmax(0,1fr));
+      gap:10px;
+      margin:0 0 18px;
+    }
+    .quick-card {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius-sm);
+      padding:13px;
+      box-shadow:0 8px 20px rgba(0,48,102,.07);
+      min-height:108px;
+    }
+    .quick-card h3 { margin:0 0 5px; color:var(--blue-dark); font-size:17px; }
+    .quick-card p { margin:0; color:#475467; font-size:14px; }
+
+    .controls {
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(12px);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:0 8px 22px rgba(0,48,102,.09);
+      padding:12px;
+      margin:0 0 18px;
+    }
+    .search {
+      width:100%;
+      min-height:48px;
+      border:2px solid var(--line);
+      border-radius:14px;
+      padding:10px 13px;
+      font-size:16px;
+      outline:none;
+      background:#fff;
+    }
+    .search:focus { border-color:var(--blue); box-shadow:0 0 0 4px rgba(0,85,165,.12); }
+    .filter-toggle {
+      display:none;
+      width:100%;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--blue-dark);
+      border-radius:14px;
+      padding:10px 12px;
+      margin-top:9px;
+      font-weight:900;
+      font-size:15px;
+      cursor:pointer;
+    }
+    .filter-toggle::after {
+      content:"⌄";
+      width:26px;
+      height:26px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      background:var(--blue-soft);
+      color:var(--blue);
+      font-size:18px;
+      line-height:1;
+      transform:translateY(-1px);
+    }
+    .controls.filter-open .filter-toggle::after {
+      content:"⌃";
+    }
+    .filter-label {
+      color:#667085;
+      font-size:13px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+    .chips {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      overflow:visible;
+      padding:10px 0 2px;
+    }
+    .chip {
+      flex:0 0 auto;
+      border:1px solid var(--line);
+      background:#fff;
+      color:#233044;
+      border-radius:999px;
+      padding:8px 12px;
+      font-weight:800;
+      font-size:14px;
+      cursor:pointer;
+    }
+    .chip.active { background:var(--blue); border-color:var(--blue); color:#fff; }
+
+    .section { margin:22px 0 30px; scroll-margin-top:140px; }
+    .section-title { margin-bottom:10px; padding-bottom:8px; border-bottom:4px solid var(--blue); }
+    .section h2 { margin:0; color:var(--blue-dark); font-size:clamp(22px, 4.8vw, 32px); line-height:1.1; letter-spacing:-.4px; }
+
+    details {
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      margin:10px 0;
+      box-shadow:0 6px 18px rgba(0,48,102,.06);
+      overflow:hidden;
+    }
+    summary {
+      list-style:none;
+      cursor:pointer;
+      padding:14px 15px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      font-weight:900;
+      color:#182230;
+    }
+    summary::-webkit-details-marker { display:none; }
+    summary::before {
+      content:"+";
+      width:26px;
+      height:26px;
+      flex:0 0 26px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:var(--blue);
+      color:#fff;
+      font-weight:900;
+      margin-top:1px;
+    }
+    details[open] summary::before { content:"–"; }
+    .answer { padding:0 15px 15px 51px; color:#344054; }
+    .answer p { margin:0 0 9px; }
+    .answer ul { margin:0 0 8px 18px; padding:0; }
+    .answer li { margin-bottom:6px; }
+    .meta {
+      margin-top:8px;
+      padding:9px 11px;
+      border-left:4px solid var(--blue);
+      background:var(--blue-soft);
+      border-radius:10px;
+      font-size:14px;
+      color:#344054;
+    }
+    .meta strong { color:var(--blue-dark); }
+
+    .doc-link {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin:3px 0 8px;
+      padding:9px 12px;
+      border-radius:999px;
+      background:var(--blue);
+      color:#fff !important;
+      text-decoration:none;
+      font-weight:900;
+      font-size:14px;
+      box-shadow:0 8px 16px rgba(0,91,181,.18);
+    }
+    .doc-link:hover { filter:brightness(.96); }
+    .doc-link::after { content:"↗"; font-weight:900; }
+    .link-hint {
+      margin:0 0 6px;
+      font-size:13px;
+      color:#667085;
+    }
+
+    .contact-answer { padding-left:15px; }
+    .contact-list {
+      display:grid;
+      gap:8px;
+      margin-top:10px;
+    }
+    .contact-row {
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:12px;
+      align-items:start;
+      background:#f8fbff;
+      border:1px solid #d7e4f4;
+      border-radius:12px;
+      padding:10px 12px;
+    }
+    .contact-row strong { color:var(--blue-dark); }
+    .contact-row span { color:#344054; }
+    .tag {
+      display:inline-block;
+      margin:4px 6px 0 0;
+      padding:4px 8px;
+      border-radius:999px;
+      background:#eef6ff;
+      color:#17446e;
+      font-size:12px;
+      font-weight:800;
+    }
+    .hidden { display:none !important; }
+
+.faq-return{display:flex;gap:10px;flex-wrap:wrap;margin:16px auto}
+.doc-link{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.contact-row{min-width:0;overflow-wrap:anywhere}
+.answer{overflow-wrap:anywhere}
+.footer .wrap{display:block}
+.quick{scroll-margin-top:16px}
+@media(max-width:980px){.quick{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:720px){.quick{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-row{grid-template-columns:1fr;gap:4px}.answer{padding-left:15px}.section{scroll-margin-top:165px}}
+@media(max-width:520px){
+ .quick{gap:8px}.quick-card{min-height:0;padding:11px 10px}.quick-card h3{font-size:15px}.quick-card p{font-size:12.5px;line-height:1.35}
+ .controls{padding:10px;border-radius:16px}.filter-toggle{display:flex}.chips{display:none;grid-template-columns:1fr 1fr;gap:8px;padding:9px 0 1px}.controls.filter-open .chips{display:grid}
+ .chip{width:100%;min-height:42px;padding:9px 10px;text-align:center}.search{min-height:44px;font-size:16px;padding:9px 11px}
+ summary{padding:13px 12px;gap:8px}summary::before{width:24px;height:24px;flex-basis:24px}.answer{padding:0 12px 13px}.contact-answer{padding-left:12px}.contact-row{padding:10px}
+}
+@media print{.controls,.top-actions,.backtop,.faq-return{display:none!important}details{break-inside:avoid}details:not([open]) .answer{display:block}summary::before{display:none}.hidden{display:block!important}}
+</style></head><body>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="hero" id="top"><div class="wrap"><div class="hero-shell">
+<div class="hero-topline">EINMAL BERNE IMMER BERNE</div>
+<div class="hero-logo"><img src="../assets/tus-berne-logo.svg" alt="tus BERNE – Vereinslogo" width="220" height="220"></div>
+<div class="hero-inner"><p class="eyebrow">FUSSBALLABTEILUNG · FAQ</p><h1>FAQ für Trainer &amp; Betreuer</h1><p class="subtitle">Die schnelle Hilfe für den Vereinsalltag: Training, Spieltag, Kabinen, Material, DFBnet, SpielerPlus, Förderungen, Verhalten und wichtige Abläufe.</p></div>
+<nav class="top-actions" aria-label="Schnellnavigation">
+            <a class="button" href="#faq">FAQ durchsuchen</a>
+            <a class="button secondary" href="#haltung">Werte &amp; Leitlinien</a>
+            <a class="button secondary" href="#spieltag">Spieltag</a>
+            <a class="button secondary" href="#training">Training</a>
+            <a class="button secondary" href="#foerderungen">Förderungen</a>
+          </nav></div></div></header>
+<div class="wrap faq-return"><a href="../intern/">← Intern</a><a href="../portal/">Zum Fußballportal</a></div>
+<main class="wrap" id="inhalt">
+    <section class="intro">
+      <h2>Startpunkt für schnelle Antworten</h2>
+      <p>Diese Seite ergänzt das tus BERNE Infoboard. Sie sammelt praktische Antworten, bleibt bewusst vereinsnah. Verlinkte Dokumente und Formulare öffnen die aktuellen Infoboard-Beiträge oder offiziellen Downloadbereiche.</p>
+    </section>
+
+    <section class="quick" aria-label="Schnellüberblick">
+      <article class="quick-card"><h3>Haltung</h3><p>Werte, Elternarbeit, Kinderschutz und Verhalten.</p></article>
+      <article class="quick-card"><h3>Training</h3><p>Trainingsplan, Qualität, Ferien, Kabinen und Tore.</p></article>
+      <article class="quick-card"><h3>Sicherheit</h3><p>Hitze, Gewitter, Verletzungen und Material.</p></article>
+      <article class="quick-card"><h3>Spieltag</h3><p>Kabinenplan, Ergebnis, Passkontrolle und Schiedsrichter.</p></article>
+      <article class="quick-card"><h3>Organisation</h3><p>SpielerPlus, DFBnet, Fotos, Turniere und Abläufe.</p></article>
+    </section>
+
+    <section id="faq" class="controls" aria-label="FAQ Suche und Filter">
+      <input id="search" class="search" type="search" placeholder="FAQ durchsuchen: Gewitter, SpielerPlus, Kabinen, DFBnet, Führungszeugnis …" aria-label="FAQ durchsuchen">
+      <button id="filterToggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="filterChips">
+        <span>Filter anzeigen</span>
+        <span id="activeFilterLabel" class="filter-label">Alle</span>
+      </button>
+      <div id="filterChips" class="chips" aria-label="Kategorien">
+        <button class="chip active" data-filter="all">Alle</button>
+        <button class="chip" data-filter="haltung">Haltung</button>
+        <button class="chip" data-filter="training">Training</button>
+        <button class="chip" data-filter="sicherheit">Sicherheit</button>
+        <button class="chip" data-filter="spieltag">Spieltag</button>
+        <button class="chip" data-filter="organisation">Organisation</button>
+        <button class="chip" data-filter="finanzen">Finanzen</button>
+        <button class="chip" data-filter="foerderung">Förderung</button>
+      </div>
+    </section>
+
+    <section id="zustaendigkeiten" class="section">
+      <div class="section-title"><h2>Zuständigkeiten</h2></div>
+
+      <details data-cat="organisation spieltag training finanzen">
+        <summary>Wen spreche ich bei welchem Thema an?</summary>
+        <div class="answer contact-answer">
+          <div class="contact-list">
+            <div class="contact-row"><strong>Simon Küseler</strong><span>Abteilungsleitung, Grundsatzfragen, übergeordnete Entscheidungen</span></div>
+            <div class="contact-row"><strong>Jörn-Hendrik Matthiesen</strong><span>Stellvertreter der Abteilungsleitung</span></div>
+            <div class="contact-row"><strong>Dennis Groneberg-Dudkowiak</strong><span>Jugendleitung, übergreifende Themen im Jugendbereich</span></div>
+            <div class="contact-row"><strong>Brigitte Steckel</strong><span>Mails, Spielbetrieb, Spielberechtigungen, Spielverlegungen, Nichtantreten, HFV-Abstimmung, DFBnet, Finanzen, Förderungen</span></div>
+            <div class="contact-row"><strong>Sebastian Lück</strong><span>Trainingsplan, Advance Football, Nuki (Zugang Fußballraum)</span></div>
+            <div class="contact-row"><strong>Matthias Groß</strong><span>Bernies, immer der zukünftige neue Jahrgang, Protokollführung bei Versammlungen</span></div>
+            <div class="contact-row"><strong>Steffen Kuhfuß</strong><span>Infoboard, FAQ, digitale Ablage, Betreuung Junior Coaches</span></div>
+            <div class="contact-row"><strong>Luc Herrmann</strong><span>Erweiterte Abteilungsleitung, Schiedsrichterobmann</span></div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="haltung" class="section">
+      <div class="section-title"><h2>Werte, Leitlinien & Kinderschutz</h2></div>
+
+      <details data-cat="haltung">
+        <summary>Wofür will tus BERNE stehen?</summary>
+        <div class="answer"><p>tus BERNE versteht sich als familiärer und attraktiver Breitensportverein. Im Mittelpunkt stehen Jugendarbeit, Gemeinschaft, Spaß am Fußball und die Entwicklung jedes einzelnen Kindes.</p></div>
+      </details>
+
+      <details data-cat="haltung">
+        <summary>Welche Haltung erwartet tus BERNE von Trainerinnen und Trainern?</summary>
+        <div class="answer"><p>Trainerinnen und Trainer handeln wertschätzend, pünktlich, respektvoll und verlässlich. Sie sind Vorbilder auf und neben dem Platz und suchen den Austausch mit Kindern, Eltern und Trainerkollegen.</p><div class="meta"><strong>Leitgedanke:</strong> Druck hat nur der Ball.</div></div>
+      </details>
+
+      <details data-cat="haltung">
+        <summary>Was bedeutet „Druck hat nur der Ball“?</summary>
+        <div class="answer"><p>Kinder sollen Fußball mit Freude und ohne unnötigen Erfolgsdruck erleben. Dazu gehören faire Begleitung, ausreichend Spielzeit, weniger Dauercoaching von außen und ein positives Lernumfeld.</p></div>
+      </details>
+
+      <details data-cat="haltung">
+        <summary>Welche Leitlinien gelten für Eltern?</summary>
+        <div class="answer"><p>Eltern unterstützen die Kinder positiv, respektieren Trainer- und Schiedsrichterentscheidungen und sprechen Probleme direkt und ruhig an. Hilfe bei Fahrten, Turnieren und Veranstaltungen gehört zum Vereinsalltag dazu.</p></div>
+      </details>
+
+      <details data-cat="haltung">
+        <summary>Was hilft bei Elternarbeit besonders?</summary>
+        <div class="answer"><p>Klare Regeln zu Saisonbeginn, transparente Kommunikation und mindestens ein Elternabend pro Saison helfen sehr. Leistungen einzelner Kinder werden nicht mit anderen Eltern besprochen.</p></div>
+      </details>
+
+      <details data-cat="haltung sicherheit">
+        <summary>Was bedeutet Kinderschutz bei tus BERNE?</summary>
+        <div class="answer"><p>Kinderschutz bedeutet: hinschauen, respektvoll handeln, Grenzen achten und Kinder ernst nehmen. Sorgen oder Auffälligkeiten werden vertraulich behandelt und nicht in Elternrunden oder WhatsApp-Gruppen diskutiert.</p></div>
+      </details>
+
+      <details data-cat="haltung sicherheit">
+        <summary>Wer sind die PSG-Beauftragten und wie erreiche ich sie?</summary>
+        <div class="answer"><p><strong>Stephanie Kroll</strong> und <strong>Benjamin Schulz</strong> sind die PSG-Beauftragten. Sie sind Ansprechpersonen für Kinderschutz, Prävention sexualisierte Gewalt und vertrauliche Meldungen bei Verdacht oder Vorfällen.</p><div class="meta"><strong>Kontakt:</strong><br>Stephanie Kroll: 0173 328 43 94<br>Benjamin Schulz: 0177 633 21 36<br>Allgemein: <a href="mailto:krise@tusberne.de">krise@tusberne.de</a></div></div>
+      </details>
+
+      <details data-cat="haltung sicherheit organisation">
+        <summary>Brauche ich als Trainer ein erweitertes Führungszeugnis?</summary>
+        <div class="answer"><p>Ja. Jeder Übungsleiter muss ein erweitertes polizeiliches Führungszeugnis vorlegen und den Ehrenkodex unterschreiben. Das Führungszeugnis muss nach vier Jahren erneut beantragt und vorgelegt werden. Die konkrete Abwicklung läuft über die Geschäftsstelle.</p></div>
+      </details>
+
+      <details data-cat="haltung sicherheit">
+        <summary>Was mache ich bei einem unguten Gefühl oder Verdacht?</summary>
+        <div class="answer"><p>Nicht wegschauen, aber auch nicht hektisch handeln. Beobachtungen sachlich festhalten, keine Gerüchte verbreiten und keine eigene Ermittlung starten. Der nächste Schritt ist die vertrauliche Kontaktaufnahme mit den PSG-Beauftragten Stephanie Kroll oder Benjamin Schulz. Täter oder Täterin werden nicht direkt konfrontiert.</p></div>
+      </details>
+
+      <details data-cat="haltung sicherheit">
+        <summary>Was mache ich, wenn sich mir ein Kind oder Jugendlicher anvertraut?</summary>
+        <div class="answer"><p>Ruhe bewahren, zuhören, Glauben schenken und nichts versprechen, was man später nicht halten kann. Aussagen und Situationen werden sachlich protokolliert. Das weitere Vorgehen wird mit den PSG-Beauftragten abgestimmt. Informationen gehen nicht an die mögliche Täterin oder den möglichen Täter.</p></div>
+      </details>
+
+      <details data-cat="haltung sicherheit">
+        <summary>Welche PSG-Verhaltensregeln sind im Alltag besonders wichtig?</summary>
+        <div class="answer"><p>Kein Gespräch oder Training ohne Kontroll- und Zugangsmöglichkeiten für Dritte. Das 6-Augen-Prinzip ist Standard. Umkleiden werden erst nach Anklopfen und Aufforderung betreten. Es gibt kein gemeinsames Duschen und kein gemeinsames Übernachten in einem Zimmer mit Sportlern. Für sport- und vereinsspezifische Themen werden vorzugsweise Gruppenchats genutzt.</p></div>
+      </details>
+
+      <details data-cat="haltung">
+        <summary>Wie gehen wir mit Fehlverhalten um?</summary>
+        <div class="answer"><p>Regeln sollten klar und verständlich sein. Bei Fehlverhalten helfen Gespräch, Konsequenz und Ruhe. Wenn nötig, werden Eltern, Trainerteam oder Jugendleitung einbezogen.</p></div>
+      </details>
+    </section>
+
+    <section id="training" class="section">
+      <div class="section-title"><h2>Training & Platznutzung</h2></div>
+
+      <details data-cat="training">
+        <summary>Wo finde ich den Trainingsplan?</summary>
+        <div class="answer"><p>Den Trainingsplan findest du im Infoboard, im Schaukasten am Platz und auf der tus BERNE Fußball-Homepage.</p><p><a class="doc-link" href="https://padlet.com/tusBERNE/tus-berne-infoboard-qabzxcjod9t51mzn/wish/XGyBQbY0OqbwaL6K" target="_blank" rel="noopener noreferrer">🔗 Trainingsplan im Infoboard öffnen</a></p></div>
+      </details>
+
+      <details data-cat="training">
+        <summary>Kann ich Trainingszeiten in den Ferien nutzen?</summary>
+        <div class="answer"><p>Ja, wenn Zeiten frei sind und sauber abgestimmt werden. Freie Zeiten werden oft in der Trainer- und Betreuergruppe geteilt. Bitte immer kurz abstimmen, damit es keine Überschneidungen gibt.</p></div>
+      </details>
+
+      <details data-cat="training">
+        <summary>Kann ich an Feiertagen trainieren?</summary>
+        <div class="answer"><p>Nein. An Feiertagen findet grundsätzlich kein Trainingsbetrieb statt. Es gibt keine Ausnahmen. Auch Freundschaftsspiele finden an Feiertagen nicht statt.</p></div>
+      </details>
+
+      <details data-cat="training">
+        <summary>Welche Kabine kann ich im Training nutzen?</summary>
+        <div class="answer"><p><strong>Block 1, 16:30–18:00 Uhr:</strong> Kabine 1 &amp; 2<br><strong>Block 2, 18:15–19:45 Uhr:</strong> Kabine 3 &amp; 4<br><strong>Block 3, 20:00–21:30 Uhr:</strong> Kabine 1 &amp; 2</p><div class="meta"><strong>Bei Spielen:</strong> Es gilt der Kabinenbelegungsplan.</div></div>
+      </details>
+
+      <details data-cat="training">
+        <summary>Was ist das wichtigste Ziel im Kindertraining?</summary>
+        <div class="answer"><p>Das Training soll so gestaltet sein, dass Kinder gerne wiederkommen. Viel Bewegung, viele Ballaktionen, wenig Wartezeit, ein klarer Start und eine positive Ansprache sind dafür entscheidend.</p></div>
+      </details>
+
+      <details data-cat="training">
+        <summary>Woran erkenne ich eine gute Trainingsübung?</summary>
+        <div class="answer"><p>Eine gute Übung hat kleine Zahlenverhältnisse, viele Wiederholungen, wenig Standzeit und einen klaren Schwerpunkt. Sie ist vorher geplant, möglichst vor Trainingsbeginn aufgebaut und weder dauerhaft zu leicht noch dauerhaft zu schwer.</p></div>
+      </details>
+
+      
+
+      <details data-cat="training">
+        <summary>Was sind typische Fehler im Kinderfußball?</summary>
+        <div class="answer"><p>Zu lange Erklärungen, Rundenlaufen, statisches Dehnen, Waldläufe als Konditionstraining, viele Standzeiten und dauerndes Kommentieren jeder Aktion passen nicht zu kindgerechtem Training.</p></div>
+      </details>
+
+      <details data-cat="training">
+        <summary>Wo finde ich den Lageplan für die Tore?</summary>
+        <div class="answer"><p>Den Lageplan für die Tore findest du im Infoboard und im Schaukasten am Platz. Dort ist sichtbar, wo die verschiedenen Tore nach der Nutzung hingehören.</p><p><a class="doc-link" href="https://padlet.com/tusBERNE/tus-berne-infoboard-qabzxcjod9t51mzn/wish/PR3NWxLerDj1Wb0O" target="_blank" rel="noopener noreferrer">🔗 Lageplan Tore im Infoboard öffnen</a></p></div>
+      </details>
+    </section>
+
+    <section id="sicherheit" class="section">
+      <div class="section-title"><h2>Sicherheit, Wetter & Material</h2></div>
+
+      <details data-cat="sicherheit training">
+        <summary>Was mache ich bei großer Hitze?</summary>
+        <div class="answer"><p>Belastung reduzieren, zusätzliche Trinkpausen einbauen, Schatten nutzen und die Kinder eng beobachten. Gesundheit geht vor Trainingsplan. Wenn die Bedingungen kritisch sind, lieber anpassen oder abbrechen.</p></div>
+      </details>
+
+      <details data-cat="sicherheit training spieltag">
+        <summary>Was mache ich bei Gewitter?</summary>
+        <div class="answer"><p>Training oder Spiel sofort unterbrechen. Die Kinder verlassen den Platz und suchen Schutz in einem Gebäude. Das Spielfeld ist bei Gewitter kein sicherer Ort.</p></div>
+      </details>
+
+      <details data-cat="sicherheit training">
+        <summary>Dürfen Kinder Tore allein bewegen?</summary>
+        <div class="answer"><p>Minitore dürfen Kinder grundsätzlich alleine bewegen, wenn es die Situation zulässt und der Bereich frei ist. Bei 5-m- oder 7-m-Toren gilt: Diese Tore werden nicht allein von Kindern bewegt. Sie werden kontrolliert und unter Aufsicht versetzt und nach der Nutzung wieder sicher abgestellt.</p></div>
+      </details>
+
+      <details data-cat="sicherheit training">
+        <summary>Was mache ich bei beschädigten Toren oder gefährlichem Material?</summary>
+        <div class="answer"><p>Unsicheres Material wird nicht benutzt. Mängel werden gemeldet und die Übung wird angepasst. Im Zweifel gilt: Sicherheit vor Trainingsinhalt.</p></div>
+      </details>
+
+      <details data-cat="sicherheit training spieltag">
+        <summary>Was mache ich bei Verletzungen?</summary>
+        <div class="answer"><p>Training oder Spiel wird sofort unterbrochen, wenn eine ernsthafte Verletzung vorliegt. Erste Hilfe leisten, Eltern informieren und bei Bedarf den Rettungsdienst rufen. Wichtige Vorfälle sollten intern weitergegeben werden.</p></div>
+      </details>
+    </section>
+
+    <section id="spieltag" class="section">
+      <div class="section-title"><h2>Spieltag, Kabinen & Schiedsrichter</h2></div>
+
+      <details data-cat="spieltag">
+        <summary>Wo finde ich den Kabinenplan für Spiele?</summary>
+        <div class="answer"><p>Der Kabinenplan steht im Infoboard und im Schaukasten am Platz. Bei Spielen gilt immer der aktuelle Kabinenbelegungsplan.</p><p><a class="doc-link" href="https://padlet.com/tusBERNE/tus-berne-infoboard-qabzxcjod9t51mzn/wish/zV61Q6P4L9oyWO98" target="_blank" rel="noopener noreferrer">🔗 Kabinenplan im Infoboard öffnen</a></p></div>
+      </details>
+
+      <details data-cat="spieltag">
+        <summary>Wo finde ich die Heimspielansetzungen?</summary>
+        <div class="answer"><p>Die Heimspielansetzungen sind im Infoboard im Bereich Spielbetrieb verlinkt. Sie helfen dabei, freie Termine zu erkennen und Freundschaftsspiele oder Turniere besser zu planen.</p><p><a class="doc-link" href="https://padlet.com/tusBERNE/tus-berne-infoboard-qabzxcjod9t51mzn/wish/j40PQDyqw90jZvXB" target="_blank" rel="noopener noreferrer">🔗 Heimspielansetzungen im Infoboard öffnen</a></p></div>
+      </details>
+
+      <details data-cat="spieltag">
+        <summary>Welche Haltung gilt am Spieltag?</summary>
+        <div class="answer"><p>Pünktlichkeit, fairer Umgang, ausreichend Spielzeit für alle Kinder, Vereinskleidung und respektvolle Kommunikation gehören zum tus BERNE Verständnis am Spieltag.</p></div>
+      </details>
+
+      <details data-cat="spieltag">
+        <summary>Wann muss der Spielbericht-Online vorbereitet sein?</summary>
+        <div class="answer"><p>Der Spielbericht sollte frühzeitig vorbereitet und spätestens 30 Minuten vor Anstoß freigegeben werden. Kader, Rückennummern, Trainer/Funktionsteam und Freigabe prüfen.</p><p>Im Erklärvideo wird gezeigt, wie der Spielbericht-Online vorbereitet wird.</p><p><a class="doc-link" href="https://youtu.be/-bSGkKCJ9yQ?si=B8n0LNmqySN9_v2a" target="_blank" rel="noopener noreferrer">🔗 Erklärvideo Spielbericht-Online öffnen</a></p></div>
+      </details>
+
+      <details data-cat="spieltag">
+        <summary>Wer meldet das Ergebnis?</summary>
+        <div class="answer"><p>Das Ergebnis wird über DFBnet gemeldet. Intern sollte klar geregelt sein, wer das übernimmt. Für tus BERNE gilt praktisch: direkt nach dem Spiel erledigen, spätestens 30 Minuten nach Spielende.</p><p><a class="doc-link" href="https://www.hfv.de/wp-content/uploads/2026/04/Leitfaden-Ergebnismeldung-3.2.1.pdf" target="_blank" rel="noopener noreferrer">🔗 Leitfaden Ergebnismeldung öffnen</a></p></div>
+      </details>
+
+      <details data-cat="spieltag">
+        <summary>Was mache ich, wenn wir ein Spiel, Kinderfestival oder Hallenturnier nicht wahrnehmen können?</summary>
+        <div class="answer"><p>Bitte frühzeitig Brigitte Steckel informieren. Nichtantreten kann zu Strafen führen. In manchen Fällen kann ein Ersatzteam organisiert oder eine andere Lösung mit dem HFV abgestimmt werden.</p></div>
+      </details>
+
+      <details data-cat="spieltag">
+        <summary>Was mache ich, wenn ein Schiedsrichter nicht erscheint?</summary>
+        <div class="answer"><p>Ruhig bleiben und zuerst klären, ob der angesetzte Schiedsrichter noch kommt. Ein Anruf ist möglich, die Handynummer ist im DFBnet hinterlegt. Dann mit dem Gegner eine faire Lösung suchen. Der Vorgang wird anschließend über das Formular <strong>Nichtantritt Schiedsrichter</strong> dokumentiert. Das Formular liegt im Platzwartraum oder im Infoboard.</p><p><a class="doc-link" href="https://www.hfv.de/wp-content/uploads/2025/05/Nichtantritt-Schiedsrichter-04-23.pdf" target="_blank" rel="noopener noreferrer">🔗 Formular Nichtantritt Schiedsrichter öffnen</a></p></div>
+      </details>
+
+      <details data-cat="spieltag finanzen">
+        <summary>Wo liegt die Schiedsrichterquittung?</summary>
+        <div class="answer"><p>Die Quittung für Schiedsrichter liegt im Platzwartraum. Ausgefüllte Quittungen und Abrechnungen sollten zeitnah an Brigitte Steckel weitergegeben werden.</p></div>
+      </details>
+
+      <details data-cat="spieltag">
+        <summary>Was passiert bei einer Passkontrolle?</summary>
+        <div class="answer"><p>Ruhe bewahren und kooperativ bleiben. Die betroffenen Spieler werden über den digitalen Spielerpass bzw. das Foto geprüft. Wenn kein Foto hinterlegt ist, wird die Identität über ein geeignetes Lichtbilddokument nachgewiesen.</p></div>
+      </details>
+    </section>
+
+    <section id="organisation" class="section">
+      <div class="section-title"><h2>Organisation, DFBnet & Spieler</h2></div>
+
+      <details data-cat="organisation">
+        <summary>Welche App kann ich zur Teamorganisation nutzen?</summary>
+        <div class="answer"><p>Empfohlen ist SpielerPlus. Für tus BERNE gibt es ein vergünstigtes Abo-Angebot.</p><p><a class="doc-link" href="https://padlet.com/tusBERNE/tus-berne-infoboard-qabzxcjod9t51mzn/wish/zV61Q6xyrG1yWO98" target="_blank" rel="noopener noreferrer">🔗 SpielerPlus-Angebot im Infoboard öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Wo finde ich Ansprechpartner für Mannschaften und Organisation?</summary>
+        <div class="answer"><p>Die wichtigsten Zuständigkeiten stehen im Bereich „Zuständigkeiten“ auf dieser Seite.</p><p>Die Ansprechpartner der einzelnen Mannschaften sind unter folgendem Link verfügbar.</p><p><a class="doc-link" href="https://tusberne-fussball.de/teams/" target="_blank" rel="noopener noreferrer">🔗 Mannschaften &amp; Ansprechpartner öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Wie bekomme ich Zugang zum Vereinshaus oder Fußballraum?</summary>
+        <div class="answer"><p>Der Zugang zum Fußballraum läuft über die <strong>Nuki-App</strong>. Bei Fragen zur Freischaltung oder zum Zugang ist <strong>Sebastian Lück</strong> der richtige Ansprechpartner.</p><p>Den Fußballraum bitte vor der Nutzung über den Buchungslink reservieren.</p><p>Wenn zusätzlich Zugang zum Vereinshaus benötigt wird, zum Beispiel weil es nicht geöffnet ist, wird dafür ein <strong>Transponder</strong> benötigt. Den Transponder erhältst du über die Geschäftsstelle. Bitte vorher klären, ob das Vereinshaus nach der Nutzung wieder abgeschlossen werden muss.</p><p><a class="doc-link" href="https://apps.apple.com/de/app/nuki-smart-lock/id1044998081" target="_blank" rel="noopener noreferrer">🔗 Nuki-App für Apple öffnen</a></p><p><a class="doc-link" href="https://play.google.com/store/apps/details?id=io.nuki&amp;hl=de&amp;pli=1" target="_blank" rel="noopener noreferrer">🔗 Nuki-App für Android öffnen</a></p><p><a class="doc-link" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0QRQHmH6AX4ik_oX_DZPrF82jPemo_JoSmb_G_tsMk0LuPd46G6kACrp43kZDeDCom0D6so-k5" target="_blank" rel="noopener noreferrer">🔗 Fußballraum buchen</a></p><p><a class="doc-link" href="https://drive.google.com/file/d/1ZOQinu2chIGAQZ3aZ58SDrcKm34JxMy8/view?usp=sharing" target="_blank" rel="noopener noreferrer">🔗 Anleitung Vereinshaus &amp; Alarmanlage öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Wie bekomme ich eine DFBnet-Kennung?</summary>
+        <div class="answer"><p>Die Kennung wird über das Formular beantragt. Die Vergabe der benötigten Rechte erfolgt ausschließlich durch die Abteilungsleitung.</p><p><a class="doc-link" href="https://tusberne-fussball.de/wp-content/uploads/2026/04/Antrag-DFBnet-Kennung.pdf" target="_blank" rel="noopener noreferrer">🔗 Antrag DFBnet-Kennung öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Welche Unterlagen brauche ich für neue Spieler?</summary>
+        <div class="answer"><p>Mindestens Aufnahmeformular, Antrag auf Spielberechtigung und Geburtsurkunde bzw. Identitätsnachweis. Bei Vereinswechseln oder Sonderfällen kann mehr nötig sein. Neue Spieler deshalb frühzeitig melden.</p><p><a class="doc-link" href="https://tusberne-fussball.de/wp-content/uploads/2025/05/Aufnahme-undAenderungsantrag_tusBERNE_2025.pdf" target="_blank" rel="noopener noreferrer">🔗 Aufnahme- und Änderungsantrag öffnen</a></p><p><a class="doc-link" href="https://tusberne-fussball.de/wp-content/uploads/2024/09/Antrag_SpB_zum-Ausfuellen_09-24.pdf" target="_blank" rel="noopener noreferrer">🔗 Antrag auf Spielberechtigung öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Wie lange dauert die Spielberechtigung für neue Spieler?</summary>
+        <div class="answer"><p>Bei einem Erstantrag besteht die Spielberechtigung sofort nach Beantragung. Bei Vereinswechseln oder Sonderfällen kann es länger dauern, weil weitere Voraussetzungen oder Freigaben nötig sein können. Neue Spieler deshalb trotzdem frühzeitig melden.</p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Ist ein Spielerfoto im DFBnet nötig?</summary>
+        <div class="answer"><p>Ja, ein aktuelles Foto ist für die praktische Spielrechtsprüfung sehr wichtig. Ohne Foto kann es bei Passkontrollen unnötig kompliziert werden.</p><p><a class="doc-link" href="https://www.hfv.de/wp-content/uploads/2025/05/Leitfaden-Fotoerstellung.pdf" target="_blank" rel="noopener noreferrer">🔗 Leitfaden Fotoerstellung öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Was ist bei Fotos, fussball.de und Veröffentlichungen zu beachten?</summary>
+        <div class="answer"><p>Das DFBnet-Foto zur Spielrechtsprüfung ist nicht dasselbe wie eine öffentliche Veröffentlichung auf fussball.de. Öffentliche Freigaben sollten nur mit sauberer Einwilligung erfolgen.</p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Was muss ich bei Freundschaftsspielen beachten?</summary>
+        <div class="answer"><p>Freundschaftsspiele sollten frühzeitig intern abgestimmt und korrekt organisiert werden. Pflichtspiele haben Vorrang.</p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Was muss ich bei Turnieren oder Ausfahrten beachten?</summary>
+        <div class="answer"><p>Ein Turnier oder eine Ausfahrt bedeutet nicht automatisch spielfrei. Wenn ein Pflichtspiel betroffen sein könnte, muss frühzeitig mit Brigitte Steckel gesprochen werden.</p></div>
+      </details>
+
+      <details data-cat="organisation finanzen">
+        <summary>Wer bezahlt Startgeld bei Turnieren?</summary>
+        <div class="answer"><p>Vor der Anmeldung sollte Brigitte Steckel informiert werden. Dann kann die Startgebühr übernommen werden. Eine Quittung ist einzureichen.</p></div>
+      </details>
+    </section>
+
+    <section id="material" class="section">
+      <div class="section-title"><h2>Material, Schlüssel & Vereinskleidung</h2></div>
+
+      <details data-cat="organisation">
+        <summary>Wann bekomme ich neue Bälle?</summary>
+        <div class="answer"><p>Neue Bälle gibt es zu Beginn der Saison, wenn sich Ballgröße oder Gewicht geändert haben.</p></div>
+      </details>
+
+      <details data-cat="organisation sicherheit">
+        <summary>Was tun, wenn Bälle auf Nachbargrundstücke geschossen wurden?</summary>
+        <div class="answer"><p>Grundstücke der Nachbarn dürfen nicht betreten werden. Die Bälle werden von den Nachbarn zurückgebracht.</p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Wie bekomme ich Zugang zu den Kabinen?</summary>
+        <div class="answer"><p>Die Schlüssel befinden sich im Platzwartraum.</p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Wie bekomme ich Zugang zur Garage?</summary>
+        <div class="answer"><p>Der Schlüssel ist im Platzwartraum. Ein eigener Schlüssel ist bei Brigitte Steckel erhältlich.</p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Wie bekomme ich Vereinskleidung?</summary>
+        <div class="answer"><p>Vereinskleidung gibt es bei Sport Böckmann oder Brosch. Im Infoboard sind zusätzlich Ausstattungs- und Flohmarkt-Links gesammelt.</p><p><a class="doc-link" href="https://padlet.com/tusBERNE/tus-berne-infoboard-qabzxcjod9t51mzn/wish/kxodWGbjA1jBZgP7" target="_blank" rel="noopener noreferrer">🔗 Ausstattung und Vereinskleidung im Infoboard öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Gibt es Vorschriften zu Vereinsfarben?</summary>
+        <div class="answer"><p>Ja. Die Vereinsfarben sind Blau/Weiß und bei Trikots verpflichtend.</p></div>
+      </details>
+
+      <details data-cat="organisation">
+        <summary>Bekomme ich als Trainer oder Betreuer Vereinskleidung?</summary>
+        <div class="answer"><p>Ja. Trainer und Betreuer erhalten ein Poloshirt und einen Pullover.</p></div>
+      </details>
+    </section>
+
+
+    <section id="foerderungen" class="section">
+      <div class="section-title"><h2>Förderungen der Hamburger Sportjugend</h2></div>
+
+      <details id="foerderung-ueberblick" data-cat="finanzen organisation foerderung">
+        <summary>Welche HSJ-Förderung passt zu welcher Maßnahme?</summary>
+        <div class="answer">
+          <p>Für Fußballmannschaften sind vor allem diese Förderbereiche relevant:</p>
+          <ul>
+            <li><strong>3.4:</strong> persönliche Sportausrüstung für Kinder und Jugendliche aus einkommensschwachen Familien.</li>
+            <li><strong>4.1:</strong> Teamevents und Tagesaktionen ohne Übernachtung.</li>
+            <li><strong>5.1:</strong> Trainingslager, Turniere und Fahrten ab 3 Tagen / 2 Übernachtungen.</li>
+            <li><strong>5.2:</strong> Zusatzförderung bei Fahrten für Kinder und Jugendliche aus einkommensschwachen Familien.</li>
+          </ul>
+          <div class="meta"><strong>Interner Ablauf bei allen Förderungen:</strong> Unterlagen vollständig ausfüllen, zuerst Brigitte Steckel zur Freigabe vorlegen, nach ihrem OK ausdrucken und in den Briefkasten der Geschäftsstelle geben.</div>
+        </div>
+      </details>
+
+      <details id="foerderung-34" data-cat="finanzen organisation foerderung">
+        <summary>3.4 – Sportausrüstung: Wann passt diese Förderung?</summary>
+        <div class="answer">
+          <p>3.4 passt, wenn ein Kind oder Jugendlicher aus einer förderberechtigten Familie persönliche Sportausrüstung benötigt, zum Beispiel Fußballschuhe, Schienbeinschoner oder Torwarthandschuhe.</p>
+          <ul>
+            <li><strong>Antrag:</strong> kein vorheriger Antrag nötig.</li>
+            <li><strong>Einreichung:</strong> nach dem Kauf mit dem Formular 3.4 und dem Original-Kaufbeleg.</li>
+            <li><strong>Zusatz bei BuT/SGB II:</strong> aktuellen Leistungsbescheid beilegen.</li>
+            <li><strong>Offizielle Fristen:</strong> Kauf im 1. Quartal bis 30.04., 2. Quartal bis 31.07., 3. Quartal bis 31.10., 4. Quartal bis 10.01. des Folgejahres.</li>
+            <li><strong>Auszahlung im laufenden Haushaltsjahr:</strong> bis spätestens 15.12. einreichen.</li>
+          </ul>
+          <div class="meta"><strong>Interner Ablauf:</strong> Formular und Belege zuerst Brigitte Steckel zur Freigabe vorlegen. Nach ihrem OK ausdrucken und in den Briefkasten der Geschäftsstelle geben.</div>
+          <p class="link-hint">Dokument zu 3.4:</p>
+          <p>
+            <a class="doc-link" href="https://hamburger-sportjugend.de/wp-content/downloads/Foerderungen/3_4-Formular-Sportausruestung-2026.docx" target="_blank" rel="noopener noreferrer">3.4 Formular Sportausrüstung öffnen</a>
+          </p>
+        </div>
+      </details>
+
+      <details id="foerderung-41" data-cat="finanzen organisation foerderung">
+        <summary>4.1 – Teamevents und Tagesaktionen: Was ist förderfähig?</summary>
+        <div class="answer">
+          <p>4.1 passt für sportartübergreifende Aktionen und Teamevents wie Bowling, Heidepark, Kletterpark, Swing-Golf, Bubble Soccer, Escape Room, Schlittschuhlaufen, Jump House, Stadionbesuch oder Indoor Ahrensburg.</p>
+          <ul>
+            <li><strong>Antrag:</strong> kein vorheriger Antrag nötig.</li>
+            <li><strong>Einreichung:</strong> nach der Veranstaltung mit dem Formular 4.1.</li>
+            <li><strong>Teilnahme:</strong> mindestens 5 junge Teilnehmende bis zum vollendeten 27. Lebensjahr.</li>
+            <li><strong>Förderung:</strong> 80 % der zuwendungsfähigen Kosten, maximal 300 € pro Maßnahme.</li>
+            <li><strong>Nicht förderfähig:</strong> Fahrtkosten, Verpflegung, Personalkosten, Honorare und Aufwandsentschädigungen.</li>
+            <li><strong>Benötigte Unterlagen:</strong> Formular 4.1, Kostenaufstellung, Rechnungskopien.</li>
+            <li><strong>Offizielle Fristen:</strong> Q1 bis 30.04., Q2 bis 31.07., Q3 bis 31.10., Q4 bis 10.01. des Folgejahres.</li>
+            <li><strong>Zahlung im laufenden Haushaltsjahr:</strong> bis spätestens 30.11. einreichen.</li>
+          </ul>
+          <div class="meta"><strong>Wichtig:</strong> Die Gesamteinnahmen sollten knapp unter den Gesamtausgaben liegen. Die Maßnahme soll keinen Überschuss ausweisen.</div>
+          <div class="meta"><strong>Interner Ablauf:</strong> Formular, Kostenaufstellung und Belege zuerst Brigitte Steckel zur Freigabe vorlegen. Nach ihrem OK ausdrucken und in den Briefkasten der Geschäftsstelle geben.</div>
+          <p class="link-hint">Formular zu 4.1:</p>
+          <p>
+            <a class="doc-link" href="https://tusberne-fussball.de/wp-content/uploads/2025/05/HSJ_Verwendungsnachweis.docx" target="_blank" rel="noopener noreferrer">4.1 Verwendungsnachweis öffnen</a>
+          </p>
+        </div>
+      </details>
+
+      <details id="foerderung-51-52" data-cat="finanzen organisation foerderung">
+        <summary>5.1 / 5.2 – Fahrten: Was gilt für Trainingslager und Turniere?</summary>
+        <div class="answer">
+          <p>5.1 passt für Trainingslager, Turniere und Fahrten mit mindestens 3 Tagen / 2 Übernachtungen. 5.2 kommt zusätzlich in Frage, wenn Kinder oder Jugendliche aus einkommensschwachen Familien teilnehmen.</p>
+
+          <p><strong>5.1 – allgemeine Fahrtenförderung</strong></p>
+          <ul>
+            <li><strong>Antrag:</strong> kein vorheriger Antrag nötig.</li>
+            <li><strong>Einreichung:</strong> nach der Fahrt.</li>
+            <li><strong>Formulare nach der Fahrt:</strong> Verwendungsnachweis 5.1/5.2 Fahrten und Teilnahmeliste abgeben.</li>
+            <li><strong>Förderung:</strong> 5 € pro Tag und förderberechtigter Person.</li>
+            <li><strong>Offizielle Fristen:</strong> Q1 bis 30.04., Q2 bis 31.07., Q3 bis 31.10., Q4 bis 10.01. des Folgejahres.</li>
+            <li><strong>Zahlung im laufenden Haushaltsjahr:</strong> bis spätestens 30.11. einreichen.</li>
+          </ul>
+
+          <p><strong>5.2 – Zusatzförderung für einkommensschwache Familien</strong></p>
+          <ul>
+            <li><strong>Antrag:</strong> vor der Fahrt stellen.</li>
+            <li><strong>Frist bei tus BERNE:</strong> spätestens 6 Wochen vor Fahrtbeginn vorbereiten und einreichen.</li>
+            <li><strong>Nachweis:</strong> Der Sozial- bzw. SGB-II-/BuT-Bescheid muss zum Zeitpunkt der Veranstaltung gültig sein.</li>
+            <li><strong>Nach der Fahrt:</strong> Verwendungsnachweis 5.1/5.2 Fahrten und Teilnahmeliste abgeben.</li>
+            <li><strong>Offizielle Verwendungsnachweis-Fristen:</strong> Q1 bis 30.04., Q2 bis 31.07., Q3 einschließlich Sommerferien bis 15.09., Q3 nach Sommerferien bis 31.10., Oktober bis 10.11., November bis 10.12., Dezember umgehend/spätestens 10.01. des Folgejahres.</li>
+          </ul>
+
+          <div class="meta"><strong>Wichtig:</strong> Auch bei 5.1/5.2 sollten die Gesamteinnahmen knapp unter den Gesamtausgaben liegen. Die Fahrt soll keinen Überschuss ausweisen.</div>
+          <div class="meta"><strong>Interner Ablauf:</strong> Antrag, Verwendungsnachweis, Teilnahmeliste und Belege immer zuerst Brigitte Steckel zur Freigabe vorlegen. Nach ihrem OK ausdrucken und in den Briefkasten der Geschäftsstelle geben.</div>
+          <p class="link-hint">Formulare zu 5.1 / 5.2:</p>
+          <p>
+            <a class="doc-link" href="https://tusberne-fussball.de/wp-content/uploads/2026/05/5.1-Teilnahmeliste_2026.docx" target="_blank" rel="noopener noreferrer">5.1 Teilnahmeliste öffnen</a>
+            <a class="doc-link" href="https://tusberne-fussball.de/wp-content/uploads/2026/05/5.1-verwendungsnachweis-fahrten-allgemein-2026.docx" target="_blank" rel="noopener noreferrer">5.1/5.2 Verwendungsnachweis öffnen</a>
+            <a class="doc-link" href="https://tusberne-fussball.de/wp-content/uploads/2026/05/5.2-antrag-eink.schwache-fahrtenhp-2026.pdf" target="_blank" rel="noopener noreferrer">5.2 Antrag öffnen</a>
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <section id="finanzen" class="section">
+      <div class="section-title"><h2>Finanzen & Lizenzen</h2></div>
+
+      <details data-cat="finanzen">
+        <summary>Gibt es eine Aufwandsentschädigung?</summary>
+        <div class="answer"><p>Ja, für Trainer und Betreuer gemeinsam. Die Höhe ist abhängig von Lizenz und Jahrgang.</p></div>
+      </details>
+
+      <details data-cat="finanzen">
+        <summary>Gibt es eine Aufwandsentschädigung für Junior Coaches?</summary>
+        <div class="answer"><p>Ja. Details dazu gibt es bei Brigitte Steckel.</p></div>
+      </details>
+
+
+      <details data-cat="finanzen spieltag">
+        <summary>Wo finde ich die aktuellen Schiedsrichterkosten und Spesen?</summary>
+        <div class="answer"><p>Die aktuellen Schiedsrichterkosten und Spesen findest du im Infoboard unter <strong>Spielbetrieb → Schiedsrichter → Kosten Schiedsrichter</strong>. Zusätzlich liegt die Schiedsrichterspesenliste im Schaukasten oder im Ordner im Platzraum.</p><p><a class="doc-link" href="https://padlet.com/tusBERNE/tus-berne-infoboard-qabzxcjod9t51mzn/wish/94PGWnop3m0eaLRV" target="_blank" rel="noopener noreferrer">🔗 Schiedsrichterkosten und Spesen im Infoboard öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation finanzen">
+        <summary>Welche Aus- und Fortbildungen gibt es?</summary>
+        <div class="answer"><p>Der Wunsch aus der Abteilungsleitung ist, dass jeder Trainer den <strong>DFB-Basis-Coach</strong> absolviert. Im Idealfall hat pro Mannschaft mindestens ein Trainer eine <strong>C-Lizenz</strong>.</p><p>Die Präsenztage der Ausbildung sind in <strong>Hamburg und Schleswig-Holstein bildungsurlaubsberechtigt</strong>.</p><p>Aktuelle Angebote und Termine können hier eingesehen werden:</p><p><a class="doc-link" href="https://www.dfbnet.org/coach/HAFV" target="_blank" rel="noopener noreferrer">🔗 Aus- und Fortbildungen im DFBnet öffnen</a></p></div>
+      </details>
+
+      <details data-cat="organisation finanzen">
+        <summary>Wer zahlt Traineraus- und Fortbildungen?</summary>
+        <div class="answer"><p>Der Verein übernimmt die Kosten für Traineraus- und Fortbildungen, wenn vorab eine Bindung vereinbart wurde. Diese Bindung beträgt nach der Unterstützung konkret <strong>zwei Jahre</strong>.</p><p>Ohne diese Bindung kann eine anteilige Rückzahlung vorgesehen sein.</p><p>Bei der <strong>B-Lizenz</strong> wird aufgrund der höheren Kosten von etwa <strong>1.500 bis 2.000 €</strong> individuell nach einer passenden Unterstützungslösung gesucht. Das gilt erst, wenn der Trainer eine Mannschaft im Bereich <strong>C-Jugend oder älter</strong> trainiert.</p></div>
+      </details>
+    </section>
+  </main><a class="backtop" href="#top" aria-label="Nach oben">↑</a><footer class="footer">
+    <div class="wrap">
+      <strong>tus BERNE Infoboard FAQ</strong><br>
+      Trainer- und Betreuerhilfe für den Vereinsalltag · Stand: 29.06.2026 · Version 1.2<br>
+      EINMAL BERNE IMMER BERNE
+    </div>
+  </footer><script>
+    const controls = document.getElementById('faq');
+    const search = document.getElementById('search');
+    const filterToggle = document.getElementById('filterToggle');
+    const activeFilterLabel = document.getElementById('activeFilterLabel');
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    const items = Array.from(document.querySelectorAll('details'));
+    const mobileQuery = window.matchMedia('(max-width: 520px)');
+    let activeFilter = 'all';
+
+    function normalize(text) {
+      return text.toLowerCase()
+        .replaceAll('ß','ss')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function applyFilter() {
+      const q = normalize(search.value.trim());
+      const shownSections = new Set();
+
+      items.forEach(item => {
+        const cats = (item.dataset.cat || '').split(/\s+/);
+        const text = normalize(item.textContent);
+        const matchesFilter = activeFilter === 'all' || cats.includes(activeFilter);
+        const matchesSearch = !q || text.includes(q);
+        const show = matchesFilter && matchesSearch;
+
+        item.classList.toggle('hidden', !show);
+        if (show) {
+          const section = item.closest('.section');
+          if (section) shownSections.add(section);
+        }
+      });
+
+      document.querySelectorAll('.section').forEach(section => {
+        const hasDetails = section.querySelector('details');
+        if (hasDetails) {
+          section.classList.toggle('hidden', !shownSections.has(section));
+        }
+      });
+    }
+
+    function closeMobileFilters() {
+      if (!mobileQuery.matches) return;
+      controls.classList.remove('filter-open');
+      filterToggle.setAttribute('aria-expanded', 'false');
+      filterToggle.querySelector('span').textContent = 'Filter anzeigen';
+    }
+
+    function toggleMobileFilters() {
+      const willOpen = !controls.classList.contains('filter-open');
+      controls.classList.toggle('filter-open', willOpen);
+      filterToggle.setAttribute('aria-expanded', String(willOpen));
+      filterToggle.querySelector('span').textContent = willOpen ? 'Filter ausblenden' : 'Filter anzeigen';
+    }
+
+    filterToggle.addEventListener('click', toggleMobileFilters);
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeFilter = chip.dataset.filter;
+        activeFilterLabel.textContent = chip.textContent.trim();
+        applyFilter();
+        closeMobileFilters();
+      });
+    });
+
+    mobileQuery.addEventListener('change', () => {
+      if (!mobileQuery.matches) {
+        controls.classList.remove('filter-open');
+        filterToggle.setAttribute('aria-expanded', 'false');
+        filterToggle.querySelector('span').textContent = 'Filter anzeigen';
+      }
+    });
+
+    search.addEventListener('input', applyFilter);
+  </script></body></html>
