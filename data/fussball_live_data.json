@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:40:49+01:00",
+  "generated_at": "2026-11-01T15:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -55,22 +55,22 @@
         },
         {
           "place": 4,
+          "team": "SV Groß Borstel 1.Hr.",
+          "games": 12,
+          "won": 6,
+          "draw": 3,
+          "lost": 3,
+          "goals": "29:23",
+          "points": 21
+        },
+        {
+          "place": 5,
           "team": "Sasel 2.Hr.",
           "games": 10,
           "won": 5,
           "draw": 3,
           "lost": 2,
           "goals": "30:20",
-          "points": 18
-        },
-        {
-          "place": 5,
-          "team": "SV Groß Borstel 1.Hr.",
-          "games": 11,
-          "won": 5,
-          "draw": 3,
-          "lost": 3,
-          "goals": "25:23",
           "points": 18
         },
         {
@@ -176,11 +176,11 @@
         {
           "place": 16,
           "team": "Eilbek 1.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 2,
           "draw": 2,
-          "lost": 7,
-          "goals": "14:38",
+          "lost": 8,
+          "goals": "14:42",
           "points": 8
         }
       ]
