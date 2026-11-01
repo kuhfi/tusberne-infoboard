@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T18:40:17+01:00",
+  "generated_at": "2026-11-01T19:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -433,6 +433,16 @@
         },
         {
           "place": 6,
+          "team": "Nordlichter im NSV 2.Hr.",
+          "games": 12,
+          "won": 7,
+          "draw": 2,
+          "lost": 3,
+          "goals": "29:18",
+          "points": 23
+        },
+        {
+          "place": 7,
           "team": "Bramfeld 4.Hr.",
           "games": 12,
           "won": 7,
@@ -442,23 +452,13 @@
           "points": 21
         },
         {
-          "place": 7,
+          "place": 8,
           "team": "Farmsen 2.Hr.",
           "games": 12,
           "won": 6,
           "draw": 2,
           "lost": 4,
           "goals": "39:27",
-          "points": 20
-        },
-        {
-          "place": 8,
-          "team": "Nordlichter im NSV 2.Hr.",
-          "games": 11,
-          "won": 6,
-          "draw": 2,
-          "lost": 3,
-          "goals": "27:18",
           "points": 20
         },
         {
@@ -534,11 +534,11 @@
         {
           "place": 16,
           "team": "Walddörfer 3.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 0,
           "draw": 1,
-          "lost": 10,
-          "goals": "8:88",
+          "lost": 11,
+          "goals": "8:90",
           "points": 1
         }
       ]
