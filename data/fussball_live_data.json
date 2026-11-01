@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T07:51:59+01:00",
+  "generated_at": "2026-11-01T08:00:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1597,8 +1597,7 @@
         "home": "West-Eimsbüttel 2.C-Jun. (J1)",
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": "1",
-        "away_score": "3",
-        "status": null
+        "away_score": "3"
       },
       "next_game": {
         "date": "08.11.2026",
@@ -1607,8 +1606,7 @@
         "home": "Condor 2.C-Jun. (J2)",
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1703,8 +1701,7 @@
         "home": "tus BERNE 4.C-Jun. (A3) 7er",
         "away": "Rahlstedt 5.C-Jun. (A3)",
         "home_score": "4",
-        "away_score": "3",
-        "status": null
+        "away_score": "3"
       },
       "next_game": {
         "date": "07.11.2026",
@@ -1713,8 +1710,7 @@
         "home": "Sternschanze 3.C-Jun. (A1)",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1780,7 +1776,7 @@
         "away": "SV Wilhelmsburg 2.D-Jun. (A1)",
         "home_score": null,
         "away_score": null,
-        "status": "Absetzung"
+        "status": "ABGESETZT"
       },
       "next_game": {
         "date": "08.11.2026",
@@ -1789,8 +1785,7 @@
         "home": "tus BERNE 1.D-Jun. (A1)",
         "away": "Harksheide 2.D-Jun. (A2)-S",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1855,8 +1850,7 @@
         "home": "tus BERNE 2.D-Jun. (J1)",
         "away": "Rahlstedt 3.D-Jun. (J1)",
         "home_score": "4",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "07.11.2026",
@@ -1865,8 +1859,7 @@
         "home": "Bramfeld 2.D-Jun. (J2)",
         "away": "tus BERNE 2.D-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1921,8 +1914,7 @@
         "home": "tus BERNE 3.D-Jun. (A2)-S",
         "away": "DUWO 08 1.D-Jun. (A1)",
         "home_score": "5",
-        "away_score": "6",
-        "status": null
+        "away_score": "6"
       },
       "next_game": {
         "date": "01.11.2026",
@@ -1931,8 +1923,7 @@
         "home": "Stapelfeld 1.D-Jun. (A1)-S",
         "away": "tus BERNE 3.D-Jun. (A2)-S",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -2007,8 +1998,7 @@
         "home": "tus BERNE 4.D-Jun. (J2)",
         "away": "Sasel 7.D-Jun. (J4)",
         "home_score": "4",
-        "away_score": "0",
-        "status": "V"
+        "away_score": "0"
       },
       "next_game": {
         "date": "08.11.2026",
@@ -2017,8 +2007,7 @@
         "home": "tus BERNE 4.D-Jun. (J2)",
         "away": "tus BERNE 1.E-Jun. (A1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
