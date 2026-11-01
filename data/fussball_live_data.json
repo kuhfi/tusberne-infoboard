@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T13:10:17+01:00",
+  "generated_at": "2026-11-01T13:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -454,11 +454,11 @@
         {
           "place": 8,
           "team": "DUWO 08 2.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 5,
           "draw": 4,
-          "lost": 2,
-          "goals": "35:17",
+          "lost": 3,
+          "goals": "37:20",
           "points": 19
         },
         {
@@ -483,6 +483,16 @@
         },
         {
           "place": 11,
+          "team": "Sasel 4.Hr.",
+          "games": 12,
+          "won": 4,
+          "draw": 2,
+          "lost": 6,
+          "goals": "33:42",
+          "points": 14
+        },
+        {
+          "place": 12,
           "team": "Hummelsbüttel 1.Hr.",
           "games": 11,
           "won": 4,
@@ -490,16 +500,6 @@
           "lost": 6,
           "goals": "29:39",
           "points": 13
-        },
-        {
-          "place": 12,
-          "team": "Sasel 4.Hr.",
-          "games": 11,
-          "won": 3,
-          "draw": 2,
-          "lost": 6,
-          "goals": "30:40",
-          "points": 11
         },
         {
           "place": 13,
