@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T13:30:17+01:00",
+  "generated_at": "2026-11-01T14:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -220,22 +220,22 @@
         {
           "place": 2,
           "team": "Bramfeld 3.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 9,
-          "draw": 0,
+          "draw": 1,
           "lost": 2,
-          "goals": "31:25",
-          "points": 27
+          "goals": "34:28",
+          "points": 28
         },
         {
           "place": 3,
           "team": "MSV Hamburg 4.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 7,
-          "draw": 1,
+          "draw": 2,
           "lost": 3,
-          "goals": "40:24",
-          "points": 22
+          "goals": "43:27",
+          "points": 23
         },
         {
           "place": 4,
