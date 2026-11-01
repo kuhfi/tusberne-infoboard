@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T15:40:17+01:00",
+  "generated_at": "2026-11-01T15:50:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1912,8 +1912,8 @@
         "competition": "Kreisfreundschaftsspiele",
         "home": "Stapelfeld 1.D-Jun. (A1)-S",
         "away": "tus BERNE 3.D-Jun. (A2)-S",
-        "home_score": null,
-        "away_score": null
+        "home_score": "8",
+        "away_score": "1"
       },
       "next_game": null,
       "table": [
