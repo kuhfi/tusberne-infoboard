@@ -1,0 +1,39 @@
+name: Einmaliger Import der drei Vereinsunterlagen
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-vereinsunterlagen.yml']
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Originaldateien mit SHA-256 pruefen und Links umstellen
+        shell: python
+        run: |
+          import hashlib, pathlib, urllib.request
+          entries = [{"source":"https://padlet-uploads-usc1.storage.googleapis.com/2246767193/a38591bab4e31868207c86a0aded5c81/25_06_04_Bambini_Jugend_Trainermappedigital_BERNE.pdf","path":"files/intern/tus-berne-fibel.pdf","bytes":2119140,"sha256":"809cf878bb98099568edc72e173b4faccaace376b94a2201665738f76becb12e"},{"source":"https://padlet-uploads-usc1.storage.googleapis.com/2246767193/7f079aa0d70dc217c78445a6b8573ee5/Anleitung_Anzeigetafel.jpeg","path":"files/intern/anleitung-anzeigetafel.jpeg","bytes":364299,"sha256":"1361367abf0303070594230a59d677e641c1949974d35cf4b66285800ee541d1"},{"source":"https://padlet-uploads-usc1.storage.googleapis.com/2246767193/2e5b65f97faf481e45995c7edab2d90f/Protokoll_Jahreshauptversammlung_08_06_2026.pdf","path":"files/intern/protokoll-jahreshauptversammlung-2026-06-08.pdf","bytes":23768265,"sha256":"2a35ee0f05349e6d0815675697782abadb4decbf2d0ba472bdd24e56df80f10e"}]
+          p = pathlib.Path("intern/index.html")
+          text = p.read_text()
+          for entry in entries:
+              target = pathlib.Path(entry["path"])
+              with urllib.request.urlopen(entry["source"], timeout=120) as response:
+                  data = response.read()
+              assert hashlib.sha256(data).hexdigest() == entry["sha256"], "Source checksum mismatch"
+              assert text.count(entry["source"]) == 1, "Expected source link not found exactly once"
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(data)
+              text = text.replace(entry["source"], "../" + entry["path"])
+          p.write_text(text)
+      - name: Gepruefte Dateien veroeffentlichen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add intern/index.html files/intern/tus-berne-fibel.pdf files/intern/anleitung-anzeigetafel.jpeg files/intern/protokoll-jahreshauptversammlung-2026-06-08.pdf
+          git diff --cached --check
+          git commit -m "Drei Vereinsunterlagen unveraendert zu GitHub uebernehmen"
+          git push origin HEAD:main
