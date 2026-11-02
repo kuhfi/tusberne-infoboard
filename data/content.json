@@ -54,8 +54,7 @@
       "title": "Fußballraum – Belegung",
       "kind": "link",
       "url": "https://script.google.com/macros/s/AKfycbxqi0Pqy_K-JkB2-KDikEWasK3AU9-U-Co0wOe7UQlb3z5X4lxayh7HtOFhATkNGeQ/exec",
-      "order": 2,
-      "description": "Belegungsübersicht des Fußballraums öffnen."
+      "order": 2
     },
     {
       "public": true,
