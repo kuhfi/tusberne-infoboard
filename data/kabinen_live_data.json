@@ -1,67 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T09:10:45+01:00",
+  "generated_at": "2026-11-02T06:31:25+01:00",
   "period": {
     "weeks": [
       {
-        "start": "2026-10-26",
-        "end": "2026-11-01"
-      },
-      {
         "start": "2026-11-02",
         "end": "2026-11-08"
+      },
+      {
+        "start": "2026-11-09",
+        "end": "2026-11-15"
       }
     ]
   },
   "games": [
-    {
-      "date": "2026-10-31",
-      "time": "17:30",
-      "kind": "Meisterschaft",
-      "league": "Kreisklasse",
-      "home": "tus BERNE 2.Hr.",
-      "away": "Horner TV 2.Hr.",
-      "home_cabin": "2",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-01",
-      "time": "10:30",
-      "kind": "Freundschaftsspiel",
-      "league": "Landesfreundschaftsspiele",
-      "home": "tus BERNE 1.B (J1)",
-      "away": "Glashütte 1.B (J1)",
-      "home_cabin": "2",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-01",
-      "time": "12:30",
-      "kind": "Meisterschaft",
-      "league": "Bezirksliga",
-      "home": "tus BERNE 1.Hr.",
-      "away": "Polonia 1.Hr.",
-      "home_cabin": "1",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
-      "festival": false
-    },
-    {
-      "date": "2026-11-01",
-      "time": "15:00",
-      "kind": "Meisterschaft",
-      "league": "Kreisklasse",
-      "home": "tus BERNE 3.Hr.",
-      "away": "Tonndorf-Lohe 2.Hr.",
-      "home_cabin": "2",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
     {
       "date": "2026-11-07",
       "time": "11:00",
@@ -106,6 +58,78 @@
       "home": "tus BERNE 1.D (A1)",
       "away": "Harksheide 2.D (A2)-S",
       "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-14",
+      "time": "09:30",
+      "kind": "Meisterschaft",
+      "league": "Bezirksliga",
+      "home": "tus BERNE 1.C (A1)",
+      "away": "GW Eimsbüttel 1.C (A1)",
+      "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-14",
+      "time": "11:00",
+      "kind": "Meisterschaft",
+      "league": "Kreisklasse",
+      "home": "tus BERNE 4.C (A3) 7er",
+      "away": "Nordlichter im NSV 1.C (A1) 7er",
+      "home_cabin": "2",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
+      "festival": false
+    },
+    {
+      "date": "2026-11-14",
+      "time": "13:00",
+      "kind": "Meisterschaft",
+      "league": "Landesliga",
+      "home": "tus BERNE 1.A (J1)",
+      "away": "Süderelbe 1.A (J1)",
+      "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-14",
+      "time": "15:00",
+      "kind": "Meisterschaft",
+      "league": "Kreisliga",
+      "home": "tus BERNE 2.B (J2)",
+      "away": "UH-Adler 2.B (J1)",
+      "home_cabin": "2",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
+      "festival": false
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:00",
+      "kind": "Freundschaftsspiel",
+      "league": "Bezirksfreundschaftsspiele",
+      "home": "tus BERNE 1.D (A1)",
+      "away": "Rahlstedt 1.D (A1)",
+      "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-15",
+      "time": "15:00",
+      "kind": "Meisterschaft",
+      "league": "Kreisklasse",
+      "home": "tus BERNE 3.Hr.",
+      "away": "FC Hamburg 1.Hr.",
+      "home_cabin": "2",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
