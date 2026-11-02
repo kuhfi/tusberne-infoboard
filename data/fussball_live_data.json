@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T10:20:20+01:00",
+  "generated_at": "2026-11-02T10:30:21+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -26,12 +26,12 @@
         {
           "place": 1,
           "team": "DSC Hanseat 1.Hr.",
-          "games": 10,
-          "won": 9,
+          "games": 11,
+          "won": 10,
           "draw": 0,
           "lost": 1,
-          "goals": "42:10",
-          "points": 27
+          "goals": "45:10",
+          "points": 30
         },
         {
           "place": 2,
@@ -66,11 +66,11 @@
         {
           "place": 5,
           "team": "Sasel 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 5,
           "draw": 3,
-          "lost": 2,
-          "goals": "30:20",
+          "lost": 3,
+          "goals": "30:23",
           "points": 18
         },
         {
