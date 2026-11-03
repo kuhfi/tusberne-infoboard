@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T09:20:27+01:00",
+  "generated_at": "2026-11-03T09:30:19+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -11,8 +11,7 @@
         "home": "tus BERNE 1.Hr.",
         "away": "Polonia 1.Hr.",
         "home_score": "1",
-        "away_score": "2",
-        "status": null
+        "away_score": "2"
       },
       "next_game": {
         "date": "06.11.2026",
@@ -21,8 +20,7 @@
         "home": "VfL 93 1.Hr.",
         "away": "tus BERNE 1.Hr.",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
