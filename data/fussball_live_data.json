@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T21:40:16+01:00",
+  "generated_at": "2026-11-04T21:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -711,6 +711,16 @@
         },
         {
           "place": 2,
+          "team": "Schwarzenbek 1.Ü40",
+          "games": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2,
+          "goals": "19:10",
+          "points": 12
+        },
+        {
+          "place": 3,
           "team": "Wandsetal 1.Ü40",
           "games": 6,
           "won": 3,
@@ -720,7 +730,7 @@
           "points": 10
         },
         {
-          "place": 3,
+          "place": 4,
           "team": "Rahlstedt 1.Ü40",
           "games": 6,
           "won": 3,
@@ -730,33 +740,23 @@
           "points": 10
         },
         {
-          "place": 4,
-          "team": "Schwarzenbek 1.Ü40",
-          "games": 5,
-          "won": 3,
-          "draw": 0,
-          "lost": 2,
-          "goals": "17:9",
-          "points": 9
-        },
-        {
           "place": 5,
-          "team": "Wellingsbüttel 1.Ü40",
-          "games": 5,
-          "won": 3,
-          "draw": 0,
-          "lost": 2,
-          "goals": "10:7",
-          "points": 9
-        },
-        {
-          "place": 6,
           "team": "Hoisbüttel 1.Ü40",
           "games": 5,
           "won": 3,
           "draw": 0,
           "lost": 2,
           "goals": "9:6",
+          "points": 9
+        },
+        {
+          "place": 6,
+          "team": "Wellingsbüttel 1.Ü40",
+          "games": 6,
+          "won": 3,
+          "draw": 0,
+          "lost": 3,
+          "goals": "11:9",
           "points": 9
         },
         {
