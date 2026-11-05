@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T11:10:25+01:00",
+  "generated_at": "2026-11-05T11:50:26+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -369,7 +369,8 @@
         "home": "tus BERNE 3.Hr.",
         "away": "Tonndorf-Lohe 2.Hr.",
         "home_score": "9",
-        "away_score": "1"
+        "away_score": "1",
+        "status": null
       },
       "next_game": {
         "date": "08.11.2026",
@@ -378,7 +379,8 @@
         "home": "Bramfeld 4.Hr.",
         "away": "tus BERNE 3.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
