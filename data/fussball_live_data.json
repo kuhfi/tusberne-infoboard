@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T12:00:37+01:00",
+  "generated_at": "2026-11-05T12:20:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -687,8 +687,7 @@
         "home": "SC Wentorf 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": "2",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -697,8 +696,7 @@
         "home": "Wellingsbüttel 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
