@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T06:31:25+01:00",
+  "generated_at": "2026-11-05T16:20:51+01:00",
   "period": {
     "weeks": [
       {
@@ -24,6 +24,18 @@
       "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-07",
+      "time": "13:00",
+      "kind": "Freundschaftsspiel",
+      "league": "Freundschaftsspiel",
+      "home": "tus BERNE 1.C (A1)",
+      "away": "tus BERNE 2.B",
+      "home_cabin": "2",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
       "festival": false
     },
     {
