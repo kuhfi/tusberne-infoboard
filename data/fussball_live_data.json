@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T09:00:35+01:00",
+  "generated_at": "2026-11-05T09:10:23+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -553,8 +553,7 @@
         "home": "tus BERNE  1.Ü32",
         "away": "BU 2.Ü32",
         "home_score": "2",
-        "away_score": "7",
-        "status": null
+        "away_score": "7"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -563,8 +562,7 @@
         "home": "Wellingsbüttel 1.Ü32",
         "away": "tus BERNE  1.Ü32",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
