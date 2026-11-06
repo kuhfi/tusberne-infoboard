@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T11:00:17+01:00",
+  "generated_at": "2026-11-06T11:30:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1875,16 +1875,6 @@
         {
           "place": 1,
           "team": "Sasel 13.D-Jun. (J7)",
-          "games": 0,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "goals": "0:0",
-          "points": 0
-        },
-        {
-          "place": 1,
-          "team": "Wandsetal 1.D-Jun. (J1)",
           "games": 0,
           "won": 0,
           "draw": 0,
