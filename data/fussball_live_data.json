@@ -1,27 +1,26 @@
 {
-  "generated_at": "2026-11-06T16:30:18+01:00",
+  "generated_at": "2026-11-06T22:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
       "league_line": "Herren Bezirksliga · BZL 02 · Saison 2026/27",
       "last_game": {
-        "date": "01.11.2026",
-        "time": "12:30",
-        "competition": "Bezirksliga",
-        "home": "tus BERNE 1.Hr.",
-        "away": "Polonia 1.Hr.",
-        "home_score": "1",
-        "away_score": "2"
-      },
-      "next_game": {
         "date": "06.11.2026",
         "time": "19:00",
         "competition": "Bezirksliga",
         "home": "VfL 93 1.Hr.",
         "away": "tus BERNE 1.Hr.",
         "home_score": null,
-        "away_score": null,
-        "status": "ABGESETZT"
+        "away_score": null
+      },
+      "next_game": {
+        "date": "15.11.2026",
+        "time": "13:00",
+        "competition": "Bezirksliga",
+        "home": "HEBC 2.Hr.",
+        "away": "tus BERNE 1.Hr.",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
@@ -404,6 +403,16 @@
         },
         {
           "place": 3,
+          "team": "Nordlichter im NSV 2.Hr.",
+          "games": 13,
+          "won": 8,
+          "draw": 2,
+          "lost": 3,
+          "goals": "30:18",
+          "points": 26
+        },
+        {
+          "place": 4,
           "team": "HSV 5.Hr.",
           "games": 12,
           "won": 8,
@@ -413,7 +422,7 @@
           "points": 25
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "tus BERNE 3.Hr.",
           "games": 12,
           "won": 7,
@@ -423,7 +432,7 @@
           "points": 24
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "Poppenbüttel 2.Hr.",
           "games": 12,
           "won": 7,
@@ -433,23 +442,13 @@
           "points": 23
         },
         {
-          "place": 6,
-          "team": "Nordlichter im NSV 2.Hr.",
-          "games": 12,
-          "won": 7,
-          "draw": 2,
-          "lost": 3,
-          "goals": "29:18",
-          "points": 23
-        },
-        {
           "place": 7,
           "team": "DUWO 08 2.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 6,
           "draw": 3,
-          "lost": 3,
-          "goals": "37:17",
+          "lost": 4,
+          "goals": "37:18",
           "points": 21
         },
         {
