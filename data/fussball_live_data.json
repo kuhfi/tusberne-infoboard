@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T09:00:50+01:00",
+  "generated_at": "2026-11-06T10:20:34+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -20,7 +20,8 @@
         "home": "VfL 93 1.Hr.",
         "away": "tus BERNE 1.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "NICHTANTRITT GAST"
       },
       "table": [
         {
