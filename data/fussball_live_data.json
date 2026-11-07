@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T12:20:16+01:00",
+  "generated_at": "2026-11-07T13:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -950,16 +950,6 @@
       "display_name": "tus BERNE 1.A",
       "league_line": "A-Junioren Landesliga · U18-LL 02 · Saison 2026/27",
       "last_game": {
-        "date": "24.10.2026",
-        "time": "10:30",
-        "competition": "Landesfreundschaftsspiele",
-        "home": "tus BERNE 1.A-Jun. (J1)",
-        "away": "UH-Adler 1.B-Jun. (A1)",
-        "home_score": null,
-        "away_score": null,
-        "status": "ABGESETZT"
-      },
-      "next_game": {
         "date": "07.11.2026",
         "time": "10:00",
         "competition": "Landesliga",
@@ -967,6 +957,15 @@
         "away": "tus BERNE 1.A-Jun. (J1)",
         "home_score": "0",
         "away_score": "3"
+      },
+      "next_game": {
+        "date": "14.11.2026",
+        "time": "13:00",
+        "competition": "Landesliga",
+        "home": "tus BERNE 1.A-Jun. (J1)",
+        "away": "Süderelbe 1.A-Jun. (J1)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
@@ -1032,12 +1031,12 @@
         {
           "place": 7,
           "team": "Rissen 1.A-Jun. (J1)",
-          "games": 6,
-          "won": 2,
+          "games": 7,
+          "won": 3,
           "draw": 1,
           "lost": 3,
-          "goals": "20:22",
-          "points": 7
+          "goals": "22:22",
+          "points": 10
         },
         {
           "place": 8,
@@ -1052,11 +1051,11 @@
         {
           "place": 9,
           "team": "Nordlichter im NSV 1.A-Jun. (J1)",
-          "games": 6,
+          "games": 7,
           "won": 2,
           "draw": 0,
-          "lost": 4,
-          "goals": "8:12",
+          "lost": 5,
+          "goals": "8:14",
           "points": 6
         },
         {
