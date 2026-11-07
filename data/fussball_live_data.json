@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T06:30:17+01:00",
+  "generated_at": "2026-11-07T10:30:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1709,8 +1709,8 @@
         "competition": "Kreisklasse",
         "home": "Sternschanze 3.C-Jun. (A1)",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
-        "home_score": null,
-        "away_score": null
+        "home_score": "1",
+        "away_score": "5"
       },
       "table": [
         {
@@ -1725,16 +1725,26 @@
         },
         {
           "place": 2,
-          "team": "Sternschanze 3.C-Jun. (A1)",
-          "games": 4,
+          "team": "tus BERNE 4.C-Jun. (A3) 7er",
+          "games": 5,
           "won": 2,
           "draw": 0,
-          "lost": 2,
-          "goals": "12:16",
+          "lost": 3,
+          "goals": "15:22",
           "points": 6
         },
         {
           "place": 3,
+          "team": "Sternschanze 3.C-Jun. (A1)",
+          "games": 5,
+          "won": 2,
+          "draw": 0,
+          "lost": 3,
+          "goals": "13:21",
+          "points": 6
+        },
+        {
+          "place": 4,
           "team": "Polonia 1.C-Jun. (A1) 7er",
           "games": 3,
           "won": 1,
@@ -1744,23 +1754,13 @@
           "points": 4
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "Hummelsbüttel 1.C-Jun. (A1) 7er",
           "games": 3,
           "won": 1,
           "draw": 0,
           "lost": 2,
           "goals": "7:14",
-          "points": 3
-        },
-        {
-          "place": 5,
-          "team": "tus BERNE 4.C-Jun. (A3) 7er",
-          "games": 4,
-          "won": 1,
-          "draw": 0,
-          "lost": 3,
-          "goals": "10:21",
           "points": 3
         }
       ]
