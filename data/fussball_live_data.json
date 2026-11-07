@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T10:30:16+01:00",
+  "generated_at": "2026-11-07T12:00:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1695,15 +1695,6 @@
       "display_name": "tus BERNE 4.C 7er",
       "league_line": "C-Junioren Kreisklasse 7er · U15-KK 71 7er Herbst · Saison 2026/27",
       "last_game": {
-        "date": "11.10.2026",
-        "time": "15:00",
-        "competition": "Kreisfreundschaftsspiele",
-        "home": "tus BERNE 4.C-Jun. (A3) 7er",
-        "away": "Rahlstedt 5.C-Jun. (A3)",
-        "home_score": "4",
-        "away_score": "3"
-      },
-      "next_game": {
         "date": "07.11.2026",
         "time": "09:00",
         "competition": "Kreisklasse",
@@ -1711,6 +1702,15 @@
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": "1",
         "away_score": "5"
+      },
+      "next_game": {
+        "date": "14.11.2026",
+        "time": "11:00",
+        "competition": "Kreisklasse",
+        "home": "tus BERNE 4.C-Jun. (A3) 7er",
+        "away": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
