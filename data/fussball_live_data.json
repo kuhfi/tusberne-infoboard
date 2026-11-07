@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T16:00:17+01:00",
+  "generated_at": "2026-11-07T16:30:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1843,15 +1843,6 @@
       "display_name": "tus BERNE 2.D",
       "league_line": "D-Junioren Landesliga · U12-LL 09 Herbst · Saison 2026/27",
       "last_game": {
-        "date": "10.10.2026",
-        "time": "11:00",
-        "competition": "Bezirksfreundschaftsspiele",
-        "home": "tus BERNE 2.D-Jun. (J1)",
-        "away": "Rahlstedt 3.D-Jun. (J1)",
-        "home_score": "4",
-        "away_score": "4"
-      },
-      "next_game": {
         "date": "07.11.2026",
         "time": "13:30",
         "competition": "Pokal",
@@ -1859,6 +1850,15 @@
         "away": "tus BERNE 2.D-Jun. (J1)",
         "home_score": "0",
         "away_score": "8"
+      },
+      "next_game": {
+        "date": "21.11.2026",
+        "time": "15:00",
+        "competition": "Landesliga",
+        "home": "tus BERNE 2.D-Jun. (J1)",
+        "away": "Sasel 13.D-Jun. (J7)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
