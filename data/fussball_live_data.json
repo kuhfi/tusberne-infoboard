@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T15:30:16+01:00",
+  "generated_at": "2026-11-07T16:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1010,23 +1010,23 @@
         },
         {
           "place": 5,
-          "team": "Nienstedten 2.A-Jun. (J1)",
-          "games": 6,
+          "team": "Sasel 1.A-Jun. (J1)",
+          "games": 7,
           "won": 4,
-          "draw": 0,
-          "lost": 2,
-          "goals": "40:18",
-          "points": 12
+          "draw": 2,
+          "lost": 1,
+          "goals": "18:7",
+          "points": 14
         },
         {
           "place": 6,
-          "team": "Sasel 1.A-Jun. (J1)",
-          "games": 6,
-          "won": 3,
-          "draw": 2,
-          "lost": 1,
-          "goals": "12:7",
-          "points": 11
+          "team": "Nienstedten 2.A-Jun. (J1)",
+          "games": 7,
+          "won": 4,
+          "draw": 0,
+          "lost": 3,
+          "goals": "40:24",
+          "points": 12
         },
         {
           "place": 7,
@@ -1238,20 +1238,20 @@
       "display_name": "tus BERNE 2.B",
       "league_line": "B-Junioren Kreisliga · U16-KL 03 · Saison 2026/27",
       "last_game": {
-        "date": "04.10.2026",
-        "time": "14:00",
-        "competition": "Kreisliga",
-        "home": "Lemsahl 2.B-Jun. (J2)",
-        "away": "tus BERNE 2.B-Jun. (J2)",
-        "home_score": "6",
-        "away_score": "3"
-      },
-      "next_game": {
         "date": "07.11.2026",
         "time": "13:00",
         "competition": "Bezirksfreundschaftsspiele",
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "tus BERNE 2.B-Jun. (J2)",
+        "home_score": null,
+        "away_score": null
+      },
+      "next_game": {
+        "date": "14.11.2026",
+        "time": "15:00",
+        "competition": "Kreisliga",
+        "home": "tus BERNE 2.B-Jun. (J2)",
+        "away": "UH-Adler 2.B-Jun. (J1)",
         "home_score": null,
         "away_score": null
       },
@@ -1382,20 +1382,20 @@
       "display_name": "tus BERNE 1.C",
       "league_line": "C-Junioren Bezirksliga · U15-BZL 02 · Saison 2026/27",
       "last_game": {
-        "date": "10.10.2026",
-        "time": "12:30",
-        "competition": "Bezirksliga",
-        "home": "UH-Adler 1.C-Jun. (A1)",
-        "away": "tus BERNE 1.C-Jun. (A1)",
-        "home_score": "7",
-        "away_score": "2"
-      },
-      "next_game": {
         "date": "07.11.2026",
         "time": "13:00",
         "competition": "Bezirksfreundschaftsspiele",
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "tus BERNE 2.B-Jun. (J2)",
+        "home_score": null,
+        "away_score": null
+      },
+      "next_game": {
+        "date": "14.11.2026",
+        "time": "09:30",
+        "competition": "Bezirksliga",
+        "home": "tus BERNE 1.C-Jun. (A1)",
+        "away": "GW Eimsbüttel 1.C-Jun. (A1)",
         "home_score": null,
         "away_score": null
       },
