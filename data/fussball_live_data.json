@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T16:30:17+01:00",
+  "generated_at": "2026-11-07T17:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -742,22 +742,22 @@
         },
         {
           "place": 5,
-          "team": "Hoisbüttel 1.Ü40",
-          "games": 5,
-          "won": 3,
-          "draw": 0,
-          "lost": 2,
-          "goals": "9:6",
-          "points": 9
-        },
-        {
-          "place": 6,
           "team": "Wellingsbüttel 1.Ü40",
           "games": 6,
           "won": 3,
           "draw": 0,
           "lost": 3,
           "goals": "11:9",
+          "points": 9
+        },
+        {
+          "place": 6,
+          "team": "Hoisbüttel 1.Ü40",
+          "games": 6,
+          "won": 3,
+          "draw": 0,
+          "lost": 3,
+          "goals": "10:8",
           "points": 9
         },
         {
@@ -782,6 +782,16 @@
         },
         {
           "place": 9,
+          "team": "Voran Ohe 1.Ü40",
+          "games": 6,
+          "won": 2,
+          "draw": 1,
+          "lost": 3,
+          "goals": "10:11",
+          "points": 7
+        },
+        {
+          "place": 10,
           "team": "Tonndorf-Lohe/​Condor 1.Ü40 SG",
           "games": 6,
           "won": 2,
@@ -791,7 +801,7 @@
           "points": 6
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Curslack-Neuengamme 1.Ü40",
           "games": 6,
           "won": 2,
@@ -799,16 +809,6 @@
           "lost": 4,
           "goals": "8:19",
           "points": 6
-        },
-        {
-          "place": 11,
-          "team": "Voran Ohe 1.Ü40",
-          "games": 5,
-          "won": 1,
-          "draw": 1,
-          "lost": 3,
-          "goals": "8:10",
-          "points": 4
         },
         {
           "place": 12,
