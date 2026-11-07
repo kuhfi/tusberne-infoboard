@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T17:50:17+01:00",
+  "generated_at": "2026-11-07T19:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -271,12 +271,12 @@
         {
           "place": 7,
           "team": "SV Barmbek 1.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 6,
-          "draw": 0,
+          "draw": 1,
           "lost": 4,
-          "goals": "36:27",
-          "points": 18
+          "goals": "38:29",
+          "points": 19
         },
         {
           "place": 8,
@@ -291,12 +291,12 @@
         {
           "place": 9,
           "team": "Farmsen 3.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 5,
-          "draw": 0,
+          "draw": 1,
           "lost": 5,
-          "goals": "28:33",
-          "points": 15
+          "goals": "30:35",
+          "points": 16
         },
         {
           "place": 10,
