@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T19:10:17+01:00",
+  "generated_at": "2026-11-07T21:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -970,22 +970,22 @@
       "table": [
         {
           "place": 1,
-          "team": "Niendorf 2.A-Jun. (J1)",
-          "games": 6,
-          "won": 6,
+          "team": "Süderelbe 1.A-Jun. (J1)",
+          "games": 7,
+          "won": 7,
           "draw": 0,
           "lost": 0,
-          "goals": "26:3",
-          "points": 18
+          "goals": "31:10",
+          "points": 21
         },
         {
           "place": 2,
-          "team": "Süderelbe 1.A-Jun. (J1)",
-          "games": 6,
+          "team": "Niendorf 2.A-Jun. (J1)",
+          "games": 7,
           "won": 6,
           "draw": 0,
-          "lost": 0,
-          "goals": "29:9",
+          "lost": 1,
+          "goals": "27:5",
           "points": 18
         },
         {
