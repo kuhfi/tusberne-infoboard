@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T14:00:16+01:00",
+  "generated_at": "2026-11-07T15:20:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -66,6 +66,16 @@
         },
         {
           "place": 5,
+          "team": "HSV 3.Hr.",
+          "games": 13,
+          "won": 4,
+          "draw": 5,
+          "lost": 4,
+          "goals": "27:23",
+          "points": 17
+        },
+        {
+          "place": 6,
           "team": "Duvenstedt 1.Hr.",
           "games": 11,
           "won": 5,
@@ -75,23 +85,13 @@
           "points": 17
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "Sasel 2.Hr.",
           "games": 12,
           "won": 5,
           "draw": 4,
           "lost": 3,
           "goals": "32:25",
-          "points": 16
-        },
-        {
-          "place": 7,
-          "team": "HSV 3.Hr.",
-          "games": 12,
-          "won": 4,
-          "draw": 4,
-          "lost": 4,
-          "goals": "25:21",
           "points": 16
         },
         {
@@ -157,12 +157,12 @@
         {
           "place": 14,
           "team": "Wellingsbüttel 1.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 3,
-          "draw": 3,
+          "draw": 4,
           "lost": 5,
-          "goals": "25:26",
-          "points": 9
+          "goals": "27:28",
+          "points": 10
         },
         {
           "place": 15,
