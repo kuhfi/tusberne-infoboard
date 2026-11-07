@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T21:20:17+01:00",
+  "generated_at": "2026-11-07T21:40:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -385,12 +385,12 @@
         {
           "place": 1,
           "team": "Alstertal-Langenhorn 3.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 10,
-          "draw": 0,
+          "draw": 1,
           "lost": 2,
-          "goals": "83:16",
-          "points": 30
+          "goals": "85:18",
+          "points": 31
         },
         {
           "place": 2,
@@ -435,12 +435,12 @@
         {
           "place": 6,
           "team": "Poppenbüttel 2.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 7,
-          "draw": 2,
+          "draw": 3,
           "lost": 3,
-          "goals": "43:20",
-          "points": 23
+          "goals": "45:22",
+          "points": 24
         },
         {
           "place": 7,
