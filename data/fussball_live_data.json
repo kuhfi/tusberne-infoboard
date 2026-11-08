@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T15:20:17+01:00",
+  "generated_at": "2026-11-08T16:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1768,16 +1768,6 @@
       "display_name": "tus BERNE 1.D",
       "league_line": "D-Junioren Verbandsliga · U13-OL 02 Herbst · Saison 2026/27",
       "last_game": {
-        "date": "10.10.2026",
-        "time": "13:00",
-        "competition": "Bezirksfreundschaftsspiele",
-        "home": "tus BERNE 1.D-Jun. (A1)",
-        "away": "SV Wilhelmsburg 2.D-Jun. (A1)",
-        "home_score": null,
-        "away_score": null,
-        "status": "ABGESETZT"
-      },
-      "next_game": {
         "date": "08.11.2026",
         "time": "13:00",
         "competition": "Pokal",
@@ -1786,6 +1776,15 @@
         "home_score": null,
         "away_score": null,
         "status": "ABGEBROCHEN"
+      },
+      "next_game": {
+        "date": "14.11.2026",
+        "time": "17:00",
+        "competition": "Bezirksfreundschaftsspiele",
+        "home": "tus BERNE 1.D-Jun. (A1)",
+        "away": "Rahlstedt 1.D-Jun. (A1)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
