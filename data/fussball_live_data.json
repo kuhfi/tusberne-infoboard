@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T17:20:18+01:00",
+  "generated_at": "2026-11-08T19:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -66,22 +66,22 @@
         },
         {
           "place": 5,
+          "team": "Duvenstedt 1.Hr.",
+          "games": 12,
+          "won": 6,
+          "draw": 2,
+          "lost": 4,
+          "goals": "31:31",
+          "points": 20
+        },
+        {
+          "place": 6,
           "team": "HSV 3.Hr.",
           "games": 13,
           "won": 4,
           "draw": 5,
           "lost": 4,
           "goals": "27:23",
-          "points": 17
-        },
-        {
-          "place": 6,
-          "team": "Duvenstedt 1.Hr.",
-          "games": 11,
-          "won": 5,
-          "draw": 2,
-          "lost": 4,
-          "goals": "26:30",
           "points": 17
         },
         {
@@ -96,22 +96,22 @@
         },
         {
           "place": 8,
-          "team": "Polonia 1.Hr.",
-          "games": 11,
-          "won": 4,
-          "draw": 3,
-          "lost": 4,
-          "goals": "25:27",
-          "points": 15
-        },
-        {
-          "place": 9,
           "team": "Alstertal-Langenhorn 1.Hr.",
           "games": 13,
           "won": 5,
           "draw": 3,
           "lost": 5,
           "goals": "22:25",
+          "points": 15
+        },
+        {
+          "place": 9,
+          "team": "Polonia 1.Hr.",
+          "games": 12,
+          "won": 4,
+          "draw": 3,
+          "lost": 5,
+          "goals": "26:32",
           "points": 15
         },
         {
@@ -444,6 +444,16 @@
         },
         {
           "place": 7,
+          "team": "Farmsen 2.Hr.",
+          "games": 13,
+          "won": 7,
+          "draw": 2,
+          "lost": 4,
+          "goals": "54:29",
+          "points": 23
+        },
+        {
+          "place": 8,
           "team": "DUWO 08 2.Hr.",
           "games": 13,
           "won": 6,
@@ -453,7 +463,7 @@
           "points": 21
         },
         {
-          "place": 8,
+          "place": 9,
           "team": "Bramfeld 4.Hr.",
           "games": 12,
           "won": 7,
@@ -463,23 +473,13 @@
           "points": 21
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "Friedrichsgabe 1.Hr.",
           "games": 13,
           "won": 5,
           "draw": 5,
           "lost": 3,
           "goals": "42:24",
-          "points": 20
-        },
-        {
-          "place": 10,
-          "team": "Farmsen 2.Hr.",
-          "games": 12,
-          "won": 6,
-          "draw": 2,
-          "lost": 4,
-          "goals": "39:27",
           "points": 20
         },
         {
@@ -535,11 +535,11 @@
         {
           "place": 16,
           "team": "Walddörfer 3.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 0,
           "draw": 1,
-          "lost": 11,
-          "goals": "8:90",
+          "lost": 12,
+          "goals": "10:105",
           "points": 1
         }
       ]
