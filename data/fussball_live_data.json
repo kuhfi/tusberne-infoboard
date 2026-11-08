@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T16:00:17+01:00",
+  "generated_at": "2026-11-08T16:30:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -37,12 +37,12 @@
         {
           "place": 2,
           "team": "UH-Adler 1.Hr.",
-          "games": 12,
-          "won": 8,
+          "games": 13,
+          "won": 9,
           "draw": 0,
           "lost": 4,
-          "goals": "35:20",
-          "points": 21
+          "goals": "39:21",
+          "points": 24
         },
         {
           "place": 3,
@@ -137,11 +137,11 @@
         {
           "place": 12,
           "team": "HEBC 2.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 3,
           "draw": 4,
-          "lost": 5,
-          "goals": "27:32",
+          "lost": 6,
+          "goals": "28:36",
           "points": 13
         },
         {
