@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T10:30:45+01:00",
+  "generated_at": "2026-11-08T10:40:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1997,8 +1997,8 @@
         "competition": "Kreisfreundschaftsspiele",
         "home": "tus BERNE 4.D-Jun. (J2)",
         "away": "tus BERNE 1.E-Jun. (A1)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "3",
+        "away_score": "6"
       },
       "table": [
         {
