@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T19:10:17+01:00",
+  "generated_at": "2026-11-08T19:50:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -378,8 +378,8 @@
         "competition": "Kreisklasse",
         "home": "Bramfeld 4.Hr.",
         "away": "tus BERNE 3.Hr.",
-        "home_score": null,
-        "away_score": null
+        "home_score": "2",
+        "away_score": "6"
       },
       "table": [
         {
@@ -404,6 +404,16 @@
         },
         {
           "place": 3,
+          "team": "tus BERNE 3.Hr.",
+          "games": 13,
+          "won": 8,
+          "draw": 3,
+          "lost": 2,
+          "goals": "54:23",
+          "points": 27
+        },
+        {
+          "place": 4,
           "team": "HSV 5.Hr.",
           "games": 13,
           "won": 8,
@@ -413,7 +423,7 @@
           "points": 26
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "Nordlichter im NSV 2.Hr.",
           "games": 13,
           "won": 8,
@@ -421,16 +431,6 @@
           "lost": 3,
           "goals": "30:18",
           "points": 26
-        },
-        {
-          "place": 5,
-          "team": "tus BERNE 3.Hr.",
-          "games": 12,
-          "won": 7,
-          "draw": 3,
-          "lost": 2,
-          "goals": "48:21",
-          "points": 24
         },
         {
           "place": 6,
@@ -465,11 +465,11 @@
         {
           "place": 9,
           "team": "Bramfeld 4.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 7,
           "draw": 0,
-          "lost": 5,
-          "goals": "30:46",
+          "lost": 6,
+          "goals": "32:52",
           "points": 21
         },
         {
