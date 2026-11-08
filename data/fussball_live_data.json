@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T17:00:17+01:00",
+  "generated_at": "2026-11-08T17:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -46,22 +46,22 @@
         },
         {
           "place": 3,
+          "team": "SV Groß Borstel 1.Hr.",
+          "games": 13,
+          "won": 7,
+          "draw": 3,
+          "lost": 3,
+          "goals": "32:23",
+          "points": 24
+        },
+        {
+          "place": 4,
           "team": "VfL 93 1.Hr.",
           "games": 12,
           "won": 6,
           "draw": 3,
           "lost": 3,
           "goals": "29:14",
-          "points": 21
-        },
-        {
-          "place": 4,
-          "team": "SV Groß Borstel 1.Hr.",
-          "games": 12,
-          "won": 6,
-          "draw": 3,
-          "lost": 3,
-          "goals": "29:23",
           "points": 21
         },
         {
@@ -127,11 +127,11 @@
         {
           "place": 11,
           "team": "Croatia 1.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 4,
           "draw": 2,
-          "lost": 6,
-          "goals": "29:32",
+          "lost": 7,
+          "goals": "29:35",
           "points": 14
         },
         {
@@ -241,11 +241,11 @@
         {
           "place": 4,
           "team": "DSC Hanseat 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 8,
           "draw": 0,
-          "lost": 2,
-          "goals": "31:28",
+          "lost": 3,
+          "goals": "33:31",
           "points": 24
         },
         {
@@ -311,12 +311,12 @@
         {
           "place": 11,
           "team": "Polonia 3.Hr.",
-          "games": 11,
-          "won": 2,
+          "games": 12,
+          "won": 3,
           "draw": 1,
           "lost": 8,
-          "goals": "24:37",
-          "points": 7
+          "goals": "27:39",
+          "points": 10
         },
         {
           "place": 12,
