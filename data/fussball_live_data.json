@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T12:20:20+01:00",
+  "generated_at": "2026-11-08T12:30:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1590,15 +1590,6 @@
       "display_name": "tus BERNE 3.C",
       "league_line": "C-Junioren Kreisliga · U14-KL 06 Herbst · Saison 2026/27",
       "last_game": {
-        "date": "10.10.2026",
-        "time": "11:00",
-        "competition": "Kreisfreundschaftsspiele",
-        "home": "West-Eimsbüttel 2.C-Jun. (J1)",
-        "away": "tus BERNE 3.C-Jun. (J1)",
-        "home_score": "1",
-        "away_score": "3"
-      },
-      "next_game": {
         "date": "08.11.2026",
         "time": "09:30",
         "competition": "Pokal",
@@ -1606,6 +1597,15 @@
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": "7",
         "away_score": "0"
+      },
+      "next_game": {
+        "date": "15.11.2026",
+        "time": "11:00",
+        "competition": "Kreisliga",
+        "home": "Lemsahl 1.C-Jun. (J1)",
+        "away": "tus BERNE 3.C-Jun. (J1)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
