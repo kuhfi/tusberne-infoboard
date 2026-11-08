@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T12:40:17+01:00",
+  "generated_at": "2026-11-08T13:10:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1128,8 +1128,8 @@
         "competition": "Landesfreundschaftsspiele",
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "U17 TuS Fleestedt",
-        "home_score": null,
-        "away_score": null
+        "home_score": "3",
+        "away_score": "5"
       },
       "table": [
         {
