@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T16:30:17+01:00",
+  "generated_at": "2026-11-08T16:40:19+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -404,6 +404,16 @@
         },
         {
           "place": 3,
+          "team": "HSV 5.Hr.",
+          "games": 13,
+          "won": 8,
+          "draw": 2,
+          "lost": 3,
+          "goals": "55:22",
+          "points": 26
+        },
+        {
+          "place": 4,
           "team": "Nordlichter im NSV 2.Hr.",
           "games": 13,
           "won": 8,
@@ -411,16 +421,6 @@
           "lost": 3,
           "goals": "30:18",
           "points": 26
-        },
-        {
-          "place": 4,
-          "team": "HSV 5.Hr.",
-          "games": 12,
-          "won": 8,
-          "draw": 1,
-          "lost": 3,
-          "goals": "53:20",
-          "points": 25
         },
         {
           "place": 5,
@@ -464,6 +464,16 @@
         },
         {
           "place": 9,
+          "team": "Friedrichsgabe 1.Hr.",
+          "games": 13,
+          "won": 5,
+          "draw": 5,
+          "lost": 3,
+          "goals": "42:24",
+          "points": 20
+        },
+        {
+          "place": 10,
           "team": "Farmsen 2.Hr.",
           "games": 12,
           "won": 6,
@@ -471,16 +481,6 @@
           "lost": 4,
           "goals": "39:27",
           "points": 20
-        },
-        {
-          "place": 10,
-          "team": "Friedrichsgabe 1.Hr.",
-          "games": 12,
-          "won": 5,
-          "draw": 4,
-          "lost": 3,
-          "goals": "40:22",
-          "points": 19
         },
         {
           "place": 11,
