@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:10:16+01:00",
+  "generated_at": "2026-11-08T15:10:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -301,12 +301,12 @@
         {
           "place": 10,
           "team": "Croatia 2.Hr.",
-          "games": 11,
-          "won": 3,
+          "games": 12,
+          "won": 4,
           "draw": 2,
           "lost": 6,
-          "goals": "26:33",
-          "points": 11
+          "goals": "30:34",
+          "points": 14
         },
         {
           "place": 11,
@@ -331,11 +331,11 @@
         {
           "place": 13,
           "team": "Hamburg Hurricanes 2.Hr.",
-          "games": 10,
+          "games": 11,
           "won": 2,
           "draw": 0,
-          "lost": 8,
-          "goals": "16:39",
+          "lost": 9,
+          "goals": "17:43",
           "points": 6
         },
         {
