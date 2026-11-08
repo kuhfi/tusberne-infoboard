@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:00:18+01:00",
+  "generated_at": "2026-11-08T14:10:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -231,12 +231,12 @@
         {
           "place": 3,
           "team": "FC Preußen Hamburg 1.Hr.",
-          "games": 11,
-          "won": 8,
+          "games": 12,
+          "won": 9,
           "draw": 0,
           "lost": 3,
-          "goals": "51:27",
-          "points": 24
+          "goals": "54:28",
+          "points": 27
         },
         {
           "place": 4,
@@ -270,6 +270,16 @@
         },
         {
           "place": 7,
+          "team": "Urania 3.Hr.",
+          "games": 12,
+          "won": 6,
+          "draw": 1,
+          "lost": 5,
+          "goals": "41:28",
+          "points": 19
+        },
+        {
+          "place": 8,
           "team": "SV Barmbek 1.Hr.",
           "games": 11,
           "won": 6,
@@ -277,16 +287,6 @@
           "lost": 4,
           "goals": "38:29",
           "points": 19
-        },
-        {
-          "place": 8,
-          "team": "Urania 3.Hr.",
-          "games": 11,
-          "won": 5,
-          "draw": 1,
-          "lost": 5,
-          "goals": "32:27",
-          "points": 16
         },
         {
           "place": 9,
@@ -321,11 +321,11 @@
         {
           "place": 12,
           "team": "DJK Hamburg 1.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 2,
           "draw": 1,
-          "lost": 8,
-          "goals": "19:58",
+          "lost": 9,
+          "goals": "20:67",
           "points": 7
         },
         {
@@ -351,11 +351,11 @@
         {
           "place": 15,
           "team": "Horner TV 2.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 1,
           "draw": 2,
-          "lost": 8,
-          "goals": "22:58",
+          "lost": 9,
+          "goals": "23:61",
           "points": -1
         }
       ]
@@ -1784,7 +1784,8 @@
         "home": "tus BERNE 1.D-Jun. (A1)",
         "away": "Harksheide 2.D-Jun. (A2)-S",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "ABGEBROCHEN"
       },
       "table": [
         {
