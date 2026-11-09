@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T10:50:17+01:00",
+  "generated_at": "2026-11-09T11:50:20+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1526,63 +1526,103 @@
       "table": [
         {
           "place": 1,
-          "team": "Glashütte 3.C-Jun. (A2)",
-          "games": 4,
-          "won": 2,
-          "draw": 1,
-          "lost": 1,
-          "goals": "18:14",
-          "points": 7
+          "team": "Sasel 2.C (J1)",
+          "games": 18,
+          "won": 14,
+          "draw": 2,
+          "lost": 2,
+          "goals": "71:20",
+          "points": 44
         },
         {
           "place": 2,
-          "team": "Meiendorf 2.C-Jun. (A1)",
-          "games": 2,
-          "won": 2,
-          "draw": 0,
-          "lost": 0,
-          "goals": "9:1",
-          "points": 6
+          "team": "Concordia 2.C (J1)",
+          "games": 18,
+          "won": 14,
+          "draw": 1,
+          "lost": 3,
+          "goals": "88:23",
+          "points": 43
         },
         {
           "place": 3,
-          "team": "Poppenbüttel 3.C-Jun. (A2)",
-          "games": 4,
-          "won": 1,
-          "draw": 1,
+          "team": "Süderelbe 2.C (J1)",
+          "games": 18,
+          "won": 13,
+          "draw": 3,
           "lost": 2,
-          "goals": "15:18",
-          "points": 4
+          "goals": "86:24",
+          "points": 42
         },
         {
           "place": 4,
-          "team": "TuS Hamburg 2.C-Jun. (A1)",
-          "games": 4,
-          "won": 1,
-          "draw": 1,
-          "lost": 2,
-          "goals": "6:12",
-          "points": 4
+          "team": "Walddörfer 1.C (J1)",
+          "games": 18,
+          "won": 10,
+          "draw": 2,
+          "lost": 6,
+          "goals": "45:35",
+          "points": 32
         },
         {
           "place": 5,
-          "team": "DUWO 08 1.C-Jun. (A1)",
-          "games": 3,
-          "won": 0,
-          "draw": 3,
-          "lost": 0,
-          "goals": "9:9",
-          "points": 3
+          "team": "Düneberg 1.C (J1)",
+          "games": 18,
+          "won": 9,
+          "draw": 2,
+          "lost": 7,
+          "goals": "38:38",
+          "points": 29
         },
         {
           "place": 6,
-          "team": "tus BERNE 2.C-Jun. (A2)",
-          "games": 3,
-          "won": 1,
+          "team": "Vorw. Wacker 3.C (J2)",
+          "games": 18,
+          "won": 9,
           "draw": 0,
-          "lost": 2,
-          "goals": "11:14",
-          "points": 3
+          "lost": 9,
+          "goals": "44:46",
+          "points": 27
+        },
+        {
+          "place": 7,
+          "team": "Atlantik 97 1.C (J1)",
+          "games": 18,
+          "won": 5,
+          "draw": 3,
+          "lost": 10,
+          "goals": "40:63",
+          "points": 18
+        },
+        {
+          "place": 8,
+          "team": "Einigkeit 2.C (J1)",
+          "games": 18,
+          "won": 5,
+          "draw": 2,
+          "lost": 11,
+          "goals": "31:45",
+          "points": 17
+        },
+        {
+          "place": 9,
+          "team": "Paloma 3.C (J2)",
+          "games": 18,
+          "won": 2,
+          "draw": 2,
+          "lost": 14,
+          "goals": "22:82",
+          "points": 8
+        },
+        {
+          "place": 10,
+          "team": "TuS Berne 2.C (J1)",
+          "games": 18,
+          "won": 0,
+          "draw": 1,
+          "lost": 17,
+          "goals": "19:108",
+          "points": 1
         }
       ]
     },
