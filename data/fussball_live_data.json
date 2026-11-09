@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T07:30:53+01:00",
+  "generated_at": "2026-11-09T10:20:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -210,6 +210,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Bramfeld 3.Hr.",
+          "games": 13,
+          "won": 10,
+          "draw": 1,
+          "lost": 2,
+          "goals": "38:28",
+          "points": 31
+        },
+        {
+          "place": 2,
           "team": "tus BERNE 2.Hr.",
           "games": 11,
           "won": 9,
@@ -217,16 +227,6 @@
           "lost": 0,
           "goals": "91:16",
           "points": 29
-        },
-        {
-          "place": 2,
-          "team": "Bramfeld 3.Hr.",
-          "games": 12,
-          "won": 9,
-          "draw": 1,
-          "lost": 2,
-          "goals": "34:28",
-          "points": 28
         },
         {
           "place": 3,
@@ -341,11 +341,11 @@
         {
           "place": 14,
           "team": "Störtebeker SV 1.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 1,
           "draw": 1,
-          "lost": 10,
-          "goals": "14:55",
+          "lost": 11,
+          "goals": "14:59",
           "points": 4
         },
         {
