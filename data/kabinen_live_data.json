@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T15:31:39+01:00",
+  "generated_at": "2026-11-09T17:10:53+01:00",
   "period": {
     "weeks": [
       {
@@ -88,25 +88,13 @@
     },
     {
       "date": "2026-11-15",
-      "time": "11:00",
-      "kind": "Freundschaftsspiel",
-      "league": "Kreisfreundschaftsspiele",
-      "home": "tus BERNE 2.C (A2)",
-      "away": "Bergstedt 1.C (A1)",
-      "home_cabin": "2",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
-      "festival": false
-    },
-    {
-      "date": "2026-11-15",
       "time": "13:00",
       "kind": "Meisterschaft",
       "league": "Vereinsturnier",
       "home": "tus BERNE 7.D (J4)",
       "away": "Concordia 3.D (J2)",
       "home_cabin": "1",
-      "guest_cabin": "3",
+      "guest_cabin": "4",
       "sr_cabin": "SR1",
       "festival": false
     },
@@ -142,7 +130,7 @@
       "home": "tus BERNE 3.Hr.",
       "away": "FC Hamburg 1.Hr.",
       "home_cabin": "2",
-      "guest_cabin": "4",
+      "guest_cabin": "3",
       "sr_cabin": "SR2",
       "festival": false
     },
