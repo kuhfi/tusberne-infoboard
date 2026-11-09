@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T10:50:40+01:00",
+  "generated_at": "2026-11-09T13:20:43+01:00",
   "period": {
     "weeks": [
       {
@@ -100,14 +100,50 @@
     },
     {
       "date": "2026-11-15",
+      "time": "13:00",
+      "kind": "Meisterschaft",
+      "league": "Vereinsturnier",
+      "home": "tus BERNE 7.D (J4)",
+      "away": "Concordia 3.D (J2)",
+      "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-15",
+      "time": "13:22",
+      "kind": "Meisterschaft",
+      "league": "Vereinsturnier",
+      "home": "Altenwerder 1.E (J1) (EJ)",
+      "away": "tus BERNE 7.D (J4)",
+      "home_cabin": "",
+      "guest_cabin": "",
+      "sr_cabin": "",
+      "festival": false
+    },
+    {
+      "date": "2026-11-15",
+      "time": "13:44",
+      "kind": "Meisterschaft",
+      "league": "Vereinsturnier",
+      "home": "Poppenbüttel 2.E (A2) (EJ)",
+      "away": "tus BERNE 7.D (J4)",
+      "home_cabin": "",
+      "guest_cabin": "",
+      "sr_cabin": "",
+      "festival": false
+    },
+    {
+      "date": "2026-11-15",
       "time": "15:00",
       "kind": "Meisterschaft",
       "league": "Kreisklasse",
       "home": "tus BERNE 3.Hr.",
       "away": "FC Hamburg 1.Hr.",
       "home_cabin": "2",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
       "festival": false
     },
     {
