@@ -559,8 +559,7 @@
         "home": "tus BERNE  1.Ü32",
         "away": "BU 2.Ü32",
         "home_score": "2",
-        "away_score": "7",
-        "status": null
+        "away_score": "7"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -569,8 +568,7 @@
         "home": "Wellingsbüttel 1.Ü32",
         "away": "tus BERNE  1.Ü32",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -695,8 +693,7 @@
         "home": "SC Wentorf 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": "2",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -705,8 +702,7 @@
         "home": "Wellingsbüttel 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1763,8 +1759,7 @@
         "home": "Sternschanze 3.C-Jun. (A1)",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": "1",
-        "away_score": "5",
-        "status": null
+        "away_score": "5"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1773,8 +1768,7 @@
         "home": "tus BERNE 4.C-Jun. (A3) 7er",
         "away": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
