@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T17:10:15+01:00",
+  "generated_at": "2026-11-10T18:40:20+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -205,7 +205,8 @@
         "home": "Hellbrook 2.Hr.",
         "away": "tus BERNE 2.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "AUSGEFALLEN"
       },
       "table": [
         {
