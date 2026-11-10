@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T18:40:20+01:00",
+  "generated_at": "2026-11-10T22:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -190,15 +190,6 @@
       "display_name": "tus BERNE 2.Hr.",
       "league_line": "Herren Kreisklasse · KK 05 · Saison 2026/27",
       "last_game": {
-        "date": "31.10.2026",
-        "time": "17:30",
-        "competition": "Kreisklasse",
-        "home": "tus BERNE 2.Hr.",
-        "away": "Horner TV 2.Hr.",
-        "home_score": "10",
-        "away_score": "0"
-      },
-      "next_game": {
         "date": "10.11.2026",
         "time": "19:00",
         "competition": "Kreisklasse",
@@ -207,6 +198,15 @@
         "home_score": null,
         "away_score": null,
         "status": "AUSGEFALLEN"
+      },
+      "next_game": {
+        "date": "15.11.2026",
+        "time": "15:00",
+        "competition": "Kreisklasse",
+        "home": "Störtebeker SV 1.Hr.",
+        "away": "tus BERNE 2.Hr.",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
