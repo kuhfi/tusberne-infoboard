@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T07:50:26+01:00",
+  "generated_at": "2026-11-10T08:00:27+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -688,7 +688,8 @@
         "home": "SC Wentorf 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": "2",
-        "away_score": "4"
+        "away_score": "4",
+        "status": null
       },
       "next_game": {
         "date": "15.11.2026",
@@ -697,7 +698,8 @@
         "home": "Wellingsbüttel 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -832,8 +834,7 @@
         "home": "tus BERNE 1.Ü50",
         "away": "Concordia 1.Ü50",
         "home_score": "1",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "22.11.2026",
@@ -842,8 +843,7 @@
         "home": "tus BERNE 1.Ü50",
         "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -958,7 +958,8 @@
         "home": "Willinghusen 2.A-Jun. (J1)",
         "away": "tus BERNE 1.A-Jun. (J1)",
         "home_score": "0",
-        "away_score": "3"
+        "away_score": "3",
+        "status": null
       },
       "next_game": {
         "date": "14.11.2026",
@@ -967,7 +968,8 @@
         "home": "tus BERNE 1.A-Jun. (J1)",
         "away": "Süderelbe 1.A-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1915,8 +1917,7 @@
         "home": "Stapelfeld 1.D-Jun. (A1)-S",
         "away": "tus BERNE 3.D-Jun. (A2)-S",
         "home_score": "8",
-        "away_score": "1",
-        "status": null
+        "away_score": "1"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -1925,8 +1926,7 @@
         "home": "tus BERNE 3.D-Jun. (A2)-S",
         "away": "Walddörfer 3.D-Jun. (A2)-S",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
