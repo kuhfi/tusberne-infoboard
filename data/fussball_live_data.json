@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T07:11:04+01:00",
+  "generated_at": "2026-11-10T07:30:25+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -12,7 +12,7 @@
         "away": "tus BERNE 1.Hr.",
         "home_score": null,
         "away_score": null,
-        "status": "Absetzung"
+        "status": "ABGESETZT"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -21,8 +21,7 @@
         "home": "HEBC 2.Hr.",
         "away": "tus BERNE 1.Hr.",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -197,8 +196,7 @@
         "home": "tus BERNE 2.Hr.",
         "away": "Horner TV 2.Hr.",
         "home_score": "10",
-        "away_score": "0",
-        "status": null
+        "away_score": "0"
       },
       "next_game": {
         "date": "10.11.2026",
@@ -207,8 +205,7 @@
         "home": "Hellbrook 2.Hr.",
         "away": "tus BERNE 2.Hr.",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -373,8 +370,7 @@
         "home": "Bramfeld 4.Hr.",
         "away": "tus BERNE 3.Hr.",
         "home_score": "2",
-        "away_score": "6",
-        "status": null
+        "away_score": "6"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -383,8 +379,7 @@
         "home": "tus BERNE 3.Hr.",
         "away": "FC Hamburg 1.Hr.",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -559,8 +554,7 @@
         "home": "tus BERNE  1.Ü32",
         "away": "BU 2.Ü32",
         "home_score": "2",
-        "away_score": "7",
-        "status": null
+        "away_score": "7"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -569,8 +563,7 @@
         "home": "Wellingsbüttel 1.Ü32",
         "away": "tus BERNE  1.Ü32",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -695,8 +688,7 @@
         "home": "SC Wentorf 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": "2",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -705,8 +697,7 @@
         "home": "Wellingsbüttel 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -841,8 +832,7 @@
         "home": "tus BERNE 1.Ü50",
         "away": "Concordia 1.Ü50",
         "home_score": "1",
-        "away_score": "4",
-        "status": null
+        "away_score": "4"
       },
       "next_game": {
         "date": "22.11.2026",
@@ -851,8 +841,7 @@
         "home": "tus BERNE 1.Ü50",
         "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -967,8 +956,7 @@
         "home": "Willinghusen 2.A-Jun. (J1)",
         "away": "tus BERNE 1.A-Jun. (J1)",
         "home_score": "0",
-        "away_score": "3",
-        "status": null
+        "away_score": "3"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -977,8 +965,7 @@
         "home": "tus BERNE 1.A-Jun. (J1)",
         "away": "Süderelbe 1.A-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1133,8 +1120,7 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "U17 TuS Fleestedt",
         "home_score": "3",
-        "away_score": "5",
-        "status": null
+        "away_score": "5"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1143,8 +1129,7 @@
         "home": "Süderelbe 3.B-Jun. (J1)",
         "away": "tus BERNE 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1259,8 +1244,7 @@
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "tus BERNE 2.B-Jun. (J2)",
         "home_score": "0",
-        "away_score": "0",
-        "status": null
+        "away_score": "0"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1269,8 +1253,7 @@
         "home": "tus BERNE 2.B-Jun. (J2)",
         "away": "UH-Adler 2.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1405,8 +1388,7 @@
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "tus BERNE 2.B-Jun. (J2)",
         "home_score": "0",
-        "away_score": "0",
-        "status": null
+        "away_score": "0"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1415,8 +1397,7 @@
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "GW Eimsbüttel 1.C-Jun. (A1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1531,8 +1512,7 @@
         "home": "Poppenbüttel 3.C-Jun. (A2)",
         "away": "tus BERNE 2.C-Jun. (A2)",
         "home_score": "4",
-        "away_score": "2",
-        "status": null
+        "away_score": "2"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1541,8 +1521,7 @@
         "home": "Meiendorf 2.C-Jun. (A1)",
         "away": "tus BERNE 2.C-Jun. (A2)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1617,8 +1596,7 @@
         "home": "Condor 2.C-Jun. (J2)",
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": "7",
-        "away_score": "0",
-        "status": null
+        "away_score": "0"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -1627,8 +1605,7 @@
         "home": "Lemsahl 1.C-Jun. (J1)",
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1723,8 +1700,7 @@
         "home": "Sternschanze 3.C-Jun. (A1)",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": "1",
-        "away_score": "5",
-        "status": null
+        "away_score": "5"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1733,8 +1709,7 @@
         "home": "tus BERNE 4.C-Jun. (A3) 7er",
         "away": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1800,7 +1775,7 @@
         "away": "Harksheide 2.D-Jun. (A2)-S",
         "home_score": null,
         "away_score": null,
-        "status": "Abbruch"
+        "status": "ABGEBROCHEN"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1809,8 +1784,7 @@
         "home": "tus BERNE 1.D-Jun. (A1)",
         "away": "Rahlstedt 1.D-Jun. (A1)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1875,8 +1849,7 @@
         "home": "Bramfeld 2.D-Jun. (J2)",
         "away": "tus BERNE 2.D-Jun. (J1)",
         "home_score": "0",
-        "away_score": "8",
-        "status": null
+        "away_score": "8"
       },
       "next_game": {
         "date": "21.11.2026",
@@ -1885,8 +1858,7 @@
         "home": "tus BERNE 2.D-Jun. (J1)",
         "away": "Sasel 13.D-Jun. (J7)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1941,8 +1913,7 @@
         "home": "Stapelfeld 1.D-Jun. (A1)-S",
         "away": "tus BERNE 3.D-Jun. (A2)-S",
         "home_score": "8",
-        "away_score": "1",
-        "status": null
+        "away_score": "1"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -1951,8 +1922,7 @@
         "home": "tus BERNE 3.D-Jun. (A2)-S",
         "away": "Walddörfer 3.D-Jun. (A2)-S",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -2027,8 +1997,7 @@
         "home": "tus BERNE 4.D-Jun. (J2)",
         "away": "tus BERNE 1.E-Jun. (A1)",
         "home_score": "3",
-        "away_score": "6",
-        "status": null
+        "away_score": "6"
       },
       "next_game": null,
       "table": [
