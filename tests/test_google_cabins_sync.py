@@ -1,5 +1,8 @@
 """Offline self-checks for Google Sheets read-only importer and weekly safety."""
 import copy
+from io import BytesIO
+from types import SimpleNamespace
+from unittest.mock import patch
 import sys
 import unittest
 from datetime import datetime
@@ -9,7 +12,7 @@ from zoneinfo import ZoneInfo
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts' if (ROOT/'scripts').exists() else ROOT/'pi'))
 from cabins_overrides import game_key, effective_plan
-from pi_google_cabins_sync import build_new_store, parse_revision_rows
+from pi_google_cabins_sync import build_new_store, parse_revision_rows, parse_xlsx_rows, fetch_rclone_rows, EXPECTED_HEADERS
 
 NOW=datetime(2026,11,11,10,30,tzinfo=ZoneInfo('Europe/Berlin'))
 WEEK='2026-11-09'
@@ -120,5 +123,50 @@ class GoogleImporterTest(unittest.TestCase):
         self.assertTrue(changed);self.assertEqual(new['weeks'][st]['revision'],2)
         same,changed2,_,_=build_new_store(BASE,sheets('partial',2,data),new,NOW,'X')
         self.assertFalse(changed2)
+
+
+    def test_xlsx_rclone_export_parsed_and_version6_auto(self):
+        from openpyxl import Workbook
+        workbook = Workbook()
+        workbook.active.title = "Wochen"
+        workbook.active.append(list(EXPECTED_HEADERS["Wochen"]))
+        workbook.active.append([WEEK, "automatic", "6", "2026-11-11T14:28:52+01:00", "hash", "0"])
+        for name in ("Einzelkorrekturen", "Fixierte_Spiele"):
+            worksheet = workbook.create_sheet(name)
+            worksheet.append(list(EXPECTED_HEADERS[name]))
+        data = BytesIO()
+        workbook.save(data)
+        content = data.getvalue()
+        parsed = parse_xlsx_rows(content)
+        self.assertEqual(parsed[0][0][:3], [WEEK, "automatic", "6"])
+        self.assertEqual(parsed[1:], [[], []])
+        with patch("pi_google_cabins_sync.subprocess.run", return_value=SimpleNamespace(
+                returncode=0, stdout=content, stderr=b"")) as mock_run:
+            extracted = fetch_rclone_rows("gdrive:ChatGPT/tus BERNE – Kabinenverwaltung (Daten).xlsx")
+            self.assertEqual(extracted, parsed)
+            self.assertEqual(mock_run.call_args.args[0][:2], ["rclone", "cat"])
+        previous = {"schema_version":1,"weeks":{}}
+        result,changed,week,revision = build_new_store(BASE,parsed,previous,NOW)
+        self.assertTrue(changed)
+        self.assertEqual(revision,6)
+        self.assertNotIn(WEEK,result["weeks"])
+        self.assertEqual(result["google_cabins_sync"]["revisions"][WEEK],6)
+
+    def test_xlsx_rejects_changed_header_and_rclone_failure(self):
+        from openpyxl import Workbook
+        workbook = Workbook()
+        workbook.active.title = "Wochen"
+        workbook.active.append(["FALSCH"] + list(EXPECTED_HEADERS["Wochen"])[1:])
+        for name in ("Einzelkorrekturen", "Fixierte_Spiele"):
+            worksheet = workbook.create_sheet(name)
+            worksheet.append(list(EXPECTED_HEADERS[name]))
+        data=BytesIO()
+        workbook.save(data)
+        with self.assertRaisesRegex(ValueError,"Spaltenüberschriften"):
+            parse_xlsx_rows(data.getvalue())
+        with patch("pi_google_cabins_sync.subprocess.run", return_value=SimpleNamespace(
+                returncode=1, stdout=b"", stderr=b"private information")):
+            with self.assertRaisesRegex(ValueError,"fehlgeschlagen"):
+                fetch_rclone_rows("gdrive:ChatGPT/tus BERNE – Kabinenverwaltung (Daten).xlsx")
 
 if __name__=='__main__':unittest.main()
