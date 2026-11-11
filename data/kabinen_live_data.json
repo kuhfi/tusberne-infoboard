@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T10:10:45+01:00",
+  "generated_at": "2026-11-11T11:11:41+01:00",
   "period": {
     "weeks": [
       {
@@ -270,11 +270,13 @@
   "manual_weeks": {
     "2026-11-09": {
       "mode": "automatic",
-      "unmatched": 0
+      "unmatched": 0,
+      "revision": 0
     },
     "2026-11-16": {
       "mode": "automatic",
-      "unmatched": 0
+      "unmatched": 0,
+      "revision": 0
     }
   }
 }
