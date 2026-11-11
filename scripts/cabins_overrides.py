@@ -106,9 +106,11 @@ def effective_plan(raw, store, now=None):
         base = [copy.deepcopy(g) for g in raw.get("games", []) if start <= g.get("date", "") <= end]
         mode = "automatic"
         missing = 0
+        revision = 0
         if start == active_start and start in records:
             record = records[start]
             mode = record.get("mode", "automatic")
+            revision = int(record.get("revision", 0))
             if mode == "locked":
                 base = [clean_game(g, start, end) for g in record["games"]]
                 for g in base:
@@ -124,7 +126,7 @@ def effective_plan(raw, store, now=None):
                 missing = len(set(changes) - {k for k in keys if keys.count(k) == 1})
             else:
                 raise ValueError("Unbekannter manueller Wochenmodus")
-        summary[start] = {"mode": mode, "unmatched": missing}
+        summary[start] = {"mode": mode, "unmatched": missing, "revision": revision}
         games.extend(base)
     result["games"] = games
     result["manual_weeks"] = summary
