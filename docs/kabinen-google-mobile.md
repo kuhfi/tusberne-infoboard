@@ -1,6 +1,6 @@
 # tus BERNE – Mobile Kabinenverwaltung über Google Sheets
 
-Stand: 11.11.2026 – **Google-Web-App bereitgestellt und Speicher-/Sperrtests erfolgreich**, Raspberry-Pi-Google-Synchronisierung noch NICHT aktiviert. Testdaten in Google sind auf Automatik, Revision 6, zurückgesetzt.
+Stand: 11.11.2026 – **Google-Web-App, Pi-Timer und öffentliche GitHub-Publikation erfolgreich im Echtbetrieb getestet**. Letzte bestätigte Revision: **7**, Modus **automatic**. Der getrennte Datenfluss zum lokalen TV muss noch geprüft werden.
 
 ## Was wurde bereits angelegt?
 
@@ -28,10 +28,21 @@ Stand: 11.11.2026 – **Google-Web-App bereitgestellt und Speicher-/Sperrtests e
    - **Zugriff:** Nur ich / Only myself.
    - Autorisierung durch dasselbe Google-Konto durchführen.
 6. Die Web-App wurde am 11.11.2026 bereits bereitgestellt. Die private `/exec`-Adresse liegt dem Betreiber vor; sie wird nicht in diesem öffentlichen Repository dokumentiert.
-7. Bereits durchgeführt: Einzelkorrektur, kompletter Wochen-Lock und Rückkehr zur Automatik. Letzte Google-Revision 6, Modus automatic. Die Pi-Übernahme folgt in Teil 2.
+7. Bereits durchgeführt: Einzelkorrektur, kompletter Wochen-Lock, Rückkehr zur Automatik sowie automatischer Pi- und GitHub-Abgleich. Letzte bestätigte Revision 7, Modus automatic.
 
 **Bei späteren Codeänderungen**: Unter Bereitstellen → Bereitstellungen verwalten dieselbe Bereitstellung mit einer neuen Version aktualisieren,
 damit der Link stabil bleibt. Nie "Jeder mit dem Link" für diese Bearbeitungsseite aktivieren.
+
+## Betriebsabnahme am 11.11.2026
+
+- Privater Google-Speicher: Woche `2026-11-09`, Revision **7**, `automatic`, keine aktiven Einzelkorrekturen.
+- Pi: `berne-cabins-google-sync.timer` läuft; Google-Revision 7 wurde automatisch als Änderung übernommen (ohne Kabinenzuweisungen zu ändern).
+- GitHub: `berne-github-public-sync.timer` läuft; Commit `10f70f0` veröffentlichte `data/kabinen_live_data.json`. Direkte GitHub-Dateiprüfung ergab `manual_weeks["2026-11-09"] = {"mode":"automatic","unmatched":0,"revision":7}`.
+- Früherer SSH-Fehler bei einfachem `git pull` ist **kein** Ausfall der produktiven Veröffentlichung: Das produktive Skript setzt `GIT_SSH_COMMAND` mit dem eigenen Deploy-Key. Dessen Verbindungstest und Commit/Push waren erfolgreich.
+- Bereits installiert: `/etc/tusberne/cabins-google-sync.env`, systemd-Service und Timer, privater Speicher `/var/lib/tusberne-kabinen/overrides.json` mit Backup `overrides.vor-timer.json`.
+- **Noch offen:** GitHub-Pages-Caching/Ladezustand der privaten Web-App separat bestätigen; tatsächlichen lokalen TV-Datenpfad prüfen. Die Pi-TV-Anzeige übernimmt laut aktuellem Code nicht automatisch den privaten Override-Speicher.
+
+Das folgende Kapitel dokumentiert die bereits durchgeführte Einrichtung und ist nur für Wiederherstellung/Neuinstallation gedacht.
 
 ## Teil 2: Raspberry Pi – nur nach Fernzugriff und Bestandsaufnahme
 
