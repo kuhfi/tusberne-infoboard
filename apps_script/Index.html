@@ -60,7 +60,7 @@
       <p class="sub" id="modeHint" style="margin-top:9px"></p>
     </div>
     <div id="staleAlert" class="alert" hidden></div>
-    <div class="row" style="margin:13px 2px"><h2>Heimspiele</h2><span class="sub" id="gameCount"></span></div>
+    <div class="row" style="margin:13px 2px"><h2>Spiele der Woche</h2><span class="sub" id="gameCount"></span></div>
     <div id="games" class="games"></div>
     <div id="addWrap" style="display:none;margin:15px 0"><button type="button" id="addGame">+ Spiel zur Woche hinzufügen</button></div>
     <div class="slogan">EINMAL BERNE IMMER BERNE</div>
@@ -125,19 +125,19 @@ function draw(){if(!initial)return;
   const p=initial.period;$('weekTitle').textContent=p?'KW '+isoWeek_(p.start)+' · '+fmt(p.start)+' – '+fmt(p.end):'Aktuelle Woche: keine Quelldaten';
   $('sourceStatus').textContent='Automatische Daten: '+(initial.sourceGeneratedAt?new Date(initial.sourceGeneratedAt).toLocaleString('de-DE',{timeZone:'Europe/Berlin'}):'kein Zeitstempel');
   const status=initial.published;
-  $('publishedStatus').textContent=status?.state==='published'?'Auf Infoboard veröffentlicht':status?.state==='pending'?'Veröffentlichung ausstehend':'Infoboard-Status nicht abrufbar';
-  $('publishedStatus').className='tag '+(status?.state==='published'?'ok':'warn');
+  $('publishedStatus').textContent=initial.revision===0?'Automatik aktiv':status?.state==='published'?'Auf Infoboard veröffentlicht':status?.state==='pending'?'Veröffentlichung ausstehend':'Infoboard-Status nicht abrufbar';
+  $('publishedStatus').className='tag '+(initial.revision===0||status?.state==='published'?'ok':'warn');
   const old=Date.now()-Date.parse(initial.sourceGeneratedAt||'')>7*86400000 || Number.isNaN(Date.parse(initial.sourceGeneratedAt||''));
   $('staleAlert').hidden=Boolean(initial.editable)&&!old;
   $('staleAlert').textContent=!initial.editable?'Die aktuelle Woche fehlt in den automatischen Quelldaten. Änderungen sind gesperrt.':old?'Die automatischen Spieldaten sind älter als sieben Tage. Bitte vor dem Speichern die tatsächlichen Ansetzungen prüfen.':'';
   showModes();
   const games=currentGames(), sorted=games.map((g,i)=>({g,i})).sort((a,b)=>a.g.date.localeCompare(b.g.date)||a.g.time.localeCompare(b.g.time));
   $('gameCount').textContent=games.length+' Spiele';
-  $('games').innerHTML=sorted.length?sorted.map(({g,i},j)=>((j===0||sorted[j-1].g.date!==g.date)?'<div class="day">'+esc(dayOf(g.date))+' · '+fmt(g.date)+'</div>':'')+gameCard(g,i)).join(''):'<div class="card">Keine Heimspiele für diese Woche eingetragen.</div>';
+  $('games').innerHTML=sorted.length?sorted.map(({g,i},j)=>((j===0||sorted[j-1].g.date!==g.date)?'<div class="day">'+esc(dayOf(g.date))+' · '+fmt(g.date)+'</div>':'')+gameCard(g,i)).join(''):'<div class="card">Keine Spiele für diese Woche eingetragen.</div>';
   $('save').disabled=!initial.editable || busy;$('reload').disabled=busy;
   document.querySelectorAll('[data-mode]').forEach(b=>{b.disabled=busy||!initial.editable;});
 }
-function isoWeek_(s){const d=new Date(s+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+3-(d.getUTCDay()+6)%7);const y=d.getUTCFullYear();return 1+Math.round((d-new Date(Date.UTC(y,0,4)-((new Date(Date.UTC(y,0,4)).getUTCDay()+6)%7)*86400000))/604800000);}
+function isoWeek_(s){const d=new Date(s+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));const first=new Date(Date.UTC(d.getUTCFullYear(),0,1));return Math.ceil(((d-first)/86400000+1)/7);}
 $('modeButtons').addEventListener('click',e=>{
   const b=e.target.closest('button[data-mode]');if(!b||busy)return;
   const prev=mode;mode=b.dataset.mode;
