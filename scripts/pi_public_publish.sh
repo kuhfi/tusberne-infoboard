@@ -75,6 +75,7 @@ python3 scripts/pi_public_sync.py --apply
 # der neue Link in Kachel 2 freigeschaltet.
 if python3 scripts/pi_cabins_export.py --apply; then
   python3 -m json.tool data/kabinen_live_data.json >/dev/null
+python3 -m json.tool data/kabinen_auto_data.json >/dev/null
 else
   echo 'WARNUNG: Kabinenplan-Export fehlgeschlagen; bestehende öffentliche Belegung behalten.' >&2
 fi
@@ -109,7 +110,7 @@ python3 -m json.tool data/kabinen_live_data.json >/dev/null
 
 # Die Arbeitskopie war vorher sauber. Es werden nur ausdruecklich
 # freigegebene Homepage-Dateien uebertragen. Keine Pi-Quelle wird veraendert.
-git add -A -- data/content.json data/fussball_live_data.json data/kabinen_live_data.json \
+git add -A -- data/content.json data/fussball_live_data.json data/kabinen_live_data.json data/kabinen_auto_data.json \
   data/training-berne.json data/training-farmsen.json files/
 # Bei einem voruebergehenden Ausfall der Pi-Teams-Datei ist teams.json
 # moeglicherweise noch nicht angelegt. In diesem Fall trotzdem alle anderen
