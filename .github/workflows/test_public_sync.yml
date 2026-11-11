@@ -47,5 +47,7 @@ jobs:
         run: bash -n scripts/pi_public_publish.sh
       - name: Check Google Apps Script editor
         run: node tests/test_apps_script.js
+      - name: Install XLSX reader for Google export tests
+        run: python3 -m pip install 'openpyxl==3.1.5'
       - name: Run offline publication-safety tests
         run: python3 -m unittest discover -s tests -v
