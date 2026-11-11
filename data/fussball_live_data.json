@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T21:10:18+01:00",
+  "generated_at": "2026-11-11T22:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -697,8 +697,8 @@
         "competition": "Kreisfreundschaftsspiele",
         "home": "Farmsen 1.Ü40",
         "away": "tus BERNE 1.Ü40",
-        "home_score": null,
-        "away_score": null
+        "home_score": "0",
+        "away_score": "1"
       },
       "table": [
         {
