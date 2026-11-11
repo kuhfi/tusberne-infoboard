@@ -1,6 +1,6 @@
 # tus BERNE – Mobile Kabinenverwaltung über Google Sheets
 
-Stand: 11.11.2026 – Quellen und Code vorbereitet; **Google-Web-App und Raspberry-Pi-Dienst sind noch NICHT aktiviert**.
+Stand: 11.11.2026 – **Google-Web-App bereitgestellt und Speicher-/Sperrtests erfolgreich**, Raspberry-Pi-Google-Synchronisierung noch NICHT aktiviert. Testdaten in Google sind auf Automatik, Revision 6, zurückgesetzt.
 
 ## Was wurde bereits angelegt?
 
@@ -27,10 +27,8 @@ Stand: 11.11.2026 – Quellen und Code vorbereitet; **Google-Web-App und Raspber
    - **Ausführen als:** Ich.
    - **Zugriff:** Nur ich / Only myself.
    - Autorisierung durch dasselbe Google-Konto durchführen.
-6. Die resultierende **/exec**-Adresse speichern und zunächst über den PC oder das Handy öffnen.
-   **Wichtig:** Es existiert bis zur Bereitstellung noch kein funktionierender Web-App-Link. Keine URL erfinden.
-7. Am Anfang zeigt der Editor nur die vorhandenen öffentlichen Quelldaten. Eine Speicherung in Google ist möglich,
-   wird aber erst nach Teil 2 auf das öffentliche Infoboard übertragen.
+6. Die Web-App wurde am 11.11.2026 bereits bereitgestellt. Die private `/exec`-Adresse liegt dem Betreiber vor; sie wird nicht in diesem öffentlichen Repository dokumentiert.
+7. Bereits durchgeführt: Einzelkorrektur, kompletter Wochen-Lock und Rückkehr zur Automatik. Letzte Google-Revision 6, Modus automatic. Die Pi-Übernahme folgt in Teil 2.
 
 **Bei späteren Codeänderungen**: Unter Bereitstellen → Bereitstellungen verwalten dieselbe Bereitstellung mit einer neuen Version aktualisieren,
 damit der Link stabil bleibt. Nie "Jeder mit dem Link" für diese Bearbeitungsseite aktivieren.
@@ -62,7 +60,50 @@ python3 -m unittest discover -s tests -p 'test_google_cabins_sync.py' -v
 python3 scripts/pi_cabins_export.py   # DRY RUN
 ```
 
-### Google-Lesezugang – nur Leserechte
+### Empfohlener Pi-Zugang: vorhandenes rclone (bereits festgestellt)
+
+**Stand 11.11.2026:** Auf dem Pi sind `rclone v1.60.1-DEV`, Remote `gdrive:`
+und `openpyxl 3.1.5` vorhanden. Der private Sheet-Export ist sichtbar unter
+`gdrive:ChatGPT/tus BERNE – Kabinenverwaltung (Daten).xlsx`.
+Ein neues Servicekonto und `google-auth` sind für diesen Pfad **nicht erforderlich**.
+
+Das folgende Kommando ist ein **reiner Probelauf**, der aus Google liest,
+Tabellenblätter und Spalten prüft und **keine lokale Datei verändert**:
+
+```bash
+cd /home/kuhfi/tusberne-github-sync || exit 1
+git status --short
+# Nur bei sauberem Arbeitsverzeichnis nach vorheriger Sicherung:
+git pull --ff-only
+python3 -m unittest discover -s tests -p 'test_google_cabins_sync.py' -v
+python3 scripts/pi_google_cabins_sync.py \
+  --rclone-path "gdrive:ChatGPT/tus BERNE – Kabinenverwaltung (Daten).xlsx"
+```
+
+Erst wenn der Probeabruf die erwartete **Google-Version 6 und Automatik**
+meldet und die local store / Export-Umgebung geprüft wurde,
+den systemd-Dienst mit `deploy/systemd/cabins-google-sync.env.example`
+vorbereiten. Der Dienst nutzt jetzt `/usr/bin/python3` und die
+private `~/.config/rclone`-Anmeldung. Die Unit darf allein
+`/var/lib/tusberne-kabinen` und `~/.config/rclone` verändern,
+weil rclone bei Bedarf ein OAuth-Refresh-Token aktualisiert.
+Vollständigen Betrieb/TV-Anzeige vor dem Aktivieren kontrollieren.
+
+```bash
+sudo install -d -o root -g kuhfi -m 0750 /etc/tusberne
+sudo install -o root -g kuhfi -m 0640 deploy/systemd/cabins-google-sync.env.example /etc/tusberne/cabins-google-sync.env
+sudo install -o root -g root -m 0644 deploy/systemd/berne-cabins-google-sync.service /etc/systemd/system/
+sudo install -o root -g root -m 0644 deploy/systemd/berne-cabins-google-sync.timer /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start berne-cabins-google-sync.service
+systemctl status berne-cabins-google-sync.service --no-pager
+# Timer erst nach erfolgreichem Lese- und Publikationstest einschalten:
+# sudo systemctl enable --now berne-cabins-google-sync.timer
+```
+
+### Alternativer Google-Lesezugang – nur falls rclone nicht funktioniert
+
+
 
 Die Python-Synchronisierung verwendet `https://www.googleapis.com/auth/spreadsheets.readonly`.
 Sie benötigt auf dem Pi eine **private JSON-Credentialdatei**, die nicht nach GitHub gehört.
