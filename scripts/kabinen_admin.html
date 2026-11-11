@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kabinenverwaltung | tus BERNE</title>
+<style>
+:root{--blue:#0055a5;--ink:#14304a;--sub:#4b667f;--line:#c7d9e7;--bg:#f4f8fc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,Arial,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:18px}header{border-bottom:3px solid var(--blue);padding:4px 0 13px}
+h1{font-size:clamp(24px,4vw,34px);margin:3px 0;color:var(--blue)}p{margin:6px 0;color:var(--sub)}
+.panel,.fixture{background:white;border:1px solid var(--line);border-radius:12px;padding:14px;margin:14px 0}
+.controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap}.controls>label{flex:1;min-width:210px}
+label{display:block;font-weight:650;font-size:13px}input,select{display:block;width:100%;margin-top:5px;padding:10px;border:1px solid #93b4cf;border-radius:8px;background:white;color:var(--ink);font:inherit;min-height:42px}
+button{cursor:pointer;border:1px solid var(--blue);background:var(--blue);color:white;padding:10px 16px;border-radius:8px;font-weight:750;min-height:42px}
+button.secondary{background:white;color:var(--blue)}button:disabled{cursor:not-allowed;opacity:.5}
+.fixture h3{font-size:16px;margin:0 0 10px}.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fixture .full{grid-column:span 3}.fixture .half{grid-column:span 2}.fixture .meta{color:var(--sub);font-size:13px}
+.small{font-size:13px;color:var(--sub)}.notice{padding:12px;border-radius:9px;background:#edf5fc;border:1px solid #accde8;margin:12px 0}
+.notice.warn{border-color:#dcad66;background:#fff6e7;color:#7d4906}.notice.error{border-color:#cd5b62;background:#fff0f0;color:#92252a}
+.actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0}
+footer{padding:20px;text-align:center;color:var(--sub);font-size:12px}
+@media(max-width:580px){main{padding:12px}.fields{grid-template-columns:repeat(2,minmax(0,1fr))}.fixture .full{grid-column:span 2}.fixture .half{grid-column:span 2}}
+</style>
+</head>
+<body>
+<main>
+<header><p>tus BERNE · Fußballabteilung</p><h1>Kabinenverwaltung</h1><p id="period">Aktuelle Kalenderwoche wird geladen …</p></header>
+<div id="feedback" class="notice" role="status">Lade automatische Planung …</div>
+<section class="panel">
+ <div class="controls">
+  <label>Bearbeitungsmodus
+   <select id="mode" disabled>
+    <option value="automatic">Automatik ohne Änderungen</option>
+    <option value="partial">Einzelne Kabinen überschreiben</option>
+    <option value="locked">Ganze Woche manuell sperren</option>
+   </select>
+  </label>
+  <button type="button" id="save" disabled>Änderungen speichern</button>
+  <button type="button" id="reload" class="secondary">Neu laden</button>
+ </div>
+ <p id="explain" class="small"></p>
+</section>
+<div id="conflicts" aria-live="polite"></div>
+<section id="games" aria-label="Spiele der laufenden Woche"></section>
+<div class="actions"><button type="button" id="add" class="secondary" hidden>+ Spiel hinzufügen</button></div>
+<footer>tus BERNE · EINMAL BERNE IMMER BERNE</footer>
+</main>
+<script nonce="__CSP_NONCE__">
+"use strict";
+const $ = id => document.getElementById(id);
+const FIELDS = ["date","time","kind","league","home","away","home_cabin","guest_cabin","sr_cabin","festival"];
+const CABINS = ["home_cabin","guest_cabin","sr_cabin"];
+let state = null, draft = [], mode = "automatic";
+function message(text, kind="") { $("feedback").textContent=text; $("feedback").className="notice "+kind; }
+const clone = v => JSON.parse(JSON.stringify(v));
+function publicGame(g) { const o={}; FIELDS.forEach(k=>o[k]=k==="festival"?Boolean(g[k]):String(g[k]??"")); return o; }
+function element(tag, text, className) { const e=document.createElement(tag); if(text!==undefined)e.textContent=text;if(className)e.className=className;return e; }
+function cell(container, name, value, editable, i, type="text", cl="") {
+ const label=element("label",name,cl);let e;
+ if(editable) { e=document.createElement("input");e.type=type;e.maxLength=160;e.value=type==="checkbox"?"":String(value??"");if(type==="checkbox")e.checked=!!value;
+  if(CABINS.includes(nameToField[name])) {e.maxLength=16;e.setAttribute("list",nameToField[name]==="sr_cabin"?"refs":"cabins");}
+  e.addEventListener("input",()=>{draft[i][nameToField[name]]=type==="checkbox"?e.checked:e.value;showConflicts();});
+ } else {e=element("div",type==="checkbox"?(value?"Ja":"Nein"):(String(value??"")||"–"),"meta");}
+ label.appendChild(e);container.appendChild(label);
+}
+const nameToField={"Datum":"date","Zeit":"time","Art":"kind","Staffel":"league","Heimteam":"home","Gastteam":"away","Heimkabine":"home_cabin","Gastkabine":"guest_cabin","SR-Kabine":"sr_cabin","Turnier":"festival"};
+function redraw() {
+ $("games").replaceChildren();$("add").hidden=mode!=="locked";
+ $("explain").textContent=mode==="automatic"?"Die automatische Kabinenbelegung wird unverändert angezeigt. Speichern hebt vorhandene manuelle Vorgaben auf.":mode==="partial"?"Nur geänderte Heim-, Gast- und SR-Kabinen werden festgesetzt. Spielzeiten und Mannschaften bleiben automatisch.":"Die aktuell angezeigten Spiele werden als vollständiger Wochenplan gespeichert. Neue automatische Spiele/Verlegungen erscheinen erst nach Entsperren; die Sperre bleibt bis Wochenwechsel bestehen.";
+ if(!draft.length)$("games").appendChild(element("div","Keine Heimspiele in dieser Woche.","panel"));
+ draft.forEach((g,i)=>{
+  const card=element("article",undefined,"fixture");const head=element("h3",`Spiel ${i+1} · ${g.date} · ${g.time}`);card.appendChild(head);
+  const fields=element("div",undefined,"fields");
+  const names=["Datum","Zeit","Heimteam","Gastteam","Art","Staffel","Heimkabine","Gastkabine","SR-Kabine","Turnier"];
+  for(const name of names){const key=nameToField[name];const editable=mode==="locked"||mode==="partial"&&CABINS.includes(key);const className=(key==="home"||key==="away")?"half":"";cell(fields,name,g[key],editable,i,key==="festival"?"checkbox":key==="date"?"date":key==="time"?"time":"text",className);}
+  card.appendChild(fields);
+  if(mode==="locked") {const btn=element("button","Spiel entfernen","secondary");btn.type="button";btn.style.marginTop="12px";btn.addEventListener("click",()=>{draft.splice(i,1);redraw();});card.appendChild(btn);}
+  $("games").appendChild(card);
+ });showConflicts();
+}
+function showConflicts(){
+ const counts=new Map(),issues=[];
+ for(const g of draft){for(const f of CABINS){const cabin=String(g[f]??"").trim();if(!cabin)continue;const k=[g.date,g.time,f,cabin].join("|");const n=(counts.get(k)||0)+1;counts.set(k,n);if(n===2)issues.push(`${g.date} ${g.time}: ${f} ${cabin} mehrfach belegt`);}}
+ const box=$("conflicts");box.replaceChildren();if(issues.length){box.className="notice warn";box.appendChild(element("strong","Prüfhinweis: gleiche Anstoßzeit"));issues.forEach(s=>box.appendChild(element("p",s)));}
+}
+function applyMode(newMode){
+ if(!state)return;const prior=mode;mode=newMode;
+ if(mode==="automatic" || (prior==="locked"&&mode==="partial"))draft=clone(state.auto_games).map(publicGame);
+ $("mode").value=mode;redraw();
+}
+async function load(saved=false){
+ try{const r=await fetch("/api/state",{cache:"no-store"});const data=await r.json();if(!r.ok)throw new Error(data.error||"Fehler beim Laden");state=data;
+  $("period").textContent=data.editable?`${data.start} bis ${data.end} · laufende Woche`:data.reason;
+  $("mode").disabled=!data.editable;$("save").disabled=!data.editable;
+  mode=data.mode||"automatic";$("mode").value=mode;draft=clone(data.effective_games||[]).map(publicGame);redraw();
+  message(saved?"Änderungen erfolgreich gespeichert.":mode==="locked"?"Vollständige Wochensperre aktiv.":mode==="partial"?"Einzelne manuelle Kabinenzuweisungen aktiv.":"Automatische Planung aktiv.",mode==="locked"?"warn":"");
+  if(data.unmatched)message(`${data.unmatched} gespeicherte Einzelkorrektur(en) passen nicht mehr zu den Spieldaten. Bitte prüfen!`,"warn");
+ }catch(e){message("Laden fehlgeschlagen: "+e.message,"error");}}
+$("reload").addEventListener("click",()=>load());
+$("mode").addEventListener("change",e=>applyMode(e.target.value));
+$("add").addEventListener("click",()=>{draft.push({date:state.start,time:"12:00",kind:"Sonstiges",league:"",home:"tus BERNE",away:"",home_cabin:"",guest_cabin:"",sr_cabin:"",festival:false});redraw();});
+$("save").addEventListener("click",async()=>{
+ if(!state?.editable)return;
+ const payload={revision:state.revision,mode};
+ if(mode==="partial"){
+  const changes={};for(let i=0;i<state.auto_games.length;i++){
+   const a=state.auto_games[i],d=draft[i],diff={};CABINS.forEach(f=>{if(String(a[f]??"")!==String(d[f]??""))diff[f]=d[f];});
+   if(Object.keys(diff).length)changes[state.game_keys[i]]=diff;
+  }payload.changes=changes;
+ } else if(mode==="locked")payload.games=draft.map(publicGame);
+ $("save").disabled=true;
+ try{const r=await fetch("/api/week",{method:"POST",headers:{"Content-Type":"application/json","X-TUSBERNE-EDITOR":"1"},body:JSON.stringify(payload)});
+  const reply=await r.json();if(!r.ok)throw new Error(reply.error||"Speichern fehlgeschlagen");await load(true);
+ }catch(e){message("Nicht gespeichert: "+e.message,"error");$("save").disabled=false;}
+});
+load();
+</script>
+<datalist id="cabins"><option value="1"><option value="2"><option value="3"><option value="4"></datalist>
+<datalist id="refs"><option value="SR1"><option value="SR2"></datalist>
+</body></html>
