@@ -142,20 +142,22 @@
     {
       "public": true,
       "category": "tabellen-news",
-      "title": "Notfallfortbildung",
+      "title": "Notfallfortbildung – 09.01.2027",
       "kind": "image",
       "url": "./files/drive/kachel3/notfallfortbildung-f6f44563.png",
       "source_path": "kachel3/06 Notfallfortbildung.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 3
     },
     {
       "public": true,
       "category": "tabellen-news",
-      "title": "Jahresauftaktessen 2027",
+      "title": "Jahresauftaktessen – 22.01.2027",
       "kind": "image",
       "url": "./files/drive/kachel3/jahresauftaktessen-2027-044f3a71.png",
       "source_path": "kachel3/07 Jahresauftaktessen 2027.png",
-      "managed_by": "pi-public-sync"
+      "managed_by": "pi-public-sync",
+      "order": 4
     }
   ]
 }
