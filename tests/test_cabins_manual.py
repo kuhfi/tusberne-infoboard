@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from cabins_overrides import (clean_game, effective_plan, file_revision, game_key,
-                             load_store, make_record, save_store)
+                             load_store, make_record, save_store, week_start)
 
 NOW = datetime(2026, 11, 11, 10, 0, tzinfo=ZoneInfo("Europe/Berlin"))
 G1 = dict(date="2026-11-14", time="09:30", kind="Meisterschaft", league="Bezirksliga", home="tus BERNE 1.C", away="GW Eimsbüttel", home_cabin="1", guest_cabin="3", sr_cabin="SR1", festival=False)
@@ -31,6 +31,10 @@ def source():
 
 
 class OverrideEngineTests(unittest.TestCase):
+    def test_berlin_calendar_week_boundary(self):
+        self.assertEqual(week_start(datetime(2026, 11, 15, 23, 59, tzinfo=ZoneInfo("Europe/Berlin"))), "2026-11-09")
+        self.assertEqual(week_start(datetime(2026, 11, 16, 0, 0, tzinfo=ZoneInfo("Europe/Berlin"))), "2026-11-16")
+
     def test_default_is_automatic_and_no_mutation(self):
         raw = source()
         original = copy.deepcopy(raw)
