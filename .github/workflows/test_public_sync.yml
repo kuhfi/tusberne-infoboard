@@ -7,6 +7,12 @@ on:
       - 'scripts/pi_cabins_admin.py'
       - 'scripts/kabinen_admin.html'
       - 'scripts/pi_cabins_export.py'
+      - 'apps_script/**'
+      - 'scripts/pi_google_cabins_sync.py'
+      - 'tests/test_google_cabins_sync.py'
+      - 'tests/test_apps_script.js'
+      - 'deploy/systemd/berne-cabins-google-sync.service'
+      - 'deploy/systemd/berne-cabins-google-sync.timer'
       - 'tests/test_cabins_manual.py'
       - 'files/kabinen-belegungsplan.html'
       - 'scripts/pi_public_publish.sh'
@@ -39,5 +45,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check publisher shell syntax
         run: bash -n scripts/pi_public_publish.sh
+      - name: Check Google Apps Script editor
+        run: node tests/test_apps_script.js
       - name: Run offline publication-safety tests
         run: python3 -m unittest discover -s tests -v
