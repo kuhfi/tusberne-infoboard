@@ -1,0 +1,23 @@
+[Unit]
+Description=tus BERNE - Geschützte manuelle Kabinenverwaltung
+After=network.target
+
+[Service]
+Type=simple
+User=kuhfi
+Group=kuhfi
+WorkingDirectory=/home/kuhfi/tusberne-github-sync
+EnvironmentFile=/etc/tusberne/kabinen-admin.env
+ExecStart=/usr/bin/python3 -B /home/kuhfi/tusberne-github-sync/scripts/pi_cabins_admin.py
+Restart=on-failure
+RestartSec=10
+UMask=0077
+StateDirectory=tusberne-kabinen
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/lib/tusberne-kabinen
+
+[Install]
+WantedBy=multi-user.target
