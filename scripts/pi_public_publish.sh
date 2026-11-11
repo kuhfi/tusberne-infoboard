@@ -38,7 +38,9 @@ echo "=== tus BERNE GitHub-Synchronisierung: $MODE ==="
 date '+Zeit: %Y-%m-%d %H:%M:%S %Z'
 if [[ "$MODE" == "--dry-run" ]]; then
   python3 scripts/pi_public_sync.py
-  python3 scripts/pi_cabins_export.py
+  if ! python3 scripts/pi_cabins_export.py; then
+    echo 'WARNUNG: Kabinenplan-Export nicht lesbar; andere Inhalte weiter prüfen.' >&2
+  fi
   # Trainingsplaene getrennt pruefen: ein fehlerhaftes HTML darf die
   # Bild-, Fussball- und Kabinenaktualisierung nicht blockieren.
   if ! python3 scripts/pi_training_export.py; then
@@ -71,7 +73,11 @@ echo "=== Freigegebene Inhalte vorbereiten ==="
 python3 scripts/pi_public_sync.py --apply
 # Erst nach erfolgreicher, datensparsamer Kabinenplan-Erzeugung wird
 # der neue Link in Kachel 2 freigeschaltet.
-python3 scripts/pi_cabins_export.py --apply
+if python3 scripts/pi_cabins_export.py --apply; then
+  python3 -m json.tool data/kabinen_live_data.json >/dev/null
+else
+  echo 'WARNUNG: Kabinenplan-Export fehlgeschlagen; bestehende öffentliche Belegung behalten.' >&2
+fi
 
 # Die Trainingsplaene stammen aus den unveraenderten Pi-HTML-Dateien in Kachel 1.
 # Beide Plaene werden zuerst gemeinsam geprueft. Bei Fehlern die alten,
