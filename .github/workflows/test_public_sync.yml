@@ -1,5 +1,16 @@
 name: Test public content sync
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/cabins_overrides.py'
+      - 'scripts/pi_cabins_admin.py'
+      - 'scripts/kabinen_admin.html'
+      - 'scripts/pi_cabins_export.py'
+      - 'tests/test_cabins_manual.py'
+      - 'files/kabinen-belegungsplan.html'
+      - 'scripts/pi_public_publish.sh'
+      - '.github/workflows/test_public_sync.yml'
   pull_request:
     paths:
       - 'files/mannschaften.html'
