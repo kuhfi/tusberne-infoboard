@@ -158,6 +158,10 @@ systemctl list-timers berne-cabins-google-sync.timer --no-pager
 `berne-cabins-admin.service` nicht aktivieren. Sie soll durch Google ersetzt werden.
 Die lokale Pi-Infoboard-Anwendung könnte bereits Port 8765 verwenden.
 
+### Zusätzlicher Darstellungswunsch am TV (11.11.2026, später umsetzen)
+
+Der Betreiber möchte den auf dem TV-Kabinenplan sichtbaren **Hinweis-/Statussatz zu Konflikten** entfernen, insbesondere den Hinweis über das Nichtvorhandensein von Konflikten (sinngemäß „keine Konflikte“ und weitere Statusinformationen). Der **exakte Wortlaut und die genaue Anzeigeposition sind noch nicht verifiziert**; vor der Änderung durch Sichtprüfung/Quellcode prüfen. Ausschließlich den störenden Text im TV-Frontend ausblenden, **nicht** die Berechnung, Warnungs-/Konfliktdaten oder sicherheitsrelevante Diagnosen löschen. Es ist noch **nichts am TV geändert**. Diesen Punkt bei der nächsten TV-Integration gemeinsam mit der Einbindung der Google-Overrides erledigen.
+
 ## TV-Diagnose 11.11.2026 – Status und nächster Arbeitsschritt
 
 **Tatsächlich auf dem Pi verifiziert, nur Leseprüfung:**
