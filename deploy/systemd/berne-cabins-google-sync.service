@@ -1,0 +1,20 @@
+[Unit]
+Description=tus BERNE - private Google-Kabinenvorgaben lesen
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=kuhfi
+Group=kuhfi
+WorkingDirectory=/home/kuhfi/tusberne-github-sync
+EnvironmentFile=/etc/tusberne/cabins-google-sync.env
+ExecStart=/home/kuhfi/.venvs/tusberne-cabins-google/bin/python /home/kuhfi/tusberne-github-sync/scripts/pi_google_cabins_sync.py --apply
+StateDirectory=tusberne-kabinen
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/lib/tusberne-kabinen
+TimeoutStartSec=90s
