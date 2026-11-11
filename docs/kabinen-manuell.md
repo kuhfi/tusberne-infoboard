@@ -1,3 +1,8 @@
+> **Stand 11.11.2026:** Die hier beschriebene lokale Admin-Bedienoberfläche ist eine ältere,
+> noch nicht produktiv aktivierte Variante. Für die gewünschte Handy-Bedienung über Google
+> siehe `docs/kabinen-google-mobile.md`. Den Dienst `berne-cabins-admin.service`
+> **nicht aktivieren**, insbesondere wegen eines möglichen Portkonflikts mit dem Pi-Infoboard.
+
 # tus BERNE – Kabinenbelegung: manuelle Wochenkorrekturen
 
 ## Zweck und Sicherheit
