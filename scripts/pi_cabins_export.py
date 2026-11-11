@@ -7,6 +7,7 @@ Private Felder (Quellen, Tabellen-IDs, Berechnungsregeln, Warnungstexte,
 Diagnosedaten) werden nicht in den oeffentlichen Export uebernommen.
 """
 import argparse
+from cabins_overrides import effective_plan, load_store
 import json
 import re
 import sys
@@ -85,11 +86,15 @@ def build_export():
         "period": {"weeks": clean_weeks},
         "games": clean_games,
     }
+    # Manueller Wochenstand liegt privat auf dem Pi. Ohne Korrektur
+    # bleiben die automatisch berechneten Spielzuweisungen unverändert.
+    result = effective_plan(result, load_store())
 
     if TARGET.is_file():
         previous = json.loads(TARGET.read_text(encoding="utf-8"))
         if (previous.get("games") == result["games"] and
-                previous.get("period") == result["period"]):
+                previous.get("period") == result["period"] and
+                previous.get("manual_weeks") == result["manual_weeks"]):
             # Nur inhaltliche Änderungen committen; Zeitstempel nicht künstlich auffrischen.
             result["generated_at"] = previous.get("generated_at", generated_at)
     return result, len(games)
