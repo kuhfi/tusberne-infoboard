@@ -40,7 +40,7 @@ const context={
   console,HtmlService:{createHtmlOutputFromFile:()=>({setTitle(){return this},addMetaTag(){return this}})},
 };
 vm.createContext(context);vm.runInContext(code,context);
-let state=context.apiLoad();assert.strictEqual(state.revision,0);assert.strictEqual(state.games.length,2);
+let state=context.apiLoad();assert.strictEqual(state.revision,0);assert.strictEqual(state.games.length,2);assert.strictEqual(state.published.state,'published');
 const id=state.gameIds[0];
 let saved=context.apiSave({week:state.week,revision:state.revision,sourceHash:state.sourceHash,mode:'partial',changes:{[id]:{guest_cabin:'4'}}});
 assert.strictEqual(saved.revision,1);state=context.apiLoad();assert.strictEqual(state.mode,'partial');
