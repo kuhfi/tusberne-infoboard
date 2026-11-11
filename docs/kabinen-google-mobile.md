@@ -172,6 +172,26 @@ Die lokale Pi-Infoboard-Anwendung könnte bereits Port 8765 verwenden.
 
 **Noch offen:** Sichtprüfung, dass auf dem physischen TV keine Warnzeile mehr erscheint. Separate Integration der Google-Overrides in die lokale TV-Anzeige ist ausdrücklich für später vorgesehen; nicht mit der Warntextkorrektur verwechseln.
 
+### TV-Wochenbalken: Hinweis „Zusatztermine: älterer Stand“ ausgeblendet (11.11.2026, 17:18 Uhr)
+
+Auslöser: Foto des lokalen TV mit `WOCHE 2/2 · ⚠ Zusatztermine: älterer Stand`.
+Im bereits aus Google Drive gelesenen Diagnoseexport war die Meldung in
+`/home/kuhfi/infoboard-app/public/portrait/kabinen.html` **zweimal** sichtbar
+(Zeilen 454 und 466 vor dem Patch). Sie wurde über den Ausdruck
+`data.extra_source?.mode==='cache'` angezeigt, alternativ `⚠ Planung prüfen`.
+
+**Tatsächliche Durchführung:** Betreiber hat das Skript
+`scripts/pi_hide_tv_cabin_status_note.py` am Pi ausgeführt. Der private Drive-Bericht
+`tusberne-tv-zusatztermine-hinweis-entfernung-20261111.txt` im Ordner
+„Entwicklung & Diagnose“ meldet:
+- `Status: OK: Nur die Statuswarnung in beiden Wochenbalken entfernt.`
+- Backup: `/home/kuhfi/infoboard-app/backups/tv-cabins-status/kabinen.html.before-hint-20261111-171857-295789.bak`
+- `Ctrl+R` wurde an den Wayland-Kiosk `wayland-0` gesendet; **sichtbarer TV-Zustand noch nicht visuell verifiziert**.
+- Tatsächlicher Zusatzquellenmodus **`cache`**, TV-Quellzeitpunkt `2026-11-11T17:10:54+01:00`.
+- Die zugrunde liegende Konfliktberechnung, TV-JSON und Google-Kabinenverwaltung wurden nicht verändert.
+
+**Offen:** Aktualität der Zusatztermine klären und den Fallback aus `cache` gezielt untersuchen. Das Verbergen der Warnung **behebt keinen veralteten Datenstand**. Google-Overrides auf dem lokalen TV erst in der nächsten gesonderten Aufgabe integrieren.
+
 ## TV-Diagnose 11.11.2026 – Status und nächster Arbeitsschritt
 
 **Tatsächlich auf dem Pi verifiziert, nur Leseprüfung:**
