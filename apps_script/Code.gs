@@ -138,7 +138,7 @@ function effective_(games,mode,record) {
 function publishedState_(week,revision) {
   try {
     const raw=getJson_(CAB_PUBLISHED_URL), info=raw.manual_weeks?.[week];
-    if(!info)return {state:'pending',revision:0};
+    if(!info)return {state:revision===0?'published':'pending',revision:0};
     const publishedRev=Number(info.revision||0);
     return {state:publishedRev>=revision?'published':'pending',revision:publishedRev};
   } catch(e) {return {state:'unavailable',revision:0};}
