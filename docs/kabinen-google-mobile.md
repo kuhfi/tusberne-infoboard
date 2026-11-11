@@ -158,6 +158,24 @@ systemctl list-timers berne-cabins-google-sync.timer --no-pager
 `berne-cabins-admin.service` nicht aktivieren. Sie soll durch Google ersetzt werden.
 Die lokale Pi-Infoboard-Anwendung könnte bereits Port 8765 verwenden.
 
+## TV-Diagnose 11.11.2026 – Status und nächster Arbeitsschritt
+
+**Tatsächlich auf dem Pi verifiziert, nur Leseprüfung:**
+
+- Produktiver TV-Dienst `berne-infoboard.service` startet `/usr/bin/python3 /home/kuhfi/infoboard-app/server.py`, Arbeitsverzeichnis `/home/kuhfi/infoboard-app`.
+- TV-Kabinenquelle `/home/kuhfi/infoboard-app/public/kabinen-live/kabinenplan_data.json`, zuletzt beobachteter Dateizeitstempel `2026-11-11 15:40:53.992893471 +0100`, mit 21 Spielen.
+- `public/app.js` Zeile 560 liest `/kabinen-live/kabinenplan_data.json?ts=...`.
+- `public/portrait/portrait.js` Zeile 26 verwendet die gleiche JSON-Datei für den Zeitstempel.
+- `public/portrait/kabinen.html` Zeile 528 benutzt `berneCycle({url:'/kabinen-live/kabinenplan_data.json', ...})`.
+- `public/kabinen-live/01_kabinen_live.html` Zeile 110 ruft die JSON-Datei per `fetch(...,{cache:'no-store'})` ab; die HTML-Version laut Kopf ist `KABINEN_LIVE_V17`.
+- `scripts/anzeigezeiten/core.py` Zeile 49 liest diese Datei.
+- `server.py` Zeile 972 referenziert die HTML-Seite `/kabinen-live/01_kabinen_live.html?v=11-fussball-de`.
+- Die **TV-Quelldatei** hat Schlüssel `critical_conflicts`, `extra_source`, `games`, `generated_at`, `missing_referees`, `page_seconds`, `period`, `refresh_seconds`, `rules`, `source`, `source_stats`, `venue_filter`, `version`, `warnings`; sie hat **kein** `manual_weeks`.
+- Der **öffentliche GitHub-Export** hat `games`, `generated_at`, `manual_weeks`, `period`, `schema_version`, ebenfalls 21 Spiele. Der bestätigte Wochenstatus lautet `2026-11-09: automatic, revision 7, unmatched 0`.
+- **Schlussfolgerung:** In der TV-Datenquelle sind die aus Google stammenden manuellen Korrekturen noch nicht integriert. Dies gilt auch dann, wenn beide Ansichten im derzeitigen Automatikmodus dieselben Kabinen zeigen.
+
+**Nächster Schritt (noch NICHT umgesetzt):** Datenproduzent und Aktualisierungsjobs der ursprünglichen `kabinenplan_data.json` ermitteln. Eine getrennte wirksame TV-Datenquelle oder eine schmale, rückrollbare Overlay-Schicht nach der automatischen Berechnung einführen. Die ursprüngliche Quelldatei und alle Zusatzdaten/Diagnosefelder erhalten. Prüfen, welche Felder die Renderer und `anzeigezeiten/core.py` tatsächlich benötigen; bestehende TV-Refresh-Zyklen, 12-Sekunden-Seitenwechsel und Konfliktanzeigen nicht unabsichtlich beeinflussen. Vor Änderungen Backups, Tests, lokaler Probelauf und Vergleich mit `effective_plan`/öffentlichem Export. Kein Eingriff in die produktive TV-Anzeige ohne Sichtprüfung.
+
 ## Teil 3: Abnahme nach der Aktivierung
 
 1. In der Google-Web-App eine Gastkabine ändern, speichern und die neue Google-Version prüfen.
