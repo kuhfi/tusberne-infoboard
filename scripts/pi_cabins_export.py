@@ -16,6 +16,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 SOURCE = Path("/home/kuhfi/infoboard-app/public/kabinen-live/kabinenplan_data.json")
 TARGET = REPO / "data/kabinen_live_data.json"
+AUTO_TARGET = REPO / "data/kabinen_auto_data.json"
 INDEX = REPO / "data/content.json"
 CABIN_URL = "./files/kabinen-belegungsplan.html"
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -86,6 +87,14 @@ def build_export():
         "period": {"weeks": clean_weeks},
         "games": clean_games,
     }
+    # Parallel ein reines, bereits datensparsam bereinigtes Automatik-Lesemodell
+    # exportieren. Die private Web-App verwendet dies als Ausgangsplanung.
+    auto_result = json.loads(json.dumps(result))
+    if AUTO_TARGET.is_file():
+        previous_auto = json.loads(AUTO_TARGET.read_text(encoding="utf-8"))
+        if (previous_auto.get("games") == auto_result["games"] and
+                previous_auto.get("period") == auto_result["period"]):
+            auto_result["generated_at"] = previous_auto.get("generated_at", generated_at)
     # Manueller Wochenstand liegt privat auf dem Pi. Ohne Korrektur
     # bleiben die automatisch berechneten Spielzuweisungen unverändert.
     result = effective_plan(result, load_store())
@@ -97,7 +106,7 @@ def build_export():
                 previous.get("manual_weeks") == result["manual_weeks"]):
             # Nur inhaltliche Änderungen committen; Zeitstempel nicht künstlich auffrischen.
             result["generated_at"] = previous.get("generated_at", generated_at)
-    return result, len(games)
+    return result, len(games), auto_result
 
 
 def main():
@@ -106,7 +115,9 @@ def main():
                         help="Git-Arbeitskopie aktualisieren; kein Upload")
     args = parser.parse_args()
 
-    export, number_source = build_export()
+    export, number_source, automatic = build_export()
+    auto_data = (json.dumps(automatic, ensure_ascii=False, indent=2) + "\n").encode()
+    auto_changed = not AUTO_TARGET.is_file() or AUTO_TARGET.read_bytes() != auto_data
     data = (json.dumps(export, ensure_ascii=False, indent=2) + "\n").encode()
     changed = not TARGET.is_file() or TARGET.read_bytes() != data
     print("=== KABINENPLAN:", "LOKAL SCHREIBEN" if args.apply else "PROBELAUF", "===")
@@ -117,6 +128,7 @@ def main():
     print("Interne Quellen/Berechnungsdetails: NICHT enthalten")
     print("Vorgesehene GitHub-Datei:", TARGET.relative_to(REPO))
     print("Aenderung:", "JA" if changed else "NEIN")
+    print("Automatik-Lesemodell geändert:", "JA" if auto_changed else "NEIN")
     index = json.loads(INDEX.read_text(encoding="utf-8"))
     if index.get("schema_version") != 1 or not isinstance(index.get("items"), list):
         raise ValueError("GitHub-Inhaltsverzeichnis ungueltig")
@@ -128,6 +140,10 @@ def main():
     entry_missing = not existing
     print("Kachel-2-Eintrag:", "NEU" if entry_missing else "vorhanden")
     if args.apply:
+        if auto_changed:
+            AUTO_TARGET.parent.mkdir(parents=True, exist_ok=True)
+            AUTO_TARGET.write_bytes(auto_data)
+            print("Automatik-Lesemodell lokal geschrieben")
         if changed:
             TARGET.parent.mkdir(parents=True, exist_ok=True)
             TARGET.write_bytes(data)
