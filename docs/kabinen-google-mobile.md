@@ -160,7 +160,9 @@ Die lokale Pi-Infoboard-Anwendung könnte bereits Port 8765 verwenden.
 
 ### Zusätzlicher Darstellungswunsch am TV (11.11.2026, später umsetzen)
 
-Der Betreiber möchte den auf dem TV-Kabinenplan sichtbaren **Hinweis-/Statussatz zu Konflikten** entfernen, insbesondere den Hinweis über das Nichtvorhandensein von Konflikten (sinngemäß „keine Konflikte“ und weitere Statusinformationen). Der **exakte Wortlaut und die genaue Anzeigeposition sind noch nicht verifiziert**; vor der Änderung durch Sichtprüfung/Quellcode prüfen. Ausschließlich den störenden Text im TV-Frontend ausblenden, **nicht** die Berechnung, Warnungs-/Konfliktdaten oder sicherheitsrelevante Diagnosen löschen. Es ist noch **nichts am TV geändert**. Diesen Punkt bei der nächsten TV-Integration gemeinsam mit der Einbindung der Google-Overrides erledigen.
+Der Betreiber möchte die **kleinen Warnungs-/Hinweiszeilen direkt unter den Spielpaarungen im TV-Kabinenplan** entfernen. Am 11.11.2026 mit Foto belegt (Sonntag 15.11.2026, Spiele 13:22 und 13:44 Uhr). Sichtbarer Wortlaut unter dem Spiel 13:22 Uhr: **„⚠ Keine konfliktfreie Heimkabine · Gastgruppen offen: 1 von 1“**. Unter dem Spiel 13:44 Uhr beginnt eine ähnliche, rechts abgeschnittene Zeile mit **„⚠ Keine konfliktfreie Heimkabine · Gastgruppen offen: 1 von 1 · Keine Ko…“**; letzten Teil nicht aus dem Foto ergänzen.
+
+**Umsetzung erst bei nächster TV-Arbeit:** Warnzeile(n) in der TV-Darstellung gezielt ausblenden, nicht Teamnamen, Uhrzeiten, Spiel-/Staffelinformationen oder Kabinenangaben. **Die Warnung ist ein tatsächlicher Belegungskonflikt, nicht „keine Konflikte“.** Interne Konflikterkennung, Daten (`warnings`, `critical_conflicts` usw.) und etwaige andere sinnvolle Fehlersignale erhalten. Den exakten Rendering-Code erst auf dem Pi prüfen; am TV ist noch **nichts geändert**. Gemeinsam mit der Google-Override-Integration bearbeiten.
 
 ## TV-Diagnose 11.11.2026 – Status und nächster Arbeitsschritt
 
