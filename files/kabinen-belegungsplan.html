@@ -89,14 +89,16 @@ function draw(){
  week=Math.max(0,Math.min(week,weeks.length-1));
  prev.disabled=week===0;next.disabled=week===weeks.length-1;
  const selected=weeks[week];
- titleEl.textContent=deDate(selected.start)+" – "+deDate(selected.end)+"  ("+(week+1)+"/"+weeks.length+")";
+ const rule=data.manual_weeks?.[selected.start];
+ const marker=rule?.mode==="locked"?" · Woche gesperrt":rule?.mode==="partial"?" · Manuelle Korrekturen":"";
+ titleEl.textContent=deDate(selected.start)+" – "+deDate(selected.end)+"  ("+(week+1)+"/"+weeks.length+")"+marker;
  const games=(data.games||[]).filter(g=>g.date>=selected.start&&g.date<=selected.end).sort((a,b)=>String(a.date).localeCompare(String(b.date))||String(a.time).localeCompare(String(b.time)));
  if(!games.length){listEl.innerHTML='<div class="empty">Keine Heimspiele in Berne in dieser Woche.</div>';return}
  const days=[...new Set(games.map(g=>g.date))].sort();
  listEl.innerHTML=days.map(day=>{
   const rows=games.filter(g=>g.date===day);
   return '<section class="day"><header class="daybar"><span>'+esc(dayName(day))+' · '+esc(deDate(day))+'</span><small>'+rows.length+' '+(rows.length===1?'Spiel':'Spiele')+'</small></header>'+
-   rows.map(g=>'<article class="game"><div class="time">'+esc(g.time)+'</div><div class="teams"><div class="home">'+esc(g.home)+'</div><div class="away">'+esc(g.away)+'</div><div class="meta">'+esc([g.kind,g.league].filter(Boolean).join(" · "))+(g.festival?' · Turnier':'')+'</div></div><div class="cabins">'+oneCabin("Heim",g.home_cabin)+oneCabin("Gast",g.guest_cabin)+oneCabin("SR",g.sr_cabin)+'</div></article>').join("")+'</section>';
+   rows.map(g=>'<article class="game"><div class="time">'+esc(g.time)+'</div><div class="teams"><div class="home">'+esc(g.home)+'</div><div class="away">'+esc(g.away)+'</div><div class="meta">'+esc([g.kind,g.league].filter(Boolean).join(" · "))+(g.festival?' · Turnier':'')+(g.manual_override?' · Manuell':'')+'</div></div><div class="cabins">'+oneCabin("Heim",g.home_cabin)+oneCabin("Gast",g.guest_cabin)+oneCabin("SR",g.sr_cabin)+'</div></article>').join("")+'</section>';
  }).join("");
 }
 prev.addEventListener("click",()=>{week--;draw()});
@@ -120,8 +122,9 @@ async function update(){
   // Der Pi überträgt nur inhaltliche Änderungen. Ein unveränderter Zeitstempel
   // bedeutet deshalb nicht, dass der 10-Minuten-Abgleich ausgefallen ist.
   const old=!Number.isFinite(age)||age>7*24*60*60*1000;
-  statusEl.classList.toggle("warning",old);
-  statusEl.textContent="Kabinenplan · Datenstand"+(stamp?" "+stamp:"")+(old?" · Bitte Aktualität prüfen":"");
+  const unmatched=Object.values(incoming.manual_weeks||{}).some(w=>Number(w.unmatched)>0);
+  statusEl.classList.toggle("warning",old||unmatched);
+  statusEl.textContent="Kabinenplan · Datenstand"+(stamp?" "+stamp:"")+(old?" · Bitte Aktualität prüfen":"")+(unmatched?" · Manuelle Zuordnung prüfen (Spiel geändert)":"");
   draw();
  }catch(e){
   statusEl.classList.add("warning");
