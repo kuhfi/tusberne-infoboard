@@ -9,6 +9,8 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import subprocess
+from io import BytesIO
 import os
 import re
 import sys
@@ -22,6 +24,13 @@ from cabins_overrides import (CABIN_FIELDS, clean_game, game_key, load_store,
 
 SHEET_ID = "1U8PoGl6_vGeLxFBryIL0JVBZPw9RAtFnHbQeoov_spc"
 DEFAULT_CREDS = "/etc/tusberne/cabins-google-reader.json"
+DEFAULT_RCLONE = "gdrive:ChatGPT/tus BERNE – Kabinenverwaltung (Daten).xlsx"
+EXPECTED_HEADERS = {
+    "Wochen": ("wochenbeginn","modus","revision","geaendert_am","quell_hash","anzahl_zeilen"),
+    "Einzelkorrekturen": ("wochenbeginn","revision","spiel_id","feld","wert","geaendert_am"),
+    "Fixierte_Spiele": ("wochenbeginn","revision","position","datum","uhrzeit","art","staffel","heim","gast",
+                       "heimkabine","gastkabine","srkabine","turnier"),
+}
 SRC = Path("/home/kuhfi/infoboard-app/public/kabinen-live/kabinenplan_data.json")
 SOURCE_SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 RANGES = ("Wochen!A2:F", "Einzelkorrekturen!A2:F", "Fixierte_Spiele!A2:M")
@@ -58,6 +67,63 @@ def fetch_google_rows(sheet_id=SHEET_ID, creds_path=DEFAULT_CREDS):
     if not isinstance(ranges, list) or len(ranges) != 3:
         raise ValueError("Google Sheets lieferte unvollständige Tabellenbereiche")
     return [part.get("values", []) for part in ranges]
+
+
+def _xlsx_text(value):
+    """Normalize read-only XLSX cell values into validated strings."""
+    if value is None:
+        return ""
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, datetime):
+        return value.date().isoformat() if value.hour == value.minute == value.second == 0 else value.isoformat()
+    from datetime import date
+    if isinstance(value, date):
+        return value.isoformat()
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return str(value)
+
+
+def parse_xlsx_rows(content):
+    """Read named tabs and verify headings before accepting any content."""
+    from openpyxl import load_workbook
+    workbook = load_workbook(BytesIO(content), read_only=True, data_only=True)
+    try:
+        result = []
+        for name, expected in EXPECTED_HEADERS.items():
+            if name not in workbook.sheetnames:
+                raise ValueError("Google-Export ohne erforderliches Tabellenblatt: " + name)
+            it = workbook[name].iter_rows(values_only=True)
+            head = next(it, ())
+            if tuple(_xlsx_text(v) for v in head[:len(expected)]) != expected:
+                raise ValueError("Spaltenüberschriften im Google-Export unerwartet: " + name)
+            rows = []
+            for line in it:
+                values = [_xlsx_text(v) for v in line[:len(expected)]]
+                if any(v != "" for v in values):
+                    rows.append(values)
+            result.append(rows)
+        return result
+    finally:
+        workbook.close()
+
+
+def fetch_rclone_rows(remote=DEFAULT_RCLONE):
+    """Export through the Pi's existing rclone configuration into memory."""
+    if not isinstance(remote, str) or not remote.startswith("gdrive:") or not remote.lower().endswith(".xlsx"):
+        raise ValueError("Unerwarteter rclone-Pfad für Google-Kabinen")
+    try:
+        result = subprocess.run(
+            ["rclone", "cat", remote, "--drive-export-formats", "xlsx"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=90, check=False)
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise ValueError("Google-Export über rclone nicht ausführbar") from exc
+    if result.returncode != 0 or not result.stdout:
+        raise ValueError("Google-Export über rclone fehlgeschlagen; lokalen Stand beibehalten")
+    if len(result.stdout) > 10_000_000:
+        raise ValueError("Google-Export ungewöhnlich groß; lokalen Stand beibehalten")
+    return parse_xlsx_rows(result.stdout)
 
 
 def cells(row, n):
@@ -199,13 +265,15 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--apply", action="store_true", help="Nach Validierung atomar in die private Datei schreiben")
     ap.add_argument("--source", default=str(SRC), help="Pfad der bestehenden automatischen Quelle")
+    ap.add_argument("--rclone-path", default=os.environ.get("TUSBERNE_CABINS_RCLONE_PATH", ""),
+                    help="Google-Tabelle über den vorhandenen rclone-Zugang lesen")
     ap.add_argument("--credentials", default=os.environ.get("TUSBERNE_CABINS_GOOGLE_CREDENTIALS", DEFAULT_CREDS))
     ap.add_argument("--sheet-id", default=os.environ.get("TUSBERNE_CABINS_GOOGLE_SHEET_ID", SHEET_ID))
     args = ap.parse_args(argv)
     source = json.loads(Path(args.source).read_text(encoding="utf-8"))
     if not isinstance(source.get("games"), list):
         raise ValueError("Automatische Spieldaten fehlen")
-    rows = fetch_google_rows(args.sheet_id, args.credentials)
+    rows = fetch_rclone_rows(args.rclone_path) if args.rclone_path else fetch_google_rows(args.sheet_id, args.credentials)
     original = load_store()
     updated, changed, start, revision = build_new_store(source, rows, original, sheet_id=args.sheet_id)
     print(f"Google-Kabinen: Woche {start}, Version {revision}, Änderungen: {'JA' if changed else 'NEIN'}")
