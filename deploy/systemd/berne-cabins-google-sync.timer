@@ -1,0 +1,12 @@
+[Unit]
+Description=tus BERNE - Google-Kabinenvorgaben alle 3 Minuten lesen
+
+[Timer]
+OnCalendar=*-*-* *:00/3:30
+Persistent=true
+RandomizedDelaySec=10s
+AccuracySec=30s
+Unit=berne-cabins-google-sync.service
+
+[Install]
+WantedBy=timers.target
