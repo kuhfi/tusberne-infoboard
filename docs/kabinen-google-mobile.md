@@ -158,11 +158,19 @@ systemctl list-timers berne-cabins-google-sync.timer --no-pager
 `berne-cabins-admin.service` nicht aktivieren. Sie soll durch Google ersetzt werden.
 Die lokale Pi-Infoboard-Anwendung könnte bereits Port 8765 verwenden.
 
-### Zusätzlicher Darstellungswunsch am TV (11.11.2026, später umsetzen)
+### TV-Warntexte entfernt (11.11.2026, 17:13 Uhr)
 
-Der Betreiber möchte die **kleinen Warnungs-/Hinweiszeilen direkt unter den Spielpaarungen im TV-Kabinenplan** entfernen. Am 11.11.2026 mit Foto belegt (Sonntag 15.11.2026, Spiele 13:22 und 13:44 Uhr). Sichtbarer Wortlaut unter dem Spiel 13:22 Uhr: **„⚠ Keine konfliktfreie Heimkabine · Gastgruppen offen: 1 von 1“**. Unter dem Spiel 13:44 Uhr beginnt eine ähnliche, rechts abgeschnittene Zeile mit **„⚠ Keine konfliktfreie Heimkabine · Gastgruppen offen: 1 von 1 · Keine Ko…“**; letzten Teil nicht aus dem Foto ergänzen.
+**Erledigt:** Der Betreiber wollte die kleinen Warnzeilen unter den Spielen im lokalen TV-Kabinenplan ausblenden, z. B. „⚠ Keine konfliktfreie Heimkabine · Gastgruppen offen: 1 von 1“ bei Spielen vom 15.11.2026 um 13:22 und 13:44 Uhr.
 
-**Umsetzung erst bei nächster TV-Arbeit:** Warnzeile(n) in der TV-Darstellung gezielt ausblenden, nicht Teamnamen, Uhrzeiten, Spiel-/Staffelinformationen oder Kabinenangaben. **Die Warnung ist ein tatsächlicher Belegungskonflikt, nicht „keine Konflikte“.** Interne Konflikterkennung, Daten (`warnings`, `critical_conflicts` usw.) und etwaige andere sinnvolle Fehlersignale erhalten. Den exakten Rendering-Code erst auf dem Pi prüfen; am TV ist noch **nichts geändert**. Gemeinsam mit der Google-Override-Integration bearbeiten.
+**Diagnose am Pi:** Die konkrete Renderstelle wurde in `/home/kuhfi/infoboard-app/public/portrait/kabinen.html`, Zeile 502 (Stand vor Patch), identifiziert. Dort erzeugte der Teil `g.warnings?.length` die störenden Zeilen. Der Renderer wurde nur um diese Ausgabe gekürzt, nicht um die Spiel-/Staffelinformationen.
+
+**Durchführung:** Das Repository-Skript `scripts/pi_hide_tv_cabin_warnings.py` wurde am Pi ausgeführt. Der private Ergebnisbericht `tusberne-tv-warntext-entfernung-20261111.txt` im Drive-Ordner „Entwicklung & Diagnose“ bestätigt:
+- `Status: OK: Nur Warnzeile im Spielrenderer entfernt; JSON und Konfliktdaten unverändert.`
+- Sicherung: `/home/kuhfi/infoboard-app/public/portrait/kabinen.html.bak-hide-warning-20261111-171330-102074`
+- `Ctrl+R` wurde erfolgreich an den Wayland-Kiosk `wayland-0` gesendet; das sichtbare TV-Ergebnis wurde **nicht** per Foto überprüft.
+- Die Google-Kabinenverwaltung und die Kabinenautomatik blieben unangetastet.
+
+**Noch offen:** Sichtprüfung, dass auf dem physischen TV keine Warnzeile mehr erscheint. Separate Integration der Google-Overrides in die lokale TV-Anzeige ist ausdrücklich für später vorgesehen; nicht mit der Warntextkorrektur verwechseln.
 
 ## TV-Diagnose 11.11.2026 – Status und nächster Arbeitsschritt
 
