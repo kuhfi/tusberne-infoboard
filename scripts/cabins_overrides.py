@@ -106,7 +106,10 @@ def effective_plan(raw, store, now=None):
         base = [copy.deepcopy(g) for g in raw.get("games", []) if start <= g.get("date", "") <= end]
         mode = "automatic"
         missing = 0
-        revision = 0
+        # Nach "Automatik wiederherstellen" existiert kein Wochen-Eintrag mehr.
+        # Die letzte angewendete Google-Revision muss trotzdem öffentlich
+        # sichtbar bleiben, damit die Web-App die Bestätigung erkennt.
+        revision = int(store.get("google_cabins_sync", {}).get("revisions", {}).get(start, 0))
         if start == active_start and start in records:
             record = records[start]
             mode = record.get("mode", "automatic")
