@@ -75,6 +75,7 @@ class GoogleImporterTest(unittest.TestCase):
         saved,changed,start,rev=build_new_store(BASE,rows,before,NOW,'X')
         self.assertTrue(changed)
         self.assertNotIn(WEEK,saved['weeks'])
+        self.assertEqual(effective_plan(BASE, saved, NOW)['manual_weeks'][WEEK]['revision'],3)
         with self.assertRaisesRegex(ValueError,'zurückgesetzt'):
             build_new_store(BASE,sheets('automatic',1,[],count=0),before,NOW,'X')
 
