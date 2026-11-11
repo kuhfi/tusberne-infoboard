@@ -9,6 +9,15 @@ assert(html.includes('data-mode="locked"'));
 assert(html.includes('google.script.run'));
 const js=html.split('<script>')[1].split('</script>')[0];
 new vm.Script(js, {filename:'Index-embedded.js'});
+const isoFn=js.match(/function isoWeek_\\(s\\)\\{[^\\n]*\\}/);
+assert(isoFn, 'ISO week helper missing');
+const isoWeek=vm.runInNewContext('('+isoFn[0]+')');
+assert.strictEqual(isoWeek('2026-11-09'),46,'09.11.2026 is ISO week 46');
+assert.strictEqual(isoWeek('2026-11-16'),47,'16.11.2026 is ISO week 47');
+assert.strictEqual(isoWeek('2025-12-29'),1,'year boundary 2025/26');
+assert.strictEqual(isoWeek('2027-01-03'),53,'year boundary 2026/27');
+assert(html.includes('<h2>Spiele der Woche</h2>'));
+assert(html.includes("initial.revision===0?'Automatik aktiv'"));
 
 const schema={
  Wochen:['wochenbeginn','modus','revision','geaendert_am','quell_hash','anzahl_zeilen'],
