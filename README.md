@@ -27,6 +27,24 @@ Die Anzahl und Auswahl der Inhalte verändern sich durch die Synchronisierung. M
 
 Die Reihenfolge in **Tabellen / News** beginnt mit Fußballtabellen, gefolgt von Schiedsrichterkosten, Notfallfortbildung (09.01.2027), Jahresauftaktessen (22.01.2027), Dachwarnung, mobiler Sitzbank und Sternenbrücke. Die tatsächlich noch veröffentlichten Einträge stehen im Inhaltsverzeichnis; abgelaufene Termine/Grafiken müssen an der Quelle gepflegt bzw. entfernt werden.
 
+## Google-Handyverwaltung für Kabinen (Vorbereitung 11.11.2026)
+
+Die private Google-Tabelle **tus BERNE – Kabinenverwaltung (Daten)** ist erstellt.
+Die mobile Apps-Script-Bearbeitungsseite und der neue ausschließlich lesende Pi-Abgleich
+sind als Quellcode vorbereitet und automatisiert getestet. **Die Apps-Script-Web-App
+ist noch nicht bereitgestellt und der Pi-Dienst noch nicht aktiviert.**
+Die bisherige Kabinenautomatik läuft daher unverändert.
+
+- Apps-Script-Quellen: `apps_script/Code.gs`, `apps_script/Index.html`, `apps_script/appsscript.json`
+- Installations- und Aktivierungsanleitung: `docs/kabinen-google-mobile.md`
+- Private Tabelle: https://docs.google.com/spreadsheets/d/1U8PoGl6_vGeLxFBryIL0JVBZPw9RAtFnHbQeoov_spc/edit
+- Öffentliche, datensparsame Automatik-Vorlage: `data/kabinen_auto_data.json`
+- Pi-Abruf: `scripts/pi_google_cabins_sync.py`, Timer `berne-cabins-google-sync.timer`
+- Nach vollständiger Aktivierung werden manuelle Korrekturen vor dem öffentlichen Export
+  aus dem privaten Google-Lesecache berücksichtigt.
+- **Nicht** die alte lokale Admin-Anwendung auf Port 8765 als Alternative aktivieren;
+  der produktive Pi-Server kann diesen Port bereits verwenden.
+
 ## Datenfluss und automatische Aktualisierung
 
 ```text
