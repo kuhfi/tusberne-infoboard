@@ -233,3 +233,93 @@ Im bereits aus Google Drive gelesenen Diagnoseexport war die Meldung in
 - Originalautomatik wird durch die neue Google-Verwaltung nicht verändert.
 - Automatischer Pi-Abgleich ist auf 3 Minuten, öffentlicher GitHub-Abgleich auf ca. 10 Minuten ausgelegt; das ist kein garantierter Echtzeitwert.
 - Die bestehende Raumbelegung über Google Kalender bleibt unberührt.
+
+## Lokales TV-Overlay: Installation am 12.11.2026 (09:08 Uhr)
+
+**Erfolgreich installiert und durch privaten Pi-Ergebnisbericht verifiziert.**
+Bericht: `tusberne-tv-google-overlay-20261112-090847.txt` im privaten Google-Drive-Ordner
+„Entwicklung & Diagnose“ (Drive-ID `13DGaoIlxD7ErUv6_L7Mwvd9RB9gT8xTr`).
+
+### Architektur und bestätigter Installationsstand
+
+- Originaler Kabinen-Datenproduzent: `/home/kuhfi/infoboard-kabinen-live/kabinenplan_update.py`,
+  gestartet durch `berne-kabinen-live.service` alle zehn Minuten.
+- Automatisch atomar erzeugte **Originalquelle**:
+  `/home/kuhfi/infoboard-app/public/kabinen-live/kabinenplan_data.json`.
+  Diese wird **nicht verändert**.
+- Privater Google-Override-Speicher:
+  `/var/lib/tusberne-kabinen/overrides.json`, Importtimer weiterhin alle ca. drei Minuten.
+- Neue eigenständige Overlay-Berechnung:
+  `/home/kuhfi/infoboard-app/scripts/tv_google_cabins_overlay.py`;
+  verwendet die bereits getestete Funktion `effective_plan()` aus
+  `/home/kuhfi/tusberne-github-sync/scripts/cabins_overrides.py`.
+  Alle TV-Rohdatenfelder und Diagnosewerte bleiben erhalten; gesperrte Spiele
+  können ergänzt oder entfernt werden. Fehler lassen die letzte gültige
+  Anzeige-Datei unverändert.
+- **Neue TV-Anzeigedatei**:
+  `/home/kuhfi/infoboard-app/public/kabinen-live/kabinenplan_tv_effective.json`
+  (atomare Schreibvorgänge).
+- **Neue Units**: `berne-tv-cabins-overlay.service` und
+  `berne-tv-cabins-overlay.timer`; im Installationsbericht Timer **aktiv**,
+  auf jede Minute ausgelegt. Der Original-Datenproduzent, sein Timer,
+  die Web-App und der GitHub-Publisher wurden nicht umgebaut.
+- Die beiden lokalen Darstellungen `public/portrait/kabinen.html` und
+  `public/kabinen-live/01_kabinen_live.html` laden die neue effektive
+  Anzeigedatei. Für die zweite HTML-Datei wurde die Refreshkennung um
+  `display_revision` ergänzt, damit auch reine manuelle Änderungen bei
+  gleichem Quell-Zeitstempel erneut gezeichnet werden.
+- Die am 11.11.2026 gezielt verborgenen Spiel-Warnungen und Wochenbalken-Hinweise
+  bleiben verborgen. Die zugrunde liegenden Diagnosefelder bleiben vorhanden.
+- **Vorhandener weiterer Datenpfad:** `public/app.js`,
+  `public/portrait/portrait.js` und
+  `scripts/anzeigezeiten/core.py` lesen für Status bzw. Wochenzahl weiterhin
+  die Originalquelle; das ist beabsichtigt, solange keine Anzeigeabweichung
+  festgestellt wird. Die Kabinenzuweisungen in den beiden eigentlichen
+  Renderern werden aus dem Overlay bezogen.
+
+### Bestätigte Tests und Sicherung
+
+Der vorherige reine Pi-Probelauf vom **12.11.2026, 09:06 Uhr**
+(`tusberne-tv-google-overlay-20261112-090614.txt`) bestand:
+Automatik mit 21 unveränderten Spielen, Einzelkorrektur, Wochen-Lock mit
+Hinzufügen/Entfernen, Rücksetzung und Erhalt von Diagnosefeldern.
+Der Installationsbericht vom **09:08 Uhr** bestätigt zusätzlich
+Produktivinstallation, aktivierten Timer und gesendetes `Ctrl+R` an
+Wayland `wayland-0`. Ein tatsächlich sichtbares Bild wurde vom Skript
+**nicht** geprüft.
+
+**Sicherung (exakt):**
+
+`/home/kuhfi/infoboard-app/backups/tv-google-cabins/20261112-090847-862164`
+
+**Rücknahme (nur bei Bedarf, auf dem Pi):**
+
+```bash
+sudo python3 /home/kuhfi/infoboard-app/backups/tv-google-cabins/20261112-090847-862164/installer.py --rollback /home/kuhfi/infoboard-app/backups/tv-google-cabins/20261112-090847-862164
+```
+
+Das Rollback ist im Installationsskript implementiert, aber bisher
+**nicht real ausgeführt**. Backup-Verzeichnis, Manifest und Wiederherstellung
+müssen vor einem eventuellen späteren Rollback gesichert bleiben.
+
+### Noch offene Endabnahmen
+
+1. **Laufender Betrieb:** Nach mindestens einem Timer-Zyklus kontrollieren,
+   dass die neue Anzeigedatei regelmäßig geprüft wird und die beiden lokalen
+   TV-Seiten die effektive Datei liefern.
+2. **Sichtkontrolle am physischen TV:** Darstellung, Uhrzeiten, Wochenwechsel,
+   Kabinen und Ausblendung beider Warnzeilen prüfen.
+3. **Google-End-to-End-Test:** Kontrollierte vorübergehende Einzelkorrektur
+   über die **private Web-App** speichern, automatische Übernahme in den
+   Pi-Override-Speicher prüfen, TV und öffentliche GitHub-Daten vergleichen,
+   anschließend in der Web-App auf Automatik zurücksetzen und erneut prüfen.
+   Keine direkte Rohbearbeitung des privaten Tabellenformats und keine
+   dauerhaft falschen Live-Zuweisungen.
+4. **Wochensperre im realen Datenweg** prüfen, ohne einen laufenden
+   Spieltag nachhaltig zu verändern.
+5. **Zusatztermine:** Am 12.11.2026 um 09:06 Uhr stand
+   `extra_source.mode=live`; der frühere Cache-Status ist zu diesem
+   Zeitpunkt nicht mehr aktiv gewesen. Spätere Fallbacks weiterhin erkennen.
+
+Wichtig: **„technisch installiert“ bedeutet nicht „vollständig end-to-end
+abgenommen“**. Bis zur Endabnahme genau so berichten.
