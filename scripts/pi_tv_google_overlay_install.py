@@ -228,7 +228,7 @@ def offline_tests() -> list[str]:
                                "changes":{test_id:{field:new}}}}
     part = render_data(raw, partial)
     actual = [g for g in part["games"] if game_key(g) == test_id]
-    if len(actual) != 1 or actual[0][field] != new or target.get(field) != old and old:
+    if len(actual) != 1 or actual[0][field] != new or (target.get(field) or "") != old:
         raise AssertionError("Einzelkorrektur überschreibt Autodaten oder wird nicht angezeigt")
     # Synthetic fixture never written to either source/Google/TV file.
     new_fixture = {"date":week,"time":"23:58","kind":"Test",
@@ -300,6 +300,10 @@ def private_report(action: str, lines: list[str]) -> None:
                       NOW.isoformat(), "Aktion: " + action] + lines) + "\n"
     file = Path(tempfile.gettempdir()) / NAME
     file.write_text(body, encoding="utf-8")
+    if os.geteuid() == 0:
+        owner = pwd.getpwnam("kuhfi")
+        os.chown(file, owner.pw_uid, owner.pw_gid)
+        file.chmod(0o600)
     try:
         if os.geteuid() == 0:
             cmd = ["runuser", "-u", "kuhfi", "--", "rclone"]
