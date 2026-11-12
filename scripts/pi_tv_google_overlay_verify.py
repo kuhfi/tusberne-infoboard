@@ -62,7 +62,7 @@ def check_unit(name, expected):
     lines=[l for l in output.splitlines() if not re.search("Environment|ExecStart",l,re.I)]
     add("Unit Details "+name,"INFO","; ".join(lines)[:300])
 
-def fetch_local(path, expected=None):
+def fetch_local(path, *, as_json=False):
     url=BASE+path
     try:
         with urlopen(url,timeout=7) as response:
@@ -70,7 +70,7 @@ def fetch_local(path, expected=None):
             status=response.status
             if len(raw)>=950_000:
                 raise ValueError("HTTP-Inhalt zu groß")
-            if expected is None:
+            if not as_json:
                 text=raw.decode("utf-8")
                 return status,text
             document=json.loads(raw)
@@ -140,7 +140,7 @@ def main():
         ("Portrait über Server","/portrait/kabinen.html"),
         ("Live V17 über Server","/kabinen-live/01_kabinen_live.html"),
     ):
-        code,content=fetch_local(route,expected=route.endswith(".json"))
+        code,content=fetch_local(route,as_json=route.endswith(".json"))
         if code!=200:
             add(label,"WARNUNG","Loopback 127.0.0.1:8765 HTTP "+str(code)+", "+str(content)[:50])
         elif route.endswith(".json"):
