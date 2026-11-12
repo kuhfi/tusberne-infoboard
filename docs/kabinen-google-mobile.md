@@ -323,3 +323,35 @@ müssen vor einem eventuellen späteren Rollback gesichert bleiben.
 
 Wichtig: **„technisch installiert“ bedeutet nicht „vollständig end-to-end
 abgenommen“**. Bis zur Endabnahme genau so berichten.
+
+
+### Post-Installationsprüfung 12.11.2026, 09:14 Uhr
+
+Privater Prüfbericht: `tusberne-tv-google-overlay-abnahme-20261112-091450.txt`
+(Drive-ID `1FSCPxtvLva6P-5VGKHge_5FgcgomRGhl`).
+
+**Auf dem Raspberry Pi bestätigt:** `berne-infoboard.service`,
+`berne-tv-cabins-overlay.timer`, `berne-kabinen-live.timer` und
+`berne-cabins-google-sync.timer` sind aktiv.
+Der Overlay-Dienst lief um **09:14 Uhr erfolgreich**; der
+Kabinen-Datenproduzent war um **09:10–09:11 Uhr erfolgreich**.
+Die erzeugte TV-JSON ist vollständig identisch zur unabhängig aus
+Originaldaten + aktuellem Google-Speicher berechneten effektiven Version.
+**21 Spiele**, zwei Wochen (09.–22.11.2026), Google Revision 7
+im Automatikmodus, Zusatztermine-Modus `live`.
+Alle geprüften Top-Level-Diagnosefelder sind identisch mit der Rohquelle.
+Die HTML-Dateien auf dem Dateisystem verwenden ausschließlich den neuen
+TV-Overlay-Pfad; zuvor entfernte Warntexte sind weiterhin nicht vorhanden.
+Die HTTP-Antwort für die **effektive JSON** entspricht exakt der lokalen Datei.
+
+**Zwei Warnungen im ersten Bericht sind Prüferfehler**, keine belegten
+Produktionsfehler: Das erste Prüfskript versuchte HTML-Routen mit
+`json.loads` zu lesen und meldete deshalb `JSONDecodeError`.
+Korrektur im Repository-Commit `b3f90955603abc7b4ea856bc00ec87fbb6c48c7c`,
+betroffen **nur** `scripts/pi_tv_google_overlay_verify.py`.
+Eine erneute HTTP-HTML-Abnahme bleibt offen, bis das korrigierte Skript
+auf dem Pi ausgeführt ist.
+
+**Weiter offen:** Physische Sichtkontrolle und echte kurzzeitige
+Google-Korrektur einschließlich Rücksetzung; bisher nur synthetische
+Offlinetests auf dem Pi. Keine Nutzeränderung vorgespiegelt.
