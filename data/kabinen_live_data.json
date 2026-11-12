@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T15:40:53+01:00",
+  "generated_at": "2026-11-12T10:41:39+01:00",
   "period": {
     "weeks": [
       {
@@ -95,8 +95,9 @@
       "away": "Concordia 3.D (J2)",
       "home_cabin": "1",
       "guest_cabin": "4",
-      "sr_cabin": "SR1",
-      "festival": false
+      "sr_cabin": "SR2",
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-15",
@@ -269,9 +270,9 @@
   ],
   "manual_weeks": {
     "2026-11-09": {
-      "mode": "automatic",
+      "mode": "partial",
       "unmatched": 0,
-      "revision": 7
+      "revision": 8
     },
     "2026-11-16": {
       "mode": "automatic",
