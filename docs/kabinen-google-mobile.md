@@ -355,3 +355,34 @@ auf dem Pi ausgeführt ist.
 **Weiter offen:** Physische Sichtkontrolle und echte kurzzeitige
 Google-Korrektur einschließlich Rücksetzung; bisher nur synthetische
 Offlinetests auf dem Pi. Keine Nutzeränderung vorgespiegelt.
+
+
+### Korrigierte vollständige Post-Installationsprüfung 12.11.2026, 09:21 Uhr
+
+Privater Bericht: `tusberne-tv-google-overlay-abnahme-20261112-092103.txt`,
+Google-Drive-ID `1Vsw5-VzTHnqLQSqqL5uxZnOyGmku6kcZ`.
+
+**Ergebnis: 0 Fehler, 0 Warnungen.** Beide Kabinen-HTML-Seiten werden
+vom lokalen HTTP-Server ausgeliefert und enthalten die neue
+`kabinenplan_tv_effective.json`-Quelle; auch diese JSON wird korrekt
+per HTTP ausgeliefert und stimmt mit der lokalen Datei überein.
+Die Overlay-JSON entspricht vollständig dem aus dem aktuellen privaten
+Google-Speicher neu berechneten Stand. Der Overlay-Dienst lief um
+**09:21 Uhr erfolgreich**, der zugehörige Timer sowie TV-Server,
+ursprünglicher Kabinen-Timer und Google-Importtimer waren aktiv.
+Der Originaldatenproduzent war zum Zeitpunkt der Abfrage ab 09:20 Uhr
+noch im Ausführungsstatus; dessen erfolgreicher Abschluss ist durch
+den Bericht von 09:21 Uhr **nicht** belegt.
+Stand: 21 Spiele, 09.–22.11.2026, KW 46 Google Revision 7
+`automatic`, Zusatztermine-Modus `live`.
+Die um 09:14 Uhr gemeldeten zwei HTML-Prüfwarnungen sind durch die
+Prüfskript-Korrektur bestätigt erledigt.
+
+Während der Nutzer den Prüfbefehl ausführte, brach seine Remote-Shell-
+Verbindung ab. Der private Bericht wurde dennoch vollständig hochgeladen;
+die Shell-Verbindungsursache ist nicht festgestellt und stellt im Bericht
+keinen Produktionsfehler dar.
+
+**Weiter offen:** Sichtkontrolle am physischen Bildschirm und
+End-to-End-Praxistest mit manueller Änderung + Rücksetzung in der
+Google-Web-App. Es wurde keine reale Google-Testkorrektur gesetzt.
