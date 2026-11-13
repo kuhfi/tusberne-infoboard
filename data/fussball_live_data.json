@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:40:29+01:00",
+  "generated_at": "2026-11-13T21:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -75,6 +75,16 @@
         },
         {
           "place": 6,
+          "team": "Harksheide 2.Hr.",
+          "games": 14,
+          "won": 5,
+          "draw": 3,
+          "lost": 6,
+          "goals": "26:32",
+          "points": 18
+        },
+        {
+          "place": 7,
           "team": "HSV 3.Hr.",
           "games": 13,
           "won": 4,
@@ -84,17 +94,17 @@
           "points": 17
         },
         {
-          "place": 7,
+          "place": 8,
           "team": "Sasel 2.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 5,
           "draw": 4,
-          "lost": 3,
-          "goals": "32:25",
+          "lost": 4,
+          "goals": "33:28",
           "points": 16
         },
         {
-          "place": 8,
+          "place": 9,
           "team": "Alstertal-Langenhorn 1.Hr.",
           "games": 13,
           "won": 5,
@@ -104,23 +114,13 @@
           "points": 15
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "Polonia 1.Hr.",
           "games": 12,
           "won": 4,
           "draw": 3,
           "lost": 5,
           "goals": "26:32",
-          "points": 15
-        },
-        {
-          "place": 10,
-          "team": "Harksheide 2.Hr.",
-          "games": 13,
-          "won": 4,
-          "draw": 3,
-          "lost": 6,
-          "goals": "23:31",
           "points": 15
         },
         {
