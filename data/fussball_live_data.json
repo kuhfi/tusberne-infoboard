@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:20:28+01:00",
+  "generated_at": "2026-11-13T21:40:29+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -383,6 +383,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Alstertal-Langenhorn 3.Hr.",
+          "games": 14,
+          "won": 11,
+          "draw": 1,
+          "lost": 2,
+          "goals": "99:18",
+          "points": 34
+        },
+        {
+          "place": 2,
           "team": "Polonia 4.Hr.",
           "games": 13,
           "won": 10,
@@ -390,16 +400,6 @@
           "lost": 1,
           "goals": "101:25",
           "points": 32
-        },
-        {
-          "place": 2,
-          "team": "Alstertal-Langenhorn 3.Hr.",
-          "games": 13,
-          "won": 10,
-          "draw": 1,
-          "lost": 2,
-          "goals": "85:18",
-          "points": 31
         },
         {
           "place": 3,
@@ -534,11 +534,11 @@
         {
           "place": 16,
           "team": "Walddörfer 3.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 0,
           "draw": 1,
-          "lost": 12,
-          "goals": "10:105",
+          "lost": 13,
+          "goals": "10:119",
           "points": 1
         }
       ]
@@ -722,12 +722,12 @@
         {
           "place": 3,
           "team": "Wandsetal 1.Ü40",
-          "games": 6,
-          "won": 3,
+          "games": 7,
+          "won": 4,
           "draw": 1,
           "lost": 2,
-          "goals": "21:13",
-          "points": 10
+          "goals": "24:14",
+          "points": 13
         },
         {
           "place": 4,
@@ -752,11 +752,11 @@
         {
           "place": 6,
           "team": "Hoisbüttel 1.Ü40",
-          "games": 6,
+          "games": 7,
           "won": 3,
           "draw": 0,
-          "lost": 3,
-          "goals": "10:8",
+          "lost": 4,
+          "goals": "11:11",
           "points": 9
         },
         {
