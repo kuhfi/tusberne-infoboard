@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T11:40:23+01:00",
+  "generated_at": "2026-11-13T11:50:21+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -197,7 +197,7 @@
         "away": "tus BERNE 2.Hr.",
         "home_score": null,
         "away_score": null,
-        "status": "Ausfall"
+        "status": "AUSGEFALLEN"
       },
       "next_game": {
         "date": "15.11.2026",
@@ -206,8 +206,7 @@
         "home": "Störtebeker SV 1.Hr.",
         "away": "tus BERNE 2.Hr.",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1514,8 +1513,7 @@
         "home": "Poppenbüttel 3.C-Jun. (A2)",
         "away": "tus BERNE 2.C-Jun. (A2)",
         "home_score": "4",
-        "away_score": "2",
-        "status": null
+        "away_score": "2"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1524,8 +1522,7 @@
         "home": "Meiendorf 2.C-Jun. (A1)",
         "away": "tus BERNE 2.C-Jun. (A2)",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
@@ -1704,7 +1701,8 @@
         "home": "Sternschanze 3.C-Jun. (A1)",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": "1",
-        "away_score": "5"
+        "away_score": "5",
+        "status": null
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1713,7 +1711,8 @@
         "home": "tus BERNE 4.C-Jun. (A3) 7er",
         "away": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
