@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T11:50:21+01:00",
+  "generated_at": "2026-11-13T12:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1701,8 +1701,7 @@
         "home": "Sternschanze 3.C-Jun. (A1)",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": "1",
-        "away_score": "5",
-        "status": null
+        "away_score": "5"
       },
       "next_game": {
         "date": "14.11.2026",
@@ -1711,8 +1710,7 @@
         "home": "tus BERNE 4.C-Jun. (A3) 7er",
         "away": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
         "home_score": null,
-        "away_score": null,
-        "status": null
+        "away_score": null
       },
       "table": [
         {
