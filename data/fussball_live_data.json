@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:50:17+01:00",
+  "generated_at": "2026-11-13T22:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -568,12 +568,12 @@
         {
           "place": 1,
           "team": "Poppenbüttel 1.Ü32",
-          "games": 5,
+          "games": 6,
           "won": 4,
-          "draw": 1,
+          "draw": 2,
           "lost": 0,
-          "goals": "20:4",
-          "points": 13
+          "goals": "21:5",
+          "points": 14
         },
         {
           "place": 2,
@@ -638,12 +638,12 @@
         {
           "place": 8,
           "team": "BU 2.Ü32",
-          "games": 6,
+          "games": 7,
           "won": 2,
-          "draw": 0,
+          "draw": 1,
           "lost": 4,
-          "goals": "8:13",
-          "points": 6
+          "goals": "9:14",
+          "points": 7
         },
         {
           "place": 9,
