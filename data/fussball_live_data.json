@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T14:00:17+01:00",
+  "generated_at": "2026-11-14T14:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1134,12 +1134,12 @@
         {
           "place": 1,
           "team": "Rahlstedt 2.B-Jun. (J1)",
-          "games": 5,
+          "games": 6,
           "won": 4,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "goals": "19:9",
-          "points": 12
+          "goals": "20:10",
+          "points": 13
         },
         {
           "place": 2,
@@ -1164,12 +1164,12 @@
         {
           "place": 4,
           "team": "Vorw. Wacker 2.B-Jun. (J1)",
-          "games": 5,
+          "games": 6,
           "won": 3,
-          "draw": 1,
+          "draw": 2,
           "lost": 1,
-          "goals": "16:12",
-          "points": 10
+          "goals": "17:13",
+          "points": 11
         },
         {
           "place": 5,
