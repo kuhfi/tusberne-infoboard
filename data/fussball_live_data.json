@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:10:17+01:00",
+  "generated_at": "2026-11-14T15:30:30+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -963,19 +963,19 @@
         "competition": "Landesliga",
         "home": "tus BERNE 1.A-Jun. (J1)",
         "away": "Süderelbe 1.A-Jun. (J1)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "0",
+        "away_score": "3"
       },
       "table": [
         {
           "place": 1,
           "team": "Süderelbe 1.A-Jun. (J1)",
-          "games": 7,
-          "won": 7,
+          "games": 8,
+          "won": 8,
           "draw": 0,
           "lost": 0,
-          "goals": "31:10",
-          "points": 21
+          "goals": "34:10",
+          "points": 24
         },
         {
           "place": 2,
@@ -1000,11 +1000,11 @@
         {
           "place": 4,
           "team": "tus BERNE 1.A-Jun. (J1)",
-          "games": 7,
+          "games": 8,
           "won": 5,
           "draw": 0,
-          "lost": 2,
-          "goals": "13:15",
+          "lost": 3,
+          "goals": "13:18",
           "points": 15
         },
         {
