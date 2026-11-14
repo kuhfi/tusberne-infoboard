@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:50:20+01:00",
+  "generated_at": "2026-11-14T16:00:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -949,15 +949,6 @@
       "display_name": "tus BERNE 1.A",
       "league_line": "A-Junioren Landesliga · U18-LL 02 · Saison 2026/27",
       "last_game": {
-        "date": "07.11.2026",
-        "time": "10:00",
-        "competition": "Landesliga",
-        "home": "Willinghusen 2.A-Jun. (J1)",
-        "away": "tus BERNE 1.A-Jun. (J1)",
-        "home_score": "0",
-        "away_score": "3"
-      },
-      "next_game": {
         "date": "14.11.2026",
         "time": "13:00",
         "competition": "Landesliga",
@@ -965,6 +956,15 @@
         "away": "Süderelbe 1.A-Jun. (J1)",
         "home_score": "0",
         "away_score": "3"
+      },
+      "next_game": {
+        "date": "21.11.2026",
+        "time": "16:00",
+        "competition": "Landesliga",
+        "home": "Sasel 1.A-Jun. (J1)",
+        "away": "tus BERNE 1.A-Jun. (J1)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
