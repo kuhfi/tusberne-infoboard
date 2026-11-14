@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T18:30:21+01:00",
+  "generated_at": "2026-11-14T19:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1049,6 +1049,16 @@
         },
         {
           "place": 9,
+          "team": "Nordlichter im NSV 1.A-Jun. (J1)",
+          "games": 8,
+          "won": 3,
+          "draw": 0,
+          "lost": 5,
+          "goals": "15:15",
+          "points": 9
+        },
+        {
+          "place": 10,
           "team": "Willinghusen 2.A-Jun. (J1)",
           "games": 8,
           "won": 2,
@@ -1058,7 +1068,7 @@
           "points": 8
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Teutonia 05 3.A-Jun. (J2)",
           "games": 7,
           "won": 2,
@@ -1066,16 +1076,6 @@
           "lost": 4,
           "goals": "20:20",
           "points": 7
-        },
-        {
-          "place": 11,
-          "team": "Nordlichter im NSV 1.A-Jun. (J1)",
-          "games": 7,
-          "won": 2,
-          "draw": 0,
-          "lost": 5,
-          "goals": "8:14",
-          "points": 6
         },
         {
           "place": 12,
@@ -1090,11 +1090,11 @@
         {
           "place": 13,
           "team": "Glashütte 2.A-Jun. (J1)",
-          "games": 7,
+          "games": 8,
           "won": 1,
           "draw": 1,
-          "lost": 5,
-          "goals": "12:24",
+          "lost": 6,
+          "goals": "13:31",
           "points": 4
         },
         {
@@ -1782,8 +1782,8 @@
         "competition": "Bezirksfreundschaftsspiele",
         "home": "tus BERNE 1.D-Jun. (A1)",
         "away": "Rahlstedt 1.D-Jun. (A1)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "4",
+        "away_score": "2"
       },
       "table": [
         {
