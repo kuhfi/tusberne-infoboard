@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:10:17+01:00",
+  "generated_at": "2026-11-14T16:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -990,12 +990,12 @@
         {
           "place": 3,
           "team": "Sternschanze 2.A-Jun. (J1)",
-          "games": 7,
+          "games": 8,
           "won": 6,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "goals": "33:12",
-          "points": 18
+          "goals": "35:14",
+          "points": 19
         },
         {
           "place": 4,
@@ -1030,12 +1030,12 @@
         {
           "place": 7,
           "team": "Rissen 1.A-Jun. (J1)",
-          "games": 7,
+          "games": 8,
           "won": 3,
-          "draw": 1,
+          "draw": 2,
           "lost": 3,
-          "goals": "22:22",
-          "points": 10
+          "goals": "24:24",
+          "points": 11
         },
         {
           "place": 8,
