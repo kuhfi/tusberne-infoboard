@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T12:40:17+01:00",
+  "generated_at": "2026-11-14T13:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1609,22 +1609,22 @@
       "table": [
         {
           "place": 1,
+          "team": "Bramfeld 2.C-Jun. (J1)",
+          "games": 5,
+          "won": 5,
+          "draw": 0,
+          "lost": 0,
+          "goals": "27:10",
+          "points": 15
+        },
+        {
+          "place": 2,
           "team": "Walddörfer 2.C-Jun. (J1)",
           "games": 4,
           "won": 4,
           "draw": 0,
           "lost": 0,
           "goals": "15:1",
-          "points": 12
-        },
-        {
-          "place": 2,
-          "team": "Bramfeld 2.C-Jun. (J1)",
-          "games": 4,
-          "won": 4,
-          "draw": 0,
-          "lost": 0,
-          "goals": "20:9",
           "points": 12
         },
         {
@@ -1670,11 +1670,11 @@
         {
           "place": 7,
           "team": "Meiendorf 3.C-Jun. (J2)",
-          "games": 4,
+          "games": 5,
           "won": 1,
           "draw": 0,
-          "lost": 3,
-          "goals": "5:19",
+          "lost": 4,
+          "goals": "6:26",
           "points": 3
         },
         {
