@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T19:00:17+01:00",
+  "generated_at": "2026-11-14T19:10:24+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1118,8 +1118,8 @@
         "competition": "Landesliga",
         "home": "Süderelbe 3.B-Jun. (J1)",
         "away": "tus BERNE 1.B-Jun. (J1)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "2",
+        "away_score": "5"
       },
       "next_game": {
         "date": "21.11.2026",
@@ -1133,6 +1133,16 @@
       "table": [
         {
           "place": 1,
+          "team": "tus BERNE 1.B-Jun. (J1)",
+          "games": 6,
+          "won": 4,
+          "draw": 2,
+          "lost": 0,
+          "goals": "34:11",
+          "points": 14
+        },
+        {
+          "place": 2,
           "team": "Rahlstedt 2.B-Jun. (J1)",
           "games": 6,
           "won": 4,
@@ -1142,24 +1152,14 @@
           "points": 13
         },
         {
-          "place": 2,
+          "place": 3,
           "team": "Süderelbe 3.B-Jun. (J1)",
-          "games": 5,
+          "games": 6,
           "won": 4,
           "draw": 0,
-          "lost": 1,
-          "goals": "14:6",
+          "lost": 2,
+          "goals": "16:11",
           "points": 12
-        },
-        {
-          "place": 3,
-          "team": "tus BERNE 1.B-Jun. (J1)",
-          "games": 5,
-          "won": 3,
-          "draw": 2,
-          "lost": 0,
-          "goals": "29:9",
-          "points": 11
         },
         {
           "place": 4,
