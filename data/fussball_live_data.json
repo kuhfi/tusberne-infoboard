@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:20:17+01:00",
+  "generated_at": "2026-11-14T16:30:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1049,6 +1049,16 @@
         },
         {
           "place": 9,
+          "team": "Teutonia 05 3.A-Jun. (J2)",
+          "games": 7,
+          "won": 2,
+          "draw": 1,
+          "lost": 4,
+          "goals": "20:20",
+          "points": 7
+        },
+        {
+          "place": 10,
           "team": "Nordlichter im NSV 1.A-Jun. (J1)",
           "games": 7,
           "won": 2,
@@ -1058,7 +1068,7 @@
           "points": 6
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Willinghusen 2.A-Jun. (J1)",
           "games": 7,
           "won": 1,
@@ -1068,23 +1078,13 @@
           "points": 5
         },
         {
-          "place": 11,
+          "place": 12,
           "team": "BU 2.A-Jun. (J2)",
           "games": 6,
           "won": 1,
           "draw": 1,
           "lost": 4,
           "goals": "13:17",
-          "points": 4
-        },
-        {
-          "place": 12,
-          "team": "Teutonia 05 3.A-Jun. (J2)",
-          "games": 6,
-          "won": 1,
-          "draw": 1,
-          "lost": 4,
-          "goals": "13:18",
           "points": 4
         },
         {
@@ -1100,11 +1100,11 @@
         {
           "place": 14,
           "team": "Walddörfer 3.A-Jun. (J2)",
-          "games": 7,
+          "games": 8,
           "won": 0,
           "draw": 0,
-          "lost": 7,
-          "goals": "3:52",
+          "lost": 8,
+          "goals": "5:59",
           "points": 0
         }
       ]
