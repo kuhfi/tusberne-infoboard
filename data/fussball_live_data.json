@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:40:19+01:00",
+  "generated_at": "2026-11-14T17:00:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1020,12 +1020,12 @@
         {
           "place": 6,
           "team": "Nienstedten 2.A-Jun. (J1)",
-          "games": 7,
+          "games": 8,
           "won": 4,
-          "draw": 0,
+          "draw": 1,
           "lost": 3,
-          "goals": "40:24",
-          "points": 12
+          "goals": "44:28",
+          "points": 13
         },
         {
           "place": 7,
@@ -1040,12 +1040,12 @@
         {
           "place": 8,
           "team": "Altona 93 2.A-Jun. (J2)",
-          "games": 7,
+          "games": 8,
           "won": 3,
-          "draw": 0,
+          "draw": 1,
           "lost": 4,
-          "goals": "14:15",
-          "points": 9
+          "goals": "18:19",
+          "points": 10
         },
         {
           "place": 9,
