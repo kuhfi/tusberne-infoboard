@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T22:00:17+01:00",
+  "generated_at": "2026-11-14T06:30:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -65,6 +65,16 @@
         },
         {
           "place": 5,
+          "team": "HSV 3.Hr.",
+          "games": 14,
+          "won": 5,
+          "draw": 5,
+          "lost": 4,
+          "goals": "31:26",
+          "points": 20
+        },
+        {
+          "place": 6,
           "team": "Duvenstedt 1.Hr.",
           "games": 12,
           "won": 6,
@@ -74,7 +84,7 @@
           "points": 20
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "Harksheide 2.Hr.",
           "games": 14,
           "won": 5,
@@ -82,16 +92,6 @@
           "lost": 6,
           "goals": "26:32",
           "points": 18
-        },
-        {
-          "place": 7,
-          "team": "HSV 3.Hr.",
-          "games": 13,
-          "won": 4,
-          "draw": 5,
-          "lost": 4,
-          "goals": "27:23",
-          "points": 17
         },
         {
           "place": 8,
@@ -106,11 +106,11 @@
         {
           "place": 9,
           "team": "Alstertal-Langenhorn 1.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 5,
           "draw": 3,
-          "lost": 5,
-          "goals": "22:25",
+          "lost": 6,
+          "goals": "25:29",
           "points": 15
         },
         {
@@ -383,6 +383,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Polonia 4.Hr.",
+          "games": 14,
+          "won": 11,
+          "draw": 2,
+          "lost": 1,
+          "goals": "103:26",
+          "points": 35
+        },
+        {
+          "place": 2,
           "team": "Alstertal-Langenhorn 3.Hr.",
           "games": 14,
           "won": 11,
@@ -390,16 +400,6 @@
           "lost": 2,
           "goals": "99:18",
           "points": 34
-        },
-        {
-          "place": 2,
-          "team": "Polonia 4.Hr.",
-          "games": 13,
-          "won": 10,
-          "draw": 2,
-          "lost": 1,
-          "goals": "101:25",
-          "points": 32
         },
         {
           "place": 3,
@@ -413,6 +413,16 @@
         },
         {
           "place": 4,
+          "team": "Nordlichter im NSV 2.Hr.",
+          "games": 14,
+          "won": 8,
+          "draw": 3,
+          "lost": 3,
+          "goals": "31:19",
+          "points": 27
+        },
+        {
+          "place": 5,
           "team": "HSV 5.Hr.",
           "games": 13,
           "won": 8,
@@ -422,17 +432,17 @@
           "points": 26
         },
         {
-          "place": 5,
-          "team": "Nordlichter im NSV 2.Hr.",
-          "games": 13,
-          "won": 8,
-          "draw": 2,
-          "lost": 3,
-          "goals": "30:18",
-          "points": 26
+          "place": 6,
+          "team": "Farmsen 2.Hr.",
+          "games": 14,
+          "won": 7,
+          "draw": 3,
+          "lost": 4,
+          "goals": "55:30",
+          "points": 24
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "Poppenbüttel 2.Hr.",
           "games": 13,
           "won": 7,
@@ -440,16 +450,6 @@
           "lost": 3,
           "goals": "45:22",
           "points": 24
-        },
-        {
-          "place": 7,
-          "team": "Farmsen 2.Hr.",
-          "games": 13,
-          "won": 7,
-          "draw": 2,
-          "lost": 4,
-          "goals": "54:29",
-          "points": 23
         },
         {
           "place": 8,
@@ -474,11 +474,11 @@
         {
           "place": 10,
           "team": "Friedrichsgabe 1.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 5,
           "draw": 5,
-          "lost": 3,
-          "goals": "42:24",
+          "lost": 4,
+          "goals": "43:26",
           "points": 20
         },
         {
@@ -608,31 +608,31 @@
         {
           "place": 5,
           "team": "Victoria 2.Ü32",
-          "games": 5,
+          "games": 6,
           "won": 3,
           "draw": 1,
-          "lost": 1,
-          "goals": "11:8",
+          "lost": 2,
+          "goals": "13:11",
           "points": 10
         },
         {
           "place": 6,
+          "team": "UH-Adler 1.Ü32",
+          "games": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2,
+          "goals": "10:13",
+          "points": 10
+        },
+        {
+          "place": 7,
           "team": "Wellingsbüttel 1.Ü32",
           "games": 6,
           "won": 2,
           "draw": 1,
           "lost": 3,
           "goals": "9:11",
-          "points": 7
-        },
-        {
-          "place": 7,
-          "team": "UH-Adler 1.Ü32",
-          "games": 5,
-          "won": 2,
-          "draw": 1,
-          "lost": 2,
-          "goals": "7:11",
           "points": 7
         },
         {
