@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T12:30:17+01:00",
+  "generated_at": "2026-11-14T12:40:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1411,6 +1411,16 @@
         },
         {
           "place": 2,
+          "team": "Rahlstedt 3.C-Jun. (A2)",
+          "games": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2,
+          "goals": "16:9",
+          "points": 12
+        },
+        {
+          "place": 3,
           "team": "GW Eimsbüttel 1.C-Jun. (A1)",
           "games": 6,
           "won": 3,
@@ -1420,7 +1430,7 @@
           "points": 10
         },
         {
-          "place": 3,
+          "place": 4,
           "team": "Farmsen 1.C-Jun. (A1)",
           "games": 5,
           "won": 3,
@@ -1430,7 +1440,7 @@
           "points": 10
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "VfL 93 2.C-Jun. (A2)",
           "games": 5,
           "won": 3,
@@ -1440,23 +1450,13 @@
           "points": 9
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "Bramfeld 1.C-Jun. (A1)",
           "games": 5,
           "won": 3,
           "draw": 0,
           "lost": 2,
           "goals": "15:10",
-          "points": 9
-        },
-        {
-          "place": 6,
-          "team": "Rahlstedt 3.C-Jun. (A2)",
-          "games": 5,
-          "won": 3,
-          "draw": 0,
-          "lost": 2,
-          "goals": "10:7",
           "points": 9
         },
         {
@@ -1492,11 +1492,11 @@
         {
           "place": 10,
           "team": "Sasel 4.C-Jun. (A2)",
-          "games": 5,
+          "games": 6,
           "won": 0,
           "draw": 0,
-          "lost": 5,
-          "goals": "7:30",
+          "lost": 6,
+          "goals": "9:36",
           "points": 0
         }
       ]
