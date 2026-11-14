@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T17:30:18+01:00",
+  "generated_at": "2026-11-14T17:40:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1327,6 +1327,16 @@
         },
         {
           "place": 8,
+          "team": "Glashütte 2.B-Jun. (J2)",
+          "games": 6,
+          "won": 1,
+          "draw": 2,
+          "lost": 3,
+          "goals": "11:20",
+          "points": 5
+        },
+        {
+          "place": 9,
           "team": "Bramfeld 1.B-Jun. (J1)",
           "games": 5,
           "won": 0,
@@ -1336,7 +1346,7 @@
           "points": 3
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "Blankenese 3.B-Jun. (J3)",
           "games": 5,
           "won": 1,
@@ -1346,7 +1356,7 @@
           "points": 3
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "tus BERNE 2.B-Jun. (J2)",
           "games": 6,
           "won": 1,
@@ -1356,23 +1366,13 @@
           "points": 3
         },
         {
-          "place": 11,
-          "team": "Glashütte 2.B-Jun. (J2)",
-          "games": 5,
-          "won": 0,
-          "draw": 2,
-          "lost": 3,
-          "goals": "6:20",
-          "points": 2
-        },
-        {
           "place": 12,
           "team": "Urania 1.B-Jun. (J1)",
-          "games": 5,
+          "games": 6,
           "won": 0,
           "draw": 0,
-          "lost": 5,
-          "goals": "4:51",
+          "lost": 6,
+          "goals": "4:56",
           "points": 0
         }
       ]
