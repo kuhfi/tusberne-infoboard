@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T19:10:24+01:00",
+  "generated_at": "2026-11-14T20:00:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -761,6 +761,16 @@
         },
         {
           "place": 7,
+          "team": "Tonndorf-Lohe/​Condor 1.Ü40 SG",
+          "games": 7,
+          "won": 3,
+          "draw": 0,
+          "lost": 4,
+          "goals": "12:15",
+          "points": 9
+        },
+        {
+          "place": 8,
           "team": "Billstedt-Horn 1.Ü40",
           "games": 6,
           "won": 3,
@@ -770,7 +780,7 @@
           "points": 9
         },
         {
-          "place": 8,
+          "place": 9,
           "team": "SC Wentorf 1.Ü40",
           "games": 6,
           "won": 2,
@@ -780,7 +790,7 @@
           "points": 7
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "Voran Ohe 1.Ü40",
           "games": 7,
           "won": 2,
@@ -790,23 +800,13 @@
           "points": 7
         },
         {
-          "place": 10,
-          "team": "Tonndorf-Lohe/​Condor 1.Ü40 SG",
-          "games": 6,
-          "won": 2,
-          "draw": 0,
-          "lost": 4,
-          "goals": "10:15",
-          "points": 6
-        },
-        {
           "place": 11,
           "team": "Curslack-Neuengamme 1.Ü40",
-          "games": 6,
+          "games": 7,
           "won": 2,
           "draw": 0,
-          "lost": 4,
-          "goals": "8:19",
+          "lost": 5,
+          "goals": "8:21",
           "points": 6
         },
         {
@@ -1768,15 +1768,6 @@
       "display_name": "tus BERNE 1.D",
       "league_line": "D-Junioren Verbandsliga · U13-OL 02 Herbst · Saison 2026/27",
       "last_game": {
-        "date": "08.11.2026",
-        "time": "13:00",
-        "competition": "Pokal",
-        "home": "tus BERNE 1.D-Jun. (A1)",
-        "away": "Harksheide 2.D-Jun. (A2)-S",
-        "home_score": "4",
-        "away_score": "0"
-      },
-      "next_game": {
         "date": "14.11.2026",
         "time": "17:00",
         "competition": "Bezirksfreundschaftsspiele",
@@ -1784,6 +1775,15 @@
         "away": "Rahlstedt 1.D-Jun. (A1)",
         "home_score": "4",
         "away_score": "2"
+      },
+      "next_game": {
+        "date": "05.12.2026",
+        "time": "18:00",
+        "competition": "Bezirksfreundschaftsspiele",
+        "home": "tus BERNE 1.D-Jun. (A1)",
+        "away": "Niedersachsen Döhren",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
