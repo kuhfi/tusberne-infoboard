@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T18:00:17+01:00",
+  "generated_at": "2026-11-15T18:20:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -310,21 +310,21 @@
         {
           "place": 11,
           "team": "Polonia 3.Hr.",
-          "games": 12,
-          "won": 3,
+          "games": 13,
+          "won": 4,
           "draw": 1,
           "lost": 8,
-          "goals": "27:39",
-          "points": 10
+          "goals": "35:39",
+          "points": 13
         },
         {
           "place": 12,
           "team": "DJK Hamburg 1.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 2,
           "draw": 1,
-          "lost": 9,
-          "goals": "20:67",
+          "lost": 10,
+          "goals": "20:75",
           "points": 7
         },
         {
