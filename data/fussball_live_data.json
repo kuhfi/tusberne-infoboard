@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T14:10:20+01:00",
+  "generated_at": "2026-11-15T14:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -681,15 +681,6 @@
       "display_name": "tus BERNE 1.Ü40",
       "league_line": "Herren Ü40 Landesliga · Ü40-LL 01 · Saison 2026/27",
       "last_game": {
-        "date": "11.11.2026",
-        "time": "20:00",
-        "competition": "Kreisfreundschaftsspiele",
-        "home": "Farmsen 1.Ü40",
-        "away": "tus BERNE 1.Ü40",
-        "home_score": "0",
-        "away_score": "1"
-      },
-      "next_game": {
         "date": "15.11.2026",
         "time": "11:15",
         "competition": "Landesliga",
@@ -697,6 +688,15 @@
         "away": "tus BERNE 1.Ü40",
         "home_score": "1",
         "away_score": "5"
+      },
+      "next_game": {
+        "date": "22.11.2026",
+        "time": "09:00",
+        "competition": "Landesliga",
+        "home": "tus BERNE 1.Ü40",
+        "away": "Walddörfer 2.Ü40",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
