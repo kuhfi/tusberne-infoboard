@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T13:00:16+01:00",
+  "generated_at": "2026-11-15T13:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -26,12 +26,12 @@
         {
           "place": 1,
           "team": "DSC Hanseat 1.Hr.",
-          "games": 12,
-          "won": 11,
+          "games": 13,
+          "won": 12,
           "draw": 0,
           "lost": 1,
-          "goals": "48:10",
-          "points": 33
+          "goals": "53:10",
+          "points": 36
         },
         {
           "place": 2,
@@ -126,11 +126,11 @@
         {
           "place": 11,
           "team": "Croatia 1.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 4,
           "draw": 2,
-          "lost": 7,
-          "goals": "29:35",
+          "lost": 8,
+          "goals": "29:40",
           "points": 14
         },
         {
@@ -1630,6 +1630,16 @@
         },
         {
           "place": 3,
+          "team": "SV Groß Borstel 4.C-Jun. (J2)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "18:12",
+          "points": 9
+        },
+        {
+          "place": 4,
           "team": "tus BERNE 3.C-Jun. (J1)",
           "games": 5,
           "won": 3,
@@ -1639,23 +1649,13 @@
           "points": 9
         },
         {
-          "place": 4,
-          "team": "SV Groß Borstel 4.C-Jun. (J2)",
-          "games": 4,
-          "won": 2,
-          "draw": 0,
-          "lost": 2,
-          "goals": "13:12",
-          "points": 6
-        },
-        {
           "place": 5,
           "team": "Sperber 1.C-Jun. (J1)",
-          "games": 4,
+          "games": 5,
           "won": 2,
           "draw": 0,
-          "lost": 2,
-          "goals": "15:15",
+          "lost": 3,
+          "goals": "15:20",
           "points": 6
         },
         {
