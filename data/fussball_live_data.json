@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T12:40:18+01:00",
+  "generated_at": "2026-11-15T12:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -547,15 +547,6 @@
       "display_name": "tus BERNE 1.Ü32",
       "league_line": "Herren Ü32 Landesliga · Ü32-LL 01 · Saison 2026/27",
       "last_game": {
-        "date": "17.10.2026",
-        "time": "11:00",
-        "competition": "Landesliga",
-        "home": "tus BERNE  1.Ü32",
-        "away": "BU 2.Ü32",
-        "home_score": "2",
-        "away_score": "7"
-      },
-      "next_game": {
         "date": "15.11.2026",
         "time": "09:45",
         "competition": "Landesliga",
@@ -563,6 +554,15 @@
         "away": "tus BERNE  1.Ü32",
         "home_score": "2",
         "away_score": "2"
+      },
+      "next_game": {
+        "date": "21.11.2026",
+        "time": "11:00",
+        "competition": "Landesliga",
+        "home": "tus BERNE  1.Ü32",
+        "away": "UH-Adler 1.Ü32",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
@@ -885,6 +885,16 @@
         },
         {
           "place": 5,
+          "team": "Dassendorf/​Aumühle 1.Ü50 SG",
+          "games": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2,
+          "goals": "23:13",
+          "points": 10
+        },
+        {
+          "place": 6,
           "team": "Düneberg 1.Ü50",
           "games": 7,
           "won": 3,
@@ -894,7 +904,7 @@
           "points": 10
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "tus BERNE 1.Ü50",
           "games": 5,
           "won": 3,
@@ -902,16 +912,6 @@
           "lost": 2,
           "goals": "14:12",
           "points": 9
-        },
-        {
-          "place": 7,
-          "team": "Dassendorf/​Aumühle 1.Ü50 SG",
-          "games": 5,
-          "won": 2,
-          "draw": 1,
-          "lost": 2,
-          "goals": "16:12",
-          "points": 7
         },
         {
           "place": 8,
@@ -926,11 +926,11 @@
         {
           "place": 9,
           "team": "Schwarzenbek 1.Ü50",
-          "games": 5,
+          "games": 6,
           "won": 0,
           "draw": 0,
-          "lost": 5,
-          "goals": "3:13",
+          "lost": 6,
+          "goals": "4:20",
           "points": 0
         },
         {
@@ -1163,6 +1163,16 @@
         },
         {
           "place": 4,
+          "team": "BU 2.B-Jun. (J1)",
+          "games": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2,
+          "goals": "16:13",
+          "points": 12
+        },
+        {
+          "place": 5,
           "team": "Vorw. Wacker 2.B-Jun. (J1)",
           "games": 6,
           "won": 3,
@@ -1172,7 +1182,7 @@
           "points": 11
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "Lemsahl 1.B-Jun. (J1)",
           "games": 6,
           "won": 3,
@@ -1182,23 +1192,13 @@
           "points": 10
         },
         {
-          "place": 6,
-          "team": "BU 2.B-Jun. (J1)",
-          "games": 5,
-          "won": 3,
-          "draw": 0,
-          "lost": 2,
-          "goals": "12:10",
-          "points": 9
-        },
-        {
           "place": 7,
           "team": "Niendorf 2.B-Jun. (J1)",
-          "games": 5,
+          "games": 6,
           "won": 2,
           "draw": 0,
-          "lost": 3,
-          "goals": "10:14",
+          "lost": 4,
+          "goals": "13:18",
           "points": 6
         },
         {
