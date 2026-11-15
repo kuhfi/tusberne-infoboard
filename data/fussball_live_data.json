@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T09:00:18+01:00",
+  "generated_at": "2026-11-15T10:40:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -731,6 +731,16 @@
         },
         {
           "place": 4,
+          "team": "SC Wentorf 1.Ü40",
+          "games": 7,
+          "won": 3,
+          "draw": 1,
+          "lost": 3,
+          "goals": "14:13",
+          "points": 10
+        },
+        {
+          "place": 5,
           "team": "Rahlstedt 1.Ü40",
           "games": 6,
           "won": 3,
@@ -740,7 +750,7 @@
           "points": 10
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "Wellingsbüttel 1.Ü40",
           "games": 6,
           "won": 3,
@@ -750,7 +760,7 @@
           "points": 9
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "Hoisbüttel 1.Ü40",
           "games": 7,
           "won": 3,
@@ -760,7 +770,7 @@
           "points": 9
         },
         {
-          "place": 7,
+          "place": 8,
           "team": "Tonndorf-Lohe/​Condor 1.Ü40 SG",
           "games": 7,
           "won": 3,
@@ -770,7 +780,7 @@
           "points": 9
         },
         {
-          "place": 8,
+          "place": 9,
           "team": "Billstedt-Horn 1.Ü40",
           "games": 6,
           "won": 3,
@@ -778,16 +788,6 @@
           "lost": 3,
           "goals": "13:18",
           "points": 9
-        },
-        {
-          "place": 9,
-          "team": "SC Wentorf 1.Ü40",
-          "games": 6,
-          "won": 2,
-          "draw": 1,
-          "lost": 3,
-          "goals": "11:12",
-          "points": 7
         },
         {
           "place": 10,
@@ -812,11 +812,11 @@
         {
           "place": 12,
           "team": "Walddörfer 2.Ü40",
-          "games": 6,
+          "games": 7,
           "won": 1,
           "draw": 0,
-          "lost": 5,
-          "goals": "7:25",
+          "lost": 6,
+          "goals": "8:28",
           "points": 3
         }
       ]
