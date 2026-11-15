@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T14:50:17+01:00",
+  "generated_at": "2026-11-15T15:30:20+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -19,8 +19,8 @@
         "competition": "Bezirksliga",
         "home": "HEBC 2.Hr.",
         "away": "tus BERNE 1.Hr.",
-        "home_score": null,
-        "away_score": null
+        "home_score": "6",
+        "away_score": "1"
       },
       "table": [
         {
@@ -105,6 +105,16 @@
         },
         {
           "place": 9,
+          "team": "HEBC 2.Hr.",
+          "games": 14,
+          "won": 4,
+          "draw": 4,
+          "lost": 6,
+          "goals": "34:37",
+          "points": 16
+        },
+        {
+          "place": 10,
           "team": "Polonia 1.Hr.",
           "games": 13,
           "won": 4,
@@ -114,7 +124,7 @@
           "points": 16
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Alstertal-Langenhorn 1.Hr.",
           "games": 14,
           "won": 5,
@@ -124,7 +134,7 @@
           "points": 15
         },
         {
-          "place": 11,
+          "place": 12,
           "team": "Croatia 1.Hr.",
           "games": 14,
           "won": 4,
@@ -134,23 +144,13 @@
           "points": 14
         },
         {
-          "place": 12,
-          "team": "HEBC 2.Hr.",
-          "games": 13,
-          "won": 3,
-          "draw": 4,
-          "lost": 6,
-          "goals": "28:36",
-          "points": 13
-        },
-        {
           "place": 13,
           "team": "tus BERNE 1.Hr.",
-          "games": 11,
+          "games": 12,
           "won": 4,
           "draw": 0,
-          "lost": 7,
-          "goals": "18:31",
+          "lost": 8,
+          "goals": "19:37",
           "points": 12
         },
         {
@@ -1288,12 +1288,12 @@
         {
           "place": 4,
           "team": "GW Eimsbüttel 2.B-Jun. (J2)",
-          "games": 5,
-          "won": 3,
+          "games": 6,
+          "won": 4,
           "draw": 1,
           "lost": 1,
-          "goals": "36:10",
-          "points": 10
+          "goals": "41:12",
+          "points": 13
         },
         {
           "place": 5,
@@ -1308,11 +1308,11 @@
         {
           "place": 6,
           "team": "Lemsahl 2.B-Jun. (J2)",
-          "games": 5,
+          "games": 6,
           "won": 2,
           "draw": 2,
-          "lost": 1,
-          "goals": "18:12",
+          "lost": 2,
+          "goals": "20:17",
           "points": 8
         },
         {
