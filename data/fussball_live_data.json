@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T18:20:18+01:00",
+  "generated_at": "2026-11-15T18:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -35,6 +35,16 @@
         },
         {
           "place": 2,
+          "team": "UH-Adler 1.Hr.",
+          "games": 14,
+          "won": 10,
+          "draw": 0,
+          "lost": 4,
+          "goals": "43:22",
+          "points": 27
+        },
+        {
+          "place": 3,
           "team": "SV Groß Borstel 1.Hr.",
           "games": 14,
           "won": 7,
@@ -42,16 +52,6 @@
           "lost": 3,
           "goals": "35:26",
           "points": 25
-        },
-        {
-          "place": 3,
-          "team": "UH-Adler 1.Hr.",
-          "games": 13,
-          "won": 9,
-          "draw": 0,
-          "lost": 4,
-          "goals": "39:21",
-          "points": 24
         },
         {
           "place": 4,
@@ -156,11 +156,11 @@
         {
           "place": 14,
           "team": "Wellingsbüttel 1.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 3,
           "draw": 4,
-          "lost": 5,
-          "goals": "27:28",
+          "lost": 6,
+          "goals": "28:32",
           "points": 10
         },
         {
@@ -194,8 +194,8 @@
         "competition": "Kreisklasse",
         "home": "Störtebeker SV 1.Hr.",
         "away": "tus BERNE 2.Hr.",
-        "home_score": null,
-        "away_score": null
+        "home_score": "1",
+        "away_score": "12"
       },
       "next_game": {
         "date": "22.11.2026",
@@ -209,6 +209,16 @@
       "table": [
         {
           "place": 1,
+          "team": "tus BERNE 2.Hr.",
+          "games": 12,
+          "won": 10,
+          "draw": 2,
+          "lost": 0,
+          "goals": "103:17",
+          "points": 32
+        },
+        {
+          "place": 2,
           "team": "Bramfeld 3.Hr.",
           "games": 13,
           "won": 10,
@@ -216,16 +226,6 @@
           "lost": 2,
           "goals": "38:28",
           "points": 31
-        },
-        {
-          "place": 2,
-          "team": "tus BERNE 2.Hr.",
-          "games": 11,
-          "won": 9,
-          "draw": 2,
-          "lost": 0,
-          "goals": "91:16",
-          "points": 29
         },
         {
           "place": 3,
@@ -340,11 +340,11 @@
         {
           "place": 14,
           "team": "Störtebeker SV 1.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 1,
           "draw": 1,
-          "lost": 11,
-          "goals": "14:59",
+          "lost": 12,
+          "goals": "15:71",
           "points": 4
         },
         {
