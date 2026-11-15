@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T12:20:18+01:00",
+  "generated_at": "2026-11-15T12:40:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -845,6 +845,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Alteng./​SC V. M./​Cursl.-N. 1.Ü50 SG",
+          "games": 6,
+          "won": 5,
+          "draw": 0,
+          "lost": 1,
+          "goals": "21:6",
+          "points": 15
+        },
+        {
+          "place": 2,
           "team": "Walddörfer 1.Ü50",
           "games": 6,
           "won": 5,
@@ -854,7 +864,7 @@
           "points": 15
         },
         {
-          "place": 2,
+          "place": 3,
           "team": "Concordia 1.Ü50",
           "games": 5,
           "won": 4,
@@ -864,23 +874,13 @@
           "points": 12
         },
         {
-          "place": 3,
+          "place": 4,
           "team": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
           "games": 6,
           "won": 4,
           "draw": 1,
           "lost": 1,
           "goals": "17:7",
-          "points": 12
-        },
-        {
-          "place": 4,
-          "team": "Alteng./​SC V. M./​Cursl.-N. 1.Ü50 SG",
-          "games": 5,
-          "won": 4,
-          "draw": 0,
-          "lost": 1,
-          "goals": "13:6",
           "points": 12
         },
         {
@@ -916,11 +916,11 @@
         {
           "place": 8,
           "team": "Meiendorf/​Wandsetal/​Farmsen 1.Ü50 SG",
-          "games": 4,
+          "games": 5,
           "won": 0,
           "draw": 1,
-          "lost": 3,
-          "goals": "2:15",
+          "lost": 4,
+          "goals": "2:23",
           "points": 1
         },
         {
@@ -1431,6 +1431,16 @@
         },
         {
           "place": 4,
+          "team": "VfL 93 2.C-Jun. (A2)",
+          "games": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2,
+          "goals": "26:17",
+          "points": 10
+        },
+        {
+          "place": 5,
           "team": "GW Eimsbüttel 1.C-Jun. (A1)",
           "games": 6,
           "won": 3,
@@ -1440,7 +1450,7 @@
           "points": 10
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "Farmsen 1.C-Jun. (A1)",
           "games": 5,
           "won": 3,
@@ -1450,24 +1460,14 @@
           "points": 10
         },
         {
-          "place": 6,
-          "team": "VfL 93 2.C-Jun. (A2)",
-          "games": 5,
-          "won": 3,
-          "draw": 0,
-          "lost": 2,
-          "goals": "22:13",
-          "points": 9
-        },
-        {
           "place": 7,
           "team": "UH-Adler 1.C-Jun. (A1)",
-          "games": 5,
+          "games": 6,
           "won": 2,
-          "draw": 0,
+          "draw": 1,
           "lost": 3,
-          "goals": "11:13",
-          "points": 6
+          "goals": "15:17",
+          "points": 7
         },
         {
           "place": 8,
@@ -1604,8 +1604,8 @@
         "competition": "Kreisliga",
         "home": "Lemsahl 1.C-Jun. (J1)",
         "away": "tus BERNE 3.C-Jun. (J1)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "0",
+        "away_score": "3"
       },
       "table": [
         {
@@ -1630,6 +1630,16 @@
         },
         {
           "place": 3,
+          "team": "tus BERNE 3.C-Jun. (J1)",
+          "games": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "goals": "19:17",
+          "points": 9
+        },
+        {
+          "place": 4,
           "team": "SV Groß Borstel 4.C-Jun. (J2)",
           "games": 4,
           "won": 2,
@@ -1639,23 +1649,13 @@
           "points": 6
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "Sperber 1.C-Jun. (J1)",
           "games": 4,
           "won": 2,
           "draw": 0,
           "lost": 2,
           "goals": "15:15",
-          "points": 6
-        },
-        {
-          "place": 5,
-          "team": "tus BERNE 3.C-Jun. (J1)",
-          "games": 4,
-          "won": 2,
-          "draw": 0,
-          "lost": 2,
-          "goals": "16:17",
           "points": 6
         },
         {
@@ -1681,11 +1681,11 @@
         {
           "place": 8,
           "team": "Lemsahl 1.C-Jun. (J1)",
-          "games": 4,
+          "games": 5,
           "won": 0,
           "draw": 0,
-          "lost": 4,
-          "goals": "9:16",
+          "lost": 5,
+          "goals": "9:19",
           "points": 0
         }
       ]
