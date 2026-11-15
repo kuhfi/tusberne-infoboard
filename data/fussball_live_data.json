@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T20:00:18+01:00",
+  "generated_at": "2026-11-15T21:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -155,6 +155,16 @@
         },
         {
           "place": 14,
+          "team": "Eilbek 1.Hr.",
+          "games": 14,
+          "won": 3,
+          "draw": 2,
+          "lost": 9,
+          "goals": "20:48",
+          "points": 11
+        },
+        {
+          "place": 15,
           "team": "Wellingsbüttel 1.Hr.",
           "games": 13,
           "won": 3,
@@ -164,23 +174,13 @@
           "points": 10
         },
         {
-          "place": 15,
+          "place": 16,
           "team": "Walddörfer 1.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 3,
           "draw": 2,
-          "lost": 8,
-          "goals": "25:40",
-          "points": 8
-        },
-        {
-          "place": 16,
-          "team": "Eilbek 1.Hr.",
-          "games": 13,
-          "won": 2,
-          "draw": 2,
           "lost": 9,
-          "goals": "14:45",
+          "goals": "28:46",
           "points": 8
         }
       ]
