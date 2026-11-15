@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T10:40:17+01:00",
+  "generated_at": "2026-11-15T11:30:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -561,8 +561,8 @@
         "competition": "Landesliga",
         "home": "Wellingsbüttel 1.Ü32",
         "away": "tus BERNE  1.Ü32",
-        "home_score": null,
-        "away_score": null
+        "home_score": "2",
+        "away_score": "2"
       },
       "table": [
         {
@@ -628,12 +628,12 @@
         {
           "place": 7,
           "team": "Wellingsbüttel 1.Ü32",
-          "games": 6,
+          "games": 7,
           "won": 2,
-          "draw": 1,
+          "draw": 2,
           "lost": 3,
-          "goals": "9:11",
-          "points": 7
+          "goals": "11:13",
+          "points": 8
         },
         {
           "place": 8,
@@ -658,12 +658,12 @@
         {
           "place": 10,
           "team": "tus BERNE  1.Ü32",
-          "games": 5,
+          "games": 6,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 4,
-          "goals": "6:18",
-          "points": 3
+          "goals": "8:20",
+          "points": 4
         },
         {
           "place": 11,
