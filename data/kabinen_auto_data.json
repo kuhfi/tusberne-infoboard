@@ -1,139 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T10:10:45+01:00",
+  "generated_at": "2026-11-16T06:31:30+01:00",
   "period": {
     "weeks": [
       {
-        "start": "2026-11-09",
-        "end": "2026-11-15"
-      },
-      {
         "start": "2026-11-16",
         "end": "2026-11-22"
+      },
+      {
+        "start": "2026-11-23",
+        "end": "2026-11-29"
       }
     ]
   },
   "games": [
-    {
-      "date": "2026-11-14",
-      "time": "09:30",
-      "kind": "Meisterschaft",
-      "league": "Bezirksliga",
-      "home": "tus BERNE 1.C (A1)",
-      "away": "GW Eimsbüttel 1.C (A1)",
-      "home_cabin": "1",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-14",
-      "time": "11:00",
-      "kind": "Meisterschaft",
-      "league": "Kreisklasse",
-      "home": "tus BERNE 4.C (A3) 7er",
-      "away": "Nordlichter im NSV 1.C (A1) 7er",
-      "home_cabin": "2",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
-      "festival": false
-    },
-    {
-      "date": "2026-11-14",
-      "time": "13:00",
-      "kind": "Meisterschaft",
-      "league": "Landesliga",
-      "home": "tus BERNE 1.A (J1)",
-      "away": "Süderelbe 1.A (J1)",
-      "home_cabin": "1",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-14",
-      "time": "15:00",
-      "kind": "Meisterschaft",
-      "league": "Kreisliga",
-      "home": "tus BERNE 2.B (J2)",
-      "away": "UH-Adler 2.B (J1)",
-      "home_cabin": "2",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
-      "festival": false
-    },
-    {
-      "date": "2026-11-14",
-      "time": "17:00",
-      "kind": "Freundschaftsspiel",
-      "league": "Bezirksfreundschaftsspiele",
-      "home": "tus BERNE 1.D (A1)",
-      "away": "Rahlstedt 1.D (A1)",
-      "home_cabin": "1",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-15",
-      "time": "09:00",
-      "kind": "Freundschaftsspiel",
-      "league": "Kreisfreundschaftsspiele",
-      "home": "tus BERNE 3.D (A2)-S",
-      "away": "Walddörfer 3.D (A2)-S",
-      "home_cabin": "1",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-15",
-      "time": "13:00",
-      "kind": "Meisterschaft",
-      "league": "Vereinsturnier",
-      "home": "tus BERNE 7.D (J4)",
-      "away": "Concordia 3.D (J2)",
-      "home_cabin": "1",
-      "guest_cabin": "4",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-15",
-      "time": "13:22",
-      "kind": "Meisterschaft",
-      "league": "Vereinsturnier",
-      "home": "Altenwerder 1.E (J1) (EJ)",
-      "away": "tus BERNE 7.D (J4)",
-      "home_cabin": "",
-      "guest_cabin": "",
-      "sr_cabin": "",
-      "festival": false
-    },
-    {
-      "date": "2026-11-15",
-      "time": "13:44",
-      "kind": "Meisterschaft",
-      "league": "Vereinsturnier",
-      "home": "Poppenbüttel 2.E (A2) (EJ)",
-      "away": "tus BERNE 7.D (J4)",
-      "home_cabin": "",
-      "guest_cabin": "",
-      "sr_cabin": "",
-      "festival": false
-    },
-    {
-      "date": "2026-11-15",
-      "time": "15:00",
-      "kind": "Meisterschaft",
-      "league": "Kreisklasse",
-      "home": "tus BERNE 3.Hr.",
-      "away": "FC Hamburg 1.Hr.",
-      "home_cabin": "2",
-      "guest_cabin": "3",
-      "sr_cabin": "SR2",
-      "festival": false
-    },
     {
       "date": "2026-11-21",
       "time": "09:00",
@@ -263,6 +143,90 @@
       "away": "Poppenbüttel 3.C (A2)",
       "home_cabin": "1",
       "guest_cabin": "3",
+      "sr_cabin": "SR2",
+      "festival": false
+    },
+    {
+      "date": "2026-11-28",
+      "time": "09:00",
+      "kind": "Meisterschaft",
+      "league": "Kreisliga",
+      "home": "tus BERNE 3.C (J1)",
+      "away": "SV Groß Borstel 4.C (J2)",
+      "home_cabin": "2",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-28",
+      "time": "11:00",
+      "kind": "Meisterschaft",
+      "league": "Bezirksliga",
+      "home": "tus BERNE 1.C (A1)",
+      "away": "Bramfeld 1.C (A1)",
+      "home_cabin": "1",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
+      "festival": false
+    },
+    {
+      "date": "2026-11-28",
+      "time": "13:00",
+      "kind": "Meisterschaft",
+      "league": "Landesliga",
+      "home": "tus BERNE 1.A (J1)",
+      "away": "Altona 93 2.A (J2)",
+      "home_cabin": "2",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:00",
+      "kind": "Meisterschaft",
+      "league": "Kreisliga",
+      "home": "tus BERNE 2.B (J2)",
+      "away": "Blankenese 3.B (J3)",
+      "home_cabin": "1",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
+      "festival": false
+    },
+    {
+      "date": "2026-11-28",
+      "time": "17:30",
+      "kind": "Meisterschaft",
+      "league": "Kreisklasse",
+      "home": "tus BERNE 2.Hr.",
+      "away": "Farmsen 3.Hr.",
+      "home_cabin": "2",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-29",
+      "time": "10:00",
+      "kind": "Meisterschaft",
+      "league": "Landesliga",
+      "home": "tus BERNE 2.D (J1)",
+      "away": "Rahlstedt 3.D (J1)",
+      "home_cabin": "2",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-29",
+      "time": "12:30",
+      "kind": "Meisterschaft",
+      "league": "Bezirksliga",
+      "home": "tus BERNE 1.Hr.",
+      "away": "SV Groß Borstel 1.Hr.",
+      "home_cabin": "1",
+      "guest_cabin": "4",
       "sr_cabin": "SR2",
       "festival": false
     }
