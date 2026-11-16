@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T06:31:30+01:00",
+  "generated_at": "2026-11-16T07:50:50+01:00",
   "period": {
     "weeks": [
       {
@@ -33,10 +33,11 @@
       "league": "Kreisturnier",
       "home": "tus BERNE 3.D (A2)-S",
       "away": "Eilbek 2.D (A1)-S",
-      "home_cabin": "2",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
-      "festival": false
+      "home_cabin": "",
+      "guest_cabin": "",
+      "sr_cabin": "",
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-21",
@@ -57,10 +58,11 @@
       "league": "Landesliga",
       "home": "tus BERNE 1.Ü32",
       "away": "UH-Adler 1.Ü32",
-      "home_cabin": "",
-      "guest_cabin": "",
-      "sr_cabin": "",
-      "festival": false
+      "home_cabin": "2",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-21",
@@ -233,9 +235,9 @@
   ],
   "manual_weeks": {
     "2026-11-16": {
-      "mode": "automatic",
+      "mode": "partial",
       "unmatched": 0,
-      "revision": 0
+      "revision": 1
     },
     "2026-11-23": {
       "mode": "automatic",
