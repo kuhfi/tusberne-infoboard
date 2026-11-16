@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T07:50:17+01:00",
+  "generated_at": "2026-11-16T10:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -413,6 +413,16 @@
         },
         {
           "place": 4,
+          "team": "HSV 5.Hr.",
+          "games": 14,
+          "won": 9,
+          "draw": 2,
+          "lost": 3,
+          "goals": "61:23",
+          "points": 29
+        },
+        {
+          "place": 5,
           "team": "Poppenbüttel 2.Hr.",
           "games": 14,
           "won": 8,
@@ -422,7 +432,7 @@
           "points": 27
         },
         {
-          "place": 5,
+          "place": 6,
           "team": "Nordlichter im NSV 2.Hr.",
           "games": 14,
           "won": 8,
@@ -430,16 +440,6 @@
           "lost": 3,
           "goals": "31:19",
           "points": 27
-        },
-        {
-          "place": 6,
-          "team": "HSV 5.Hr.",
-          "games": 13,
-          "won": 8,
-          "draw": 2,
-          "lost": 3,
-          "goals": "55:22",
-          "points": 26
         },
         {
           "place": 7,
@@ -494,11 +494,11 @@
         {
           "place": 12,
           "team": "Hummelsbüttel 1.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 5,
           "draw": 0,
-          "lost": 8,
-          "goals": "32:46",
+          "lost": 9,
+          "goals": "33:52",
           "points": 15
         },
         {
