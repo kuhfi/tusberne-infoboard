@@ -59,3 +59,13 @@ Ziel: Anleitung kürzer, übersichtlicher und ohne Quell-/Historienverweise in d
 8. Tests vor Deploy: vorhandene freie/belegte Slots; Doppelbuchung; ungültige Eingaben; Pop-up abbrechen; Checkboxen fehlen; Status „noch offen“; erfolgreich verbindlich buchen; Mobilansicht und Tastatur; bestehende Buchungsbenachrichtigung/Belegung weiter funktionsfähig.
 
 Verifikation: GitHub-Repo-Quelländerungen per Dateirücklesung prüfbar, Live-HTTP-Zugriffe auf Google Apps Script und GitHub Pages über die verfügbaren Browserquellen nicht bestätigt. Keine Google-Script-, Raspberry-Pi-, systemd-, Drive-Ordner- oder Kalenderänderung.
+
+## Vereinfachung nach Screenshot-Markierungen – 17.11.2026, nachmittags
+Die vom Nutzer grün gestrichenen Bereiche der mobilen Anleitung wurden **gezielt entfernt**:
+- Im ersten Hinweisblock den zweiten und dritten Satz nach „Vor dem Termin klären, wer das übernimmt.“ entfernt. Die eigentliche Schließpflicht und der knappe Aufruf zur Klärung bleiben.
+- Im ersten Hinweisblock die beiden Navigationsschaltflächen „Fußballraum buchen“ und „FAQ“ entfernt.
+- Unter „Tür & Alarmanlage bedienen“ den doppelten erklärenden Absatz entfernt; die Kennzeichnung „Nur für eingewiesene Personen“ bleibt.
+
+Änderung nur an `files/vereinszentrum-alarmanlage.html`, öffentlicher GitHub-Branch main, Commit `4eb4857b27e78cd360afddee803728ea26ff0799`; vorheriger Blob `d92426945355a80b5605859cfc963217b397192e`, neuer Blob `587d650da19c7aa7ec4eb55260e15abd0fa88bdb`. Rücknahme durch gezielten Git-Revert bzw. Wiederherstellen der Vorgängerblobfassung; keine Änderungen an Apps Script, Buchungs-/Kalenderdaten, Raspberry Pi oder anderen Webseiten.
+
+**Kontrolle:** komplette HTML-Quelldatei aus GitHub zurückgelesen, alle drei vorgesehenen Löschstellen nicht mehr enthalten, HTML-Tag-Verschachtelung geprüft (kein Fehlpaar, kein offenes Tag). Wichtige Bestandsinhalte vorhanden: Schließpflicht, Kurzaufforderung zur vorherigen Klärung, persönliche Einweisung beim Zugang, zwei ausklappbare Bedienabläufe, Alarmkontakt, Geschäftsstellenzeiten, echtes Logo und „EINMAL BERNE IMMER BERNE“. Kein eigenständiger Smartphone-/GitHub-Pages-Sichttest dieser Änderung erfolgt; GitHub-Commit bestätigt den Repository-Stand, nicht die Auslieferungszeit.
