@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T12:40:16+01:00",
+  "generated_at": "2026-11-17T15:10:23+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -11,7 +11,8 @@
         "home": "HEBC 2.Hr.",
         "away": "tus BERNE 1.Hr.",
         "home_score": "6",
-        "away_score": "1"
+        "away_score": "1",
+        "status": null
       },
       "next_game": {
         "date": "22.11.2026",
@@ -20,7 +21,8 @@
         "home": "tus BERNE 1.Hr.",
         "away": "Duvenstedt 1.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
