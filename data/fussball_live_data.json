@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T15:20:16+01:00",
+  "generated_at": "2026-11-17T20:40:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -249,6 +249,16 @@
         },
         {
           "place": 5,
+          "team": "MSV Hamburg 4.Hr.",
+          "games": 13,
+          "won": 7,
+          "draw": 3,
+          "lost": 3,
+          "goals": "44:28",
+          "points": 24
+        },
+        {
+          "place": 6,
           "team": "DSC Hanseat 2.Hr.",
           "games": 12,
           "won": 8,
@@ -256,16 +266,6 @@
           "lost": 4,
           "goals": "35:34",
           "points": 24
-        },
-        {
-          "place": 6,
-          "team": "MSV Hamburg 4.Hr.",
-          "games": 12,
-          "won": 7,
-          "draw": 2,
-          "lost": 3,
-          "goals": "43:27",
-          "points": 23
         },
         {
           "place": 7,
@@ -319,6 +319,16 @@
         },
         {
           "place": 12,
+          "team": "Hamburg Hurricanes 2.Hr.",
+          "games": 12,
+          "won": 2,
+          "draw": 1,
+          "lost": 9,
+          "goals": "18:44",
+          "points": 7
+        },
+        {
+          "place": 13,
           "team": "DJK Hamburg 1.Hr.",
           "games": 13,
           "won": 2,
@@ -326,16 +336,6 @@
           "lost": 10,
           "goals": "20:75",
           "points": 7
-        },
-        {
-          "place": 13,
-          "team": "Hamburg Hurricanes 2.Hr.",
-          "games": 11,
-          "won": 2,
-          "draw": 0,
-          "lost": 9,
-          "goals": "17:43",
-          "points": 6
         },
         {
           "place": 14,
