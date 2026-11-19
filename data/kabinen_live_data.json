@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T15:11:48+01:00",
+  "generated_at": "2026-11-19T09:10:52+01:00",
   "period": {
     "weeks": [
       {
@@ -28,27 +28,14 @@
     },
     {
       "date": "2026-11-21",
-      "time": "09:20",
-      "kind": "Meisterschaft",
-      "league": "Kreisturnier",
-      "home": "tus BERNE 3.D (A2)-S",
-      "away": "Eilbek 2.D (A1)-S",
-      "home_cabin": "",
-      "guest_cabin": "",
-      "sr_cabin": "",
-      "festival": false,
-      "manual_override": true
-    },
-    {
-      "date": "2026-11-21",
       "time": "09:40",
       "kind": "Meisterschaft",
       "league": "Kreisturnier",
       "home": "Eilbek 4.D (J3)-S",
       "away": "tus BERNE 3.D (A2)-S",
-      "home_cabin": "",
-      "guest_cabin": "",
-      "sr_cabin": "",
+      "home_cabin": "2",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
       "festival": false
     },
     {
@@ -71,9 +58,9 @@
       "league": "Landesliga",
       "home": "tus BERNE 1.B (J1)",
       "away": "BU 2.B (J1)",
-      "home_cabin": "1",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
+      "home_cabin": "2",
+      "guest_cabin": "4",
+      "sr_cabin": "SR2",
       "festival": false
     },
     {
@@ -83,9 +70,9 @@
       "league": "Landesliga",
       "home": "tus BERNE 2.D (J1)",
       "away": "Sasel 13.D (J7)",
-      "home_cabin": "2",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
+      "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
       "festival": false
     },
     {
@@ -248,7 +235,7 @@
   "manual_weeks": {
     "2026-11-16": {
       "mode": "partial",
-      "unmatched": 0,
+      "unmatched": 1,
       "revision": 1
     },
     "2026-11-23": {
