@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:10:17+01:00",
+  "generated_at": "2026-11-20T21:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -95,6 +95,16 @@
         },
         {
           "place": 8,
+          "team": "Croatia 1.Hr.",
+          "games": 15,
+          "won": 5,
+          "draw": 2,
+          "lost": 8,
+          "goals": "32:41",
+          "points": 17
+        },
+        {
+          "place": 9,
           "team": "Sasel 2.Hr.",
           "games": 13,
           "won": 5,
@@ -104,7 +114,7 @@
           "points": 16
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "HEBC 2.Hr.",
           "games": 14,
           "won": 4,
@@ -114,7 +124,7 @@
           "points": 16
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Polonia 1.Hr.",
           "games": 13,
           "won": 4,
@@ -124,7 +134,7 @@
           "points": 16
         },
         {
-          "place": 11,
+          "place": 12,
           "team": "Alstertal-Langenhorn 1.Hr.",
           "games": 14,
           "won": 5,
@@ -132,16 +142,6 @@
           "lost": 6,
           "goals": "25:29",
           "points": 15
-        },
-        {
-          "place": 12,
-          "team": "Croatia 1.Hr.",
-          "games": 14,
-          "won": 4,
-          "draw": 2,
-          "lost": 8,
-          "goals": "29:40",
-          "points": 14
         },
         {
           "place": 13,
@@ -176,11 +176,11 @@
         {
           "place": 16,
           "team": "Walddörfer 1.Hr.",
-          "games": 14,
+          "games": 15,
           "won": 3,
           "draw": 2,
-          "lost": 9,
-          "goals": "28:46",
+          "lost": 10,
+          "goals": "29:49",
           "points": 8
         }
       ]
@@ -713,21 +713,21 @@
         {
           "place": 2,
           "team": "Schwarzenbek 1.Ü40",
-          "games": 7,
-          "won": 5,
+          "games": 8,
+          "won": 6,
           "draw": 0,
           "lost": 2,
-          "goals": "26:11",
-          "points": 15
+          "goals": "30:13",
+          "points": 18
         },
         {
           "place": 3,
           "team": "Wandsetal 1.Ü40",
-          "games": 7,
+          "games": 8,
           "won": 4,
           "draw": 1,
-          "lost": 2,
-          "goals": "24:14",
+          "lost": 3,
+          "goals": "26:18",
           "points": 13
         },
         {
@@ -753,12 +753,12 @@
         {
           "place": 6,
           "team": "Hoisbüttel 1.Ü40",
-          "games": 7,
+          "games": 8,
           "won": 3,
-          "draw": 0,
+          "draw": 1,
           "lost": 4,
-          "goals": "11:11",
-          "points": 9
+          "goals": "13:13",
+          "points": 10
         },
         {
           "place": 7,
@@ -803,12 +803,12 @@
         {
           "place": 11,
           "team": "Curslack-Neuengamme 1.Ü40",
-          "games": 7,
+          "games": 8,
           "won": 2,
-          "draw": 0,
+          "draw": 1,
           "lost": 5,
-          "goals": "8:21",
-          "points": 6
+          "goals": "10:23",
+          "points": 7
         },
         {
           "place": 12,
