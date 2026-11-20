@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T13:30:18+01:00",
+  "generated_at": "2026-11-20T20:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -569,11 +569,11 @@
         {
           "place": 1,
           "team": "Poppenbüttel 1.Ü32",
-          "games": 6,
+          "games": 7,
           "won": 4,
           "draw": 2,
-          "lost": 0,
-          "goals": "21:5",
+          "lost": 1,
+          "goals": "21:10",
           "points": 14
         },
         {
@@ -608,6 +608,16 @@
         },
         {
           "place": 5,
+          "team": "Wellingsbüttel 1.Ü32",
+          "games": 8,
+          "won": 3,
+          "draw": 2,
+          "lost": 3,
+          "goals": "16:13",
+          "points": 11
+        },
+        {
+          "place": 6,
           "team": "Victoria 2.Ü32",
           "games": 6,
           "won": 3,
@@ -617,7 +627,7 @@
           "points": 10
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "UH-Adler 1.Ü32",
           "games": 6,
           "won": 3,
@@ -625,16 +635,6 @@
           "lost": 2,
           "goals": "10:13",
           "points": 10
-        },
-        {
-          "place": 7,
-          "team": "Wellingsbüttel 1.Ü32",
-          "games": 7,
-          "won": 2,
-          "draw": 2,
-          "lost": 3,
-          "goals": "11:13",
-          "points": 8
         },
         {
           "place": 8,
