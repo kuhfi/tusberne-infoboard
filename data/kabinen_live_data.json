@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T09:10:52+01:00",
+  "generated_at": "2026-11-20T09:51:46+01:00",
   "period": {
     "weeks": [
       {
@@ -16,38 +16,14 @@
   "games": [
     {
       "date": "2026-11-21",
-      "time": "09:00",
-      "kind": "Meisterschaft",
-      "league": "Kreisturnier",
-      "home": "tus BERNE 3.D (A2)-S",
-      "away": "Eilbek 3.D (A2)-S",
-      "home_cabin": "1",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
-      "festival": false
-    },
-    {
-      "date": "2026-11-21",
-      "time": "09:40",
-      "kind": "Meisterschaft",
-      "league": "Kreisturnier",
-      "home": "Eilbek 4.D (J3)-S",
-      "away": "tus BERNE 3.D (A2)-S",
-      "home_cabin": "2",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
-      "festival": false
-    },
-    {
-      "date": "2026-11-21",
       "time": "11:00",
       "kind": "Meisterschaft",
       "league": "Landesliga",
       "home": "tus BERNE 1.Ü32",
       "away": "UH-Adler 1.Ü32",
-      "home_cabin": "2",
-      "guest_cabin": "4",
-      "sr_cabin": "SR2",
+      "home_cabin": "1",
+      "guest_cabin": "3",
+      "sr_cabin": "SR1",
       "festival": false,
       "manual_override": true
     },
@@ -61,7 +37,8 @@
       "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
-      "festival": false
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-21",
@@ -73,7 +50,8 @@
       "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
-      "festival": false
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-22",
@@ -85,7 +63,8 @@
       "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR2",
-      "festival": false
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-22",
@@ -97,7 +76,8 @@
       "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR1",
-      "festival": false
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-22",
@@ -109,7 +89,8 @@
       "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR2",
-      "festival": false
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-22",
@@ -121,7 +102,8 @@
       "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR1",
-      "festival": false
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-22",
@@ -133,7 +115,8 @@
       "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR2",
-      "festival": false
+      "festival": false,
+      "manual_override": true
     },
     {
       "date": "2026-11-28",
@@ -234,9 +217,9 @@
   ],
   "manual_weeks": {
     "2026-11-16": {
-      "mode": "partial",
-      "unmatched": 1,
-      "revision": 1
+      "mode": "locked",
+      "unmatched": 0,
+      "revision": 3
     },
     "2026-11-23": {
       "mode": "automatic",
