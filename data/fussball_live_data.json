@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:30:44+01:00",
+  "generated_at": "2026-11-21T15:40:24+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -414,6 +414,16 @@
         },
         {
           "place": 4,
+          "team": "Poppenbüttel 2.Hr.",
+          "games": 15,
+          "won": 9,
+          "draw": 3,
+          "lost": 3,
+          "goals": "55:24",
+          "points": 30
+        },
+        {
+          "place": 5,
           "team": "HSV 5.Hr.",
           "games": 14,
           "won": 9,
@@ -421,16 +431,6 @@
           "lost": 3,
           "goals": "61:23",
           "points": 29
-        },
-        {
-          "place": 5,
-          "team": "Poppenbüttel 2.Hr.",
-          "games": 14,
-          "won": 8,
-          "draw": 3,
-          "lost": 3,
-          "goals": "51:23",
-          "points": 27
         },
         {
           "place": 6,
@@ -475,11 +475,11 @@
         {
           "place": 10,
           "team": "Friedrichsgabe 1.Hr.",
-          "games": 14,
+          "games": 15,
           "won": 5,
           "draw": 5,
-          "lost": 4,
-          "goals": "43:26",
+          "lost": 5,
+          "goals": "44:30",
           "points": 20
         },
         {
