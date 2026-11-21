@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:50:22+01:00",
+  "generated_at": "2026-11-21T17:00:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1857,12 +1857,22 @@
         "competition": "Landesliga",
         "home": "tus BERNE 2.D-Jun. (J1)",
         "away": "Sasel 13.D-Jun. (J7)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "6",
+        "away_score": "2"
       },
       "table": [
         {
           "place": 1,
+          "team": "tus BERNE 2.D-Jun. (J1)",
+          "games": 1,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "goals": "6:2",
+          "points": 3
+        },
+        {
+          "place": 2,
           "team": "Germania 1.D-Jun. (J1)",
           "games": 0,
           "won": 0,
@@ -1872,7 +1882,7 @@
           "points": 0
         },
         {
-          "place": 1,
+          "place": 2,
           "team": "Rahlstedt 3.D-Jun. (J1)",
           "games": 0,
           "won": 0,
@@ -1882,23 +1892,13 @@
           "points": 0
         },
         {
-          "place": 1,
+          "place": 4,
           "team": "Sasel 13.D-Jun. (J7)",
-          "games": 0,
+          "games": 1,
           "won": 0,
           "draw": 0,
-          "lost": 0,
-          "goals": "0:0",
-          "points": 0
-        },
-        {
-          "place": 1,
-          "team": "tus BERNE 2.D-Jun. (J1)",
-          "games": 0,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "goals": "0:0",
+          "lost": 1,
+          "goals": "2:6",
           "points": 0
         }
       ]
