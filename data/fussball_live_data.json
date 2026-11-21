@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:00:17+01:00",
+  "generated_at": "2026-11-21T16:30:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1259,11 +1259,11 @@
         {
           "place": 1,
           "team": "UH-Adler 2.B-Jun. (J1)",
-          "games": 6,
+          "games": 7,
           "won": 6,
           "draw": 0,
-          "lost": 0,
-          "goals": "58:6",
+          "lost": 1,
+          "goals": "58:11",
           "points": 18
         },
         {
@@ -1278,6 +1278,16 @@
         },
         {
           "place": 3,
+          "team": "GW Eimsbüttel 2.B-Jun. (J2)",
+          "games": 7,
+          "won": 5,
+          "draw": 1,
+          "lost": 1,
+          "goals": "46:12",
+          "points": 16
+        },
+        {
+          "place": 4,
           "team": "BU 4.B-Jun. (J2)",
           "games": 6,
           "won": 5,
@@ -1285,16 +1295,6 @@
           "lost": 1,
           "goals": "39:20",
           "points": 15
-        },
-        {
-          "place": 4,
-          "team": "GW Eimsbüttel 2.B-Jun. (J2)",
-          "games": 6,
-          "won": 4,
-          "draw": 1,
-          "lost": 1,
-          "goals": "41:12",
-          "points": 13
         },
         {
           "place": 5,
