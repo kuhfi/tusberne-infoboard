@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T18:10:19+01:00",
+  "generated_at": "2026-11-21T19:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -950,15 +950,6 @@
       "display_name": "tus BERNE 1.A",
       "league_line": "A-Junioren Landesliga · U18-LL 02 · Saison 2026/27",
       "last_game": {
-        "date": "14.11.2026",
-        "time": "13:00",
-        "competition": "Landesliga",
-        "home": "tus BERNE 1.A-Jun. (J1)",
-        "away": "Süderelbe 1.A-Jun. (J1)",
-        "home_score": "0",
-        "away_score": "3"
-      },
-      "next_game": {
         "date": "21.11.2026",
         "time": "16:00",
         "competition": "Landesliga",
@@ -966,6 +957,15 @@
         "away": "tus BERNE 1.A-Jun. (J1)",
         "home_score": "2",
         "away_score": "0"
+      },
+      "next_game": {
+        "date": "28.11.2026",
+        "time": "13:00",
+        "competition": "Landesliga",
+        "home": "tus BERNE 1.A-Jun. (J1)",
+        "away": "Altona 93 2.A-Jun. (J2)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
@@ -1010,6 +1010,16 @@
         },
         {
           "place": 5,
+          "team": "Nienstedten 2.A-Jun. (J1)",
+          "games": 9,
+          "won": 5,
+          "draw": 1,
+          "lost": 3,
+          "goals": "48:28",
+          "points": 16
+        },
+        {
+          "place": 6,
           "team": "tus BERNE 1.A-Jun. (J1)",
           "games": 9,
           "won": 5,
@@ -1017,16 +1027,6 @@
           "lost": 4,
           "goals": "13:20",
           "points": 15
-        },
-        {
-          "place": 6,
-          "team": "Nienstedten 2.A-Jun. (J1)",
-          "games": 8,
-          "won": 4,
-          "draw": 1,
-          "lost": 3,
-          "goals": "44:28",
-          "points": 13
         },
         {
           "place": 7,
@@ -1091,11 +1091,11 @@
         {
           "place": 13,
           "team": "Glashütte 2.A-Jun. (J1)",
-          "games": 8,
+          "games": 9,
           "won": 1,
           "draw": 1,
-          "lost": 6,
-          "goals": "13:31",
+          "lost": 7,
+          "goals": "13:35",
           "points": 4
         },
         {
