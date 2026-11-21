@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T13:40:29+01:00",
+  "generated_at": "2026-11-21T13:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1252,8 +1252,8 @@
         "competition": "Kreisliga",
         "home": "Bramfeld 1.B-Jun. (J1)",
         "away": "tus BERNE 2.B-Jun. (J2)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "6",
+        "away_score": "2"
       },
       "table": [
         {
@@ -1308,6 +1308,16 @@
         },
         {
           "place": 6,
+          "team": "Bramfeld 1.B-Jun. (J1)",
+          "games": 7,
+          "won": 2,
+          "draw": 3,
+          "lost": 2,
+          "goals": "18:28",
+          "points": 9
+        },
+        {
+          "place": 7,
           "team": "Lemsahl 2.B-Jun. (J2)",
           "games": 6,
           "won": 2,
@@ -1315,16 +1325,6 @@
           "lost": 2,
           "goals": "20:17",
           "points": 8
-        },
-        {
-          "place": 7,
-          "team": "Bramfeld 1.B-Jun. (J1)",
-          "games": 6,
-          "won": 1,
-          "draw": 3,
-          "lost": 2,
-          "goals": "12:26",
-          "points": 6
         },
         {
           "place": 8,
@@ -1359,11 +1359,11 @@
         {
           "place": 11,
           "team": "tus BERNE 2.B-Jun. (J2)",
-          "games": 6,
+          "games": 7,
           "won": 1,
           "draw": 0,
-          "lost": 5,
-          "goals": "9:57",
+          "lost": 6,
+          "goals": "11:63",
           "points": 3
         },
         {
@@ -1547,6 +1547,16 @@
         },
         {
           "place": 3,
+          "team": "TuS Hamburg 2.C-Jun. (A1)",
+          "games": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goals": "9:13",
+          "points": 7
+        },
+        {
+          "place": 4,
           "team": "Poppenbüttel 3.C-Jun. (A2)",
           "games": 4,
           "won": 1,
@@ -1556,23 +1566,13 @@
           "points": 4
         },
         {
-          "place": 4,
-          "team": "TuS Hamburg 2.C-Jun. (A1)",
-          "games": 4,
-          "won": 1,
-          "draw": 1,
-          "lost": 2,
-          "goals": "6:12",
-          "points": 4
-        },
-        {
           "place": 5,
           "team": "DUWO 08 1.C-Jun. (A1)",
-          "games": 3,
+          "games": 4,
           "won": 0,
           "draw": 3,
-          "lost": 0,
-          "goals": "9:9",
+          "lost": 1,
+          "goals": "10:12",
           "points": 3
         },
         {
