@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T14:20:21+01:00",
+  "generated_at": "2026-11-21T14:50:36+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1452,6 +1452,16 @@
         },
         {
           "place": 6,
+          "team": "UH-Adler 1.C-Jun. (A1)",
+          "games": 7,
+          "won": 3,
+          "draw": 1,
+          "lost": 3,
+          "goals": "21:17",
+          "points": 10
+        },
+        {
+          "place": 7,
           "team": "Farmsen 1.C-Jun. (A1)",
           "games": 6,
           "won": 3,
@@ -1459,16 +1469,6 @@
           "lost": 2,
           "goals": "10:8",
           "points": 10
-        },
-        {
-          "place": 7,
-          "team": "UH-Adler 1.C-Jun. (A1)",
-          "games": 6,
-          "won": 2,
-          "draw": 1,
-          "lost": 3,
-          "goals": "15:17",
-          "points": 7
         },
         {
           "place": 8,
@@ -1493,11 +1493,11 @@
         {
           "place": 10,
           "team": "Sasel 4.C-Jun. (A2)",
-          "games": 6,
+          "games": 7,
           "won": 0,
           "draw": 0,
-          "lost": 6,
-          "goals": "9:36",
+          "lost": 7,
+          "goals": "9:42",
           "points": 0
         }
       ]
@@ -1716,21 +1716,21 @@
         {
           "place": 1,
           "team": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
-          "games": 5,
-          "won": 4,
+          "games": 6,
+          "won": 5,
           "draw": 1,
           "lost": 0,
-          "goals": "29:4",
-          "points": 13
+          "goals": "33:5",
+          "points": 16
         },
         {
           "place": 2,
           "team": "Polonia 1.C-Jun. (A1) 7er",
-          "games": 4,
+          "games": 5,
           "won": 2,
           "draw": 1,
-          "lost": 1,
-          "goals": "21:6",
+          "lost": 2,
+          "goals": "22:10",
           "points": 7
         },
         {
