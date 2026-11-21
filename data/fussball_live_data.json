@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:40:17+01:00",
+  "generated_at": "2026-11-21T16:50:22+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -847,12 +847,12 @@
         {
           "place": 1,
           "team": "Alteng./​SC V. M./​Cursl.-N. 1.Ü50 SG",
-          "games": 6,
+          "games": 7,
           "won": 5,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "goals": "21:6",
-          "points": 15
+          "goals": "22:7",
+          "points": 16
         },
         {
           "place": 2,
@@ -867,12 +867,12 @@
         {
           "place": 3,
           "team": "Concordia 1.Ü50",
-          "games": 5,
+          "games": 6,
           "won": 4,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "goals": "16:3",
-          "points": 12
+          "goals": "17:4",
+          "points": 13
         },
         {
           "place": 4,
@@ -1611,22 +1611,22 @@
       "table": [
         {
           "place": 1,
-          "team": "Walddörfer 2.C-Jun. (J1)",
-          "games": 5,
-          "won": 5,
+          "team": "Bramfeld 2.C-Jun. (J1)",
+          "games": 6,
+          "won": 6,
           "draw": 0,
           "lost": 0,
-          "goals": "29:1",
-          "points": 15
+          "goals": "33:10",
+          "points": 18
         },
         {
           "place": 2,
-          "team": "Bramfeld 2.C-Jun. (J1)",
-          "games": 5,
+          "team": "Walddörfer 2.C-Jun. (J1)",
+          "games": 6,
           "won": 5,
           "draw": 0,
-          "lost": 0,
-          "goals": "27:10",
+          "lost": 1,
+          "goals": "29:7",
           "points": 15
         },
         {
