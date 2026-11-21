@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T21:50:17+01:00",
+  "generated_at": "2026-11-21T06:30:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -36,12 +36,12 @@
         {
           "place": 2,
           "team": "UH-Adler 1.Hr.",
-          "games": 14,
-          "won": 10,
+          "games": 15,
+          "won": 11,
           "draw": 0,
           "lost": 4,
-          "goals": "43:22",
-          "points": 27
+          "goals": "50:23",
+          "points": 30
         },
         {
           "place": 3,
@@ -136,11 +136,11 @@
         {
           "place": 12,
           "team": "Alstertal-Langenhorn 1.Hr.",
-          "games": 14,
+          "games": 15,
           "won": 5,
           "draw": 3,
-          "lost": 6,
-          "goals": "25:29",
+          "lost": 7,
+          "goals": "26:36",
           "points": 15
         },
         {
