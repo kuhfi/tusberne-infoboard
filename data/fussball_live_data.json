@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T14:00:17+01:00",
+  "generated_at": "2026-11-21T14:20:21+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -76,12 +76,12 @@
         {
           "place": 6,
           "team": "HSV 3.Hr.",
-          "games": 14,
+          "games": 15,
           "won": 5,
-          "draw": 5,
+          "draw": 6,
           "lost": 4,
-          "goals": "31:26",
-          "points": 20
+          "goals": "32:27",
+          "points": 21
         },
         {
           "place": 7,
@@ -95,6 +95,16 @@
         },
         {
           "place": 8,
+          "team": "Sasel 2.Hr.",
+          "games": 14,
+          "won": 5,
+          "draw": 5,
+          "lost": 4,
+          "goals": "34:29",
+          "points": 17
+        },
+        {
+          "place": 9,
           "team": "Croatia 1.Hr.",
           "games": 15,
           "won": 5,
@@ -102,16 +112,6 @@
           "lost": 8,
           "goals": "32:41",
           "points": 17
-        },
-        {
-          "place": 9,
-          "team": "Sasel 2.Hr.",
-          "games": 13,
-          "won": 5,
-          "draw": 4,
-          "lost": 4,
-          "goals": "33:28",
-          "points": 16
         },
         {
           "place": 10,
@@ -1134,6 +1134,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Süderelbe 3.B-Jun. (J1)",
+          "games": 7,
+          "won": 5,
+          "draw": 0,
+          "lost": 2,
+          "goals": "21:11",
+          "points": 15
+        },
+        {
+          "place": 2,
           "team": "tus BERNE 1.B-Jun. (J1)",
           "games": 6,
           "won": 4,
@@ -1143,7 +1153,7 @@
           "points": 14
         },
         {
-          "place": 2,
+          "place": 3,
           "team": "Vorw. Wacker 2.B-Jun. (J1)",
           "games": 7,
           "won": 4,
@@ -1153,7 +1163,7 @@
           "points": 14
         },
         {
-          "place": 3,
+          "place": 4,
           "team": "Rahlstedt 2.B-Jun. (J1)",
           "games": 7,
           "won": 4,
@@ -1163,7 +1173,7 @@
           "points": 13
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "Lemsahl 1.B-Jun. (J1)",
           "games": 7,
           "won": 4,
@@ -1171,16 +1181,6 @@
           "lost": 2,
           "goals": "21:15",
           "points": 13
-        },
-        {
-          "place": 5,
-          "team": "Süderelbe 3.B-Jun. (J1)",
-          "games": 6,
-          "won": 4,
-          "draw": 0,
-          "lost": 2,
-          "goals": "16:11",
-          "points": 12
         },
         {
           "place": 6,
@@ -1225,11 +1225,11 @@
         {
           "place": 10,
           "team": "Einigkeit 1.B-Jun. (J1)",
-          "games": 6,
+          "games": 7,
           "won": 0,
           "draw": 1,
-          "lost": 5,
-          "goals": "8:26",
+          "lost": 6,
+          "goals": "8:31",
           "points": 1
         }
       ]
