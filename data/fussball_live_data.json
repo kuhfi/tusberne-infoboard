@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T19:00:17+01:00",
+  "generated_at": "2026-11-21T19:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -210,6 +210,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Bramfeld 3.Hr.",
+          "games": 14,
+          "won": 11,
+          "draw": 1,
+          "lost": 2,
+          "goals": "42:28",
+          "points": 34
+        },
+        {
+          "place": 2,
           "team": "tus BERNE 2.Hr.",
           "games": 12,
           "won": 10,
@@ -217,16 +227,6 @@
           "lost": 0,
           "goals": "103:17",
           "points": 32
-        },
-        {
-          "place": 2,
-          "team": "Bramfeld 3.Hr.",
-          "games": 13,
-          "won": 10,
-          "draw": 1,
-          "lost": 2,
-          "goals": "38:28",
-          "points": 31
         },
         {
           "place": 3,
@@ -321,11 +321,11 @@
         {
           "place": 12,
           "team": "Hamburg Hurricanes 2.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 2,
           "draw": 1,
-          "lost": 9,
-          "goals": "18:44",
+          "lost": 10,
+          "goals": "18:48",
           "points": 7
         },
         {
@@ -1031,15 +1031,25 @@
         {
           "place": 7,
           "team": "Rissen 1.A-Jun. (J1)",
-          "games": 8,
+          "games": 9,
           "won": 3,
           "draw": 2,
-          "lost": 3,
-          "goals": "24:24",
+          "lost": 4,
+          "goals": "26:30",
           "points": 11
         },
         {
           "place": 8,
+          "team": "Teutonia 05 3.A-Jun. (J2)",
+          "games": 8,
+          "won": 3,
+          "draw": 1,
+          "lost": 4,
+          "goals": "26:22",
+          "points": 10
+        },
+        {
+          "place": 9,
           "team": "Altona 93 2.A-Jun. (J2)",
           "games": 8,
           "won": 3,
@@ -1049,7 +1059,7 @@
           "points": 10
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "Nordlichter im NSV 1.A-Jun. (J1)",
           "games": 9,
           "won": 3,
@@ -1059,7 +1069,7 @@
           "points": 9
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Willinghusen 2.A-Jun. (J1)",
           "games": 8,
           "won": 2,
@@ -1067,16 +1077,6 @@
           "lost": 4,
           "goals": "13:23",
           "points": 8
-        },
-        {
-          "place": 11,
-          "team": "Teutonia 05 3.A-Jun. (J2)",
-          "games": 7,
-          "won": 2,
-          "draw": 1,
-          "lost": 4,
-          "goals": "20:20",
-          "points": 7
         },
         {
           "place": 12,
