@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T17:10:17+01:00",
+  "generated_at": "2026-11-22T17:20:26+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -395,12 +395,12 @@
         {
           "place": 2,
           "team": "Alstertal-Langenhorn 3.Hr.",
-          "games": 14,
-          "won": 11,
+          "games": 15,
+          "won": 12,
           "draw": 1,
           "lost": 2,
-          "goals": "99:18",
-          "points": 34
+          "goals": "103:19",
+          "points": 37
         },
         {
           "place": 3,
@@ -444,22 +444,22 @@
         },
         {
           "place": 7,
-          "team": "Farmsen 2.Hr.",
-          "games": 14,
-          "won": 7,
-          "draw": 3,
-          "lost": 4,
-          "goals": "55:30",
-          "points": 24
-        },
-        {
-          "place": 8,
           "team": "DUWO 08 2.Hr.",
           "games": 14,
           "won": 7,
           "draw": 3,
           "lost": 4,
           "goals": "42:19",
+          "points": 24
+        },
+        {
+          "place": 8,
+          "team": "Farmsen 2.Hr.",
+          "games": 15,
+          "won": 7,
+          "draw": 3,
+          "lost": 5,
+          "goals": "56:34",
           "points": 24
         },
         {
