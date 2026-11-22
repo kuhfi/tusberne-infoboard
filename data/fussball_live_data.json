@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T19:50:17+01:00",
+  "generated_at": "2026-11-22T20:00:39+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1506,16 +1506,6 @@
       "display_name": "tus BERNE 2.C",
       "league_line": "C-Junioren Kreisliga · U15-KL 03 · Saison 2026/27",
       "last_game": {
-        "date": "15.11.2026",
-        "time": "11:00",
-        "competition": "Kreisfreundschaftsspiele",
-        "home": "tus BERNE 2.C-Jun. (A2)",
-        "away": "Bergstedt 1.C-Jun. (A1)",
-        "home_score": null,
-        "away_score": null,
-        "status": "ABGESETZT"
-      },
-      "next_game": {
         "date": "22.11.2026",
         "time": "17:00",
         "competition": "Kreisliga",
@@ -1523,6 +1513,15 @@
         "away": "Poppenbüttel 3.C-Jun. (A2)",
         "home_score": "0",
         "away_score": "0"
+      },
+      "next_game": {
+        "date": "29.11.2026",
+        "time": "15:00",
+        "competition": "Kreisliga",
+        "home": "Glashütte 3.C-Jun. (A2)",
+        "away": "tus BERNE 2.C-Jun. (A2)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
