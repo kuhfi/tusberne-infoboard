@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T10:00:20+01:00",
+  "generated_at": "2026-11-22T10:40:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -568,6 +568,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Eilbek 1.Ü32",
+          "games": 8,
+          "won": 5,
+          "draw": 1,
+          "lost": 2,
+          "goals": "9:5",
+          "points": 16
+        },
+        {
+          "place": 2,
           "team": "Poppenbüttel 1.Ü32",
           "games": 7,
           "won": 4,
@@ -577,7 +587,7 @@
           "points": 14
         },
         {
-          "place": 2,
+          "place": 3,
           "team": "Bergstedt 1.Ü32",
           "games": 7,
           "won": 4,
@@ -585,16 +595,6 @@
           "lost": 1,
           "goals": "16:6",
           "points": 14
-        },
-        {
-          "place": 3,
-          "team": "Eilbek 1.Ü32",
-          "games": 7,
-          "won": 4,
-          "draw": 1,
-          "lost": 2,
-          "goals": "8:5",
-          "points": 13
         },
         {
           "place": 4,
@@ -659,11 +659,11 @@
         {
           "place": 10,
           "team": "Alstertal-Langenhorn 1.Ü32",
-          "games": 6,
+          "games": 7,
           "won": 1,
           "draw": 1,
-          "lost": 4,
-          "goals": "11:15",
+          "lost": 5,
+          "goals": "11:16",
           "points": 4
         },
         {
