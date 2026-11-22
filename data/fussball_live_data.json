@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T12:20:27+01:00",
+  "generated_at": "2026-11-22T12:31:10+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -11,7 +11,8 @@
         "home": "HEBC 2.Hr.",
         "away": "tus BERNE 1.Hr.",
         "home_score": "6",
-        "away_score": "1"
+        "away_score": "1",
+        "status": null
       },
       "next_game": {
         "date": "22.11.2026",
@@ -20,7 +21,8 @@
         "home": "tus BERNE 1.Hr.",
         "away": "Duvenstedt 1.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -195,7 +197,8 @@
         "home": "Störtebeker SV 1.Hr.",
         "away": "tus BERNE 2.Hr.",
         "home_score": "1",
-        "away_score": "12"
+        "away_score": "12",
+        "status": null
       },
       "next_game": {
         "date": "22.11.2026",
@@ -205,7 +208,7 @@
         "away": "FC Preußen Hamburg 1.Hr.",
         "home_score": null,
         "away_score": null,
-        "status": "NICHTANTRITT GAST"
+        "status": "Nichtantritt GAST"
       },
       "table": [
         {
@@ -370,7 +373,8 @@
         "home": "HSV 5.Hr.",
         "away": "tus BERNE 3.Hr.",
         "home_score": "2",
-        "away_score": "2"
+        "away_score": "2",
+        "status": null
       },
       "next_game": {
         "date": "29.11.2026",
@@ -379,7 +383,8 @@
         "home": "Polonia 4.Hr.",
         "away": "tus BERNE 3.Hr.",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -554,7 +559,8 @@
         "home": "tus BERNE  1.Ü32",
         "away": "UH-Adler 1.Ü32",
         "home_score": "0",
-        "away_score": "3"
+        "away_score": "3",
+        "status": null
       },
       "next_game": {
         "date": "29.11.2026",
@@ -563,7 +569,8 @@
         "home": "Rahlstedt 1.Ü32",
         "away": "tus BERNE  1.Ü32",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -688,7 +695,8 @@
         "home": "tus BERNE 1.Ü40",
         "away": "Walddörfer 2.Ü40",
         "home_score": "6",
-        "away_score": "0"
+        "away_score": "0",
+        "status": null
       },
       "next_game": {
         "date": "29.11.2026",
@@ -697,7 +705,8 @@
         "home": "Billstedt-Horn 1.Ü40",
         "away": "tus BERNE 1.Ü40",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -832,7 +841,8 @@
         "home": "tus BERNE 1.Ü50",
         "away": "Concordia 1.Ü50",
         "home_score": "1",
-        "away_score": "4"
+        "away_score": "4",
+        "status": null
       },
       "next_game": {
         "date": "22.11.2026",
@@ -841,7 +851,8 @@
         "home": "tus BERNE 1.Ü50",
         "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -956,7 +967,8 @@
         "home": "Sasel 1.A-Jun. (J1)",
         "away": "tus BERNE 1.A-Jun. (J1)",
         "home_score": "2",
-        "away_score": "0"
+        "away_score": "0",
+        "status": null
       },
       "next_game": {
         "date": "28.11.2026",
@@ -965,7 +977,8 @@
         "home": "tus BERNE 1.A-Jun. (J1)",
         "away": "Altona 93 2.A-Jun. (J2)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1040,6 +1053,16 @@
         },
         {
           "place": 8,
+          "team": "Willinghusen 2.A-Jun. (J1)",
+          "games": 9,
+          "won": 3,
+          "draw": 2,
+          "lost": 4,
+          "goals": "18:24",
+          "points": 11
+        },
+        {
+          "place": 9,
           "team": "Teutonia 05 3.A-Jun. (J2)",
           "games": 8,
           "won": 3,
@@ -1049,7 +1072,7 @@
           "points": 10
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "Altona 93 2.A-Jun. (J2)",
           "games": 8,
           "won": 3,
@@ -1059,7 +1082,7 @@
           "points": 10
         },
         {
-          "place": 10,
+          "place": 11,
           "team": "Nordlichter im NSV 1.A-Jun. (J1)",
           "games": 9,
           "won": 3,
@@ -1067,16 +1090,6 @@
           "lost": 6,
           "goals": "16:19",
           "points": 9
-        },
-        {
-          "place": 11,
-          "team": "Willinghusen 2.A-Jun. (J1)",
-          "games": 8,
-          "won": 2,
-          "draw": 2,
-          "lost": 4,
-          "goals": "13:23",
-          "points": 8
         },
         {
           "place": 12,
@@ -1101,11 +1114,11 @@
         {
           "place": 14,
           "team": "Walddörfer 3.A-Jun. (J2)",
-          "games": 8,
+          "games": 9,
           "won": 0,
           "draw": 0,
-          "lost": 8,
-          "goals": "5:59",
+          "lost": 9,
+          "goals": "6:64",
           "points": 0
         }
       ]
@@ -1120,7 +1133,8 @@
         "home": "tus BERNE 1.B-Jun. (J1)",
         "away": "BU 2.B-Jun. (J1)",
         "home_score": "3",
-        "away_score": "2"
+        "away_score": "2",
+        "status": null
       },
       "next_game": {
         "date": "28.11.2026",
@@ -1129,7 +1143,8 @@
         "home": "Niendorf 2.B-Jun. (J1)",
         "away": "tus BERNE 1.B-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1244,7 +1259,8 @@
         "home": "Bramfeld 1.B-Jun. (J1)",
         "away": "tus BERNE 2.B-Jun. (J2)",
         "home_score": "6",
-        "away_score": "2"
+        "away_score": "2",
+        "status": null
       },
       "next_game": {
         "date": "28.11.2026",
@@ -1253,7 +1269,8 @@
         "home": "tus BERNE 2.B-Jun. (J2)",
         "away": "Blankenese 3.B-Jun. (J3)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1388,7 +1405,8 @@
         "home": "Farmsen 1.C-Jun. (A1)",
         "away": "tus BERNE 1.C-Jun. (A1)",
         "home_score": "10",
-        "away_score": "0"
+        "away_score": "0",
+        "status": null
       },
       "next_game": {
         "date": "28.11.2026",
@@ -1397,7 +1415,8 @@
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "Bramfeld 1.C-Jun. (A1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1513,7 +1532,7 @@
         "away": "Bergstedt 1.C-Jun. (A1)",
         "home_score": null,
         "away_score": null,
-        "status": "ABGESETZT"
+        "status": "Absetzung"
       },
       "next_game": {
         "date": "22.11.2026",
@@ -1522,7 +1541,8 @@
         "home": "tus BERNE 2.C-Jun. (A2)",
         "away": "Poppenbüttel 3.C-Jun. (A2)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1597,7 +1617,8 @@
         "home": "Lemsahl 1.C-Jun. (J1)",
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": "0",
-        "away_score": "3"
+        "away_score": "3",
+        "status": null
       },
       "next_game": {
         "date": "22.11.2026",
@@ -1606,7 +1627,8 @@
         "home": "Duvenstedt 1.C-Jun. (J1)",
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1701,7 +1723,8 @@
         "home": "Hummelsbüttel 1.C-Jun. (A1) 7er",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": "2",
-        "away_score": "2"
+        "away_score": "2",
+        "status": null
       },
       "next_game": {
         "date": "28.11.2026",
@@ -1710,7 +1733,8 @@
         "home": "Polonia 1.C-Jun. (A1) 7er",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1775,7 +1799,8 @@
         "home": "tus BERNE 1.D-Jun. (A1)",
         "away": "Rahlstedt 1.D-Jun. (A1)",
         "home_score": "4",
-        "away_score": "2"
+        "away_score": "2",
+        "status": null
       },
       "next_game": {
         "date": "05.12.2026",
@@ -1784,7 +1809,8 @@
         "home": "tus BERNE 1.D-Jun. (A1)",
         "away": "Niedersachsen Döhren",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1849,7 +1875,8 @@
         "home": "tus BERNE 2.D-Jun. (J1)",
         "away": "Sasel 13.D-Jun. (J7)",
         "home_score": "6",
-        "away_score": "2"
+        "away_score": "2",
+        "status": null
       },
       "next_game": {
         "date": "29.11.2026",
@@ -1858,7 +1885,8 @@
         "home": "tus BERNE 2.D-Jun. (J1)",
         "away": "Rahlstedt 3.D-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1913,7 +1941,8 @@
         "home": "Eilbek 4.D-Jun. (J3)-S",
         "away": "tus BERNE 3.D-Jun. (A2)-S",
         "home_score": "2",
-        "away_score": "0"
+        "away_score": "0",
+        "status": null
       },
       "next_game": {
         "date": "05.12.2026",
@@ -1922,7 +1951,8 @@
         "home": "Walddörfer 3.D-Jun. (A2)-S",
         "away": "tus BERNE 3.D-Jun. (A2)-S",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": null
       },
       "table": [
         {
@@ -1997,7 +2027,8 @@
         "home": "tus BERNE 4.D-Jun. (J2)",
         "away": "tus BERNE 1.E-Jun. (A1)",
         "home_score": "3",
-        "away_score": "6"
+        "away_score": "6",
+        "status": null
       },
       "next_game": null,
       "table": [
