@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T18:40:17+01:00",
+  "generated_at": "2026-11-22T18:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1195,12 +1195,12 @@
         {
           "place": 7,
           "team": "Niendorf 2.B-Jun. (J1)",
-          "games": 6,
-          "won": 2,
+          "games": 7,
+          "won": 3,
           "draw": 0,
           "lost": 4,
-          "goals": "13:18",
-          "points": 6
+          "goals": "20:20",
+          "points": 9
         },
         {
           "place": 8,
@@ -1215,11 +1215,11 @@
         {
           "place": 9,
           "team": "Curslack-Neuengamme 1.B-Jun. (J1)",
-          "games": 6,
+          "games": 7,
           "won": 0,
           "draw": 1,
-          "lost": 5,
-          "goals": "6:18",
+          "lost": 6,
+          "goals": "8:25",
           "points": 1
         },
         {
