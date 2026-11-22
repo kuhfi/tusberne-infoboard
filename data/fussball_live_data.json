@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T16:20:17+01:00",
+  "generated_at": "2026-11-22T16:30:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1403,15 +1403,25 @@
         {
           "place": 1,
           "team": "Alstertal-Langenhorn 2.C-Jun. (A1)",
-          "games": 6,
+          "games": 7,
           "won": 6,
           "draw": 0,
-          "lost": 0,
-          "goals": "24:5",
+          "lost": 1,
+          "goals": "26:8",
           "points": 18
         },
         {
           "place": 2,
+          "team": "Bramfeld 1.C-Jun. (A1)",
+          "games": 7,
+          "won": 5,
+          "draw": 0,
+          "lost": 2,
+          "goals": "24:14",
+          "points": 15
+        },
+        {
+          "place": 3,
           "team": "Farmsen 1.C-Jun. (A1)",
           "games": 7,
           "won": 4,
@@ -1421,7 +1431,7 @@
           "points": 13
         },
         {
-          "place": 3,
+          "place": 4,
           "team": "VfL 93 2.C-Jun. (A2)",
           "games": 7,
           "won": 4,
@@ -1431,7 +1441,7 @@
           "points": 13
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "Rahlstedt 3.C-Jun. (A2)",
           "games": 7,
           "won": 4,
@@ -1439,16 +1449,6 @@
           "lost": 2,
           "goals": "18:11",
           "points": 13
-        },
-        {
-          "place": 5,
-          "team": "Bramfeld 1.C-Jun. (A1)",
-          "games": 6,
-          "won": 4,
-          "draw": 0,
-          "lost": 2,
-          "goals": "21:12",
-          "points": 12
         },
         {
           "place": 6,
