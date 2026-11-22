@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T15:30:52+01:00",
+  "generated_at": "2026-11-22T15:51:48+01:00",
   "period": {
     "weeks": [
       {
@@ -83,7 +83,7 @@
       "away": "Walddörfer 2.Ü40",
       "home_cabin": "1",
       "guest_cabin": "3",
-      "sr_cabin": "SR1",
+      "sr_cabin": "SR2",
       "festival": false
     },
     {
@@ -95,6 +95,18 @@
       "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
       "home_cabin": "2",
       "guest_cabin": "4",
+      "sr_cabin": "SR1",
+      "festival": false
+    },
+    {
+      "date": "2026-11-22",
+      "time": "12:30",
+      "kind": "Meisterschaft",
+      "league": "Bezirksliga",
+      "home": "tus BERNE 1.Hr.",
+      "away": "Duvenstedt 1.Hr.",
+      "home_cabin": "1",
+      "guest_cabin": "3",
       "sr_cabin": "SR2",
       "festival": false
     },
@@ -106,7 +118,7 @@
       "home": "tus BERNE 2.Hr.",
       "away": "FC Preußen Hamburg 1.Hr.",
       "home_cabin": "2",
-      "guest_cabin": "3",
+      "guest_cabin": "4",
       "sr_cabin": "SR1",
       "festival": false
     },
@@ -118,7 +130,7 @@
       "home": "tus BERNE 2.C (A2)",
       "away": "Poppenbüttel 3.C (A2)",
       "home_cabin": "1",
-      "guest_cabin": "4",
+      "guest_cabin": "3",
       "sr_cabin": "SR2",
       "festival": false
     },
