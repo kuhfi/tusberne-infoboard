@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T13:50:17+01:00",
+  "generated_at": "2026-11-22T14:00:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -991,12 +991,12 @@
         {
           "place": 3,
           "team": "Niendorf 2.A-Jun. (J1)",
-          "games": 8,
+          "games": 9,
           "won": 6,
-          "draw": 1,
+          "draw": 2,
           "lost": 1,
-          "goals": "29:7",
-          "points": 19
+          "goals": "31:9",
+          "points": 20
         },
         {
           "place": 4,
@@ -1030,6 +1030,16 @@
         },
         {
           "place": 7,
+          "team": "Altona 93 2.A-Jun. (J2)",
+          "games": 9,
+          "won": 3,
+          "draw": 2,
+          "lost": 4,
+          "goals": "20:21",
+          "points": 11
+        },
+        {
+          "place": 8,
           "team": "Rissen 1.A-Jun. (J1)",
           "games": 9,
           "won": 3,
@@ -1039,7 +1049,7 @@
           "points": 11
         },
         {
-          "place": 8,
+          "place": 9,
           "team": "Willinghusen 2.A-Jun. (J1)",
           "games": 9,
           "won": 3,
@@ -1049,23 +1059,13 @@
           "points": 11
         },
         {
-          "place": 9,
+          "place": 10,
           "team": "Teutonia 05 3.A-Jun. (J2)",
           "games": 8,
           "won": 3,
           "draw": 1,
           "lost": 4,
           "goals": "26:22",
-          "points": 10
-        },
-        {
-          "place": 10,
-          "team": "Altona 93 2.A-Jun. (J2)",
-          "games": 8,
-          "won": 3,
-          "draw": 1,
-          "lost": 4,
-          "goals": "18:19",
           "points": 10
         },
         {
@@ -1591,15 +1591,6 @@
       "display_name": "tus BERNE 3.C",
       "league_line": "C-Junioren Kreisliga · U14-KL 06 Herbst · Saison 2026/27",
       "last_game": {
-        "date": "15.11.2026",
-        "time": "11:00",
-        "competition": "Kreisliga",
-        "home": "Lemsahl 1.C-Jun. (J1)",
-        "away": "tus BERNE 3.C-Jun. (J1)",
-        "home_score": "0",
-        "away_score": "3"
-      },
-      "next_game": {
         "date": "22.11.2026",
         "time": "11:00",
         "competition": "Kreisliga",
@@ -1607,6 +1598,15 @@
         "away": "tus BERNE 3.C-Jun. (J1)",
         "home_score": "0",
         "away_score": "7"
+      },
+      "next_game": {
+        "date": "28.11.2026",
+        "time": "09:00",
+        "competition": "Kreisliga",
+        "home": "tus BERNE 3.C-Jun. (J1)",
+        "away": "SV Groß Borstel 4.C-Jun. (J2)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
