@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T12:40:17+01:00",
+  "generated_at": "2026-11-22T13:30:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -385,12 +385,12 @@
         {
           "place": 1,
           "team": "Polonia 4.Hr.",
-          "games": 14,
-          "won": 11,
+          "games": 15,
+          "won": 12,
           "draw": 2,
           "lost": 1,
-          "goals": "103:26",
-          "points": 35
+          "goals": "111:26",
+          "points": 38
         },
         {
           "place": 2,
@@ -495,11 +495,11 @@
         {
           "place": 12,
           "team": "Hummelsbüttel 1.Hr.",
-          "games": 14,
+          "games": 15,
           "won": 5,
           "draw": 0,
-          "lost": 9,
-          "goals": "33:52",
+          "lost": 10,
+          "goals": "33:60",
           "points": 15
         },
         {
@@ -826,20 +826,20 @@
       "display_name": "tus BERNE 1.Ü50",
       "league_line": "Herren Ü50 Kreisklasse · Ü50-KK 01 · Saison 2026/27",
       "last_game": {
-        "date": "11.10.2026",
-        "time": "11:00",
-        "competition": "Kreisklasse",
-        "home": "tus BERNE 1.Ü50",
-        "away": "Concordia 1.Ü50",
-        "home_score": "1",
-        "away_score": "4"
-      },
-      "next_game": {
         "date": "22.11.2026",
         "time": "10:30",
         "competition": "Kreisklasse",
         "home": "tus BERNE 1.Ü50",
         "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
+        "home_score": null,
+        "away_score": null
+      },
+      "next_game": {
+        "date": "28.11.2026",
+        "time": "16:00",
+        "competition": "Kreisklasse",
+        "home": "Düneberg 1.Ü50",
+        "away": "tus BERNE 1.Ü50",
         "home_score": null,
         "away_score": null
       },
