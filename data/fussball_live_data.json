@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T14:20:17+01:00",
+  "generated_at": "2026-11-22T14:40:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -19,8 +19,8 @@
         "competition": "Bezirksliga",
         "home": "tus BERNE 1.Hr.",
         "away": "Duvenstedt 1.Hr.",
-        "home_score": null,
-        "away_score": null
+        "home_score": "1",
+        "away_score": "8"
       },
       "table": [
         {
@@ -45,6 +45,16 @@
         },
         {
           "place": 3,
+          "team": "Duvenstedt 1.Hr.",
+          "games": 14,
+          "won": 8,
+          "draw": 2,
+          "lost": 4,
+          "goals": "44:35",
+          "points": 26
+        },
+        {
+          "place": 4,
           "team": "SV Groß Borstel 1.Hr.",
           "games": 14,
           "won": 7,
@@ -52,16 +62,6 @@
           "lost": 3,
           "goals": "35:26",
           "points": 25
-        },
-        {
-          "place": 4,
-          "team": "Duvenstedt 1.Hr.",
-          "games": 13,
-          "won": 7,
-          "draw": 2,
-          "lost": 4,
-          "goals": "36:34",
-          "points": 23
         },
         {
           "place": 5,
@@ -146,11 +146,11 @@
         {
           "place": 13,
           "team": "tus BERNE 1.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 4,
           "draw": 0,
-          "lost": 8,
-          "goals": "19:37",
+          "lost": 9,
+          "goals": "20:45",
           "points": 12
         },
         {
@@ -1288,6 +1288,16 @@
         },
         {
           "place": 4,
+          "team": "BU 4.B-Jun. (J2)",
+          "games": 7,
+          "won": 5,
+          "draw": 1,
+          "lost": 1,
+          "goals": "42:23",
+          "points": 16
+        },
+        {
+          "place": 5,
           "team": "Walddörfer 1.B-Jun. (J1)",
           "games": 7,
           "won": 5,
@@ -1295,16 +1305,6 @@
           "lost": 1,
           "goals": "25:9",
           "points": 16
-        },
-        {
-          "place": 5,
-          "team": "BU 4.B-Jun. (J2)",
-          "games": 6,
-          "won": 5,
-          "draw": 0,
-          "lost": 1,
-          "goals": "39:20",
-          "points": 15
         },
         {
           "place": 6,
@@ -1349,12 +1349,12 @@
         {
           "place": 10,
           "team": "Blankenese 3.B-Jun. (J3)",
-          "games": 6,
+          "games": 7,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 5,
-          "goals": "10:37",
-          "points": 3
+          "goals": "13:40",
+          "points": 4
         },
         {
           "place": 11,
