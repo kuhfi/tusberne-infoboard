@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T13:40:17+01:00",
+  "generated_at": "2026-11-22T13:50:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -722,6 +722,16 @@
         },
         {
           "place": 3,
+          "team": "Rahlstedt 1.Ü40",
+          "games": 8,
+          "won": 5,
+          "draw": 1,
+          "lost": 2,
+          "goals": "18:22",
+          "points": 16
+        },
+        {
+          "place": 4,
           "team": "Wandsetal 1.Ü40",
           "games": 8,
           "won": 4,
@@ -731,23 +741,13 @@
           "points": 13
         },
         {
-          "place": 4,
+          "place": 5,
           "team": "SC Wentorf 1.Ü40",
           "games": 8,
           "won": 4,
           "draw": 1,
           "lost": 3,
           "goals": "17:13",
-          "points": 13
-        },
-        {
-          "place": 5,
-          "team": "Rahlstedt 1.Ü40",
-          "games": 7,
-          "won": 4,
-          "draw": 1,
-          "lost": 2,
-          "goals": "16:22",
           "points": 13
         },
         {
@@ -773,11 +773,11 @@
         {
           "place": 8,
           "team": "Tonndorf-Lohe/​Condor 1.Ü40 SG",
-          "games": 7,
+          "games": 8,
           "won": 3,
           "draw": 0,
-          "lost": 4,
-          "goals": "12:15",
+          "lost": 5,
+          "goals": "12:17",
           "points": 9
         },
         {
@@ -831,8 +831,8 @@
         "competition": "Kreisklasse",
         "home": "tus BERNE 1.Ü50",
         "away": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
-        "home_score": null,
-        "away_score": null
+        "home_score": "2",
+        "away_score": "1"
       },
       "next_game": {
         "date": "28.11.2026",
@@ -887,15 +887,25 @@
         {
           "place": 5,
           "team": "SC V. M./​ Alteng./​ Cursl.-N. 1.Ü50 SG",
-          "games": 6,
+          "games": 7,
           "won": 4,
           "draw": 1,
-          "lost": 1,
-          "goals": "17:7",
+          "lost": 2,
+          "goals": "18:9",
           "points": 12
         },
         {
           "place": 6,
+          "team": "tus BERNE 1.Ü50",
+          "games": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2,
+          "goals": "16:13",
+          "points": 12
+        },
+        {
+          "place": 7,
           "team": "Düneberg 1.Ü50",
           "games": 7,
           "won": 3,
@@ -903,16 +913,6 @@
           "lost": 3,
           "goals": "10:12",
           "points": 10
-        },
-        {
-          "place": 7,
-          "team": "tus BERNE 1.Ü50",
-          "games": 5,
-          "won": 3,
-          "draw": 0,
-          "lost": 2,
-          "goals": "14:12",
-          "points": 9
         },
         {
           "place": 8,
