@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T17:00:17+01:00",
+  "generated_at": "2026-11-22T17:10:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -301,22 +301,22 @@
         {
           "place": 10,
           "team": "Croatia 2.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 4,
-          "draw": 2,
+          "draw": 3,
           "lost": 7,
-          "goals": "33:41",
-          "points": 14
+          "goals": "37:45",
+          "points": 15
         },
         {
           "place": 11,
           "team": "Polonia 3.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 4,
-          "draw": 1,
+          "draw": 2,
           "lost": 8,
-          "goals": "35:39",
-          "points": 13
+          "goals": "39:43",
+          "points": 14
         },
         {
           "place": 12,
