@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T18:50:17+01:00",
+  "generated_at": "2026-11-22T19:20:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -434,6 +434,16 @@
         },
         {
           "place": 6,
+          "team": "DUWO 08 2.Hr.",
+          "games": 15,
+          "won": 8,
+          "draw": 3,
+          "lost": 4,
+          "goals": "46:19",
+          "points": 27
+        },
+        {
+          "place": 7,
           "team": "Nordlichter im NSV 2.Hr.",
           "games": 14,
           "won": 8,
@@ -441,16 +451,6 @@
           "lost": 3,
           "goals": "31:19",
           "points": 27
-        },
-        {
-          "place": 7,
-          "team": "DUWO 08 2.Hr.",
-          "games": 14,
-          "won": 7,
-          "draw": 3,
-          "lost": 4,
-          "goals": "42:19",
-          "points": 24
         },
         {
           "place": 8,
@@ -475,11 +475,11 @@
         {
           "place": 10,
           "team": "Bramfeld 4.Hr.",
-          "games": 14,
+          "games": 15,
           "won": 7,
           "draw": 0,
-          "lost": 7,
-          "goals": "32:59",
+          "lost": 8,
+          "goals": "32:63",
           "points": 21
         },
         {
@@ -504,6 +504,16 @@
         },
         {
           "place": 13,
+          "team": "Condor 4.Hr.",
+          "games": 15,
+          "won": 1,
+          "draw": 2,
+          "lost": 12,
+          "goals": "17:72",
+          "points": 5
+        },
+        {
+          "place": 14,
           "team": "FC Hamburg 1.Hr.",
           "games": 15,
           "won": 1,
@@ -511,16 +521,6 @@
           "lost": 12,
           "goals": "31:87",
           "points": 5
-        },
-        {
-          "place": 14,
-          "team": "Condor 4.Hr.",
-          "games": 14,
-          "won": 1,
-          "draw": 1,
-          "lost": 12,
-          "goals": "16:71",
-          "points": 4
         },
         {
           "place": 15,
@@ -535,12 +535,12 @@
         {
           "place": 16,
           "team": "Walddörfer 3.Hr.",
-          "games": 14,
+          "games": 15,
           "won": 0,
-          "draw": 1,
+          "draw": 2,
           "lost": 13,
-          "goals": "10:119",
-          "points": 1
+          "goals": "11:120",
+          "points": 2
         }
       ]
     },
