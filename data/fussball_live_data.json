@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T10:50:24+01:00",
+  "generated_at": "2026-11-22T11:40:17+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -916,6 +916,26 @@
         },
         {
           "place": 8,
+          "team": "Schwarzenbek 1.Ü50",
+          "games": 7,
+          "won": 0,
+          "draw": 1,
+          "lost": 6,
+          "goals": "6:22",
+          "points": 1
+        },
+        {
+          "place": 9,
+          "team": "Stapelfeld 1.Ü50",
+          "games": 7,
+          "won": 0,
+          "draw": 1,
+          "lost": 6,
+          "goals": "10:29",
+          "points": 1
+        },
+        {
+          "place": 10,
           "team": "Meiendorf/​Wandsetal/​Farmsen 1.Ü50 SG",
           "games": 5,
           "won": 0,
@@ -923,26 +943,6 @@
           "lost": 4,
           "goals": "2:23",
           "points": 1
-        },
-        {
-          "place": 9,
-          "team": "Schwarzenbek 1.Ü50",
-          "games": 6,
-          "won": 0,
-          "draw": 0,
-          "lost": 6,
-          "goals": "4:20",
-          "points": 0
-        },
-        {
-          "place": 10,
-          "team": "Stapelfeld 1.Ü50",
-          "games": 6,
-          "won": 0,
-          "draw": 0,
-          "lost": 6,
-          "goals": "8:27",
-          "points": 0
         }
       ]
     },
