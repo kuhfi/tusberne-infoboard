@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T14:40:18+01:00",
+  "generated_at": "2026-11-22T15:00:20+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -261,12 +261,12 @@
         {
           "place": 6,
           "team": "DSC Hanseat 2.Hr.",
-          "games": 12,
+          "games": 13,
           "won": 8,
-          "draw": 0,
+          "draw": 1,
           "lost": 4,
-          "goals": "35:34",
-          "points": 24
+          "goals": "37:36",
+          "points": 25
         },
         {
           "place": 7,
@@ -351,12 +351,12 @@
         {
           "place": 15,
           "team": "Horner TV 2.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 2,
-          "draw": 2,
+          "draw": 3,
           "lost": 9,
-          "goals": "26:62",
-          "points": 2
+          "goals": "28:64",
+          "points": 3
         }
       ]
     },
