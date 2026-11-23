@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T14:10:19+01:00",
+  "generated_at": "2026-11-23T15:20:19+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -239,16 +239,6 @@
         },
         {
           "place": 4,
-          "team": "FC Preußen Hamburg 1.Hr.",
-          "games": 14,
-          "won": 9,
-          "draw": 0,
-          "lost": 5,
-          "goals": "55:33",
-          "points": 27
-        },
-        {
-          "place": 5,
           "team": "SV Barmbek 1.Hr.",
           "games": 13,
           "won": 8,
@@ -258,7 +248,7 @@
           "points": 25
         },
         {
-          "place": 6,
+          "place": 5,
           "team": "MSV Hamburg 4.Hr.",
           "games": 14,
           "won": 7,
@@ -268,7 +258,7 @@
           "points": 25
         },
         {
-          "place": 7,
+          "place": 6,
           "team": "DSC Hanseat 2.Hr.",
           "games": 13,
           "won": 8,
@@ -276,6 +266,16 @@
           "lost": 4,
           "goals": "37:36",
           "points": 25
+        },
+        {
+          "place": 7,
+          "team": "FC Preußen Hamburg 1.Hr.",
+          "games": 14,
+          "won": 9,
+          "draw": 0,
+          "lost": 5,
+          "goals": "55:33",
+          "points": 24
         },
         {
           "place": 8,
