@@ -158,6 +158,15 @@
       "source_path": "kachel3/07 Jahresauftaktessen 2027.png",
       "managed_by": "pi-public-sync",
       "order": 4
+    },
+    {
+      "public": true,
+      "category": "mannschaften-ansprechpartner",
+      "title": "tus Berne Social-Media-Poster",
+      "kind": "image",
+      "url": "./files/drive/kachel4/tus-berne-social-media-poster-27b54732.png",
+      "source_path": "kachel4/02 tus Berne Social-Media-Poster.png",
+      "managed_by": "pi-public-sync"
     }
   ]
 }
