@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T06:30:51+01:00",
+  "generated_at": "2026-11-24T12:01:49+01:00",
   "period": {
     "weeks": [
       {
@@ -21,7 +21,7 @@
       "league": "Kreisliga",
       "home": "tus BERNE 3.C (J1)",
       "away": "SV Groß Borstel 4.C (J2)",
-      "home_cabin": "2",
+      "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
@@ -33,7 +33,7 @@
       "league": "Bezirksliga",
       "home": "tus BERNE 1.C (A1)",
       "away": "Bramfeld 1.C (A1)",
-      "home_cabin": "1",
+      "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
       "festival": false
@@ -45,7 +45,7 @@
       "league": "Landesliga",
       "home": "tus BERNE 1.A (J1)",
       "away": "Altona 93 2.A (J2)",
-      "home_cabin": "2",
+      "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
@@ -57,21 +57,9 @@
       "league": "Kreisliga",
       "home": "tus BERNE 2.B (J2)",
       "away": "Blankenese 3.B (J3)",
-      "home_cabin": "1",
+      "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
-      "festival": false
-    },
-    {
-      "date": "2026-11-28",
-      "time": "17:30",
-      "kind": "Meisterschaft",
-      "league": "Kreisklasse",
-      "home": "tus BERNE 2.Hr.",
-      "away": "Farmsen 3.Hr.",
-      "home_cabin": "2",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
       "festival": false
     },
     {

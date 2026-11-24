@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T15:20:19+01:00",
+  "generated_at": "2026-11-24T12:00:18+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -189,173 +189,145 @@
       "display_name": "tus BERNE 2.Hr.",
       "league_line": "Herren Kreisklasse · KK 05 · Saison 2026/27",
       "last_game": {
-        "date": "22.11.2026",
-        "time": "15:00",
-        "competition": "Kreisklasse",
+        "date": "06.10.2026",
+        "time": "19:00",
+        "competition": "Pokal",
         "home": "tus BERNE 2.Hr.",
-        "away": "FC Preußen Hamburg 1.Hr.",
-        "home_score": "3",
-        "away_score": "0"
+        "away": "St. Pauli 3.Hr.",
+        "home_score": "2",
+        "away_score": "5"
       },
-      "next_game": {
-        "date": "28.11.2026",
-        "time": "17:30",
-        "competition": "Kreisklasse",
-        "home": "tus BERNE 2.Hr.",
-        "away": "Farmsen 3.Hr.",
-        "home_score": null,
-        "away_score": null
-      },
+      "next_game": null,
       "table": [
         {
           "place": 1,
-          "team": "tus BERNE 2.Hr.",
-          "games": 13,
-          "won": 11,
+          "team": "FC Gregs 1.",
+          "games": 24,
+          "won": 21,
           "draw": 2,
-          "lost": 0,
-          "goals": "106:17",
-          "points": 35
+          "lost": 1,
+          "goals": "106:26",
+          "points": 65
         },
         {
           "place": 2,
-          "team": "Bramfeld 3.Hr.",
-          "games": 14,
-          "won": 11,
+          "team": "Hellbrook 1.",
+          "games": 24,
+          "won": 20,
           "draw": 1,
-          "lost": 2,
-          "goals": "42:28",
-          "points": 34
+          "lost": 3,
+          "goals": "142:56",
+          "points": 61
         },
         {
           "place": 3,
-          "team": "Hellbrook 2.Hr.",
-          "games": 13,
-          "won": 9,
-          "draw": 1,
-          "lost": 3,
-          "goals": "56:28",
-          "points": 28
+          "team": "SV Alter Teichweg 1.",
+          "games": 24,
+          "won": 16,
+          "draw": 4,
+          "lost": 4,
+          "goals": "100:33",
+          "points": 52
         },
         {
           "place": 4,
-          "team": "SV Barmbek 1.Hr.",
-          "games": 13,
-          "won": 8,
-          "draw": 1,
-          "lost": 4,
-          "goals": "49:31",
-          "points": 25
+          "team": "Tonndorf-Lohe 1.",
+          "games": 24,
+          "won": 13,
+          "draw": 4,
+          "lost": 7,
+          "goals": "76:58",
+          "points": 43
         },
         {
           "place": 5,
-          "team": "MSV Hamburg 4.Hr.",
-          "games": 14,
-          "won": 7,
-          "draw": 4,
-          "lost": 3,
-          "goals": "46:30",
-          "points": 25
+          "team": "BU 5.",
+          "games": 24,
+          "won": 13,
+          "draw": 2,
+          "lost": 9,
+          "goals": "72:54",
+          "points": 41
         },
         {
           "place": 6,
-          "team": "DSC Hanseat 2.Hr.",
-          "games": 13,
-          "won": 8,
-          "draw": 1,
-          "lost": 4,
-          "goals": "37:36",
-          "points": 25
+          "team": "tus BERNE 2.",
+          "games": 24,
+          "won": 11,
+          "draw": 3,
+          "lost": 10,
+          "goals": "70:65",
+          "points": 36
         },
         {
           "place": 7,
-          "team": "FC Preußen Hamburg 1.Hr.",
-          "games": 14,
+          "team": "SV Barmbek 1.",
+          "games": 24,
           "won": 9,
-          "draw": 0,
-          "lost": 5,
-          "goals": "55:33",
-          "points": 24
+          "draw": 4,
+          "lost": 11,
+          "goals": "64:55",
+          "points": 31
         },
         {
           "place": 8,
-          "team": "Urania 3.Hr.",
-          "games": 14,
-          "won": 7,
-          "draw": 2,
-          "lost": 5,
-          "goals": "50:33",
-          "points": 23
+          "team": "Croatia 2.",
+          "games": 24,
+          "won": 10,
+          "draw": 4,
+          "lost": 10,
+          "goals": "64:71",
+          "points": 31
         },
         {
           "place": 9,
-          "team": "Farmsen 3.Hr.",
-          "games": 13,
-          "won": 5,
-          "draw": 1,
-          "lost": 7,
-          "goals": "33:41",
-          "points": 16
+          "team": "HafenCity 3.",
+          "games": 24,
+          "won": 8,
+          "draw": 4,
+          "lost": 12,
+          "goals": "61:79",
+          "points": 28
         },
         {
           "place": 10,
-          "team": "Croatia 2.Hr.",
-          "games": 14,
-          "won": 4,
+          "team": "Farmsen 2.",
+          "games": 24,
+          "won": 8,
           "draw": 3,
-          "lost": 7,
-          "goals": "37:45",
-          "points": 15
+          "lost": 13,
+          "goals": "44:77",
+          "points": 27
         },
         {
           "place": 11,
-          "team": "Polonia 3.Hr.",
-          "games": 14,
-          "won": 4,
-          "draw": 2,
-          "lost": 8,
-          "goals": "39:43",
-          "points": 14
+          "team": "MSV Hamburg 4.",
+          "games": 24,
+          "won": 2,
+          "draw": 5,
+          "lost": 17,
+          "goals": "35:88",
+          "points": 11
         },
         {
           "place": 12,
-          "team": "Hamburg Hurricanes 2.Hr.",
-          "games": 13,
-          "won": 2,
-          "draw": 1,
-          "lost": 10,
-          "goals": "18:48",
-          "points": 7
+          "team": "DJK Hamburg 1.",
+          "games": 24,
+          "won": 3,
+          "draw": 2,
+          "lost": 19,
+          "goals": "30:100",
+          "points": 11
         },
         {
           "place": 13,
-          "team": "DJK Hamburg 1.Hr.",
-          "games": 14,
+          "team": "Bramfeld 5.",
+          "games": 24,
           "won": 2,
-          "draw": 1,
-          "lost": 11,
-          "goals": "20:83",
-          "points": 7
-        },
-        {
-          "place": 14,
-          "team": "Störtebeker SV 1.Hr.",
-          "games": 14,
-          "won": 1,
-          "draw": 1,
-          "lost": 12,
-          "goals": "15:71",
-          "points": 4
-        },
-        {
-          "place": 15,
-          "team": "Horner TV 2.Hr.",
-          "games": 14,
-          "won": 2,
-          "draw": 3,
-          "lost": 9,
-          "goals": "28:64",
-          "points": 3
+          "draw": 2,
+          "lost": 20,
+          "goals": "34:136",
+          "points": 8
         }
       ]
     },
