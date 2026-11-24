@@ -3,7 +3,7 @@
   "location_id": "berne",
   "location": "Sportplatz „Berner Allee“",
   "season": "Saison 2026/27",
-  "source_modified_at": "2026-09-30T17:53:54.459Z",
+  "source_modified_at": "2026-11-24T07:59:49.030Z",
   "days": [
     {
       "name": "Montag",
@@ -34,7 +34,7 @@
           "block": "Block 3",
           "time": "20:00–21:30",
           "front": [
-            "2. Herren"
+            "1. Herren"
           ],
           "back": [
             "Ü32"
@@ -146,7 +146,7 @@
             "1. Herren"
           ],
           "back": [
-            "2. Herren"
+            "frei"
           ]
         }
       ]
