@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T16:00:17+01:00",
+  "generated_at": "2026-11-25T16:50:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -95,6 +95,16 @@
         },
         {
           "place": 8,
+          "team": "Sasel 2.Hr.",
+          "games": 15,
+          "won": 6,
+          "draw": 5,
+          "lost": 4,
+          "goals": "37:29",
+          "points": 20
+        },
+        {
+          "place": 9,
           "team": "HEBC 2.Hr.",
           "games": 15,
           "won": 5,
@@ -102,16 +112,6 @@
           "lost": 6,
           "goals": "36:38",
           "points": 19
-        },
-        {
-          "place": 9,
-          "team": "Sasel 2.Hr.",
-          "games": 14,
-          "won": 5,
-          "draw": 5,
-          "lost": 4,
-          "goals": "34:29",
-          "points": 17
         },
         {
           "place": 10,
@@ -126,11 +126,11 @@
         {
           "place": 11,
           "team": "Polonia 1.Hr.",
-          "games": 13,
+          "games": 14,
           "won": 4,
           "draw": 4,
-          "lost": 5,
-          "goals": "29:35",
+          "lost": 6,
+          "goals": "29:38",
           "points": 16
         },
         {
