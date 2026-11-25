@@ -198,3 +198,9 @@ Die exportierten Inhalte werden außerdem durch die produktiven Skripte vor eine
 - **Wiederherstellung:** Hardware-Restore bzw. bootfähiges, getestetes Ersatzmedium weiterhin nicht nachgewiesen.
 
 Die zuletzt bestätigten Betriebsdaten dienen als Ausgangspunkt für spätere Kontrollen, nicht als Garantie für den zukünftigen Zustand.
+
+## Kabinenautomatik – Änderung vom 25.11.2026
+
+Die Heimkabinenvergabe berücksichtigt aktualisierte Mannschaftsprioritäten und die bevorzugte Belegung von Kabine 2. Bei zeitlichen Konflikten entscheidet die Prioritätsreihenfolge; sofern zulässig, wird auf die andere Heimkabine ausgewichen. Die Drei-Stunden-Regel, die öffentliche JSON-Struktur und der Google-Korrekturweg bleiben erhalten.
+
+Die private Pi-Programmänderung wurde durch Selbsttests und 14 gezielte Vergabeszenarien geprüft. Die reguläre Datenübertragung und die Anzeige auf dem TV und der Homepage wurden am 25.11.2026 bestätigt. Zwei Pages-Veröffentlichungen scheiterten beim Deployment mit HTTP 500, obwohl die Builds erfolgreich waren. Die erneute Ausführung des fehlgeschlagenen Deployments war erfolgreich. Bei ähnlichen Störungen zunächst Repository-Daten und Pages-Workflow getrennt prüfen; keine unnötigen Eingriffe in den Raspberry Pi vornehmen.
