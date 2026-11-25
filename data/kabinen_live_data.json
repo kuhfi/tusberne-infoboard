@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T12:01:49+01:00",
+  "generated_at": "2026-11-25T17:10:55+01:00",
   "period": {
     "weeks": [
       {
@@ -21,7 +21,7 @@
       "league": "Kreisliga",
       "home": "tus BERNE 3.C (J1)",
       "away": "SV Groß Borstel 4.C (J2)",
-      "home_cabin": "1",
+      "home_cabin": "2",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
@@ -33,7 +33,7 @@
       "league": "Bezirksliga",
       "home": "tus BERNE 1.C (A1)",
       "away": "Bramfeld 1.C (A1)",
-      "home_cabin": "2",
+      "home_cabin": "1",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
       "festival": false
@@ -45,7 +45,7 @@
       "league": "Landesliga",
       "home": "tus BERNE 1.A (J1)",
       "away": "Altona 93 2.A (J2)",
-      "home_cabin": "1",
+      "home_cabin": "2",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
@@ -57,7 +57,7 @@
       "league": "Kreisliga",
       "home": "tus BERNE 2.B (J2)",
       "away": "Blankenese 3.B (J3)",
-      "home_cabin": "2",
+      "home_cabin": "1",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
       "festival": false
@@ -69,7 +69,7 @@
       "league": "Landesliga",
       "home": "tus BERNE 2.D (J1)",
       "away": "Rahlstedt 3.D (J1)",
-      "home_cabin": "2",
+      "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
@@ -81,7 +81,7 @@
       "league": "Bezirksliga",
       "home": "tus BERNE 1.Hr.",
       "away": "SV Groß Borstel 1.Hr.",
-      "home_cabin": "1",
+      "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
       "festival": false
@@ -93,7 +93,7 @@
       "league": "Landesfreundschaftsspiele",
       "home": "tus BERNE 1.A (J1)",
       "away": "TSG Bergedorf 1.A (J1)",
-      "home_cabin": "2",
+      "home_cabin": "1",
       "guest_cabin": "3",
       "sr_cabin": "SR1",
       "festival": false
@@ -141,7 +141,7 @@
       "league": "Bezirksfreundschaftsspiele",
       "home": "tus BERNE 1.D (A1)",
       "away": "Niedersachsen Döhren",
-      "home_cabin": "1",
+      "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
       "festival": false
