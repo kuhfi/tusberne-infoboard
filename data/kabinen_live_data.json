@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T17:10:55+01:00",
+  "generated_at": "2026-11-26T12:10:54+01:00",
   "period": {
     "weeks": [
       {
@@ -84,18 +84,6 @@
       "home_cabin": "2",
       "guest_cabin": "4",
       "sr_cabin": "SR2",
-      "festival": false
-    },
-    {
-      "date": "2026-11-29",
-      "time": "14:45",
-      "kind": "Freundschaftsspiel",
-      "league": "Landesfreundschaftsspiele",
-      "home": "tus BERNE 1.A (J1)",
-      "away": "TSG Bergedorf 1.A (J1)",
-      "home_cabin": "1",
-      "guest_cabin": "3",
-      "sr_cabin": "SR1",
       "festival": false
     },
     {
