@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T09:20:16+01:00",
+  "generated_at": "2026-11-26T21:30:23+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -548,11 +548,11 @@
         {
           "place": 3,
           "team": "Rahlstedt 1.Ü40",
-          "games": 8,
+          "games": 9,
           "won": 5,
           "draw": 1,
-          "lost": 2,
-          "goals": "18:22",
+          "lost": 3,
+          "goals": "18:26",
           "points": 16
         },
         {
@@ -567,6 +567,16 @@
         },
         {
           "place": 5,
+          "team": "Hoisbüttel 1.Ü40",
+          "games": 9,
+          "won": 4,
+          "draw": 1,
+          "lost": 4,
+          "goals": "17:13",
+          "points": 13
+        },
+        {
+          "place": 5,
           "team": "SC Wentorf 1.Ü40",
           "games": 8,
           "won": 4,
@@ -576,7 +586,7 @@
           "points": 13
         },
         {
-          "place": 6,
+          "place": 7,
           "team": "Wellingsbüttel 1.Ü40",
           "games": 8,
           "won": 4,
@@ -584,16 +594,6 @@
           "lost": 4,
           "goals": "19:16",
           "points": 12
-        },
-        {
-          "place": 7,
-          "team": "Hoisbüttel 1.Ü40",
-          "games": 8,
-          "won": 3,
-          "draw": 1,
-          "lost": 4,
-          "goals": "13:13",
-          "points": 10
         },
         {
           "place": 8,
