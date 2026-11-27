@@ -167,6 +167,15 @@
       "url": "./files/drive/kachel4/tus-berne-social-media-poster-27b54732.png",
       "source_path": "kachel4/02 tus Berne Social-Media-Poster.png",
       "managed_by": "pi-public-sync"
+    },
+    {
+      "public": true,
+      "category": "tabellen-news",
+      "title": "Winterpause",
+      "kind": "image",
+      "url": "./files/drive/kachel3/winterpause-7f0910e9.png",
+      "source_path": "kachel3/03 Winterpause.png",
+      "managed_by": "pi-public-sync"
     }
   ]
 }
