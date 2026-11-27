@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T21:40:16+01:00",
+  "generated_at": "2026-11-27T22:00:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -393,6 +393,16 @@
       "table": [
         {
           "place": 1,
+          "team": "Poppenbüttel 1.Ü32",
+          "games": 8,
+          "won": 5,
+          "draw": 2,
+          "lost": 1,
+          "goals": "27:13",
+          "points": 17
+        },
+        {
+          "place": 2,
           "team": "Eilbek 1.Ü32",
           "games": 8,
           "won": 5,
@@ -400,16 +410,6 @@
           "lost": 2,
           "goals": "9:5",
           "points": 16
-        },
-        {
-          "place": 2,
-          "team": "Poppenbüttel 1.Ü32",
-          "games": 7,
-          "won": 4,
-          "draw": 2,
-          "lost": 1,
-          "goals": "21:10",
-          "points": 14
         },
         {
           "place": 3,
@@ -424,11 +424,11 @@
         {
           "place": 4,
           "team": "UH-Adler 1.Ü32",
-          "games": 7,
+          "games": 8,
           "won": 4,
           "draw": 1,
-          "lost": 2,
-          "goals": "13:13",
+          "lost": 3,
+          "goals": "16:19",
           "points": 13
         },
         {
