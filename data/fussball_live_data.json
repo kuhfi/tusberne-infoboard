@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T21:00:17+01:00",
+  "generated_at": "2026-11-27T21:30:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -136,15 +136,25 @@
         {
           "place": 12,
           "team": "Alstertal-Langenhorn 1.Hr.",
-          "games": 15,
+          "games": 16,
           "won": 5,
           "draw": 3,
-          "lost": 7,
-          "goals": "26:36",
+          "lost": 8,
+          "goals": "27:40",
           "points": 15
         },
         {
           "place": 13,
+          "team": "Wellingsbüttel 1.Hr.",
+          "games": 15,
+          "won": 4,
+          "draw": 4,
+          "lost": 7,
+          "goals": "33:35",
+          "points": 13
+        },
+        {
+          "place": 14,
           "team": "tus BERNE 1.Hr.",
           "games": 13,
           "won": 4,
@@ -154,7 +164,7 @@
           "points": 12
         },
         {
-          "place": 14,
+          "place": 15,
           "team": "Eilbek 1.Hr.",
           "games": 15,
           "won": 3,
@@ -162,16 +172,6 @@
           "lost": 10,
           "goals": "21:53",
           "points": 11
-        },
-        {
-          "place": 15,
-          "team": "Wellingsbüttel 1.Hr.",
-          "games": 14,
-          "won": 3,
-          "draw": 4,
-          "lost": 7,
-          "goals": "29:34",
-          "points": 10
         },
         {
           "place": 16,
