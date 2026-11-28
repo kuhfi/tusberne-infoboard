@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T11:00:17+01:00",
+  "generated_at": "2026-11-28T12:00:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1416,15 +1416,6 @@
       "display_name": "tus BERNE 3.C",
       "league_line": "C-Junioren Kreisliga · U14-KL 06 Herbst · Saison 2026/27",
       "last_game": {
-        "date": "22.11.2026",
-        "time": "11:00",
-        "competition": "Kreisliga",
-        "home": "Duvenstedt 1.C-Jun. (J1)",
-        "away": "tus BERNE 3.C-Jun. (J1)",
-        "home_score": "0",
-        "away_score": "7"
-      },
-      "next_game": {
         "date": "28.11.2026",
         "time": "09:00",
         "competition": "Kreisliga",
@@ -1433,6 +1424,7 @@
         "home_score": "3",
         "away_score": "2"
       },
+      "next_game": null,
       "table": [
         {
           "place": 1,
