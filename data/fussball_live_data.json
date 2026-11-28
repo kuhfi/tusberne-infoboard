@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T17:10:50+01:00",
+  "generated_at": "2026-11-28T18:10:27+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1065,15 +1065,6 @@
       "display_name": "tus BERNE 2.B",
       "league_line": "B-Junioren Kreisliga · U16-KL 03 · Saison 2026/27",
       "last_game": {
-        "date": "21.11.2026",
-        "time": "11:00",
-        "competition": "Kreisliga",
-        "home": "Bramfeld 1.B-Jun. (J1)",
-        "away": "tus BERNE 2.B-Jun. (J2)",
-        "home_score": "6",
-        "away_score": "2"
-      },
-      "next_game": {
         "date": "28.11.2026",
         "time": "15:00",
         "competition": "Kreisliga",
@@ -1081,6 +1072,15 @@
         "away": "Blankenese 3.B-Jun. (J3)",
         "home_score": "2",
         "away_score": "6"
+      },
+      "next_game": {
+        "date": "05.12.2026",
+        "time": "13:00",
+        "competition": "Kreisliga",
+        "home": "tus BERNE 2.B-Jun. (J2)",
+        "away": "GW Eimsbüttel 2.B-Jun. (J2)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
