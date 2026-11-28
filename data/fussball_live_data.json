@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T15:20:16+01:00",
+  "generated_at": "2026-11-28T16:00:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -776,15 +776,6 @@
       "display_name": "tus BERNE 1.A",
       "league_line": "A-Junioren Landesliga · U18-LL 02 · Saison 2026/27",
       "last_game": {
-        "date": "21.11.2026",
-        "time": "16:00",
-        "competition": "Landesliga",
-        "home": "Sasel 1.A-Jun. (J1)",
-        "away": "tus BERNE 1.A-Jun. (J1)",
-        "home_score": "2",
-        "away_score": "0"
-      },
-      "next_game": {
         "date": "28.11.2026",
         "time": "13:00",
         "competition": "Landesliga",
@@ -792,6 +783,15 @@
         "away": "Altona 93 2.A-Jun. (J2)",
         "home_score": "0",
         "away_score": "1"
+      },
+      "next_game": {
+        "date": "29.11.2026",
+        "time": "14:45",
+        "competition": "Landesfreundschaftsspiele",
+        "home": "tus BERNE 1.A-Jun. (J1)",
+        "away": "TSG Bergedorf 1.A-Jun. (J1)",
+        "home_score": null,
+        "away_score": null
       },
       "table": [
         {
@@ -866,22 +866,22 @@
         },
         {
           "place": 8,
-          "team": "Rissen 1.A-Jun. (J1)",
-          "games": 9,
-          "won": 3,
+          "team": "Willinghusen 2.A-Jun. (J1)",
+          "games": 10,
+          "won": 4,
           "draw": 2,
           "lost": 4,
-          "goals": "26:30",
-          "points": 11
+          "goals": "22:26",
+          "points": 14
         },
         {
           "place": 9,
-          "team": "Willinghusen 2.A-Jun. (J1)",
-          "games": 9,
+          "team": "Rissen 1.A-Jun. (J1)",
+          "games": 10,
           "won": 3,
           "draw": 2,
-          "lost": 4,
-          "goals": "18:24",
+          "lost": 5,
+          "goals": "28:34",
           "points": 11
         },
         {
@@ -1259,12 +1259,12 @@
         {
           "place": 4,
           "team": "Rahlstedt 3.C-Jun. (A2)",
-          "games": 7,
-          "won": 4,
+          "games": 8,
+          "won": 5,
           "draw": 1,
           "lost": 2,
-          "goals": "18:11",
-          "points": 13
+          "goals": "26:11",
+          "points": 16
         },
         {
           "place": 5,
@@ -1289,11 +1289,11 @@
         {
           "place": 7,
           "team": "UH-Adler 1.C-Jun. (A1)",
-          "games": 7,
+          "games": 8,
           "won": 3,
           "draw": 1,
-          "lost": 3,
-          "goals": "21:17",
+          "lost": 4,
+          "goals": "21:25",
           "points": 10
         },
         {
@@ -1512,23 +1512,15 @@
       "display_name": "tus BERNE 4.C 7er",
       "league_line": "C-Junioren Kreisklasse 7er · U15-KK 71 7er Herbst · Saison 2026/27",
       "last_game": {
-        "date": "21.11.2026",
-        "time": "11:00",
-        "competition": "Kreisklasse",
-        "home": "Hummelsbüttel 1.C-Jun. (A1) 7er",
-        "away": "tus BERNE 4.C-Jun. (A3) 7er",
-        "home_score": "2",
-        "away_score": "2"
-      },
-      "next_game": {
         "date": "28.11.2026",
         "time": "13:00",
         "competition": "Kreisklasse",
         "home": "Polonia 1.C-Jun. (A1) 7er",
         "away": "tus BERNE 4.C-Jun. (A3) 7er",
-        "home_score": null,
-        "away_score": null
+        "home_score": "12",
+        "away_score": "1"
       },
+      "next_game": null,
       "table": [
         {
           "place": 1,
@@ -1543,12 +1535,12 @@
         {
           "place": 2,
           "team": "Polonia 1.C-Jun. (A1) 7er",
-          "games": 5,
-          "won": 2,
+          "games": 6,
+          "won": 3,
           "draw": 1,
           "lost": 2,
-          "goals": "22:10",
-          "points": 7
+          "goals": "34:11",
+          "points": 10
         },
         {
           "place": 3,
@@ -1563,11 +1555,11 @@
         {
           "place": 4,
           "team": "tus BERNE 4.C-Jun. (A3) 7er",
-          "games": 7,
+          "games": 8,
           "won": 2,
           "draw": 1,
-          "lost": 4,
-          "goals": "18:33",
+          "lost": 5,
+          "goals": "19:45",
           "points": 7
         },
         {
