@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T12:40:16+01:00",
+  "generated_at": "2026-11-28T13:10:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1229,12 +1229,12 @@
         {
           "place": 1,
           "team": "Alstertal-Langenhorn 2.C-Jun. (A1)",
-          "games": 7,
-          "won": 6,
+          "games": 8,
+          "won": 7,
           "draw": 0,
           "lost": 1,
-          "goals": "26:8",
-          "points": 18
+          "goals": "29:8",
+          "points": 21
         },
         {
           "place": 2,
@@ -1309,11 +1309,11 @@
         {
           "place": 9,
           "team": "HSV 4.C-Jun. (A3)",
-          "games": 7,
+          "games": 8,
           "won": 1,
           "draw": 1,
-          "lost": 5,
-          "goals": "17:32",
+          "lost": 6,
+          "goals": "17:35",
           "points": 4
         },
         {
