@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T12:00:16+01:00",
+  "generated_at": "2026-11-28T12:40:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1222,8 +1222,8 @@
         "competition": "Bezirksliga",
         "home": "tus BERNE 1.C-Jun. (A1)",
         "away": "Bramfeld 1.C-Jun. (A1)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "1",
+        "away_score": "3"
       },
       "table": [
         {
@@ -1239,12 +1239,12 @@
         {
           "place": 2,
           "team": "Bramfeld 1.C-Jun. (A1)",
-          "games": 7,
-          "won": 5,
+          "games": 8,
+          "won": 6,
           "draw": 0,
           "lost": 2,
-          "goals": "24:14",
-          "points": 15
+          "goals": "27:15",
+          "points": 18
         },
         {
           "place": 3,
@@ -1299,11 +1299,11 @@
         {
           "place": 8,
           "team": "tus BERNE 1.C-Jun. (A1)",
-          "games": 7,
+          "games": 8,
           "won": 2,
           "draw": 0,
-          "lost": 5,
-          "goals": "14:34",
+          "lost": 6,
+          "goals": "15:37",
           "points": 6
         },
         {
