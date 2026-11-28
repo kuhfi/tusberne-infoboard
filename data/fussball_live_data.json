@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T14:00:16+01:00",
+  "generated_at": "2026-11-28T14:20:16+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -1533,12 +1533,12 @@
         {
           "place": 1,
           "team": "Nordlichter im NSV 1.C-Jun. (A1) 7er",
-          "games": 6,
-          "won": 5,
+          "games": 7,
+          "won": 6,
           "draw": 1,
           "lost": 0,
-          "goals": "33:5",
-          "points": 16
+          "goals": "42:5",
+          "points": 19
         },
         {
           "place": 2,
@@ -1573,11 +1573,11 @@
         {
           "place": 5,
           "team": "Sternschanze 3.C-Jun. (A1)",
-          "games": 6,
+          "games": 7,
           "won": 2,
           "draw": 0,
-          "lost": 4,
-          "goals": "13:24",
+          "lost": 5,
+          "goals": "13:33",
           "points": 6
         }
       ]
