@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T17:00:16+01:00",
+  "generated_at": "2026-11-28T17:10:50+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -827,6 +827,16 @@
         },
         {
           "place": 4,
+          "team": "Sasel 1.A-Jun. (J1)",
+          "games": 10,
+          "won": 6,
+          "draw": 3,
+          "lost": 1,
+          "goals": "28:9",
+          "points": 21
+        },
+        {
+          "place": 5,
           "team": "Nienstedten 2.A-Jun. (J1)",
           "games": 10,
           "won": 6,
@@ -834,16 +844,6 @@
           "lost": 3,
           "goals": "58:30",
           "points": 19
-        },
-        {
-          "place": 5,
-          "team": "Sasel 1.A-Jun. (J1)",
-          "games": 9,
-          "won": 5,
-          "draw": 3,
-          "lost": 1,
-          "goals": "22:9",
-          "points": 18
         },
         {
           "place": 6,
@@ -908,11 +908,11 @@
         {
           "place": 12,
           "team": "BU 2.A-Jun. (J2)",
-          "games": 8,
+          "games": 9,
           "won": 1,
           "draw": 1,
-          "lost": 6,
-          "goals": "18:33",
+          "lost": 7,
+          "goals": "18:39",
           "points": 4
         },
         {
@@ -1079,8 +1079,8 @@
         "competition": "Kreisliga",
         "home": "tus BERNE 2.B-Jun. (J2)",
         "away": "Blankenese 3.B-Jun. (J3)",
-        "home_score": null,
-        "away_score": null
+        "home_score": "2",
+        "away_score": "6"
       },
       "table": [
         {
@@ -1165,6 +1165,16 @@
         },
         {
           "place": 9,
+          "team": "Blankenese 3.B-Jun. (J3)",
+          "games": 8,
+          "won": 2,
+          "draw": 1,
+          "lost": 5,
+          "goals": "19:42",
+          "points": 7
+        },
+        {
+          "place": 10,
           "team": "Glashütte 2.B-Jun. (J2)",
           "games": 7,
           "won": 1,
@@ -1174,23 +1184,13 @@
           "points": 5
         },
         {
-          "place": 10,
-          "team": "Blankenese 3.B-Jun. (J3)",
-          "games": 7,
-          "won": 1,
-          "draw": 1,
-          "lost": 5,
-          "goals": "13:40",
-          "points": 4
-        },
-        {
           "place": 11,
           "team": "tus BERNE 2.B-Jun. (J2)",
-          "games": 7,
+          "games": 8,
           "won": 1,
           "draw": 0,
-          "lost": 6,
-          "goals": "11:63",
+          "lost": 7,
+          "goals": "13:69",
           "points": 3
         },
         {
