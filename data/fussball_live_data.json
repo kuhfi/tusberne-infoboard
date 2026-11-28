@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T16:00:16+01:00",
+  "generated_at": "2026-11-28T16:10:20+01:00",
   "teams": [
     {
       "display_name": "tus BERNE 1.Hr.",
@@ -791,18 +791,19 @@
         "home": "tus BERNE 1.A-Jun. (J1)",
         "away": "TSG Bergedorf 1.A-Jun. (J1)",
         "home_score": null,
-        "away_score": null
+        "away_score": null,
+        "status": "ABGESETZT"
       },
       "table": [
         {
           "place": 1,
           "team": "Süderelbe 1.A-Jun. (J1)",
-          "games": 9,
-          "won": 9,
+          "games": 10,
+          "won": 10,
           "draw": 0,
           "lost": 0,
-          "goals": "46:13",
-          "points": 27
+          "goals": "53:14",
+          "points": 30
         },
         {
           "place": 2,
@@ -927,11 +928,11 @@
         {
           "place": 14,
           "team": "Walddörfer 3.A-Jun. (J2)",
-          "games": 9,
+          "games": 10,
           "won": 0,
           "draw": 0,
-          "lost": 9,
-          "goals": "6:64",
+          "lost": 10,
+          "goals": "7:71",
           "points": 0
         }
       ]
@@ -1134,6 +1135,16 @@
         },
         {
           "place": 6,
+          "team": "Lemsahl 2.B-Jun. (J2)",
+          "games": 8,
+          "won": 3,
+          "draw": 2,
+          "lost": 3,
+          "goals": "32:22",
+          "points": 11
+        },
+        {
+          "place": 7,
           "team": "Bramfeld 1.B-Jun. (J1)",
           "games": 7,
           "won": 2,
@@ -1143,23 +1154,13 @@
           "points": 9
         },
         {
-          "place": 7,
+          "place": 8,
           "team": "Condor 3.B-Jun. (J1)",
           "games": 7,
           "won": 2,
           "draw": 2,
           "lost": 3,
           "goals": "20:14",
-          "points": 8
-        },
-        {
-          "place": 8,
-          "team": "Lemsahl 2.B-Jun. (J2)",
-          "games": 7,
-          "won": 2,
-          "draw": 2,
-          "lost": 3,
-          "goals": "21:19",
           "points": 8
         },
         {
@@ -1195,11 +1196,11 @@
         {
           "place": 12,
           "team": "Urania 1.B-Jun. (J1)",
-          "games": 7,
+          "games": 8,
           "won": 0,
           "draw": 0,
-          "lost": 7,
-          "goals": "4:62",
+          "lost": 8,
+          "goals": "7:73",
           "points": 0
         }
       ]
